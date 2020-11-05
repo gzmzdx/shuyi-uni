@@ -20,7 +20,8 @@
   "scripts": {
     "cct": "node ./cliShell/createComponent.js",
     "commit": "git-cz",
-    "addAll": "git add -A"
+    "addAll": "git add -A",
+    "gitFlow": "npm run addAll && npm run commit && git push"
   },
   "author": "",
   "license": "ISC",
