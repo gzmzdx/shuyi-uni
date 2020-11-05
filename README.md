@@ -13,6 +13,7 @@ shell依赖
 
 
 
+
 ## 编译
 
 **IDE:**   **HBuilder X**
@@ -23,6 +24,14 @@ shell依赖
 + scss编译
 + uni-app编译
 
+
+**安装依赖**
+```shell
+# 使用npm
+npm instal
+# 使用yarn
+yarn
+```
 
 ## UI组件库
 
@@ -148,9 +157,9 @@ shell依赖
 
 # ~~关于代码提交~~
 
-~~ 参考 [宇宙互联代码提交规范](https://thoughts.aliyun.com/workspaces/5f04896991b713001dbbf8ef/docs/5f460f570d263e0001284f1d) ~~
+参考 gitCommit.md
 
-~~拉取最新代码 `git push`命令或者直接点webstorm的拉取按钮<br/>
+拉取最新代码 `git push`命令或者直接点webstorm的拉取按钮<br/>
  使用 `npm run addAll` 命令将所有文件添加至git变更中,当然你也可以使用git  add命令来指定要add的文件<br/>
  使用 `npm run commit` 命令提交当前变更<br/>
  选择     提交类型<br/>
@@ -158,7 +167,7 @@ shell依赖
  输入     本次提交的简介（描述主要更新了什么 <90字）<br/>
  输入     本次提交的详情（可以不写）<br/>
  后面全部按  Enter 默认即可<br/>
- 使用 `git push` 命令将提交推送到远程仓库~~<br/>
+ 使用 `git push` 命令将提交推送到远程仓库<br/>
 
  
 
