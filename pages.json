@@ -24,7 +24,7 @@
 			"style": {"navigationStyle": "custom"}
 		}
 		// #endif
-		
+
 		// #ifdef MP-WEIXIN
 		{
 			"path": "pages/main/main",
