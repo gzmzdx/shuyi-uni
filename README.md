@@ -33,6 +33,49 @@ npm instal
 yarn
 ```
 
+**注意：** 编译报错，当编译到H5端报错pages.json，请在MP-WEIXIN的第一个page前添加逗号
+如下
+```js
+		{
+			"path": "pages/test/test",
+			"style": {"navigationStyle": "custom"}
+		}
+		//这里没有逗号
+		// #endif
+
+		// #ifdef MP-WEIXIN
+		//下面有逗号
+		,{
+			"path": "pages/main/main",
+			"style": {
+				"navigationStyle": "custom",
+				"app-plus": {"titleNView": false}
+				}
+		}
+```
+
+当编译到MP-WEIXIN端报错pages.json，请在H5的最后一个page后添加逗号
+```js
+		{
+			"path": "pages/test/test",
+			"style": {"navigationStyle": "custom"}
+		},
+		//这里有逗号
+		// #endif
+
+		// #ifdef MP-WEIXIN
+		//下面没有逗号
+		{
+			"path": "pages/main/main",
+			"style": {
+				"navigationStyle": "custom",
+				"app-plus": {"titleNView": false}
+				}
+		}
+```
+
+如果要同时编译到小程序和H5，那么可以先选择编译一种，然后修改pages中逗号位置即可(修改不会导致之前正在编译的报错)
+
 ## UI组件库
 
 + [uviewui](https://www.uviewui.com/)
