@@ -143,9 +143,10 @@ yarn
 
 使用 `npm run cct` 命令创建页面<br/>
 
+*h5页面请添加h5-前缀，例如h5的my页面，页面名为h5-my*
 
+在 `pages.json` 文件中对应位置添加当前页面的配置， 在 `test`页面添加向当前页面转跳的按钮<br/>
 
-在 `pages.json` 文件中添加当前页面的配置， 在 `test`页面添加向当前页面转跳的按钮<br/>
 
 
 
@@ -155,9 +156,9 @@ yarn
 
 
 
-# ~~关于代码提交~~
+# 关于代码提交
 
-参考 gitCommit.md
+规范说明参考 gitCommit.md
 
 拉取最新代码 `git push`命令或者直接点webstorm的拉取按钮<br/>
  使用 `npm run addAll` 命令将所有文件添加至git变更中,当然你也可以使用git  add命令来指定要add的文件<br/>
