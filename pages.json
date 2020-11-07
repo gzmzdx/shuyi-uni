@@ -1,32 +1,9 @@
 {
-	"easycom": {//组件默认寻找规则, c-为自定义组件
+	"easycom": { //组件默认寻找规则, c-为自定义组件
 		"^u-(.*)": "@/uview-ui/components/u-$1/u-$1.vue",
 		"^c-(.*)": "@/components/c-$1/index.vue"
 	},
-	"pages": [
-		// #ifdef H5
-		{
-			"path": "pages/h5-my/h5-my",
-			"style": {"navigationStyle": "custom"}
-		},
-		{
-			"path": "pages/h5-my/h5-myinfo",
-			"style": {"navigationStyle": "custom"}
-		},
-		{
-			"path": "uview-ui/components/u-avatar-cropper/u-avatar-cropper",
-			"style": {
-				"navigationBarTitleText": "头像裁剪",
-				"navigationBarBackgroundColor": "#000000"
-			}
-		},{
-			"path": "pages/test/test",
-			"style": {"navigationStyle": "custom"}
-		},
-		// #endif
-
-		// #ifdef MP-WEIXIN
-		{
+	"pages": [{
 			"path": "pages/main/main",
 			"style": {
 				"navigationStyle": "custom",
@@ -34,93 +11,112 @@
 					"titleNView": false
 				}
 			}
-		},{
-			"path" : "pages/my_reserve/my_reserve",
-			"style" : {"navigationBarTitleText": "预约记录"}
-		}
-	,{
-			"path" : "pages/mycollection/mycollbook",
-			"style" : {"navigationBarTitleText": "收藏的书"}
-		}
-	,{
-			"path" : "pages/mycollection/xinjiang",
-			"style" : {"navigationBarTitleText": "新建书单"}
-		}
-	,{
-			"path" : "pages/myinfomation/myinfomation",
-			"style" : {"navigationBarTitleText": "我的信息"}
-		}
-	,{
-			"path" : "pages/index/publish",
-			"style" : {"navigationBarTitleText": "发表"}
-		}
-	,{
-			"path" : "pages/index/MyExperience",
-			"style" : {"navigationBarTitleText": "我的心得"}
-		}
-	,{
-			"path" : "pages/index/MyExper",
-			"style" : {"navigationBarTitleText": "我要发表"}
-		}
-	,{
-			"path" : "pages/index/SerchExper",
-			"style" : {"navigationBarTitleText": "搜索心得"}
-		}
-	,{
-			"path" : "pages/index/yifabiao",
-			"style" : {"navigationBarTitleText": "已发表"}
-		}
-	,{
-			"path" : "pages/personal/personal",
-			"style" : {"navigationBarTitleText": "个人中心"}
-		}
-	,{
-			"path" : "pages/personal/personal_home",
-			"style" : {"navigationBarTitleText": "我的主页"}
-		}
-	,{
-			"path" : "pages/personal/Mynotice",
-			"style" : {"navigationBarTitleText": "通知消息"}
-		}
-	,{
-			"path" : "pages/personal/XiTonMessage",
-			"style" : {"navigationBarTitleText": "系统消息"}
-		}
-	,{
-			"path" : "pages/personal/unChat",
-			"style" : {"navigationBarTitleText": "聊天页面"}
-		}
-	,{
-			"path" : "pages/index/wuliu",
-			"style" : {"navigationBarTitleText": "物流设置"}
-		}
-	,{
-			"path" : "pages/my_reserve/reserve",
-			"style" : {}
-		}
-	,{
-			"path" : "pages/personal/Shejiao_notice",
-			"style" : {"navigationBarTitleText": "社交消息"}
-		}
-	,{
-			"path" : "pages/personal/serve_chat",
-			"style" : {"navigationBarTitleText": "书易客服"}
-		}
-	,{
-			"path" : "pages/personal/Lib_ser_chat",
-			"style" : {"navigationBarTitleText": "图书馆客服"}
-		}
-	,{
-			"path" : "pages/readCircle/readCircle",
-			"style" : {"navigationBarTitleText": "阅读圈子"}
-		}
-	,{
-			"path" : "pages/readCircle/readCircleXQ",
-			"style" : {"navigationBarTitleText": "圈子详情"}
-		}
-	,{
-			"path" : "pages/readCircle/readCircleNR",
-			"style" : {}
+		}, {
+			"path": "pages/my_reserve/my_reserve",
+			"style": {
+				"navigationBarTitleText": "预约记录"
+			}
+		}, {
+			"path": "pages/mycollection/mycollbook",
+			"style": {
+				"navigationBarTitleText": "收藏的书"
+			}
+		}, {
+			"path": "pages/mycollection/xinjiang",
+			"style": {
+				"navigationBarTitleText": "新建书单"
+			}
+		}, {
+			"path": "pages/myinfomation/myinfomation",
+			"style": {
+				"navigationBarTitleText": "我的信息"
+			}
+		}, {
+			"path": "pages/index/publish",
+			"style": {
+				"navigationBarTitleText": "发表"
+			}
+		}, {
+			"path": "pages/index/MyExperience",
+			"style": {
+				"navigationBarTitleText": "我的心得"
+			}
+		}, {
+			"path": "pages/index/MyExper",
+			"style": {
+				"navigationBarTitleText": "我要发表"
+			}
+		}, {
+			"path": "pages/index/SerchExper",
+			"style": {
+				"navigationBarTitleText": "搜索心得"
+			}
+		}, {
+			"path": "pages/index/yifabiao",
+			"style": {
+				"navigationBarTitleText": "已发表"
+			}
+		}, {
+			"path": "pages/personal/personal",
+			"style": {
+				"navigationBarTitleText": "个人中心"
+			}
+		}, {
+			"path": "pages/personal/personal_home",
+			"style": {
+				"navigationBarTitleText": "我的主页"
+			}
+		}, {
+			"path": "pages/personal/Mynotice",
+			"style": {
+				"navigationBarTitleText": "通知消息"
+			}
+		}, {
+			"path": "pages/personal/XiTonMessage",
+			"style": {
+				"navigationBarTitleText": "系统消息"
+			}
+		}, {
+			"path": "pages/personal/unChat",
+			"style": {
+				"navigationBarTitleText": "聊天页面"
+			}
+		}, {
+			"path": "pages/index/wuliu",
+			"style": {
+				"navigationBarTitleText": "物流设置"
+			}
+		}, {
+			"path": "pages/my_reserve/reserve",
+			"style": {}
+		}, {
+			"path": "pages/personal/Shejiao_notice",
+			"style": {
+				"navigationBarTitleText": "社交消息"
+			}
+		}, {
+			"path": "pages/personal/serve_chat",
+			"style": {
+				"navigationBarTitleText": "书易客服"
+			}
+		}, {
+			"path": "pages/personal/Lib_ser_chat",
+			"style": {
+				"navigationBarTitleText": "图书馆客服"
+			}
+		}, {
+			"path": "pages/readCircle/readCircle",
+			"style": {
+				"navigationBarTitleText": "阅读圈子"
+			}
+		}, {
+			"path": "pages/readCircle/readCircleXQ",
+			"style": {
+				"navigationBarTitleText": "圈子详情"
+			}
+		}, {
+			"path": "pages/readCircle/readCircleNR",
+			"style": {}
 		},
 		{
 			"path": "pages/my/my",
@@ -158,74 +154,73 @@
 				"navigationBarTitleText": "取消预约"
 
 			}
-		}
-	,{
-			"path" : "pages/borrow/borrow",
-			"style" : {
+		}, {
+			"path": "pages/borrow/borrow",
+			"style": {
 				"navigationBarTitleText": "借书"
 			}
 		},
 		{
-			"path" : "pages/appointment/confirm",
-			"style" : {
+			"path": "pages/appointment/confirm",
+			"style": {
 				"navigationBarTitleText": "确认收货"
 			}
 		},
 		{
-			"path" : "pages/appointment/logistics",
-			"style" : {
+			"path": "pages/appointment/logistics",
+			"style": {
 				"navigationBarTitleText": "查看物流"
 			}
 		},
 		{
-			"path" : "pages/borrow/face_to_face",
-			"style" : {
+			"path": "pages/borrow/face_to_face",
+			"style": {
 				"navigationBarTitleText": "面对面借书"
 			}
 		},
 		{
-			"path" : "pages/appointment/index",
-			"style" : {
+			"path": "pages/appointment/index",
+			"style": {
 				"navigationBarTitleText": "面对面借书"
 			}
 		},
 		{
-			"path" : "pages/allOrders/index",
-			"style" : {
+			"path": "pages/allOrders/index",
+			"style": {
 				"navigationBarTitleText": "预约"
 			}
 		},
 		{
-			"path" : "pages/components/orders",
-			"style" : {
+			"path": "pages/components/orders",
+			"style": {
 				"navigationBarTitleText": "线上预约"
 			}
 		},
 		{
-			"path" : "pages/components/trade",
-			"style" : {
+			"path": "pages/components/trade",
+			"style": {
 				"navigationBarTitleText": "面对面交易中"
 			}
 		},
 		{
-			"path" : "pages/components/logistic",
-			"style" : {
+			"path": "pages/components/logistic",
+			"style": {
 				"navigationBarTitleText": "物流配送中"
 			}
 		},
 
 		{
-			"path" : "pages/components/fail",
-			"style" : {
+			"path": "pages/components/fail",
+			"style": {
 				"navigationBarTitleText": "预约失败",
 				"app-plus": {
 					"bounce": "none", //关闭窗口回弹效果
 					"titleNView": {
 						"buttons": [ //原生标题栏按钮配置,
 							{
-								"type":"none",
-								"text":"\u2713",
-								"float":"right"
+								"type": "none",
+								"text": "\u2713",
+								"float": "right"
 							}
 						]
 					}
@@ -235,43 +230,43 @@
 		},
 
 		{
-			"path" : "pages/return/return",
-			"style" : {
+			"path": "pages/return/return",
+			"style": {
 				"navigationBarTitleText": "面对面还书"
 			}
 		}
 
-	,{
-			"path" : "pages/book-selection-car/book-selection-car",
-			"style" : {
+		, {
+			"path": "pages/book-selection-car/book-selection-car",
+			"style": {
 				// "navigationBarBackgroundColor":"#00BFFF"
-				"navigationBarTitleText":"借书车"
+				"navigationBarTitleText": "借书车"
 			}
 		},
 		{
-			"path" : "pages/personal-library/personal-library",
-			"style" : {
-				"navigationBarTitleText":"个人图书馆",
-				"navigationBarBackgroundColor":"#FFFFFF"
+			"path": "pages/personal-library/personal-library",
+			"style": {
+				"navigationBarTitleText": "个人图书馆",
+				"navigationBarBackgroundColor": "#FFFFFF"
 			}
 		},
 
 		{
-			"path" : "pages/mineFriend/mineFriend",
-			"style" : {
-				"navigationBarTitleText":"我的好友",
-				"navigationBarBackgroundColor":"#FFFFFF"
+			"path": "pages/mineFriend/mineFriend",
+			"style": {
+				"navigationBarTitleText": "我的好友",
+				"navigationBarBackgroundColor": "#FFFFFF"
 			}
 		}
 
-	,{
-			"path" : "pages/personal-library/shareBook",
-			"style" : {
-				"navigationBarTitleText":"共享图书",
-				"navigationBarBackgroundColor":"#FFFFFF",
-				"app-plus":{
-					"titleNView":{
-						"buttons":[
+		, {
+			"path": "pages/personal-library/shareBook",
+			"style": {
+				"navigationBarTitleText": "共享图书",
+				"navigationBarBackgroundColor": "#FFFFFF",
+				"app-plus": {
+					"titleNView": {
+						"buttons": [
 
 							//                     {
 							//                         "text":"提交",
@@ -284,10 +279,10 @@
 
 							//                     },
 							{
-								"type":"none",
-								"text":"\u2713",
-								"float":"right",
-								"color":"#00BFFF"
+								"type": "none",
+								"text": "\u2713",
+								"float": "right",
+								"color": "#00BFFF"
 							}
 						]
 					}
@@ -443,7 +438,6 @@
 				}
 			}
 		}
-		// #endif
 	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
@@ -456,11 +450,11 @@
 		"color": "#8A8A8A",
 		"selectedColor": "#18C7F2",
 		"list": [{
-			"pagePath": "pages/main/main",
-			"text": "首页",
-			"iconPath": "/static/images/firstpage_black.png",
-			"selectedIconPath": "/static/images/firstpage_blue.png"
-		},
+				"pagePath": "pages/main/main",
+				"text": "首页",
+				"iconPath": "/static/images/firstpage_black.png",
+				"selectedIconPath": "/static/images/firstpage_blue.png"
+			},
 			{
 				"pagePath": "pages/classify/classify",
 				"text": "分类",
@@ -478,7 +472,7 @@
 				"text": "借书车",
 				"iconPath": "./static/images/borrow_card_black.png",
 				"selectedIconPath": "/static/images/borrow_card_blue.png"
-			},{
+			}, {
 
 				"pagePath": "pages/my/my",
 				"text": "我的",
@@ -487,14 +481,12 @@
 			}
 		]
 	},
-	"condition" : { //模式配置，仅开发期间生效
+	"condition": { //模式配置，仅开发期间生效
 		"current": 0, //当前激活的模式(list 的索引项)
-		"list": [
-			{
-				"name": "", //模式名称
-				"path": "", //启动页面，必选
-				"query": "" //启动参数，在页面的onLoad函数里面得到
-			}
-		]
+		"list": [{
+			"name": "", //模式名称
+			"path": "", //启动页面，必选
+			"query": "" //启动参数，在页面的onLoad函数里面得到
+		}]
 	}
 }

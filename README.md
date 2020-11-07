@@ -45,7 +45,7 @@ yarn
 
 		// #ifdef MP-WEIXIN
 		//下面有逗号
-		,{
+		{
 			"path": "pages/main/main",
 			"style": {
 				"navigationStyle": "custom",
