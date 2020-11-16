@@ -3,15 +3,21 @@
 		<!-- 顶部 -->
 		<view class="top">
 			<view class="wz">我的书单</view>
-			<image class="image" src="../../static/image/新建.png" style="width: 50rpx;height: 50rpx;"></image>
-			<view class="xinjian">新建</view>
+			<navigator url="./xinjiang">
+			<view class="Xjiang">
+					<view class="image">
+					<image src="../../static/images/新建.png" style="width: 50rpx;height: 50rpx;"></image>	
+					</view>
+				<view class="xinjian">新建</view>
+			</view>
+			</navigator>
 		</view>
 		<!-- 中间 -->
 		<view class="mid">
 			<view class="midone">
 				<navigator url="mycollbook">
 				<view class="zhengti">
-					<image class="imag" src="../../static/image/我的喜欢.png" style="width: 150rpx; height: 150rpx;"></image>
+					<image class="imag" src="../../static/images/我的喜欢.png" style="width: 150rpx; height: 150rpx;"></image>
 					<view class="midwz">我的最爱</view>
 				</view>
 				<view class="shumu">100本</view>
@@ -20,7 +26,7 @@
 			<view class="midone">
 				<navigator url="mycollbook">
 				<view class="zhengti">
-					<image class="imag" src="../../static/image/书1.jpg" style="width: 150rpx; height: 150rpx;"></image>
+					<image class="imag" src="../../static/images/书1.jpg" style="width: 150rpx; height: 150rpx;"></image>
 					<view class="midwz">mybook</view>
 				</view>
 				<view class="shumu">500本</view>
@@ -29,7 +35,7 @@
 			<view class="midone">
 				<navigator url="mycollbook">
 				<view class="zhengti">
-					<image class="imag" src="../../static/image/after.jpg" style="width: 150rpx; height: 150rpx;"></image>
+					<image class="imag" src="../../static/images/after.jpg" style="width: 150rpx; height: 150rpx;"></image>
 					<view class="midwz">呵呵哈哈哈哈哈哈</view>
 				</view>
 				<view class="shumu">50本</view>
@@ -43,7 +49,6 @@
 
 <style>
 .top {
-	width: 100%;
 	height: 60rpx;
 	background: #f1f1f1;
 	box-shadow: #C0C0C0 6rpx 0rpx 6rpx 6rpx;
@@ -52,15 +57,20 @@
 	margin-left: 25rpx;
 	height: 15rpx;
 	width: 150rpx;
-	/* background-color: #4CD964; */
+}
+.Xjiang{
+	display: flex;
+	margin-left: 600rpx;
+	height: 50rpx;
+	width: 550rpx;
 }
 .image {
-	margin-top: -10rpx;
-	margin-left: 600rpx;
+	margin-top: -5rpx;
+	/* margin-left: 600rpx; */
 }
 .xinjian {
-	margin-left: 660rpx;
-	margin-top: -55rpx;
+	margin-left: 0rpx;
+	/* margin-top: -55rpx; */
 	font-size: 30rpx;
 }
 .mid {
