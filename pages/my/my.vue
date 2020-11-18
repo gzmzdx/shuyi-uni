@@ -27,18 +27,22 @@
 			</view>
 			<!-- 分割线br1 -->
 			<view class="br1"></view>
+			<navigator url="../personal/personal_home">
 			<view class="class1">
 				<image class="tupian" src="../../static/images/userinfo_space.png"></image>
 				<view class="neirong">我的主页</view>
 				<image class="img2" src="../../static/images/right_arrow.png"></image>
 			</view>
+			</navigator>
 			<!-- 分割线br1 -->
 			<view class="br1"></view>
+			<navigator url="../personal/Mynotice">
 			<view class="class1">
 				<image class="tupian" src=""></image>
 				<view class="neirong">通知信息</view>
 				<image class="img2" src="../../static/images/right_arrow.png"></image> 
 			</view>
+			</navigator>
 			<!-- 分割线br1 -->
 			<view class="br1"></view>
 			<view class="class1">
@@ -91,11 +95,13 @@
 			</view>
 			<!-- 分割线br1 -->
 			<view class="br1"></view>
+			<navigator url="../mycollection/mycollection">
 			<view class="class1">
 				<image class="tupian" src=""></image>
 				<view class="neirong">我的收藏</view>
 				<image class="img2" src="../../static/images/right_arrow.png"></image> 
 			</view>
+			</navigator>
 			<!-- 分割线br1 -->
 			<view class="br1"></view>
 			<navigator url="../personal-library/personal-library">

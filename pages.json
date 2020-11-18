@@ -121,8 +121,13 @@
 			}
 		}, {
 			"path": "pages/readCircle/readCircleNR",
+			"style": {"navigationBarTitleText": "圈子详情"
+			}
+		}, {
+			"path": "pages/readCirclepage/CircleNR_Life",
 			"style": {}
 		},
+		
 		{
 			"path": "pages/my/my",
 			"style": {
@@ -443,7 +448,35 @@
 				}
 			}
 		}
-	],
+	    
+        ,{
+            "path" : "pages/readCirclepage/CircleNR_Right",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "圈文",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/readCirclepage/CircleXQLife",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "圈子信息",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/readCirclepage/CircleXQRight",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "圈子成员",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",
