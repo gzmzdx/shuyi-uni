@@ -57,7 +57,7 @@ export default {
 				userId:1,
 				meId:"",
 				userName:"纵横天下",
-				userImg:"../../static/image/头像3.jpg",
+				userImg:"../../static/images/头像3.jpg",
 				type:"text",
 				context:"吾问无为谓jhhhh哈哈哈哈哈哈哈哈哈哈哈hh哇哇哇哇",
 				time:(new Date().getTime())
@@ -66,7 +66,7 @@ export default {
 				userId:"",
 				meId:2,
 				userName:"白百合",
-				userImg:"../../static/image/头像2.jpg",
+				userImg:"../../static/images/头像2.jpg",
 				type:"text",
 				context:"哈哈哈",
 				time:(new Date().getTime())
@@ -75,7 +75,7 @@ export default {
 			userId:1,
 			meId:"",
 			userName:"纵横天下",
-			userImg:"../../static/image/头像3.jpg",
+			userImg:"../../static/images/头像3.jpg",
 			type:"text",
 			context:"吾问无为谓哇哇哇哇",
 			time:(new Date().getTime())

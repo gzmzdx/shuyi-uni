@@ -16,7 +16,7 @@
 					<text id="tone">回复</text>
 				</view>
 				<view class="sc">
-					<image class="two" src="/static/image/SC.png" style="width: 38rpx;height: 36rpx;"></image>
+					<image class="two" src="/static/images/SC.png" style="width: 38rpx;height: 36rpx;"></image>
 					<text id="ttwo">删除</text>
 				</view>
 				<view class="imaWD"><image src="../../static/images/WD.png"style="width: 18rpx;height: 18rpx; border-radius: 100%;" ></image></view>

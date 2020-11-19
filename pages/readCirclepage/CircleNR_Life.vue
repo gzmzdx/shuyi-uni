@@ -1,13 +1,23 @@
 <template name="Logistic">
 	<view>
 		<view class="underL">
+			<!-- 第一条心得 -->
 			<view class="show">
 				<view class="showone">
 					<view class="person">
-						<view class="tou"><image class="imagetwo" src="../../static/images/头像2.jpg" style="width: 90rpx;height: 90rpx;border-radius: 50%;"></image></view>
-						<view class="bn"><text class="name">爱丽丝</text></view>
-						<view class="tw"><view class="time">2020-08-09 14:10</view></view>
-					</view>
+						<view class="tou">
+							<image src="../../static/images/头像2.jpg" style="width: 90rpx;height: 90rpx;border-radius: 50%;"></image>
+						</view>
+						<view class="Ttitle">
+							<view class="Ntitle">
+								<view class="name">爱丽丝</view>
+								<view class="dj">
+								<view class="vip">LV.11</view>	
+								</view>
+							</view>
+							<view class="time">2020-08-09 14:10</view>	
+						</view>
+						</view>
 					<navigator url="./readExperience">
 					<view class="zy">
 						<text>
@@ -35,14 +45,24 @@
 					</view>
 				</view>
 			</view>
+			<!-- 第二条心得 -->
 			<view class="show">
 				<view class="showone">
 					<view class="person">
-						<view class="tou"><image class="imagetwo" src="../../static/images/notice.jpg" style="width: 90rpx;height: 90rpx;border-radius: 50%;"></image></view>
-						<view class="bn"><text class="name">爱丽丝</text></view>
-						<view class="tw"><view class="time">2020-08-09 14:10</view></view>
-					</view>
-					<view class="zy"><text>《预见未来》今 哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</text></view>
+						<view class="tou">
+							<image src="../../static/images/头像2.jpg" style="width: 90rpx;height: 90rpx;border-radius: 50%;"></image>
+						</view>
+						<view class="Ttitle">
+							<view class="Ntitle">
+								<view class="name">爱丽丝爱吃鱼</view>
+								<view class="dj">
+								<view class="vip">LV.11</view>	
+								</view>
+							</view>
+							<view class="time">2020-08-09 14:10</view>	
+						</view>
+						</view>
+					<view class="zy"><text>《来》今 哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</text></view>
 					<view class="book">
 						<view class="bookone"><image class="booktp" src="../../static/images/书2.jpg" style="width: 130rpx; height: 180rpx;"></image></view>
 						<view class="bookn"><text class="bookname">最强帝国副瑞士</text></view>
@@ -63,11 +83,20 @@
 			<view class="show">
 				<view class="showone">
 					<view class="person">
-						<view class="tou"><image class="imagetwo" src="../../static/images/头像2.jpg" style="width: 90rpx;height: 90rpx;border-radius: 50%;"></image></view>
-						<view class="bn"><text class="name">爱丽丝</text></view>
-						<view class="tw"><view class="time">2020-08-09 14:10</view></view>
-					</view>
-					<view class="zy"><text>《预见未来》今 哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</text></view>
+						<view class="tou">
+							<image src="../../static/images/头像2.jpg" style="width: 90rpx;height: 90rpx;border-radius: 50%;"></image>
+						</view>
+						<view class="Ttitle">
+							<view class="Ntitle">
+								<view class="name">爱丽丝爱吃鱼</view>
+								<view class="dj">
+								<view class="vip">LV.11</view>	
+								</view>
+							</view>
+							<view class="time">2020-08-09 14:10</view>	
+						</view>
+						</view>
+					<view class="zy"><text>今 哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</text></view>
 				</view>
 		
 				<view class="showtwo">
@@ -99,12 +128,7 @@
 </script>
 
 <style>
-/* 底部内容 */
-.mid{
-	margin-top: 50rpx;
-	/* box-shadow: #f1f1f1 0rpx 0rpx 82rpx 5rpx; */
-}
-/* 底部左边 */
+/* 中间 */
 .underL {
 	line-height: 150rpx;
 	/* 设置行高*/
@@ -126,42 +150,50 @@
 .person {
 	line-height: 20rpx;
 	display: flex;
+	height: 100rpx;
 }
-.imagetwo {
+.tou{
 	margin-top: 0rpx;
 	margin-left: 20rpx;
 }
-
-.name {
-	font-size: 30rpx;
-	margin: 20rpx;
-	top: 90rpx;
-	color: #00bfff;
-	/* background-color: #007AFF; */
+.Ttitle{
+	height: 50rpx;
 }
-
+.Ntitle{
+	display: flex;
+	}
+.name {
+	height: 30rpx;
+	color: #00aaff;
+	margin-top: 20rpx;
+	font-size: 30rpx;
+	margin-left: 20rpx;
+}
+.dj{
+	color: #f0ad4e;
+	font-size: 25rpx;
+	border-radius: 10rpx;
+	border: 1rpx solid #f0ad4e;
+	height: 35rpx;
+	margin-top: 12rpx;
+	width: 80rpx;
+	margin-left: 10rpx;
+}
+.vip {
+	margin-top: 6rpx;
+	text-align: center;
+}
 .bn {
 	height: 100%;
-	margin-top: 20rpx;
-	/* background-color: #007AFF; */
+	margin-top: 0rpx;
 }
-.tw {
-	margin-top: -130rpx;
-	margin-left: 500p;
-}
-
 .time {
 	font-size: 20rpx;
-	margin-top: 190rpx;
-	margin-left: -110rpx;
+	margin-top: 10rpx;
+	margin-left: 18rpx;
+	/* background-color: #4CD964; */
 }
-.delate {
-	margin-left: 400rpx;
-	margin-top: 20rpx;
-	background-color: #00BFFF;
-	width: 28rpx;
-	height: 30rpx;
-}
+
 .zy {
 	margin-top: 10rpx;
 	line-height: 40rpx;
@@ -181,13 +213,9 @@
 	box-shadow: #f1f1f1 0rpx 0rpx 10rpx 5rpx;
 	border-radius: 8rpx;
 }
-.bookone {
-	/* margin-top: 20rpx; */
-}
 .booktp {
 	margin-top: 30rpx;
 	margin-left: 30rpx;
-	/* align-items: center; */
 }
 .bookn {
 	margin-top: -260rpx;
@@ -230,24 +258,22 @@
 	width: 40rpx;
 	padding-top: 10rpx;
 	margin-top: 50rpx;
+	/* animation: wave 10s linear infinite; */
 }
 
 .dz {
 	margin-left: 450rpx;
 	display: flex;
-	/* background-color: #007AFF; */
 }
 
 .pl {
 	margin-left: 80rpx;
 	display: flex;
-	/* background-color: #007AFF; */
 }
 #t {
 	font-size: 25rpx;
 	color: #bbbbbb;
 	margin-left: 5rpx;
 	margin-top: 10rpx;
-	/* background-color: #4CD964; */
 }
 </style>
