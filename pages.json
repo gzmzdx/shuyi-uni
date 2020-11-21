@@ -92,9 +92,6 @@
 				"navigationBarTitleText": "物流设置"
 			}
 		}, {
-			"path": "pages/my_reserve/reserve",
-			"style": {}
-		}, {
 			"path": "pages/personal/Shejiao_notice",
 			"style": {
 				"navigationBarTitleText": "社交消息"
@@ -504,10 +501,46 @@
             
         }
         ,{
-            "path" : "pages/readCircle/readCircleNew",
+            "path" : "pages/my_reserve_Spage/reserve_SpageR",
             "style" :                                                                                    
             {
                 "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/my_reserve_Spage/reserve_SpageL",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/readLabel/readLabel",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/readLabel/readLabelNew",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/borrow_and_return/borrow_and_return",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "借还记录",
                 "enablePullDownRefresh": false
             }
             
