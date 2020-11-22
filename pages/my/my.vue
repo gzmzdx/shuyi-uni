@@ -19,6 +19,7 @@
 		<view class="br"></view>
 		<!-- 列表 -->
 		<view class="lie">
+			<navigator url="../personal/personal_home">
 			<view class="neirou"> 
 				<image class="img" src="../../static/images/userface.png"></image>
 				<view class="tit">
@@ -27,6 +28,7 @@
 				</view>
 				<image class="img1" src="../../static/images/right_arrow.png"></image>
 			</view>
+			</navigator>
 			<!-- 分割线br1 -->
 			<view class="br1"></view>
 			<navigator url="../personal/personal_home">
@@ -89,6 +91,15 @@
 				<view class="neirong">读书历史</view>
 				<image class="img2" src="../../static/images/right_arrow.png"></image>
 			</view>
+			<!-- 分割线br1 -->
+			<view class="br1"></view>
+			<navigator url="../borrow_and_return/borrow_and_return">
+			<view class="class1">
+				<image class="tupian" src="../../static/images/jiehuanjilu.png"></image>
+				<view class="neirong">借还记录</view>
+				<image class="img2" src="../../static/images/right_arrow.png"></image>
+			</view>
+			</navigator>
 			<!-- 分割线br2 -->
 			<view class="br2"></view>
 			
@@ -124,6 +135,15 @@
 					<image class="img2" src="../../static/images/right_arrow.png"></image>
 				</view>
 			</navigator>
+			<!-- 分割线br1 -->
+			<view class="br1"></view>
+			<navigator url="../index/MyExperience">
+				<view class="class1">
+					<image class="tupianO" src="../../static/images/woyaofabu.png" ></image>
+					<view class="neirong">我的心得</view>
+					<image class="img2" src="../../static/images/right_arrow.png"></image>
+				</view>
+			</navigator>
 			<!-- 分割线br2 -->
 			<view class="br2"></view>
 			
@@ -143,11 +163,13 @@
 			</view>
 			<!-- 分割线br1 -->
 			<view class="br1"></view>
+			<navigator url="../Setup/Setup">
 			<view class="class1">
 				<image class="tupian" src="../../static/images/userinfo_setting.png"></image>
 				<view class="neirong">系统设置</view>
 				<image class="img2" src="../../static/images/right_arrow.png"></image>
 			</view>
+			</navigator>
 			<!-- 分割线br1 -->
 			<view class="br1"></view>
 			<view class="class1">
@@ -294,6 +316,12 @@
 		width: 80rpx;
 		height: 80rpx; 
 		margin-left: 30rpx;
+	}
+	.tupianO{
+		width: 68rpx;
+		height: 68rpx; 
+		margin-top: 5rpx;
+		margin-left: 38rpx;
 	}
 	.neirong{
 		width: 68%;

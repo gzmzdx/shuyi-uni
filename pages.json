@@ -673,6 +673,15 @@
             }
             
         }
+        ,{
+            "path" : "pages/Setup/Setup",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

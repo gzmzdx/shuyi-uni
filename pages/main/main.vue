@@ -44,12 +44,16 @@
 					</navigator>
 				</view>
 				<view class="module">
+					<navigator url="../return/return">
 					<image class="tupian" src="../../static/images/icon_return_book.png"></image>
 					<view class="name">还书</view>
+					</navigator>
 				</view>
 				<view class="module">
+					<navigator url="../allOrders/index">
 					<image class="tupian" src="../../static/images/icon_preborrow.png"></image>
 					<view class="name">预约</view>
+					</navigator>
 				</view>
 				<view class="module">
 					<navigator url="../mycollection/mycollection">
