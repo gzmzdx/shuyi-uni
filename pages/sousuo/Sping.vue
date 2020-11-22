@@ -1,20 +1,15 @@
 <template>
 	<view>
-		<view class="list">
-			<!-- <view class="tit">图书</view> -->
-			<view class="tit1" mode="aspectFill" @click="titClick" :class="{'blue':this.ShowHidden}">书评</view>
-			<!-- <view class="tit">关注</view>
-			<view class="tit">好友</view>-->
-		</view> 
-		
-		<!-- 内容 -->
-		<view class="Array" v-if="ShowHidden">
+		<view class="Array">
 		<view class="list1">
 			<image class="ima" src="../../static/images/封面.png" style="width: 150rpx; height: 200rpx;"></image>
 			<view class="tabs">
 				<view class="li">
 				<view class="name">书名....</view>
-				<view class="te">更多</view></view>
+				<navigator url="../Bdetail/Bdetail">
+				<view class="te">更多</view>
+				</navigator>
+				</view>
 				<view class="tex">作者 ：哈哈</view>
 				<view class="tex">最近书评 ：2020-09</view>
 				<view class="tex1"></view>
@@ -61,7 +56,6 @@
 	}
 	
 	.list1 {
-		margin-left: -180rpx;
 		height: 300rpx;
 		/* width: 100%; */
 		border-bottom: 1rpx solid #C8C7CC;

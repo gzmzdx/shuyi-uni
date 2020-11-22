@@ -16,7 +16,7 @@
 				<view class="td">在馆</view>
 				<view class="td">书易流通</view>
 			</view>
-			<view class="tab1"></view>
+			<view class="tab2"></view>
 			<view class="list">
 				<image class="ima" src="../../static/images/封面.png" style="width: 150rpx; height: 200rpx;"></image>
 				<view>
@@ -57,6 +57,7 @@
 <style>
 .tab1 {
 		display: flex;
+		margin-top: 79rpx;
 	}
 	.tit1 {
 		margin-top: 9rpx;
@@ -84,6 +85,9 @@
 		height: 70rpx;
 		background-color: #F8F8F8;
 	}
+	.tab2 {
+			display: flex;
+		}
 	.td{
 		width: 160rpx;
 		font-size: 25rpx;

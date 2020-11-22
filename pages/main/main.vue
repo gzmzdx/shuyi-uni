@@ -6,8 +6,10 @@
 				<view class="index-header">
 					<image class="address" src="../../static/images/app_icon.png"></image>
 					<view class="input-wrap">
+						<navigator url="../sousuo/sousuo">
 						<input type="search" placeholder="书易搜索" v-model="value" @change="inputChange" />
 						<image class="img" src="/static/images/search_icon.png"></image>
+						</navigator>
 					</view>
 					<view class="map-wrap" @click="rightClick">
 						<image class="iconfont" src="../../static/images/ring_white.png"></image>
@@ -36,31 +38,30 @@
 			<!-- 找还书列表 -->
 			<view class="gongnen">
 				<view class="module">
-					<navigator url="../borrow/borrow">
-						<image class="tupian" src="../../static/images/icon_find_book.png"></image>
-						<view class="name">找书</view>
+					<navigator url="../zhaob/blist">
+					<image class="tupian" src="../../static/images/icon_find_book.png"></image>
+					<view class="name">找书</view>
 					</navigator>
 				</view>
 				<view class="module">
-					<navigator url="../return/return">
-						<image class="tupian" src="../../static/images/icon_return_book.png"></image>
-						<view class="name">还书</view>
-					</navigator>
+					<image class="tupian" src="../../static/images/icon_return_book.png"></image>
+					<view class="name">还书</view>
 				</view>
-				
-					<view class="module">
-						<navigator url="../allOrders/index">
-						<image class="tupian" src="../../static/images/icon_preborrow.png"></image>
-						<view class="name">预约</view>
-						</navigator>
-					</view>
 				<view class="module">
+					<image class="tupian" src="../../static/images/icon_preborrow.png"></image>
+					<view class="name">预约</view>
+				</view>
+				<view class="module">
+					<navigator url="../mycollection/mycollection">
 					<image class="tupian" src="../../static/images/icon_collection.png"></image>
 					<view class="name">收藏</view>
+					</navigator>
 				</view>
 				<view class="module">
+					<navigator url="../sousuo/fujin">
 					<image class="tupian" src="../../static/images/icon_view.png"></image>
 					<view class="name">附近的书</view>
+					</navigator>
 				</view>
 			</view>
 			<!-- 分类 -->
@@ -104,26 +105,30 @@
 					<view class="name">活动</view>
 				</view>
 				<view class="module1">
+					<navigator url="../classify/classify">
 					<image class="tupian1" src="../../static/images/icon_all_class.png"></image>
 					<view class="name">全部分类</view>
+					</navigator>
 				</view>
 			</view>
 			<!-- 分割线 -->
 			<view class="br"></view>
 			<!-- 新书上架 -->
 			<view class="xinshu">
+				<navigator url="../jianshu/newb">
 				<view class="tit">
 					<view class="shu">新书上架</view>
 					<image class="imag1" src="../../static/images/devider_right.png"></image>
 					<view class="gengduo">更多</view>
 					<image class="imag2" src="../../static/images/right_arrow.png"></image>
 				</view>
+				</navigator>
 				<view class="lieshu">
 					<view class="lies">
-						<navigator url="../borrow/borrow">
-							<image class="imag3" src="http://cdn.static.17k.com/book/189x272/61/95/3159561.jpg-189x272?v=1590116249000"></image>
-							<view class="name1">解忧杂货铺牛吼i哦吼i的hi后i松平定紧哦碰上架</view>
-							<view class="name2">[日]东野圭吾电风扇广泛广泛是</view>
+						<navigator url="../Bdetail/Bdetail">
+						<image class="imag3" src="http://cdn.static.17k.com/book/189x272/61/95/3159561.jpg-189x272?v=1590116249000"></image>
+						<view class="name1">解忧杂货铺牛吼i哦吼i的hi后i松平定紧哦碰上架</view>
+						<view class="name2">[日]东野圭吾电风扇广泛广泛是</view>
 						</navigator>
 					</view>
 					<view class="lies">
@@ -159,12 +164,14 @@
 			<view class="br"></view>
 			<!-- 热门推荐 -->
 			<view class="xinshu">
+				<navigator url="../jianshu/remen">
 				<view class="tit">
 					<view class="shu">热门推荐</view>
 					<image class="imag1" src="../../static/images/devider_right.png"></image>
 					<view class="gengduo">更多</view>
 					<image class="imag2" src="../../static/images/right_arrow.png"></image>
 				</view>
+				</navigator>
 				<view class="lieshu">
 					<view class="lies">
 						<image class="imag3" src="http://cdn.static.17k.com/book/189x272/61/95/3159561.jpg-189x272?v=1590116249000"></image>
@@ -204,17 +211,21 @@
 			<view class="br"></view>
 			<!-- 猜您喜欢 -->
 			<view class="xinshu">
+				<navigator url="../jianshu/person">
 				<view class="tit">
 					<view class="shu">猜您喜欢</view>
 					<image class="imag1" src="../../static/images/devider_right.png"></image>
 					<view class="gengduo">更多</view>
 					<image class="imag2" src="../../static/images/right_arrow.png"></image>
 				</view>
+				</navigator>
 				<view class="lieshu">
 					<view class="lies">
+						<navigator url="../Bdetail/Bdetail">
 						<image class="imag3" src="http://cdn.static.17k.com/book/189x272/61/95/3159561.jpg-189x272?v=1590116249000"></image>
 						<view class="name1">解忧杂货铺牛吼i哦吼i的hi后i松平定紧哦碰上架</view>
 						<view class="name2">[日]东野圭吾电风扇广泛广泛是</view>
+						</navigator>
 					</view>
 					<view class="lies">
 						<image class="imag3" src="http://cdn.static.17k.com/book/189x272/83/03/3200383.jpg-189x272?v=1596527153000"></image>

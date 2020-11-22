@@ -10,7 +10,7 @@
 			<input class="inp" placeholder="姓         名" placeholder-style="color:#BBBBBB"  type="text"></input>
 		</view>
 		<view class="tab">
-			<input class="inp" placeholder="身份证号" placeholder-style="color:#BBBBBB"  type="number"></input>
+			<input class="inp" placeholder="身份证号" placeholder-style="color:#BBBBBB"  type="text"></input>
 		</view>
 		<view class="tab">
 			<input class="inp" placeholder="密         码" placeholder-style="color:#BBBBBB"  type="password"></input>

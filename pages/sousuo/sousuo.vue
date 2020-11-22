@@ -20,7 +20,9 @@
 					<image src="../../static/images/搜索.png" class="image"></image>
 					<input @input="goToSearch" placeholder="人民的名义" placeholderStyle="color:#BBBBBB "  type="text"/>
 				</view>
+				<navigator url="book">
 				<view class="tab">搜索</view>
+				</navigator>
 			</view>
 			</view>
 			<!-- 热搜内容 -->

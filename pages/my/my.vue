@@ -3,6 +3,7 @@
 		<!-- 顶部部分 -->
 		<view class="head">
 			<view class="header-wrap">
+				<navigator url="../personal/personal_home">
 				<view class="index-header">
 					<image class="address" src="../../static/images/back.png"></image>
 					<view class="name">个人中心</view>
@@ -10,6 +11,7 @@
 						<image class="iconfont" src="../../static/images/search_icon.png"></image>
 					</view>
 				</view>
+				</navigator>
 			</view>
 			<view class="blank"></view>
 		</view>
@@ -45,11 +47,13 @@
 			</navigator>
 			<!-- 分割线br1 -->
 			<view class="br1"></view>
+			<navigator url="jszlist">
 			<view class="class1">
 				<image class="tupian" src="../../static/images/userinfo_reader_card.png"></image>
 				<view class="neirong">借书卡</view>
 				<image class="img2" src="../../static/images/right_arrow.png"></image>
 			</view>
+			</navigator>
 			<!-- 分割线br2 -->
 			<view class="br2"></view>
 			
@@ -104,10 +108,19 @@
 			</navigator>
 			<!-- 分割线br1 -->
 			<view class="br1"></view>
-			<navigator url="../personal-library/personal-library">
+			<navigator url="mylibrary">
 				<view class="class1">
 					<image class="tupian" src="../../static/images/userinfo_extend.png"></image>
 					<view class="neirong">个人图书管</view>
+					<image class="img2" src="../../static/images/right_arrow.png"></image>
+				</view>
+			</navigator>
+			<!-- 分割线br1 -->
+			<view class="br1"></view>
+			<navigator url="../readCircle/readCircle">
+				<view class="class1">
+					<image class="tupian" src="../../static/images/quanzi.png"></image>
+					<view class="neirong">阅读圈子</view>
 					<image class="img2" src="../../static/images/right_arrow.png"></image>
 				</view>
 			</navigator>

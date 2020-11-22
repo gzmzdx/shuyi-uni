@@ -15,6 +15,9 @@
 			<view class="td">2KM以内</view>
 			<view class="td">同城</view>
 		</view>
+		<view>
+			<map class="map" circles=""></map>
+		</view>
 	</view>
 </template>
 
@@ -66,5 +69,10 @@
 		
 		border-top: 1rpx solid #C0C0C0;
 		border-bottom:1rpx solid #C0C0C0;
+	}
+	.map {
+		/* margin-top: 30rpx; */
+		width: 100%;
+		height: 1000rpx;
 	}
 </style>
