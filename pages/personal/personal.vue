@@ -7,7 +7,7 @@
 				<image class="topimage" src="../../static/images/userface.png" style="width: 135rpx;height: 135rpx;border-radius: 50%;"></image>
 			</view>
 			<view class="bn">
-				<text class="name">爱丽丝</text>
+				<text class="name">爱丽丝丝丝</text>
 			</view>
 			<view class="tw">
 				<view class="idnum">账号：Summer</view>
