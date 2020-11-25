@@ -34,7 +34,7 @@
 		}, {
 			"path": "pages/myinfomation/myinfomation",
 			"style": {
-				"navigationBarTitleText": "我的信息"
+				"navigationBarTitleText": "信息管理"
 			}
 		}, {
 			"path": "pages/index/publish",
@@ -675,6 +675,15 @@
         }
         ,{
             "path" : "pages/Setup/Setup",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/readCircle/readCicleMore",
             "style" :                                                                                    
             {
                 "navigationBarTitleText": "",
