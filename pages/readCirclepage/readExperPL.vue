@@ -2,6 +2,7 @@
 	<view>
 		<view class="lis">
 			<view class="tit2">全部(50)</view>
+			<view class="PLall">
 			<view class="li">
 				<image class="toux" src="../../static/images/头像2.jpg" style="width: 80rpx; height: 80rpx;"></image>
 				<view class="name">爱书的猫</view>
@@ -9,6 +10,8 @@
 				<view class="time">2017-05-05 15:32</view>
 			</view>
 			<view class="text1">光大证券首席金融业分析师王一峰认为，自7月份开始，货币市场短期与中长期资金利率运行出现明显分化迹象。</view>
+			</view>
+			<view class="PLall">
 			<view class="li">
 				<image class="toux" src="../../static/images/头像2.jpg" style="width: 80rpx; height: 80rpx;"></image>
 				<view class="name">爱书的猫</view>
@@ -16,6 +19,8 @@
 				<view class="time">2017-05-05 15:32</view>
 			</view>
 			<view class="text1">光大证券首席金融业分析师王一峰认为，自7月份开始，货币市场短期与中长期资金利率运行出现明显分化迹象。</view>
+			</view>
+			<view class="PLall">
 			<view class="li">
 				<image class="toux" src="../../static/images/头像2.jpg" style="width: 80rpx; height: 80rpx;"></image>
 				<view class="name">爱书的猫</view>
@@ -23,6 +28,7 @@
 				<view class="time">2017-05-05 15:32</view>
 			</view>
 			<view class="text1">光大证券首席金融业分析师王一峰认为，自7月份开始，货币市场短期与中长期资金利率运行出现明显分化迹象。</view>
+			</view>
 		</view>
 	</view>
 </template>
@@ -48,6 +54,10 @@
 .tit2 {
 	margin: 20rpx 50rpx;
 	color: #f0ad4e;
+}
+.PLall{
+	height: auto;
+	// background-color: yellow;
 }
 .toux {
 	border-radius: 50%;
@@ -86,6 +96,7 @@
 	margin-top: 37rpx;
 }
 .text1 {
+	height: auto;
 	margin: 10rpx 20rpx;
 	font-size: 25rpx;
 	margin-left: 100rpx;

@@ -29,7 +29,7 @@
 		}, {
 			"path": "pages/mycollection/xinjiang",
 			"style": {
-				"navigationBarTitleText": "新建书单"
+				"navigationBarTitleText": "添加图书"
 			}
 		}, {
 			"path": "pages/myinfomation/myinfomation",
@@ -60,11 +60,6 @@
 			"path": "pages/index/yifabiao",
 			"style": {
 				"navigationBarTitleText": "已发表"
-			}
-		}, {
-			"path": "pages/personal/personal",
-			"style": {
-				"navigationBarTitleText": "个人中心"
 			}
 		}, {
 			"path": "pages/personal/personal_home",
@@ -111,6 +106,11 @@
 			"style": {
 				"navigationBarTitleText": "阅读圈子"
 			}
+		}, {
+			"path": "pages/readCircle/readCircleNew",
+			"style": {
+				"navigationBarTitleText": "新建圈子"
+			}	
 		}, {
 			"path": "pages/readCircle/readCircleXQ",
 			"style": {

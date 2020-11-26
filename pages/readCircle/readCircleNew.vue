@@ -9,10 +9,17 @@
 						<input placeholder="请输入书圈名" name="input"></input>
 					</view>
 				</view>
-				<view class="topone">
-					<view class="title">出版社</view>
+				<!-- <view class="topone">
+					<view class="title">公告</view>
 					<view class="shuru">
-						<input placeholder="请输入出版社" name="input"></input>
+						<input placeholder="请输入公告内容" name="input"></input>
+					</view>
+				</view> -->
+				<!-- 公告 -->
+				<view class="toptwo">
+					<view class="jjtitle">公告</view>
+					<view class="jjNR">
+						<textarea class="jjk" placeholder="请输入公告内容" maxlength="200"></textarea>
 					</view>
 				</view>
 				<!-- 简介 -->
@@ -160,9 +167,10 @@
 	/* margin-bottom: 0rpx; */
 	/* marker-end: 0rpx; */
 	color: #FFFFFF;
-	background-color: #00BFFF;
+	background-color: #5251F5;
 	position:fixed;
 	bottom: 0;
 	width:100%;
+	border-radius: 0rpx;
 }
 </style>

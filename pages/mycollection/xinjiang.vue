@@ -165,9 +165,10 @@
 	/* margin-bottom: 0rpx; */
 	/* marker-end: 0rpx; */
 	color: #FFFFFF;
-	background-color: #00BFFF;
+	background-color: #5251F5;
 	position:fixed;
 	bottom: 0;
 	width:100%;
+	border-radius: 0rpx;
 }
 </style>

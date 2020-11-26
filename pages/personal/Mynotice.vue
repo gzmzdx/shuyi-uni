@@ -30,6 +30,8 @@
 			</view>
 			</navigator>
 		</view>
+		<!-- 分割线 -->
+		<view class="br2"></view>
 		<!-- 中间 客服 -->
 		<view class="mid">
 			<navigator url="serve_chat">
@@ -100,6 +102,11 @@ export default {
 	margin-left: 460rpx;
 	margin-top: 30rpx;
 }
+.br2 {
+		width: 100%;
+		height: 30rpx;
+		background-color: #F5F5F5;
+	}
 .mid{
 	width: 100%;
 	height: auto;

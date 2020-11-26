@@ -2,7 +2,7 @@
 	<view class="all">
 		<view class="top">
 			<view class="topone">头像</view>
-			<view><image class="image" src="../../static/images/头像2.jpg" style="width:120rpx;height: 120rpx;border-radius: 100%;"></image></view>
+			<view><image class="image" src="../../static/images/头像2.jpg" style="width:120rpx;height: 120rpx;border-radius: 100%;":loading="loading" :disabled="disabled" @click="upload" ></image></view>
 			<!-- <view class="topthree"><image class="imag" src="../../static/images/更多.png" style="width: 30rpx;height: 35rpx;"></image></view> -->
 		</view>
 		<view class="br2"></view>
@@ -59,12 +59,52 @@
 </template>
 
 <script>
-export default {
-	data() {
-		return {};
-	},
-	methods: {}
-};
+	var _self;
+	export default {
+	 data:{
+	  percent:0,
+	  loading:false,
+	  disabled:false
+	 },
+	 methods : {
+	  upload : function(){
+	   _self = this;
+	   uni.chooseImage({
+	    count: 1,
+	    sizeType: ['original', 'compressed'], //可以指定是原图还是压缩图，默认二者都有
+	    sourceType: ['album'], //从相册选择
+	    success: function (res) {
+	     const tempFilePaths = res.tempFilePaths;
+	     const uploadTask = uni.uploadFile({
+	      url : "https://jxsbbx.gzmu.edu.cn/schoolcloud/",
+	      filePath: tempFilePaths[0],
+	      name: 'file',
+		  // fileType: 'image',
+	      formData: {
+	       'user': 'test'
+	      },
+	      success: function (uploadFileRes) {
+	       console.log(uploadFileRes.data);
+	      }
+	     });
+	 
+	     uploadTask.onProgressUpdate(function (res) {
+	      _self.percent = res.progress;
+	      console.log('上传进度' + res.progress);
+	      console.log('已经上传的数据长度' + res.totalBytesSent);
+	      console.log('预期需要上传的数据总长度' + res.totalBytesExpectedToSend);
+	     });
+	    },
+	    error : function(e){
+	     console.log(e);
+	    }
+	   });
+	  }
+	 },
+	    onLoad:function(){
+	  
+	    }
+	}
 </script>
 
 <style>

@@ -26,14 +26,15 @@
 					<view class="name1">伍辉</view>
 					<view class="zhanghao">账号：www.wuhui2100.com</view>
 				</view>
-				<image class="img1" src="../../static/images/right_arrow.png"></image>
+				<image class="img1" src="../../static/images/中心.向右箭头.icon.png"></image>
 			</view>
 			</navigator>
-			<!-- 分割线br1 -->
-			<view class="br1"></view>
+			
+			<!-- 分割线br2 -->
+			<view class="br2"></view>
 			<navigator url="../personal/personal_home">
 			<view class="class1">
-				<image class="tupian" src="../../static/images/userinfo_space.png"></image>
+				<image class="tupian" src="../../static/images/中心.主页.icon.png"></image>
 				<view class="neirong">我的主页</view>
 				<image class="img2" src="../../static/images/right_arrow.png"></image>
 			</view>
@@ -42,7 +43,7 @@
 			<view class="br1"></view>
 			<navigator url="../personal/Mynotice">
 			<view class="class1">
-				<image class="tupian" src=""></image>
+				<image class="tupian" src="../../static/images/信息-1.png"></image>
 				<view class="neirong">通知信息</view>
 				<image class="img2" src="../../static/images/right_arrow.png"></image> 
 			</view>
@@ -51,7 +52,7 @@
 			<view class="br1"></view>
 			<navigator url="jszlist">
 			<view class="class1">
-				<image class="tupian" src="../../static/images/userinfo_reader_card.png"></image>
+				<image class="tupian" src="../../static/images/中心.借书卡.icon.png"></image>
 				<view class="neirong">借书卡</view>
 				<image class="img2" src="../../static/images/right_arrow.png"></image>
 			</view>
@@ -61,7 +62,7 @@
 			
 			<navigator url="../allOrders/index">
 				<view class="class1">
-					<image class="tupian" src=""></image>
+					<image class="tupian" src="../../static/images/我的预约-2.png"></image>
 					<view class="neirong">我的预约</view>
 					<image class="img2" src="../../static/images/right_arrow.png"></image>
 				</view>
@@ -70,7 +71,7 @@
 			<!-- 分割线br1 -->
 			<view class="br1"></view>
 			<view class="class1">
-				<image class="tupian" src="../../static/images/userinfo_reading.png"></image>
+				<image class="tupian" src="../../static/images/中心.阅读.icon.png"></image>
 				<view class="neirong">正在阅读</view>
 				<image class="img2" src="../../static/images/right_arrow.png"></image> 
 			</view>
@@ -78,7 +79,7 @@
 			<view class="br1"></view>
 			<navigator url="../return/return">
 				<view class="class1">
-					<image class="tupian" src="../../static/images/userinfo_record.png"></image>
+					<image class="tupian" src="../../static/images/中心.还书.icon.png"></image>
 					<view class="neirong">我要还书</view>
 					<image class="img2" src="../../static/images/right_arrow.png"></image>
 				</view>
@@ -87,7 +88,7 @@
 			<!-- 分割线br1 -->
 			<view class="br1"></view>
 			<view class="class1">
-				<image class="tupian" src="../../static/images/userinfo_community.png"></image>
+				<image class="tupian" src="../../static/images/中心.读书历史.icon.png"></image>
 				<view class="neirong">读书历史</view>
 				<image class="img2" src="../../static/images/right_arrow.png"></image>
 			</view>
@@ -104,7 +105,7 @@
 			<view class="br2"></view>
 			
 			<view class="class1">
-				<image class="tupian" src="../../static/images/userinfo_comment.png"></image>
+				<image class="tupian" src="../../static/images/中心.书评.icon.png"></image>
 				<view class="neirong">我的书评</view>
 				<image class="img2" src="../../static/images/right_arrow.png"></image>
 			</view>
@@ -112,7 +113,7 @@
 			<view class="br1"></view>
 			<navigator url="../mycollection/mycollection">
 			<view class="class1">
-				<image class="tupian" src=""></image>
+				<image class="tupian" src="../../static/images/我的收藏.png"></image>
 				<view class="neirong">我的收藏</view>
 				<image class="img2" src="../../static/images/right_arrow.png"></image> 
 			</view>
@@ -121,7 +122,7 @@
 			<view class="br1"></view>
 			<navigator url="mylibrary">
 				<view class="class1">
-					<image class="tupian" src="../../static/images/userinfo_extend.png"></image>
+					<image class="tupian" src="../../static/images/中心.个人图书馆.icon.png"></image>
 					<view class="neirong">个人图书管</view>
 					<image class="img2" src="../../static/images/right_arrow.png"></image>
 				</view>
@@ -130,7 +131,7 @@
 			<view class="br1"></view>
 			<navigator url="../readCircle/readCircle">
 				<view class="class1">
-					<image class="tupian" src="../../static/images/quanzi.png"></image>
+					<image class="tupian" src="../../static/images/圈子.png"></image>
 					<view class="neirong">阅读圈子</view>
 					<image class="img2" src="../../static/images/right_arrow.png"></image>
 				</view>
@@ -139,7 +140,7 @@
 			<view class="br1"></view>
 			<navigator url="../index/MyExperience">
 				<view class="class1">
-					<image class="tupianO" src="../../static/images/woyaofabu.png" ></image>
+					<image class="tupian" src="../../static/images/woyaofabu.png" ></image>
 					<view class="neirong">我的心得</view>
 					<image class="img2" src="../../static/images/right_arrow.png"></image>
 				</view>
@@ -149,7 +150,7 @@
 			
 			<navigator url="../mineFriend/mineFriend">
 				<view class="class1">
-					<image class="tupian" src=""></image>
+					<image class="tupianO" src="../../static/images/contacts_blue.png"></image>
 					<view class="neirong">我的好友</view>
 					<image class="img2" src="../../static/images/right_arrow.png"></image>
 				</view>
@@ -157,7 +158,7 @@
 			<!-- 分割线br1 -->
 			<view class="br1"></view>
 			<view class="class1">
-				<image class="tupian" src=""></image>
+				<image class="tupian" src="../../static/images/我的关注.png"></image>
 				<view class="neirong">我的关注</view>
 				<image class="img2" src="../../static/images/right_arrow.png"></image> 
 			</view>
@@ -165,9 +166,9 @@
 			<view class="br1"></view>
 			<navigator url="../Setup/Setup">
 			<view class="class1">
-				<image class="tupian" src="../../static/images/userinfo_setting.png"></image>
+				<image class="tupian" src="../../static/images/中心.设置.icon.png"></image>
 				<view class="neirong">系统设置</view>
-				<image class="img2" src="../../static/images/right_arrow.png"></image>
+				<image class="img2" src="../../static/images/right_arrow.png"></image>	
 			</view>
 			</navigator>
 			<!-- 分割线br1 -->
@@ -282,15 +283,16 @@
 	}
 	.br1 {
 		width: 100%;
-		height: 5rpx;
+		height: 3rpx;
 		background-color: #F5F5F5;
 	}
 	.tit{
 		margin-left: 30rpx;
 		margin-top: 20rpx;
 		padding-top: 20rpx;
-		width: 60%;
+		width: 63%;
 		height: 150rpx;
+		// background-color: red;
 	}
 	.name1{
 		width: 100%;
@@ -303,8 +305,8 @@
 		font-size: 28rpx;
 	}
 	.img1{
-		width: 60rpx;
-		height: 60rpx;
+		width: 40rpx;
+		height: 40rpx;
 		margin-top: 60rpx;
 	}
 	.class1{
@@ -313,30 +315,33 @@
 		height: 80rpx;
 	}
 	.tupian{
-		width: 80rpx;
-		height: 80rpx; 
+		width: 60rpx;
+		height: 60rpx; 
+		margin-top: 10rpx;
 		margin-left: 30rpx;
 	}
 	.tupianO{
-		width: 68rpx;
-		height: 68rpx; 
-		margin-top: 5rpx;
-		margin-left: 38rpx;
+		width: 55rpx;
+		height: 50rpx; 
+		margin-top: 10rpx;
+		margin-left: 30rpx;
 	}
 	.neirong{
-		width: 68%;
+		width: 72%;
 		height: 60rpx;
 		margin-left: 40rpx;
-		margin-top: 13rpx;
+		margin-top: 20rpx;
+		// background-color: yellow;
 	}
+	
 	.img2{
-		width: 60rpx;
-		height: 60rpx;
-		margin-top: 10rpx;
+		width: 50rpx;
+		height: 50rpx;
+		margin-top: 15rpx;
 	}
 	.br2 {
 		width: 100%;
-		height: 40rpx;
+		height: 30rpx;
 		background-color: #F5F5F5;
 	}
 </style>

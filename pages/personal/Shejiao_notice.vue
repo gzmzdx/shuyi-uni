@@ -39,11 +39,11 @@
 <style>
 .all{
 	margin-top: 30rpx;
-	/* background-color: #F8F8F8; */
+	background-color: #FFFFFF;
 }
 .top{
 	height: 100rpx;
-	border: 1rpx solid #E3E3E3;
+	border: 1rpx solid #F4F4F5;
 }
 .wz{
 	margin-top: 30rpx;
