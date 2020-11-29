@@ -1,4 +1,14 @@
 <template>
+	<view>
+	<view class="top">
+	<view class="header-input">
+		<input @input="goToSearch" placeholder="输入书名查找" placeholderStyle="color:#BBBBBB" type="text"></input>
+		<view>
+			<image class="image" src="../../static/images/search_icon.png">
+			</image>
+		</view>
+	</view>
+	</view>
 	<view class="show">
 		<view class="mid">
 			<view class="zt"><view class="zt1">广州图书馆</view></view>
@@ -18,7 +28,7 @@
 						<view class="s3">上一次还书期：2017-09-10</view>
 						<view class="s4">
 							当前状态：
-							<view class="s5">等待持书人还书</view>
+							<view class="s5">交易成功</view>
 						</view>
 						<view class="s8">
 							<navigator url="abolish">
@@ -46,7 +56,7 @@
 						<view class="s3">上一次还书期：2017-09-10</view>
 						<view class="s4">
 							当前状态：
-							<view class="s5">等待持书人还书</view>
+							<view class="s5">交易成功</view>
 						</view>
 						<view class="s8">
 							<navigator url="abolish">
@@ -76,7 +86,7 @@
 						<view class="s3">上一次还书期：2017-09-10</view>
 						<view class="s4">
 							当前状态：
-							<view class="s5">等待持书人还书</view>
+							<view class="s5">交易成功</view>
 						</view>
 						<view class="s8">
 							<navigator url="abolish">
@@ -106,7 +116,7 @@
 						<view class="s3">上一次还书期：2017-09-10</view>
 						<view class="s4">
 							当前状态：
-							<view class="s5">等待持书人还书</view>
+							<view class="s5">交易成功</view>
 						</view>
 						<view class="s8">
 							<navigator url="abolish">
@@ -120,13 +130,53 @@
 		</view>
 		<view class="bt"><button style="background-color: #00BFFF;">刷新</button></view>
 	</view>
+	</view>
 </template>
 
 <script></script>
 
 <style>
+/* 搜索框 */
+.top{
+		// background-color: #007AFF;
+		height: 90rpx;
+		box-shadow: #EDEDED 0rpx 0rpx 0rpx 0rpx;
+	}
+	.header-input {
+	    margin-left: 28rpx;
+	    margin-top: 20rpx;
+	    width: 694rpx;
+	    height: 66rpx;
+	    border-radius: 36rpx;
+	    background-color: rgba(255,255,255,255);
+	    // border: 1rpx solid #E3E3E3;
+	    display: flex;
+	    flex-direction: row;
+		box-shadow: #007AFF 1rpx 1rpx 5rpx 1rpx;
+	} 
+	.header-input input {
+	    margin-left: 31rpx;
+	    width: 564rpx;
+	    height: 66rpx;
+	    line-height: 66rpx;
+	    /* border-right: 1rpx solid #dfdfdf; */
+	    font-size: 28rpx;
+	}
+	
+	.header-input view {
+	    width: 96rpx;
+	    height: 66rpx;
+	}
+	
+	.image {
+	    margin-left: 20rpx;
+	    margin-top: 11rpx;
+	    width: 55rpx;
+	    height: 55rpx;
+	}
 .show {
 	/* margin-bottom: auto; */
+	/* background-color: #0066CC; */
 	width: auto;
 	height: auto;
 }
@@ -146,7 +196,7 @@
 	margin-top: 25rpx;
 }
 .zt {
-	border-bottom: solid 1rpx;
+	border-bottom: 1rpx solid #bbbbbb;
 	margin-top: -5rpx;
 	height: 60rpx;
 	color: #bbbbbb;

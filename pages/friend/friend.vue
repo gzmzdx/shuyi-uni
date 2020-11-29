@@ -4,7 +4,9 @@
 		<view class="head">
 			<view class="header-wrap">
 				<view class="index-header">
-					<image class="address" src="../../static/images/friendsort.png"></image>
+					<navigator url="./friends_rank">
+					<image class="address" src="../../static/images/通讯录.排行.icon.png"></image>
+					</navigator>
 					<view class="name">
 						<view class="haoyou">好友</view>
 						<view class="guanzhu">关注</view>
@@ -62,6 +64,7 @@
 				height: 60rpx;
 				font-size: 26rpx;
 				margin-top: 20rpx;
+				background-color:#000000;
 			}
 	
 			.name {

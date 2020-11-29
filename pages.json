@@ -691,6 +691,15 @@
             }
             
         }
+        ,{
+            "path" : "pages/friend/friends_rank",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "好友排行",
+                "enablePullDownRefresh": false
+            }
+           
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
