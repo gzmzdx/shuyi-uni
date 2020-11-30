@@ -87,7 +87,7 @@
 
 <style lang="scss" scoped>
 	.top{
-		/* background-color: #007AFF; */
+		// background-color: #007AFF;
 		height: 90rpx;
 		box-shadow: #EDEDED 0rpx 0rpx 0rpx 0rpx;
 	}
