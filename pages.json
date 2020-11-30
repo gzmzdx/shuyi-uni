@@ -3,7 +3,14 @@
 		"^u-(.*)": "@/uview-ui/components/u-$1/u-$1.vue",
 		"^c-(.*)": "@/components/c-$1/index.vue"
 	},
-	"pages": [{
+	"pages": [
+		// {
+		// 	"path": "pages/myinfomation/myinfomation",
+		// 	"style": {
+		// 		"navigationBarTitleText": "信息管理"
+		// 	}
+		// },
+		{
 			"path": "pages/main/main",
 			"style": {
 				"navigationStyle": "custom",
@@ -31,12 +38,14 @@
 			"style": {
 				"navigationBarTitleText": "添加图书"
 			}
-		}, {
+		}, 
+		{
 			"path": "pages/myinfomation/myinfomation",
 			"style": {
 				"navigationBarTitleText": "信息管理"
 			}
-		}, {
+		}, 
+		{
 			"path": "pages/index/publish",
 			"style": {
 				"navigationBarTitleText": "发表"
