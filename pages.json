@@ -700,6 +700,24 @@
             }
            
         }
+        ,{
+            "path" : "pages/friend/friendSearch",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "搜索好友",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/borrow_and_return/borrow_and_returnXQ",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "订单详情",
+                "enablePullDownRefresh": false
+            }
+            
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
