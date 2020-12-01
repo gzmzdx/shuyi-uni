@@ -50,7 +50,7 @@
 					</navigator>
 				</view>
 				<view class="module">
-					<navigator url="../allOrders/index">
+					<navigator url="../appointment/appointment">
 					<image class="tupian" src="../../static/images/icon_preborrow.png"></image>
 					<view class="name">预约</view>
 					</navigator>
