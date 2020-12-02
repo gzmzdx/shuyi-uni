@@ -1,109 +1,179 @@
 <template>
 	<view class="all">
-		<view class="top">
+		<form @submit="formSubmit" >
+		<view class="top" >
 			<view class="topone">头像</view>
-			<view><image class="image" src="../../static/images/头像2.jpg" style="width:120rpx;height: 120rpx;border-radius: 100%;":loading="loading" :disabled="disabled" @click="upload" ></image></view>
-			<!-- <view class="topthree"><image class="imag" src="../../static/images/更多.png" style="width: 30rpx;height: 35rpx;"></image></view> -->
+			<view><image class="image" :src="head_img" style="width:120rpx;height: 120rpx;border-radius: 100%;":loading="loading" :disabled="disabled" @click="upImg()" ></image></view>
 		</view>
 		<view class="br2"></view>
 		<view class="mid">
 			<view class="midone">昵称 :</view>
-			<view class="midone_r"><input placeholder="林思鱼" /></view>
+			<view class="midone_r"><input name="nickname" :value="info.nickname" /></view>
 		</view>
 		<view class="br1"></view>
-		<view class="mid">
+		<view class="mid" v-show="isShow">
 			<view class="midone">手机 :</view>
-			<view class="midone_r"><input placeholder="18927276565" /></view>
+			<view class="midone_r"><input name="phoneNum" :value="info.phone" /></view>
 		</view>
 		<view class="br1"></view>
-		<view class="mid">
+		<view class="mid" >
 			<view class="midone">隐藏手机号 :</view>
-			<view class="midone_TP"><image src="../../static/images/gb.png" style="width: 65rpx;height: 65rpx;"></image></view>
+			<view class="midone_TP">
+				<switch checked @change="switchChange" />
+			</view>
 		</view>
 		<view class="br2"></view>
 		<view class="mid">
 			<view class="midone">邮箱 :</view>
-			<view class="midone_r"><input placeholder="65523355@qq.com" /></view>
+			<view class="midone_r"><input name = "email" :value="info.email" /></view>
 		</view>
 		<view class="br1"></view>
 		<view class="mid">
 			<view class="midone">常用地址 :</view>
-			<view class="midone_r"><input placeholder="上海市松江区亭林镇大叶公路500号" /></view>
+			<view class="midone_r" v-text="info.detail_address"></view>
 		</view>
 		<view class="br2"></view>
 		<view class="mid">
 			<view class="midone">职业 :</view>
-			<view class="midone_r"><input placeholder="教师" /></view>
+			<view class="midone_r"><input name = "occupation" :value="info.occupation" /></view>
 		</view>
 		<view class="br1"></view>
 		<view class="mid">
 			<view class="midone">职称 :</view>
-			<view class="midone_r"><input placeholder="无" /></view>
+			<view class="midone_r"><input name="professional" :value="info.professional" /></view>
 		</view>
 		<view class="br1"></view>
 		<view class="mid">
 			<view class="midone">学历 :</view>
-			<view class="midone_r"><input placeholder="本科" /></view>
+			<view class="midone_r"><input name="education" :value="info.education" /></view>
 		</view>
 		<view class="br3"></view>
-		<!-- <view class="mid_two">
-			<view class="midtwo">常用地址 :</view>
-			<view class="midtwo_r">
-				<textarea placeholder="贵州省贵阳市花溪区XXXXX镇XXXXXX村xxxx组xxxxxxxxx栋xxxxxx层xxxxx" maxlength="100" style="height: 300rpx;width: auto;"></textarea>
-			</view>
-		</view> -->
 		<view class="x">
-		<button class="bc">保存</button>
+			<button form-type="submit" class="bc">保存</button>
 		</view>
+		</form>
 	</view>
 </template>
 
 <script>
 	var _self;
 	export default {
-	 data:{
-	  percent:0,
-	  loading:false,
-	  disabled:false
-	 },
+		data() {
+			return {
+				percent:0,
+				loading:false,
+				disabled:false,
+				isShow:true,//是否隐藏电话号码
+				openId:1 ,//暂时是1
+				info:{},//读者信息
+				token:'token',
+				head_img:'',//头像
+				info:{
+					openId:1
+				}
+				
+			};
+		},
+		onLoad() {
+			this.getReaderInfo();
+		},
 	 methods : {
-	  upload : function(){
-	   _self = this;
-	   uni.chooseImage({
-	    count: 1,
-	    sizeType: ['original', 'compressed'], //可以指定是原图还是压缩图，默认二者都有
-	    sourceType: ['album'], //从相册选择
-	    success: function (res) {
-	     const tempFilePaths = res.tempFilePaths;
-	     const uploadTask = uni.uploadFile({
-	      url : "https://jxsbbx.gzmu.edu.cn/schoolcloud/",
-	      filePath: tempFilePaths[0],
-	      name: 'file',
-		  // fileType: 'image',
-	      formData: {
-	       'user': 'test'
-	      },
-	      success: function (uploadFileRes) {
-	       console.log(uploadFileRes.data);
-	      }
-	     });
-	 
-	     uploadTask.onProgressUpdate(function (res) {
-	      _self.percent = res.progress;
-	      console.log('上传进度' + res.progress);
-	      console.log('已经上传的数据长度' + res.totalBytesSent);
-	      console.log('预期需要上传的数据总长度' + res.totalBytesExpectedToSend);
-	     });
-	    },
-	    error : function(e){
-	     console.log(e);
-	    }
-	   });
-	  }
+		 //获取读者信息
+		 getReaderInfo(){
+		 	var that = this;
+		 	uni.request({
+		 		 // url:getApp().globalData.URL +'api/reader/app?id='+that.openId,
+		 		 url:getApp().globalData.URL +'api/reader/app',
+		 		 data:{
+		 			 id:that.openId,
+		 			 token:that.token,
+		 		 },
+		 		 header: {
+		 		     'content-type': 'application/json;charset=UTF-8' // 默认值
+		 		   },
+		 		 method:'GET',
+		 		 success:res =>{
+		 			that.info=res.data;
+					that.head_img = res.data.avatar
+		 			}
+		 	})
+		 },
+		 //是否隐藏电话号码
+		 switchChange: function (e) {
+			 this.isShow = e.target.value;
+		 },
+		 formSubmit:function(e){
+			var that = this
+			let tmp = JSON.stringify(e.detail.value)
+			console.log('form发生了submit事件，携带数据为：' + JSON.stringify(e.detail.value))
+			var formdata = e.detail.value
+			// 数据校验
+			let reg_tel = /(^$)|(\d{11})|^((\d{7,8})|(\d{4}|\d{3})-(\d{7,8})|(\d{4}|\d{3})-(\d{7,8})-(\d{4}|\d{3}|\d{2}|\d{1})|(\d{7,8})-(\d{4}|\d{3}|\d{2}|\d{1}))$/
+			let reg_email = /(^$)|^\w+((.\w+)|(-\w+))@[A-Za-z0-9]+((.|-)[A-Za-z0-9]+).[A-Za-z0-9]+$/ 
+			//结果标记
+			let sign_tel = RegExp(reg_tel).test(formdata.phoneNum);	
+			let sign_email = RegExp(reg_email).test(formdata.email);
+			if(!sign_tel){
+				this.showModal("请检查电话号码格式");
+			}else if(!sign_email){
+				this.showModal('请检查电子邮箱格式')
+			}else{
+				uni.request({
+					url:getApp().globalData.URL +'api/reader/app?openId='+that.openId+'&headImg='+that.head_img,
+					data: tmp,
+					method: "PUT",
+					success:(res)=> {
+						console.log('idhjeiofhiuhfi',res)
+						if(res.statusCode==200){
+							this.showModal("更改信息成功了！")
+						}else{
+							this.showModal("更改信息失败了！")
+						}
+					},
+					fail:(res)=>{
+						this.showModal("网络错误！")
+					}
+				})
+			}
+			
+		},
+		 //上传图片
+		 upImg(){
+		 	var that = this;
+		 	uni.chooseImage({
+		 	    success: (chooseImageRes) => {
+		 	        const tempFilePaths = chooseImageRes.tempFilePaths;
+		 	        uni.uploadFile({
+		 	            url: getApp().globalData.URL +'api/imgUpload/upload', //仅为示例，非真实的接口地址
+		 	            filePath: tempFilePaths[0],
+		 	            name: 'multipartFile',
+		 	            formData: {
+		 	                'user': 'test'
+		 	            },
+		 	            success: (uploadFileRes) => {
+		 					var datas=JSON.parse(uploadFileRes.data);
+		 					if(datas.errno==0){
+								this.showModal("头像已上传！")
+		 						that.head_img = getApp().globalData.URL+"upload/图片/" + datas.data[0];
+		 					}else{
+								this.showModal("图片上传失败了！")
+		 						}
+		 					},
+						fail:(res)=>{
+							this.showModal("网络错误！")
+						}
+		 	        });
+		 	    }
+		 	});
+		 },
+		 //提示框
+		 showModal(val){
+			 uni.showToast({
+			 	title: val,
+			 	icon: 'none'
+			 });
+		 },
 	 },
-	    onLoad:function(){
-	  
-	    }
 	}
 </script>
 

@@ -8,7 +8,14 @@
 		},
 		onHide: function() {
 			console.log('App Hide')
-		}
+		},
+		
+		globalData: {
+		    userInfo: {},
+			URL: "http://localhost:8000/",
+			token: '',
+			num:''
+		 },
 	}
 </script>
 
