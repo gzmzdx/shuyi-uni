@@ -153,7 +153,7 @@
 		font-size: 28rpx;
 		margin-top: 100rpx;
 		width: 500rpx;
-		background-color: #00BFFF;
+		background-color: #4658F6;
 	}
 	.one{
 		align-items: center;

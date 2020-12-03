@@ -28,12 +28,10 @@
 							<view class="mz">肖石榴</view>
 						</view>
 					</navigator>
-					<navigator url="../privateSpace/privateSpace">
 						<view class="tr">
 							<image class="ima" src="../../static/images/after.jpg" style="width: 120rpx;height: 120rpx;border-radius: 50%;"></image>
 							<view class="mz">肖石榴</view>
 						</view>
-					</navigator>
 						<view class="tr">
 							<image class="ima" src="../../static/images/after.jpg" style="width: 120rpx;height: 120rpx;border-radius: 50%;"></image>
 							<view class="mz">肖石榴</view>

@@ -17,7 +17,7 @@
 			<view class="midone">
 				<navigator url="mycollbook">
 				<view class="zhengti">
-					<image class="imag" src="../../static/images/我的喜欢.png" style="width: 150rpx; height: 150rpx;"></image>
+					<image src="../../static/images/我的喜欢.png" style="width: 150rpx; height: 150rpx;"></image>
 					<view class="midwz">我的最爱</view>
 				</view>
 				<view class="shumu">100本</view>
@@ -26,7 +26,7 @@
 			<view class="midone">
 				<navigator url="mycollbook">
 				<view class="zhengti">
-					<image class="imag" src="../../static/images/书1.jpg" style="width: 150rpx; height: 150rpx;"></image>
+					<image src="../../static/images/书1.jpg" style="width: 150rpx; height: 150rpx;"></image>
 					<view class="midwz">mybook</view>
 				</view>
 				<view class="shumu">500本</view>
@@ -35,7 +35,7 @@
 			<view class="midone">
 				<navigator url="mycollbook">
 				<view class="zhengti">
-					<image class="imag" src="../../static/images/after.jpg" style="width: 150rpx; height: 150rpx;"></image>
+					<image src="../../static/images/after.jpg" style="width: 150rpx; height: 150rpx;"></image>
 					<view class="midwz">呵呵哈哈哈哈哈哈</view>
 				</view>
 				<view class="shumu">50本</view>
@@ -91,6 +91,7 @@
 } */
 .zhengti {
 	display: flex;
+	margin-left:20rpx;
 	/* background-color: #4CD964; */
 }
 .imag{

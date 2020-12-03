@@ -4,10 +4,11 @@
 			<view class="zt"><view class="zt1">广东图书馆</view></view>
 			<view class="midone">
 				<view class="zhengti">
-					<image class="imag" src="../../static/images/书2.jpg" style="width: 125rpx; height: 170rpx;"></image>
+					<image src="../../static/images/书2.jpg" style="width: 125rpx; height: 170rpx;"></image>
 					<view class="midwz">致敬老师</view>
 				</view>
 				<view>
+					<!-- <view class="midwz">致敬老师</view> -->
 					<view class="s1">
 						预约时间：2017-11-08
 						<image style="width: 30rpx; height: 30rpx;" src="../../static/images/dingwei.png"></image>
@@ -32,7 +33,7 @@
 			<view class="zt"><view class="zt1">广州图书馆</view></view>
 			<view class="midone">
 				<view class="zhengti">
-					<image class="imag" src="../../static/images/书2.jpg" style="width: 125rpx; height: 170rpx;"></image>
+					<image src="../../static/images/书2.jpg" style="width: 125rpx; height: 170rpx;"></image>
 					<view class="midwz">致敬老师</view>
 				</view>
 				<view>
@@ -58,7 +59,7 @@
 			<view class="zt"><view class="zt1">广东图书馆</view></view>
 			<view class="midone">
 				<view class="zhengti">
-					<image class="imag" src="../../static/images/书2.jpg" style="width: 125rpx; height: 170rpx;"></image>
+					<image src="../../static/images/书2.jpg" style="width: 125rpx; height: 170rpx;"></image>
 					<view class="midwz">致敬老师</view>
 				</view>
 				<view>
@@ -129,6 +130,7 @@ export default {
 .zhengti {
 	display: flex;
 	width: 100%;
+	margin-left: 30rpx;
 }
 .imag {
 	margin-left: 30rpx;
@@ -145,7 +147,7 @@ export default {
 .s1 {
 	font-size: 20rpx;
 	height: 35rpx;
-	margin-top: -120rpx;
+	margin-top: -130rpx;
 	align-items: center;
 	margin-left: 190rpx;
 	color: #999999;

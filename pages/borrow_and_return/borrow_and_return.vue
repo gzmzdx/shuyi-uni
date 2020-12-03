@@ -17,21 +17,12 @@
 				</view>
 				<view class="xq">
 					<view class="midwz">致敬老师</view>
-					<!-- <view class="s1">
-						预约时间：2017-7-08
-						<image style="width: 30rpx; height: 30rpx;" src="../../static/images/dingwei.png"></image>
-						<view class="s6">1.2km</view>
-					</view> -->
 					<view class="s2">借入时间：2017-08-10</view>
 					<view class="s7">
 						<view class="s3">还书时间：2017-09-10</view>
 						<view class="s4">
-							<!-- 当前状态： -->
-							配送方式：
-							<!-- 书易配送 -->
-							<!-- 物流配送 -->
-							<!-- 读者自提 -->
-							<view class="s5">书易配送</view>
+							承运快递：
+							<view class="s5">书易物流</view>
 						</view>
 						<view class="s8">
 							<navigator url="./borrow_and_returnXQ">
@@ -49,21 +40,12 @@
 					</view>
 					<view class="xq">
 						<view class="midwz">致敬老师</view>
-						<!-- <view class="s1">
-							预约时间：2017-7-08
-							<image style="width: 30rpx; height: 30rpx;" src="../../static/images/dingwei.png"></image>
-							<view class="s6">1.2km</view>
-						</view> -->
 						<view class="s2">借入时间：2017-08-10</view>
 						<view class="s7">
 							<view class="s3">还书时间：2017-09-10</view>
 							<view class="s4">
-								<!-- 当前状态： -->
-								配送方式：
-								<!-- 书易配送 -->
-								<!-- 物流配送 -->
-								<!-- 读者自提 -->
-								<view class="s5">物流配送</view>
+								承运快递：
+								<view class="s5">顺丰速运</view>
 							</view>
 							<view class="s8">
 								<navigator url="./borrow_and_returnXQ">
@@ -81,20 +63,11 @@
 					</view>
 					<view class="xq">
 						<view class="midwz">致敬老师</view>
-						<!-- <view class="s1">
-							预约时间：2017-7-08
-							<image style="width: 30rpx; height: 30rpx;" src="../../static/images/dingwei.png"></image>
-							<view class="s6">1.2km</view>
-						</view> -->
 						<view class="s2">借入时间：2017-08-10</view>
 						<view class="s7">
 							<view class="s3">还书时间：2017-09-10</view>
 							<view class="s4">
-								<!-- 当前状态： -->
-								配送方式：
-								<!-- 书易配送 -->
-								<!-- 物流配送 -->
-								<!-- 读者自提 -->
+								承运快递：
 								<view class="s5">读者自提</view>
 							</view>
 							<view class="s8">
@@ -106,11 +79,51 @@
 					</view>
 				</view>
 			<!-- 下一个 -->
-			
+				<view class="midone">
+					<view class="zhengti">
+						<image src="../../static/images/书1.jpg" style="width: 140rpx;height: 180rpx;"></image>
+					</view>
+					<view class="xq">
+						<view class="midwz">致敬老师</view>
+						<view class="s2">借入时间：2017-08-10</view>
+						<view class="s7">
+							<view class="s3">还书时间：2017-09-10</view>
+							<view class="s4">
+								承运快递：
+								<view class="s5">读者自提</view>
+							</view>
+							<view class="s8">
+								<navigator url="./borrow_and_returnXQ">
+									<button class="btn1"><view class="wz">查看详情</view></button>
+								</navigator>
+							</view>
+						</view>
+					</view>
+				</view>
 			<!-- 下一个 -->
-			
+				<view class="midone">
+					<view class="zhengti">
+						<image src="../../static/images/书1.jpg" style="width: 140rpx;height: 180rpx;"></image>
+					</view>
+					<view class="xq">
+						<view class="midwz">致敬老师</view>
+						<view class="s2">借入时间：2017-08-10</view>
+						<view class="s7">
+							<view class="s3">还书时间：2017-09-10</view>
+							<view class="s4">
+								承运快递：
+								<view class="s5">读者自提</view>
+							</view>
+							<view class="s8">
+								<navigator url="./borrow_and_returnXQ">
+									<button class="btn1"><view class="wz">查看详情</view></button>
+								</navigator>
+							</view>
+						</view>
+					</view>
+				</view>
 			<!-- 刷新 -->
-		<!-- <view class="bt"><button style="background-color: #00BFFF;">刷新</button></view> -->
+		<view class="bt"><button style="background-color: #00BFFF;">刷新</button></view>
 	</view>
 	</view>
 </template>
