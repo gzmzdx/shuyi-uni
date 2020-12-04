@@ -15,25 +15,25 @@
 </template>
 
 <script>
-	/**
-	 * tag 提示
-	 * @description 该组件一般用于标记和选择
-	 * @tutorial https://www.uviewui.com/components/tag.html
-	 * @property {String} type 主题类型（默认primary）
-	 * @property {String} size 标签大小（默认default）
-	 * @property {String} shape 标签形状（默认square）
-	 * @property {String} text 标签的文字内容
-	 * @property {String} bg-color 自定义标签的背景颜色
-	 * @property {String} border-color 标签的边框颜色
-	 * @property {String} close-color 关闭按钮的颜色
-	 * @property {String Number} index 点击标签时，会通过click事件返回该值
-	 * @property {String} mode 模式选择，见官网说明（默认light）
-	 * @property {Boolean} closeable 是否可关闭，设置为true，文字右边会出现一个关闭图标（默认false）
-	 * @property {Boolean} show 标签显示与否（默认true）
-	 * @event {Function} click 点击标签触发
-	 * @event {Function} close closeable为true时，点击标签关闭按钮触发
-	 * @example <u-tag text="雪月夜" type="success" />
-	 */
+	// *
+	//  * tag 提示
+	//  * @description 该组件一般用于标记和选择
+	//  * @tutorial https://www.uviewui.com/components/tag.html
+	//  * @property {String} type 主题类型（默认primary）
+	//  * @property {String} size 标签大小（默认default）
+	//  * @property {String} shape 标签形状（默认square）
+	//  * @property {String} text 标签的文字内容
+	//  * @property {String} bg-color 自定义标签的背景颜色
+	//  * @property {String} border-color 标签的边框颜色
+	//  * @property {String} close-color 关闭按钮的颜色
+	//  * @property {String Number} index 点击标签时，会通过click事件返回该值
+	//  * @property {String} mode 模式选择，见官网说明（默认light）
+	//  * @property {Boolean} closeable 是否可关闭，设置为true，文字右边会出现一个关闭图标（默认false）
+	//  * @property {Boolean} show 标签显示与否（默认true）
+	//  * @event {Function} click 点击标签触发
+	//  * @event {Function} close closeable为true时，点击标签关闭按钮触发
+	//  * @example <u-tag text="雪月夜" type="success" />
+	
 	export default {
 		name: 'u-tag',
 		// 是否禁用这个标签，禁用的话，会屏蔽点击事件
