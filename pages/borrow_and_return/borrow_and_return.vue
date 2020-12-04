@@ -1,5 +1,6 @@
 <template>
 	<view>
+		<!-- 搜索框开始 -->
 	<view class="top">
 	<view class="header-input">
 		<input @input="goToSearch" placeholder="输入书名查找" placeholderStyle="color:#BBBBBB" type="text"></input>
@@ -9,102 +10,45 @@
 		</view>
 	</view>
 	</view>
+	<!-- 搜索框结束 -->
 	<view class="show">
-			<!-- <view class="zt"><view class="zt1">广州图书馆</view></view> -->
-			<view class="main">
-				<view v-for="(item, index) in csListArrl" :key="index" :data-index="index"  class="order-item"   @touchstart="drawStart" @touchmove="drawMove"  @touchend="drawEnd"  :style="'right:'+item.right+'px'">
-			<view class="content">
-				<view class="zhengti">
-					<image src="../../static/images/书1.jpg" style="width: 140rpx;height: 180rpx;"></image>
-				</view>
-				<view class="xq">
-					<view class="midwz">致敬老师</view>
-					<view class="s2">借入时间：2017-08-10</view>
-					<view class="s7">
-						<view class="s3">还书时间：2017-09-10</view>
-						<view class="s4">
-							承运快递：
-							<view class="s5">书易物流</view>
+			<!-- 第一个 -->
+				<view class="main">
+					<view v-for="(item, index) in csListArrl" :key="index" :data-index="index"  class="order-item"   @touchstart="drawStart" @touchmove="drawMove"  @touchend="drawEnd"  :style="'right:'+item.right+'px'">
+						<view class="content">
+							<view class="zhengti">
+								<image src="../../static/images/书1.jpg" style="width: 140rpx;height: 180rpx;"></image>
+							</view>
+							<view class="xq">
+								<view class="midwz">致敬老师</view>
+								<view class="s2">借入时间：2017-08-10</view>
+								<!-- <view class="s7"> -->
+								<view class="s3">还书时间：2017-09-10</view>
+								<view class="s4">
+									承运快递：
+									<view class="s5">书易物流</view>
+								</view>
+								<view class="s8">
+									<navigator url="./borrow_and_returnXQ">
+										<button class="btn1"><view class="wz">查看详情</view></button>
+									</navigator>
+								</view>
+							</view>
 						</view>
-						<view class="s8">
-							<navigator url="./borrow_and_returnXQ">
-								<button class="btn1"><view class="wz">查看详情</view></button>
-							</navigator>
-						</view>
+						<view class="remove" @click="delData(item)">删除</view>
 					</view>
 				</view>
-			</view>
-			<view class="remove" @click="delData(item)">删除</view>
-			</view>
-		</view>	
-			
 			<!--下一个开始-->
-			<view class="main">
-					<view v-for="(item, index) in csListArrl" :key="index" :data-index="index"  class="order-item"   @touchstart="drawStart" @touchmove="drawMove"  @touchend="drawEnd"  :style="'right:'+item.right+'px'">
-				<view class="content">
-					<view class="zhengti">
-						<image src="../../static/images/书1.jpg" style="width: 140rpx;height: 180rpx;"></image>
-					</view>
-					<view class="xq">
-						<view class="midwz">致敬老师</view>
-						<view class="s2">借入时间：2017-08-10</view>
-						<view class="s7">
-							<view class="s3">还书时间：2017-09-10</view>
-							<view class="s4">
-								承运快递：
-								<view class="s5">书易物流</view>
-							</view>
-							<view class="s8">
-								<navigator url="./borrow_and_returnXQ">
-									<button class="btn1"><view class="wz">查看详情</view></button>
-								</navigator>
-							</view>
-						</view>
-					</view>
-				</view>
-				<view class="remove" @click="delData(item)">删除</view>
-				</view>
-			</view>
-				
-			<!-- 下一个 -->
-			<view class="main">
-					<view v-for="(item, index) in csListArrl" :key="index" :data-index="index"  class="order-item"   @touchstart="drawStart" @touchmove="drawMove"  @touchend="drawEnd"  :style="'right:'+item.right+'px'">
-				<view class="content">
-					<view class="zhengti">
-						<image src="../../static/images/书1.jpg" style="width: 140rpx;height: 180rpx;"></image>
-					</view>
-					<view class="xq">
-						<view class="midwz">致敬老师</view>
-						<view class="s2">借入时间：2017-08-10</view>
-						<view class="s7">
-							<view class="s3">还书时间：2017-09-10</view>
-							<view class="s4">
-								承运快递：
-								<view class="s5">书易物流</view>
-							</view>
-							<view class="s8">
-								<navigator url="./borrow_and_returnXQ">
-									<button class="btn1"><view class="wz">查看详情</view></button>
-								</navigator>
-							</view>
-						</view>
-					</view>
-				</view>
-				<view class="remove" @click="delData(item)">删除</view>
-				</view>
-			</view>
-				
-			<!-- 下一个 -->
 				<view class="main">
-						<view v-for="(item, index) in csListArrl" :key="index" :data-index="index"  class="order-item"   @touchstart="drawStart" @touchmove="drawMove"  @touchend="drawEnd"  :style="'right:'+item.right+'px'">
-					<view class="content">
-						<view class="zhengti">
-							<image src="../../static/images/书1.jpg" style="width: 140rpx;height: 180rpx;"></image>
-						</view>
-						<view class="xq">
-							<view class="midwz">致敬老师</view>
-							<view class="s2">借入时间：2017-08-10</view>
-							<view class="s7">
+					<view v-for="(item, index) in csListArrl" :key="index" :data-index="index"  class="order-item"   @touchstart="drawStart" @touchmove="drawMove"  @touchend="drawEnd"  :style="'right:'+item.right+'px'">
+						<view class="content">
+							<view class="zhengti">
+								<image src="../../static/images/书1.jpg" style="width: 140rpx;height: 180rpx;"></image>
+							</view>
+							<view class="xq">
+								<view class="midwz">致敬老师</view>
+								<view class="s2">借入时间：2017-08-10</view>
+								<!-- <view class="s7"> -->
 								<view class="s3">还书时间：2017-09-10</view>
 								<view class="s4">
 									承运快递：
@@ -117,21 +61,20 @@
 								</view>
 							</view>
 						</view>
-					</view>
-					<view class="remove" @click="delData(item)">删除</view>
+						<view class="remove" @click="delData(item)">删除</view>
 					</view>
 				</view>
 			<!-- 下一个 -->
 				<view class="main">
-						<view v-for="(item, index) in csListArrl" :key="index" :data-index="index"  class="order-item"   @touchstart="drawStart" @touchmove="drawMove"  @touchend="drawEnd"  :style="'right:'+item.right+'px'">
-					<view class="content">
-						<view class="zhengti">
-							<image src="../../static/images/书1.jpg" style="width: 140rpx;height: 180rpx;"></image>
-						</view>
-						<view class="xq">
-							<view class="midwz">致敬老师</view>
-							<view class="s2">借入时间：2017-08-10</view>
-							<view class="s7">
+					<view v-for="(item, index) in csListArrl" :key="index" :data-index="index"  class="order-item"   @touchstart="drawStart" @touchmove="drawMove"  @touchend="drawEnd"  :style="'right:'+item.right+'px'">
+						<view class="content">
+							<view class="zhengti">
+								<image src="../../static/images/书1.jpg" style="width: 140rpx;height: 180rpx;"></image>
+							</view>
+							<view class="xq">
+								<view class="midwz">致敬老师</view>
+								<view class="s2">借入时间：2017-08-10</view>
+								<!-- <view class="s7"> -->
 								<view class="s3">还书时间：2017-09-10</view>
 								<view class="s4">
 									承运快递：
@@ -144,8 +87,59 @@
 								</view>
 							</view>
 						</view>
+						<view class="remove" @click="delData(item)">删除</view>
 					</view>
-					<view class="remove" @click="delData(item)">删除</view>
+				</view>
+			<!-- 下一个 -->
+				<view class="main">
+					<view v-for="(item, index) in csListArrl" :key="index" :data-index="index"  class="order-item"   @touchstart="drawStart" @touchmove="drawMove"  @touchend="drawEnd"  :style="'right:'+item.right+'px'">
+						<view class="content">
+							<view class="zhengti">
+								<image src="../../static/images/书1.jpg" style="width: 140rpx;height: 180rpx;"></image>
+							</view>
+							<view class="xq">
+								<view class="midwz">致敬老师</view>
+								<view class="s2">借入时间：2017-08-10</view>
+								<!-- <view class="s7"> -->
+								<view class="s3">还书时间：2017-09-10</view>
+								<view class="s4">
+									承运快递：
+									<view class="s5">书易物流</view>
+								</view>
+								<view class="s8">
+									<navigator url="./borrow_and_returnXQ">
+										<button class="btn1"><view class="wz">查看详情</view></button>
+									</navigator>
+								</view>
+							</view>
+						</view>
+						<view class="remove" @click="delData(item)">删除</view>
+					</view>
+				</view>
+			<!-- 下一个 -->
+				<view class="main">
+					<view v-for="(item, index) in csListArrl" :key="index" :data-index="index"  class="order-item"   @touchstart="drawStart" @touchmove="drawMove"  @touchend="drawEnd"  :style="'right:'+item.right+'px'">
+						<view class="content">
+							<view class="zhengti">
+								<image src="../../static/images/书1.jpg" style="width: 140rpx;height: 180rpx;"></image>
+							</view>
+							<view class="xq">
+								<view class="midwz">致敬老师</view>
+								<view class="s2">借入时间：2017-08-10</view>
+								<!-- <view class="s7"> -->
+								<view class="s3">还书时间：2017-09-10</view>
+								<view class="s4">
+									承运快递：
+									<view class="s5">书易物流</view>
+								</view>
+								<view class="s8">
+									<navigator url="./borrow_and_returnXQ">
+										<button class="btn1"><view class="wz">查看详情</view></button>
+									</navigator>
+								</view>
+							</view>
+						</view>
+						<view class="remove" @click="delData(item)">删除</view>
 					</view>
 				</view>
 			<!-- 刷新 -->
@@ -225,10 +219,8 @@
 <style>
 /* 搜索框 */
 .top{
-		/* background-color: #007AFF; */
 		height: 90rpx;
 		border-bottom: 1rpx solid #EBEBEB;
-		/* box-shadow: #EDEDED 0rpx 0rpx 0rpx 0rpx; */
 	}
 	.header-input {
 	    margin-left: 28rpx;
@@ -247,7 +239,6 @@
 	    width: 564rpx;
 	    height: 66rpx;
 	    line-height: 66rpx;
-	    /* border-right: 1rpx solid #dfdfdf; */
 	    font-size: 28rpx;
 	}
 	
@@ -268,15 +259,20 @@
 	height: auto;
 }
 .bt {
-	/* margin-top: 1045rpx; */
+	background-color: #5251F5;
+	position:fixed;
+	bottom: 0;
+	width:100%;
+	border-radius: 0rpx;
+}
+.bt button{
+	color: #FFFFFF;
 }
 
 .zt1 {
 	color: #f0ad4e;
 	font-size: 28rpx;
 	margin-left: 30rpx;
-	/* line-height: center; */
-	/* margin-top: 25rpx; */
 }
 .zt {
 	border-bottom: 1rpx solid #EBEBEB;
@@ -284,21 +280,10 @@
 	height: 60rpx;
 	color: #bbbbbb;
 }
-.midone {
-	display: flex;
-	/* width: 100%; */
-	height: 210rpx;
-	font-size: 30rpx;
-	margin-top: 35rpx;
-	/* align-items: center; */
-	/* background-color: #00BFFF; */
-	border-bottom: 1rpx solid #EBEBEB;
-}
 .zhengti {
 	margin-left: 30rpx;
 	width: 125rpx;
 	height: 170rpx;
-	/* background-color: #0066CC; */
 }
 .xq{
 	margin-left: 40rpx;
@@ -353,11 +338,12 @@
 	color: #dd524d;
 }
 
-.s7 {
+/* .s7 {
 	height: 35rpx;
 	align-items: center;
 	width: auto;
-}
+	background-color: #000000;
+} */
 
 .s8 {
 	margin-top: 20rpx;
@@ -380,15 +366,13 @@
 	text-align: center;
 	position: absolute;
 }
-.bt button{
-	color: #FFFFFF;
-}
+
 /* 滑动删除 */
 	.main{
-		border: 1rpx solid #C0C0C0;
+		border: 1rpx solid #F3F3F3;
 	   /* width: 90%; */
 	    height: auto;
-	    /* margin: 10px auto; */
+	    /* margin: 20px auto; */
 	    overflow: hidden;
 	}
 	.order-item {
@@ -404,7 +388,7 @@
 		/* background-color: #0066CC; */
 	    /* width: 100%; */
 	    height: 100px;
-	    margin: 0 auto;
+	    /* margin: 20 auto; */
 	    /* border: 1px solid #C0C0C0; */
 	    /* line-height: 100px; */
 	    /* text-align: center; */
