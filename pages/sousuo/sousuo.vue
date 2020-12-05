@@ -5,10 +5,12 @@
 		<view class="tab1" style="width: 100%; height: 90rpx;">
 			<image class="back" src="../../static/images/向左箭头.二级.返回@2x.png" style="width: 64rpx; height: 64rpx;"></image>
 			<view class="tit1">图书搜索</view>
+			<!-- #ifdef APP-PLUS -->
 			<image class="im"  src="../../static/images/附近的书.定位.icon@2x.png" style="width: 48rpx; height: 48rpx;"></image>
 			<navigator url="fujin">
 			<view class="tit2">附近的书</view>
 			</navigator>
+			<!-- #endif -->
 			</view>
 			<!-- 搜索框 -->
 			<view class="tit">
