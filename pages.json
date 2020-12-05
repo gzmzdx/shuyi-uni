@@ -3,7 +3,14 @@
 		"^u-(.*)": "@/uview-ui/components/u-$1/u-$1.vue",
 		"^c-(.*)": "@/components/c-$1/index.vue"
 	},
-	"pages": [{
+	"pages": [
+		// {
+		// 	"path": "pages/myinfomation/myinfomation",
+		// 	"style": {
+		// 		"navigationBarTitleText": "信息管理"
+		// 	}
+		// },
+		{
 			"path": "pages/main/main",
 			"style": {
 				"navigationStyle": "custom",
@@ -31,12 +38,14 @@
 			"style": {
 				"navigationBarTitleText": "添加图书"
 			}
-		}, {
+		}, 
+		{
 			"path": "pages/myinfomation/myinfomation",
 			"style": {
 				"navigationBarTitleText": "信息管理"
 			}
-		}, {
+		}, 
+		{
 			"path": "pages/index/publish",
 			"style": {
 				"navigationBarTitleText": "发表"
@@ -706,8 +715,36 @@
             
         }
         ,{
+<<<<<<< HEAD
             "path" : "pages/order/order",
             "style" : {}
+=======
+            "path" : "pages/friend/friends_rank",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "好友排行",
+                "enablePullDownRefresh": false
+            }
+           
+        }
+        ,{
+            "path" : "pages/friend/friendSearch",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "搜索好友",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/borrow_and_return/borrow_and_returnXQ",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "订单详情",
+                "enablePullDownRefresh": false
+            }
+            
+>>>>>>> b1a3f59ae74237d17529bbb09cd1e664e7d131dd
         }
     ],
 	"globalStyle": {

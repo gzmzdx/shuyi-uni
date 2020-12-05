@@ -11,7 +11,7 @@
 		<view class="midone">
 			
 			<view class="zhengti">
-				<image class="imag" src="../../static/images/书2.jpg" style="width: 125rpx; height: 170rpx;"></image>
+				<image src="../../static/images/书2.jpg" style="width: 125rpx; height: 170rpx;"></image>
 				<view class="midwz">致敬老师</view>
 				
 			</view>
@@ -41,7 +41,7 @@
 			<view class="midone">
 				
 				<view class="zhengti">
-					<image class="imag" src="../../static/images/书2.jpg" style="width: 125rpx; height: 170rpx;"></image>
+					<image src="../../static/images/书2.jpg" style="width: 125rpx; height: 170rpx;"></image>
 					<view class="midwz">致敬老师</view>
 					
 				</view>
@@ -71,7 +71,7 @@
 			<view class="midone">
 				
 				<view class="zhengti">
-					<image class="imag" src="../../static/images/书2.jpg" style="width: 125rpx; height: 170rpx;"></image>
+					<image src="../../static/images/书2.jpg" style="width: 125rpx; height: 170rpx;"></image>
 					<view class="midwz">致敬老师</view>
 					
 				</view>
@@ -143,6 +143,7 @@
 	.zhengti {
 		display: flex;
 		width: 100%;
+		margin-left:30rpx;
 	}
 	.imag{
 		margin-left:30rpx;
@@ -159,7 +160,7 @@
 	.s1{
 		font-size: 20rpx;
 		height:35rpx;
-		margin-top: -120rpx;
+		margin-top: -130rpx;
 		align-items: center;
 		margin-left: 190rpx;
 		color: #999999;
