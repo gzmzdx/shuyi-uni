@@ -11,6 +11,10 @@
 			<view class="tit2">附近的书</view>
 			</navigator>
 			<!-- #endif -->
+			<image class="im"  src="../../static/images/附近的书.定位.icon@2x.png" style="width: 48rpx; height: 48rpx;"></image>
+			<navigator url="fujin">
+			<view class="tit2">附近的书</view>
+			</navigator>
 			</view>
 			<!-- 搜索框 -->
 			<view class="tit">
