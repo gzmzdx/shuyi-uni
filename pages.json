@@ -158,9 +158,19 @@
 			}
 		},
 		{
+			"path": "pages/return-books/return-books",
+			"style": {
+				"navigationBarTitleText": "还书",
+				"navigationBarBackgroundColor":"#6C40F3"
+				
+			}
+		},
+		{
 			"path": "pages/appointment/appointment",
 			"style": {
-				"navigationBarTitleText": "预约"
+				"navigationBarTitleText": "预约",
+				"navigationBarBackgroundColor":"#6C40F3"
+				
 			}
 		},
 
@@ -179,13 +189,17 @@
 		{
 			"path": "pages/appointment/confirm",
 			"style": {
-				"navigationBarTitleText": "确认收货"
+				"navigationBarTitleText": "确认收货",
+				"navigationBarBackgroundColor":"#6C40F3"
 			}
 		},
 		{
 			"path": "pages/appointment/logistics",
 			"style": {
-				"navigationBarTitleText": "查看物流"
+				// "navigationStyle": custom
+				"navigationBarTitleText":"物流查看",
+				"navigationBarBackgroundColor":"#6C40F3"
+				// "backgroundColor":"#F8F8F8"
 			}
 		},
 		{
@@ -701,6 +715,10 @@
             
         }
         ,{
+<<<<<<< HEAD
+            "path" : "pages/order/order",
+            "style" : {}
+=======
             "path" : "pages/friend/friends_rank",
             "style" :                                                                                    
             {
@@ -726,6 +744,10 @@
                 "enablePullDownRefresh": false
             }
             
+<<<<<<< HEAD
+=======
+>>>>>>> b1a3f59ae74237d17529bbb09cd1e664e7d131dd
+>>>>>>> d42648c364c006f97c820b10165618579dc1520d
         }
     ],
 	"globalStyle": {
