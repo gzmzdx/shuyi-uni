@@ -715,10 +715,10 @@
             
         }
         ,{
-<<<<<<< HEAD
-            "path" : "pages/order/order",
-            "style" : {}
-=======
+// <<<<<<< HEAD
+//             "path" : "pages/order/order",
+//             "style" : {}
+// =======
             "path" : "pages/friend/friends_rank",
             "style" :                                                                                    
             {
@@ -745,6 +745,10 @@
             }
             
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> b1a3f59ae74237d17529bbb09cd1e664e7d131dd
+>>>>>>> d42648c364c006f97c820b10165618579dc1520d
 =======
 >>>>>>> b1a3f59ae74237d17529bbb09cd1e664e7d131dd
 >>>>>>> d42648c364c006f97c820b10165618579dc1520d

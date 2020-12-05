@@ -16,15 +16,21 @@
 					<image class="imag" src="../../static/images/ap.jpg" style="width: 206rpx; height: 258rpx;"></image>
 				</view>
 				<view>
+<<<<<<< HEAD
 <!-- <<<<<<< HEAD -->
 					<view class="book-name">大数据与机器学习</view>
 <!-- =======
+=======
+>>>>>>> d42648c364c006f97c820b10165618579dc1520d
 <<<<<<< HEAD
 					<view class="book-name">书的名字</view>
 =======
 					<view class="book-name">大数据与机器学习</view>
 >>>>>>> b1a3f59ae74237d17529bbb09cd1e664e7d131dd
+<<<<<<< HEAD
 >>>>>>> d42648c364c006f97c820b10165618579dc1520d -->
+=======
+>>>>>>> d42648c364c006f97c820b10165618579dc1520d
 					<view class="s1">预约时间：
 						<view class="s6">2018-08-20</view>
 					</view>
@@ -47,6 +53,7 @@
 							<view  style="margin-left: 20rpx; margin-top: 5rpx;">确认收货</view>
 						</view>
 						<view class="three">
+<<<<<<< HEAD
 <!-- <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -57,6 +64,10 @@
 							<view  style="margin-left: 20rpx; margin-top: 5rpx;">查看物流</view>
 							</navigator>
 <!-- >>>>>>> b1a3f59ae74237d17529bbb09cd1e664e7d131dd -->
+
+							<navigator url="./logistics">
+							<view  style="margin-left: 20rpx; margin-top: 5rpx;">查看物流</view>
+							</navigator>
 						</view>
 					</view>
 				</view>
