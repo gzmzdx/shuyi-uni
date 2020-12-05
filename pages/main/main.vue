@@ -50,8 +50,13 @@
 					</navigator>
 				</view>
 				<view class="module">
+<!-- <<<<<<< HEAD
 					<navigator url="../allOrders/index">
 					<image class="tupian" src="../../static/images/预约.icon@2x.png"></image>
+======= -->
+					<navigator url="../appointment/appointment">
+					<image class="tupian" src="../../static/images/预约.icon@2x.png"></image>
+<!-- >>>>>>> b1a3f59ae74237d17529bbb09cd1e664e7d131dd -->
 					<view class="name">预约</view>
 					</navigator>
 				</view>

@@ -87,17 +87,19 @@
 			
 			<!-- 分割线br1 -->
 			<view class="br1"></view>
-			<view class="class1">
-				<image class="tupian" src="../../static/images/中心.读书历史.icon.png"></image>
-				<view class="neirong">读书历史</view>
-				<image class="img2" src="../../static/images/right_arrow.png"></image>
-			</view>
-			<!-- 分割线br1 -->
-			<view class="br1"></view>
 			<navigator url="../borrow_and_return/borrow_and_return">
 			<view class="class1">
-				<image class="tupian" src="../../static/images/jiehuanjilu.png"></image>
+				<image class="tupian" src="../../static/images/中心.读书历史.icon.png"></image>
 				<view class="neirong">借还记录</view>
+				<image class="img2" src="../../static/images/right_arrow.png"></image>
+			</view>
+			</navigator>
+			<!-- 分割线br1 -->
+			<view class="br1"></view>
+			<navigator url="../my_reserve/my_reserve">
+			<view class="class1">
+				<image class="tupian" src="../../static/images/jiehuanjilu.png"></image>
+				<view class="neirong">预约记录</view>
 				<image class="img2" src="../../static/images/right_arrow.png"></image>
 			</view>
 			</navigator>

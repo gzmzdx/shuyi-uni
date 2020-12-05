@@ -2,20 +2,20 @@
 	<view>
 		<view class="top">
 			<view class="tou">
-				<image class="topimage" src="../../static/images/userface.png" style="width: 135rpx;height: 135rpx;border-radius: 50%;"></image>
+				<image class="topimage" :src="info.avatar" style="width: 135rpx;height: 135rpx;border-radius: 50%;"></image>
 			</view>
 			<view class="bn">
-				<text class="name">爱丽丝</text>
+				<view class="name" v-text="info.nickname">爱丽丝</view>
 			</view>
 			<!-- <view class="Grade">
 				等级
 			</view> -->
 			<view class="dd">
-				<view class="didian">广州</view>
+				<view class="didian" v-text="info.city">广州</view>
 			</view>
 			<!-- 个性签名 -->
 			<view class="gq">
-				<view class="qianmin">书上有路，学海无涯</view>
+				<view class="qianmin" v-text="info.signature">书上有路，学海无涯</view>
 			</view>
 			<navigator url="../myinfomation/myinfomation">
 			<view class="genduo">
@@ -28,10 +28,10 @@
 			<view class="wz">
 				最近读书
 			</view>
-			<view class="book">
-				<image class="bookone"src="../../static/images/书3.jpg" style="width: 120rpx;height: 150rpx;"></image>
+			<view class="book" v-for="b in book">
+				<image class="bookone" :src="b.picture_path" style="width: 120rpx;height: 150rpx;"></image>
 			</view>
-			<view class="book">
+			<!-- <view class="book">
 				<image class="bookone"src="../../static/images/书1.jpg" style="width: 120rpx;height: 150rpx;"></image>
 			</view>
 			<view class="book">
@@ -42,7 +42,7 @@
 			</view>
 			<view class="book">
 				<image class="bookone"src="../../static/images/书2.jpg" style="width: 120rpx;height: 150rpx;"></image>
-			</view>
+			</view> -->
 		</view>
 	</view>
 </template>
@@ -51,11 +51,40 @@
 	export default {
 		data() {
 			return {
-				
+				openId:1 ,//暂时是1
+				info:{},//读者信息
+				book:[],//最近读的书
+				token:'token',
 			}
 		},
+		onLoad() {
+			this.getReaderInfo();
+		},
 		methods: {
-			
+			//获取读者信息
+			getReaderInfo(){
+				var that = this;
+				uni.request({
+					 // url:getApp().globalData.URL +'api/reader/app?id='+that.openId,
+					 url:getApp().globalData.URL +'api/reader/personal',
+					 data:{
+						 id:that.openId,
+						 token:that.token,
+					 },
+					 header: {
+					     'content-type': 'application/json;charset=UTF-8' // 默认值
+					   },
+					 method:'GET',
+					 success:res =>{
+						that.info=res.data.readerInfo;
+						that.book=res.data.zjds
+						console.log("后台的数据1：",res.data)
+						console.log("后台的数据2：",res.data.zjds)
+						
+						//that.head_img = res.data.avatar
+						}
+				})
+			},
 		}
 	}
 </script>

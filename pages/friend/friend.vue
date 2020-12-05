@@ -12,7 +12,7 @@
 						<view class="guanzhu">关注</view>
 					</view>
 					<view class="map-wrap" >
-						<image class="iconfont" src="../../static/images/add_more2.png"></image> 
+						<image class="iconfont" src="../../static/images/Fsearch.png"></image> 
 					</view>
 				</view>
 			</view>
@@ -48,11 +48,12 @@
 	
 		.index-header {
 			display: flex;
-			height: 110rpx;
+			height: 200rpx;
 			line-height: 110rpx;
 			padding: 0 30rpx;
 			padding-top: 40rpx;
-			background-color: $color-base;
+			// background-color: $color-base;
+			background-color: #6C40F3;
 			font-size: 28rpx;
 			color: #fff;
 			align-items: center;
@@ -63,24 +64,24 @@
 				width: 60rpx;
 				height: 60rpx;
 				font-size: 26rpx;
-				margin-top: 20rpx;
+				margin-top: 90rpx;
 				background-color:#000000;
 			}
 	
 			.name {
 				display: flex;
 				color: #3C3C3C;
-				width: 10
-				0%;
+				width: 200rpx;
 				height: 100rpx;
 				font-size: 40rpx;
 				margin-top: 20rpx;
 				margin-bottom: 40rpx;
+				// background-color: red;
 				justify-content: space-around; //靠左靠右
 				
 				.haoyou{
 					width: 50%;
-					height: 20rpx; 
+					height: 60rpx; 
 					font-size: 40rpx;
 					margin-top: 40rpx;
 					padding-bottom: 40rpx;
@@ -98,9 +99,9 @@
 	
 			.map-wrap {
 				.iconfont {
-					margin-top: 50rpx;
-					width: 60rpx;
-					height: 60rpx;
+					margin-top: 120rpx;
+					width: 50rpx;
+					height: 50rpx;
 					font-size: 32rpx;
 					margin-right: 5rpx;
 				}

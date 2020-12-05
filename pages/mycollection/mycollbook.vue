@@ -4,9 +4,9 @@
 		<view class="mid">
 			<view class="midone">
 				<view class="zhengti">
-					<image class="imag" src="../../static/images/书1.jpg" style="width: 125rpx; height: 170rpx;"></image>
+					<image src="../../static/images/书1.jpg" style="width: 125rpx; height: 170rpx;"></image>
 					<view class="midwz">致敬老师</view>
-					<image class="ima"src="../../static/images/shoucang1.png"></image>
+					<image src="../../static/images/shoucang1.png" style="width: 40rpx; height: 30rpx;"></image>
 				</view>
 				<view class="shumu">作者：
 				<view class="shumutwo">于思蓝</view>
@@ -17,9 +17,9 @@
 			</view>
 			<view class="midone">
 				<view class="zhengti">
-					<image class="imag" src="../../static/images/书2.jpg" style="width: 125rpx; height: 170rpx;"></image>
+					<image src="../../static/images/书2.jpg" style="width: 125rpx; height: 170rpx;"></image>
 					<view class="midwz">预见未来</view>
-					<image class="ima"src="../../static/images/shoucang1.png"></image>
+					<image src="../../static/images/shoucang1.png" style="width: 40rpx; height: 30rpx;"></image>
 				</view>
 				<view class="shumu">作者：
 				<view class="shumutwo">大鱼</view>
@@ -30,14 +30,13 @@
 			</view>
 			<view class="midone">
 				<view class="zhengti">
-					<image class="imag" src="../../static/images/书3.jpg" style="width: 125rpx; height: 170rpx;"></image>
+					<image src="../../static/images/书3.jpg" style="width: 125rpx; height: 170rpx;"></image>
 					<view class="midwz">你是人间四月天</view>
-					<image class="ima"src="../../static/images/shoucang1.png"></image>
+					<image src="../../static/images/shoucang1.png" style="width: 40rpx; height: 30rpx;"></image>
 				</view>
 				<view class="shumu">作者：
 				<view class="shumutwo">余小鱼</view>
 				</view>
-				<view class="shumutwo">余小鱼</view>
 				<view class="shumuone">出版社：为人民服务出版社</view>
 				<view class="shumuone">出版时间：2020-09</view>
 				<view class="shumuthree">广东省立中山图书馆馆藏，广东中山图书馆</view>
@@ -66,6 +65,7 @@
 	/* background-color: #2C405A; */
 }
 .zhengti {
+	margin-left:30rpx;
 	display: flex;
 }
 .imag{

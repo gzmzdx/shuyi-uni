@@ -3,7 +3,14 @@
 		"^u-(.*)": "@/uview-ui/components/u-$1/u-$1.vue",
 		"^c-(.*)": "@/components/c-$1/index.vue"
 	},
-	"pages": [{
+	"pages": [
+		// {
+		// 	"path": "pages/myinfomation/myinfomation",
+		// 	"style": {
+		// 		"navigationBarTitleText": "信息管理"
+		// 	}
+		// },
+		{
 			"path": "pages/main/main",
 			"style": {
 				"navigationStyle": "custom",
@@ -31,12 +38,14 @@
 			"style": {
 				"navigationBarTitleText": "添加图书"
 			}
-		}, {
+		}, 
+		{
 			"path": "pages/myinfomation/myinfomation",
 			"style": {
 				"navigationBarTitleText": "信息管理"
 			}
-		}, {
+		}, 
+		{
 			"path": "pages/index/publish",
 			"style": {
 				"navigationBarTitleText": "发表"
@@ -699,6 +708,24 @@
                 "enablePullDownRefresh": false
             }
            
+        }
+        ,{
+            "path" : "pages/friend/friendSearch",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "搜索好友",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/borrow_and_return/borrow_and_returnXQ",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "订单详情",
+                "enablePullDownRefresh": false
+            }
+            
         }
     ],
 	"globalStyle": {
