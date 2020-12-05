@@ -50,9 +50,7 @@
 					</navigator>
 				</view>
 				<view class="module">
-					<navigator url="../appointment/appointment">
 					<image class="tupian" src="../../static/images/预约.icon@2x.png"></image>
-
 					<view class="name">预约</view>
 					</navigator>
 				</view>
