@@ -4,13 +4,6 @@
 		
 		<!-- 顶部 -->
 		<view class="mid" >
-			<view class="zt" style=" background-color: #F8F8F8;  opacity:1;">
-				<view class="zt1">
-					线下物流配送中
-				</view>
-				<!-- <view style="color: #808080;">156487912</view> -->
-			</view>
-			
 			<view class="midone">
 				<view class="">
 					<image class="imag" src="../../static/images/ap.jpg" style="width: 206rpx; height: 258rpx;"></image>
@@ -32,14 +25,8 @@
 						<view class="">线下交易中，物流配送中</view>
 					</view>
 					<view class="btns">
-						<view class="one">
-							<view  style="margin-left: 10rpx; margin-top: 5rpx;">联系持有人</view>
-						</view>
 						<view class="two">
-							<view  style="margin-left: 20rpx; margin-top: 5rpx;">确认收货</view>
-						</view>
-						<view class="three">
-							<view  style="margin-left: 20rpx; margin-top: 5rpx;">查看物流</view>
+							<view  style="margin-left: 25rpx; margin-top: 5rpx;">我已读完</view>
 						</view>
 					</view>
 				</view>
@@ -71,52 +58,18 @@
 					</view>
 					<view class="btns">
 						<view class="one">
-							<view  style="margin-left: 10rpx; margin-top: 5rpx;">联系持有人</view>
-						</view>
-						<view class="two1">
-							<view  style="margin-left: 20rpx; margin-top: 5rpx;">确认收货</view>
+							<view  style="margin-left: 10rpx; margin-top: 5rpx;">联系预约人</view>
 						</view>
 						<view class="three">
-							<view  style="margin-left: 20rpx; margin-top: 5rpx;">查看物流</view>
+							<view  style="margin-left: 20rpx; margin-top: 5rpx;">面对面还书</view>
 						</view>
 					</view>
 				</view>
 			</view>
 			
 			<!-- 线上预约中 -->
-			<view class="zt" style=" background-color: #F8F8F8;  opacity:1;">
-				<view class="zt1">
-					线上预约中
-				</view>
-				<!-- <view style="color: #808080;">156487912</view> -->
-			</view>
-			<view class="midone">
-				<view class="">
-					<image class="imag" src="../../static/images/ap.jpg" style="width: 206rpx; height: 258rpx;"></image>
-				</view>
-				<view>
-					<view class="book-name">书的名字</view>
-					<view class="s1">预约时间：
-						<view class="s6">2018-08-20</view>
-					</view>
-					<view class="s2">持书人：
-						<view class="">省中山图书馆</view>
-					</view>
-					<view class="s7">
-						<view class="s4">应还时间：无
-							<!-- <view class="">无</view> -->
-						</view>
-					</view>
-					<view class="s2">当前状态：
-						<view class="">线下交易中，物流配送中</view>
-					</view>
-					<view class="btns">
-						<view class="one">
-							<view  style="margin-left: 20rpx; margin-top: 5rpx;">取消预约</view>
-						</view>
-					</view>
-				</view>
-			</view>
+			
+			
 			<!-- 分割线br -->
 			<view class="br"></view>
 			
@@ -134,7 +87,7 @@
 }	
 	
 .br {
-		margin-top: 10rpx;
+		margin-top: 20rpx;
 		/* width: 100%; */
 		height: 1rpx;
 		background-color: #EEEEEE;
@@ -193,7 +146,7 @@
 	display: flex;
 }
 .btns{
-	font-size: 24rpx;
+	font-size: 22rpx;
 	height:35rpx;
 	margin-top: 20rpx;
 	align-items: center;
@@ -204,36 +157,29 @@
 .one{
 	background-color: #EBEBEB;
 	height: 45rpx;
-	width: 140rpx;
-	border-radius: 22rpx;
+	width: 135rpx;
+	border-radius: 23rpx;
 	opacity:1;
+	margin-left: 200rpx;
 }
 .two{
 	background-color: #5E49F5;
 	color: #FFFFFF;
 	height: 45rpx;
-	width: 140rpx;
-	margin-left: 20rpx;
-	border-radius: 22rpx;
+	width: 135rpx;
+	margin-left: 355rpx;
+	border-radius: 23rpx;
 	opacity:1;
 }
 
-.two1{
-	background-color: #EBEBEB;
-	/* color: #FFFFFF; */
-	height: 45rpx;
-	width: 140rpx;
-	margin-left: 20rpx;
-	border-radius: 22rpx;
-	opacity:100%;
-}
+
 
 .three{
 	background-color: #EBEBEB;
 	height: 45rpx;
-	width: 140rpx;
+	width: 135rpx;
 	margin-left: 20rpx;
-	border-radius: 22rpx;
+	border-radius: 23rpx;
 	opacity:1;
 }
 
