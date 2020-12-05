@@ -710,36 +710,30 @@
 	"tabBar": {
 		"backgroundColor": "#FFFFFF",
 		"color": "#8A8A8A",
-		"selectedColor": "#18C7F2",
+		"selectedColor": "#0066CC",
 		"list": [{
 				"pagePath": "pages/main/main",
 				"text": "首页",
-				"iconPath": "/static/images/firstpage_black.png",
-				"selectedIconPath": "/static/images/firstpage_blue.png"
-			},
-			{
-				"pagePath": "pages/classify/classify",
-				"text": "分类",
-				"iconPath": "/static/images/classify.png",
-				"selectedIconPath": "/static/images/classify1.png"
+				"iconPath": "/static/images/首页.icon@2x.png",
+				"selectedIconPath": "/static/images/首页.icon.active@2x.png"
 			},
 			{
 				"pagePath": "pages/friend/friend",
-				"text": "好友",
-				"iconPath": "/static/images/contacts_black.png",
-				"selectedIconPath": "/static/images/contacts_blue.png"
+				"text": "通讯录",
+				"iconPath": "/static/images/通讯录.icon@2x.png",
+				"selectedIconPath": "/static/images/通讯录.icon.active@2x.png"
 			},
 			{
 				"pagePath": "pages/book_cart/book_cart",
 				"text": "借书车",
-				"iconPath": "./static/images/borrow_card_black.png",
-				"selectedIconPath": "/static/images/borrow_card_blue.png"
+				"iconPath": "./static/images/借书车.icon@2x.png",
+				"selectedIconPath": "/static/images/借书车.icon.active@2x.png"
 			}, {
 
 				"pagePath": "pages/my/my",
 				"text": "我的",
-				"iconPath": "/static/images/me_black.png",
-				"selectedIconPath": "/static/images/me_blue.png"
+				"iconPath": "/static/images/我的.icon@2x.png",
+				"selectedIconPath": "/static/images/我的.icon.active@2x.png"
 			}
 		]
 	},

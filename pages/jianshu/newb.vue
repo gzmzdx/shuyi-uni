@@ -61,6 +61,7 @@
 		color: #808080;
 		margin-left: 5rpx;
 		font-size: 45rpx;
+	
 	}
 
 	.back {
