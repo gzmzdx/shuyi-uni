@@ -3,9 +3,10 @@
 		
 		<!-- 分享弹窗 -->
 		<view mode="aspectFill" @click.stop="ShowHidden=!ShowHidden">
-			<image class="im"  src="../../static/images/分享1.png" style="width: 50rpx; height: 50rpx;"></image>
+			<image class="im"  src="../../static/images/详情页.分享.icon.png" style="width: 50rpx; height: 50rpx;"></image>
 		</view>
 		<view class="all" v-if="ShowHidden">
+		<!-- #ifdef APP-PLUS -->
 		<view class="list">
 			<view class="td">
 				<image class="im1" src="../../static/images/微信.png" style="width: 150rpx; height: 150rpx;"></image>
@@ -20,6 +21,23 @@
 			<view>QQ空间</view>
 			</view>
 		</view>
+		<!-- #endif -->
+		<!-- #ifdef MP-WEIXIN -->
+		<view class="list3">
+			<view class="td">
+				<image class="im1" src="../../static/images/微信.png" style="width: 150rpx; height: 150rpx;"></image>
+			<view>微信</view>
+			</view>
+			<view class="td">
+				<image class="im1" src="../../static/images/朋友圈.png" style="width: 150rpx; height: 150rpx;"></image>
+			<view>微信朋友圈</view>
+			</view>
+			<view class="td">
+				<image class="im1" src="../../static/images/QQ空间.png" style="width: 150rpx; height: 150rpx;"></image>
+			<view>QQ空间</view>
+			</view>
+		</view>
+		<!-- #endif -->
 		<view class="list1">
 			<view class="td">
 				<image class="im1" src="../../static/images/QQ.png" style="width: 150rpx; height: 150rpx;"></image>
@@ -56,9 +74,10 @@
 <style>
 .im{
 		margin-top: 15rpx;
-		margin-left: 420rpx;
+		margin-left: 220rpx;
 	}
 	.all{
+		margin-top: -200rpx;
 		width: 100%;
 		position: absolute;
 		height: 38%;
@@ -77,6 +96,10 @@
 	.list1{
 		display: flex;
 		/* margin-top: 500rpx; */
+	}
+	.list3{
+		display: flex;
+		margin-top: -200rpx;
 	}
 	.td{
 		height: 250rpx;
