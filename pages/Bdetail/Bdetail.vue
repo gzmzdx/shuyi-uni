@@ -69,8 +69,14 @@
 			</view>
 			<!-- 底部 -->
 			<view class="btn">
-				<button class="btn1">借书</button>
-				<button class="btn2">收藏</button>
+				<navigator url="../borrow/borrow">
+					<view class="btn1">
+						<button class="btn1">借书</button>
+					</view>
+				</navigator>
+				<view class="btn2">
+					<button class="btn2">收藏</button>
+				</view>
 			</view>
 	</view>
 </template>

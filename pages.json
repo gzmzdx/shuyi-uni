@@ -3,14 +3,7 @@
 		"^u-(.*)": "@/uview-ui/components/u-$1/u-$1.vue",
 		"^c-(.*)": "@/components/c-$1/index.vue"
 	},
-	"pages": [
-		// {
-		// 	"path": "pages/myinfomation/myinfomation",
-		// 	"style": {
-		// 		"navigationBarTitleText": "信息管理"
-		// 	}
-		// },
-		{
+	"pages": [{
 			"path": "pages/main/main",
 			"style": {
 				"navigationStyle": "custom",
@@ -38,14 +31,12 @@
 			"style": {
 				"navigationBarTitleText": "添加图书"
 			}
-		}, 
-		{
+		}, {
 			"path": "pages/myinfomation/myinfomation",
 			"style": {
 				"navigationBarTitleText": "信息管理"
 			}
-		}, 
-		{
+		}, {
 			"path": "pages/index/publish",
 			"style": {
 				"navigationBarTitleText": "发表"
@@ -177,19 +168,36 @@
 		{
 			"path": "pages/appointment/abolish",
 			"style": {
-				"navigationBarTitleText": "取消预约"
+				"navigationBarTitleText": "取消预约",
+				"navigationBarBackgroundColor":"#6C40F3"
 
 			}
 		}, {
 			"path": "pages/borrow/borrow",
 			"style": {
-				"navigationBarTitleText": "借书"
+				"navigationBarTitleText": "借书",
+				"navigationBarBackgroundColor":"#6C40F3"
 			}
+			
 		},
 		{
 			"path": "pages/appointment/confirm",
 			"style": {
 				"navigationBarTitleText": "确认收货",
+				"navigationBarBackgroundColor":"#6C40F3"
+			}
+		},
+		{
+			"path": "pages/appointment/contact-booking-agent",
+			"style": {
+				"navigationBarTitleText": "联系持书人",
+				"navigationBarBackgroundColor":"#6C40F3"
+			}
+		},
+		{
+			"path": "pages/return-books/contact-order-agent",
+			"style": {
+				"navigationBarTitleText": "联系预约人",
 				"navigationBarBackgroundColor":"#6C40F3"
 			}
 		},
@@ -235,7 +243,8 @@
 		{
 			"path": "pages/components/logistic",
 			"style": {
-				"navigationBarTitleText": "物流配送中"
+				"navigationBarTitleText": "物流配送中",
+				"navigationBarBackgroundColor":"#6C40F3"
 			}
 		},
 
@@ -262,7 +271,8 @@
 		{
 			"path": "pages/return/return",
 			"style": {
-				"navigationBarTitleText": "面对面还书"
+				"navigationBarTitleText": "面对面还书",
+				"navigationBarBackgroundColor":"#6C40F3"
 			}
 		}
 
@@ -285,35 +295,36 @@
 			"path": "pages/mineFriend/mineFriend",
 			"style": {
 				"navigationBarTitleText": "我的好友",
-				"navigationBarBackgroundColor": "#FFFFFF"
+				"navigationBarBackgroundColor":"#6C40F3"
 			}
 		}
 
 		, {
 			"path": "pages/personal-library/shareBook",
 			"style": {
-				"navigationBarTitleText": "共享图书",
-				"navigationBarBackgroundColor": "#FFFFFF",
+				"navigationBarTitleText": "添加共享图书",
+				"navigationBarBackgroundColor":"#6C40F3",
 				"app-plus": {
 					"titleNView": {
 						"buttons": [
 
-							//                     {
-							//                         "text":"提交",
-							//                         "type":"none",
-							//                         "color":"#00BFFF",
-							//                         "background":"#000000",
-							//                         "fontSize":"16px",
-							//  "float":"right"
-							//  // "margin-right":"100px"
+							 //                    {
+							 //                        "text":"提交",
+							 //                        "type":"none",
+							 //                        "color":"#00BFFF",
+							 //                        "background":"#000000",
+							 //                        "fontSize":"16px",
+							 // "float":"right"
+							 // // "margin-right":"100px"
 
-							//                     },
-							{
-								"type": "none",
-								"text": "\u2713",
-								"float": "right",
-								"color": "#00BFFF"
-							}
+							 //                    },
+							 // 勾的图
+							// {
+							// 	"type": "none",
+							// 	"text": "\u2713",
+							// 	"float": "right",
+							// 	"color": "#00BFFF"
+							// }
 						]
 					}
 				}
@@ -715,36 +726,8 @@
             
         }
         ,{
-<<<<<<< HEAD
             "path" : "pages/order/order",
             "style" : {}
-=======
-            "path" : "pages/friend/friends_rank",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "好友排行",
-                "enablePullDownRefresh": false
-            }
-           
-        }
-        ,{
-            "path" : "pages/friend/friendSearch",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "搜索好友",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/borrow_and_return/borrow_and_returnXQ",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "订单详情",
-                "enablePullDownRefresh": false
-            }
-            
->>>>>>> b1a3f59ae74237d17529bbb09cd1e664e7d131dd
         }
     ],
 	"globalStyle": {

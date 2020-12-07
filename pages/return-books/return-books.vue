@@ -26,7 +26,7 @@
 					</view>
 					<view class="btns">
 						<view class="two">
-							<view  style="margin-left: 25rpx; margin-top: 5rpx;">我已读完</view>
+							<view  style="margin-left: 25rpx; margin-top: 5rpx;" @click="cl">我已读完</view>
 						</view>
 					</view>
 				</view>
@@ -57,12 +57,16 @@
 						<view class="">线下交易中，物流配送中</view>
 					</view>
 					<view class="btns">
-						<view class="one">
-							<view  style="margin-left: 10rpx; margin-top: 5rpx;">联系预约人</view>
-						</view>
-						<view class="three">
-							<view  style="margin-left: 20rpx; margin-top: 5rpx;">面对面还书</view>
-						</view>
+						<navigator url="contact-order-agent">
+							<view class="one">
+								<view  style="margin-left: 10rpx; margin-top: 5rpx;">联系预约人</view>
+							</view>
+						</navigator>
+						<navigator url="../return/return">
+							<view class="three">
+								<view  style="margin-left: 20rpx; margin-top: 5rpx;">面对面还书</view>
+							</view>
+						</navigator>
 					</view>
 				</view>
 			</view>
@@ -76,7 +80,46 @@
 		</view>
 	</view>
 </template>
-<!-- <script></script> -->
+<script>
+	export default {
+		data() {
+			return {
+				
+			};
+		},
+
+		onLoad() {
+
+		},
+
+
+
+
+		methods: {
+			
+			cl(){
+				uni.showModal({
+					title:'温馨提示',
+					style:'color:#494949;font-size: 30rpx;border-radius: 20rpx;',
+					content:'确认读完后将无法取消，其他人将可以在系统上向你借书',
+					
+					success:function (res) {
+						if(res.confirm){
+							console.log('取消');
+						}
+						else if (res.cancel){
+							console.log('确认');
+						}
+					}
+				});
+			}
+				
+		},
+	}
+	
+	
+	
+</script>
 
 <style>
 	

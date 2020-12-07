@@ -44,7 +44,7 @@
 					</navigator>
 				</view>
 				<view class="module">
-					<navigator url="../return/return">
+					<navigator url="../return-books/return-books">
 					<image class="tupian" src="../../static/images/icon_return_book.png"></image>
 					<view class="name">还书</view>
 					</navigator>
