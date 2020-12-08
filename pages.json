@@ -103,6 +103,11 @@
 				"navigationBarTitleText": "社交消息"
 			}
 		}, {
+			"path": "pages/personal/BandR_notice",
+			"style": {
+				"navigationBarTitleText": "借还消息"
+			}	
+		}, {
 			"path": "pages/personal/serve_chat",
 			"style": {
 				"navigationBarTitleText": "书易客服"
@@ -151,7 +156,11 @@
 		{
 			"path": "pages/classify/classify",
 			"style": {
-				"navigationBarTitleText": "分类"
+				"navigationBarTitleText": "全部分类",
+				"navigationStyle": "custom",
+				"app-plus": {
+					"titleNView": false
+				}
 			}
 		},
 		{
@@ -954,7 +963,8 @@
 				"enablePullDownRefresh": false
 			}
 		}
-	],
+	    
+    ],
 	"globalStyle":{
 			"navigationBarTextStyle": "black",
 			"navigationBarTitleText": "uni-app",
@@ -964,7 +974,7 @@
 	"tabBar": {
 			"backgroundColor": "#FFFFFF",
 			"color": "#8A8A8A",
-			"selectedColor": "#0066CC",
+			"selectedColor": "#0044dd",
 			"list": [{
 				"pagePath": "pages/main/main",
 				"text": "首页",
