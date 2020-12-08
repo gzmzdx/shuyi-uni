@@ -619,15 +619,23 @@
 		}, {
 			"path": "pages/my/mylib",
 			"style": {
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
+				"style": {
+					"navigationBarTitleText": "好友图书馆",
+					"navigationStyle": "custom",
+					"app-plus": {
+						"titleNView": false
+					}
+				}
 			}
 
 		}, {
 			"path": "pages/my/mylibrary",
 			"style": {
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
+				"navigationBarTitleText": "个人图书馆",
+				"navigationStyle": "custom",
+				"app-plus": {
+					"titleNView": false
+				}
 			}
 
 		}, {
@@ -694,276 +702,6 @@
 				"enablePullDownRefresh": false
 			}
 		}
-	,{
-			"path" : "pages/readCirclepage/CircleNR_Right",
-			"style" :
-			{
-				"navigationBarTitleText": "圈文",
-				"enablePullDownRefresh": false
-			}
-
-		}
-	,{
-			"path" : "pages/readCirclepage/CircleXQLife",
-			"style" :
-			{
-				"navigationBarTitleText": "圈子信息",
-				"enablePullDownRefresh": false
-			}
-		}
-	,{
-			"path" : "pages/readCirclepage/CircleXQRight",
-			"style" :
-			{
-				"navigationBarTitleText": "圈子成员",
-				"enablePullDownRefresh": false
-			}
-
-		}
-	,{
-			"path" : "pages/readCircle/readExperience",
-			"style" :
-			{
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
-			}
-
-		}
-	,{
-			"path" : "pages/readCirclepage/readExperDZ",
-			"style" :
-			{
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
-			}
-
-		}
-	,{
-			"path" : "pages/readCirclepage/readExperPL",
-			"style" :
-			{
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
-			}
-
-		}
-	,{
-			"path" : "pages/my_reserve_Spage/reserve_SpageR",
-			"style" :
-			{
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
-			}
-
-		}
-	,{
-			"path" : "pages/my_reserve_Spage/reserve_SpageL",
-			"style" :
-			{
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
-			}
-
-		}
-	,{
-			"path" : "pages/readLabel/readLabel",
-			"style" :
-			{
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
-			}
-
-		}
-	,{
-			"path" : "pages/readLabel/readLabelNew",
-			"style" :
-			{
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
-			}
-
-		}
-	,{
-			"path" : "pages/borrow_and_return/borrow_and_return",
-			"style" :
-			{
-				"navigationBarTitleText": "借还记录",
-				"enablePullDownRefresh": false
-			}
-
-		}
-	,{
-			"path" : "pages/privateSpace/privateSpace",
-			"style" :
-			{
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
-			}
-
-		}
-	,{
-			"path" : "pages/login/login",
-			"style" :
-			{
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
-			}
-
-		}
-	,{
-			"path" : "pages/login/register",
-			"style" :
-			{
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
-			}
-
-		}
-	,{
-			"path" : "pages/my/build",
-			"style" :
-			{
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
-			}
-
-		}
-
-	,{
-			"path" : "pages/my/chengy",
-			"style" :
-			{
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
-			}
-
-		}
-	,{
-			"path" : "pages/my/jianj",
-			"style" :
-			{
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
-			}
-
-		}
-	,{
-			"path" : "pages/my/join",
-			"style" :
-			{
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
-			}
-
-		}
-
-	,{
-			"path" : "pages/my/lib",
-			"style" :
-			{
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
-			}
-
-		}
-	,{
-			"path" : "pages/my/mylib",
-			"style" :
-			{
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
-			}
-
-		}
-	,{
-			"path" : "pages/my/mylibrary",
-			"style" :
-			{
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
-			}
-
-		}
-	,{
-			"path" : "pages/my/tushu",
-			"style" :
-			{
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
-			}
-
-		}
-	,{
-			"path" : "pages/yind/yind",
-			"style" :
-			{
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
-			}
-
-		}
-	,{
-			"path" : "pages/sousuo/Gzhu",
-			"style" :
-			{
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
-			}
-
-		}
-	,{
-			"path" : "pages/sousuo/Hyou",
-			"style" :
-			{
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
-			}
-
-		}
-	,{
-			"path" : "pages/Setup/Setup",
-			"style" :
-			{
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
-			}
-
-		}
-	,{
-			"path" : "pages/readCircle/readCicleMore",
-			"style" :
-			{
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
-			}
-
-		}
-	,{
-			"path" : "pages/friend/friends_rank",
-			"style" :
-			{
-				"navigationBarTitleText": "好友排行",
-				"enablePullDownRefresh": false
-			}
-
-		}
-	,{
-			"path" : "pages/friend/friendSearch",
-			"style" :
-			{
-				"navigationBarTitleText": "搜索好友",
-				"enablePullDownRefresh": false
-			}
-
-		}
-	, {
-			"path": "pages/borrow_and_return/borrow_and_returnXQ",
-			"style": {
-				"navigationBarTitleText": "订单详情",
-				"enablePullDownRefresh": false
-			}
-		}
-	    
     ],
 	"globalStyle":{
 			"navigationBarTextStyle": "black",
