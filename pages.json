@@ -103,6 +103,11 @@
 				"navigationBarTitleText": "社交消息"
 			}
 		}, {
+			"path": "pages/personal/BandR_notice",
+			"style": {
+				"navigationBarTitleText": "借还消息"
+			}	
+		}, {
 			"path": "pages/personal/serve_chat",
 			"style": {
 				"navigationBarTitleText": "书易客服"
@@ -697,7 +702,6 @@
 				"enablePullDownRefresh": false
 			}
 		}
-	
     ],
 	"globalStyle":{
 			"navigationBarTextStyle": "black",
