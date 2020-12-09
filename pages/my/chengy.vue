@@ -1,7 +1,25 @@
 <template>
 	<view> 
+	<!-- #ifdef APP-PLUS -->
+	<view class="Array">
+			<view class="list1">
+				<image class="ima" src="../../static/images/me_blue.png" style="width: 80rpx; height: 80rpx;"></image>
+				<view class="tabs">
+					<view class="tr">
+					<view class="tit">爱读书的</view>
+					<view class="btn">LV11</view>
+					<view class="te">书圣</view>
+					<image class="imag" src="../../static/images/double_right_arrow.png" style="width: 20rpx; height: 20rpx;"></image>
+					</view>
+					<view class="tr">
+				</view>
+				</view>
+			</view>
+		</view>
+	<!-- #endif -->
+		<!-- #ifdef MP-WEIXIN -->
 		<view class="Array">
-				<view class="list1">
+				<view class="list2">
 					<image class="ima" src="../../static/images/me_blue.png" style="width: 80rpx; height: 80rpx;"></image>
 					<view class="tabs">
 						<view class="tr">
@@ -15,6 +33,7 @@
 					</view>
 				</view>
 			</view>
+		<!-- #endif -->
 		</view>
 	</view>
 	
@@ -70,9 +89,15 @@
 		border-bottom: 3rpx solid #F1F1F1;
 		border-top:3rpx solid #F1F1F1 ;
 		display: flex;
-		
 	}
-	
+	.list2 {
+		height: 130rpx;
+		/* margin-top: 10rpx; */
+		width: 100%;
+		/* border-bottom: 3rpx solid #F1F1F1; */
+		/* border-top:3rpx solid #F1F1F1 ; */
+		display: flex;
+	}
 	.ima {
 		margin: 40rpx 40rpx;
 		border-radius: 50%;
