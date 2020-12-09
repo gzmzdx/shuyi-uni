@@ -218,12 +218,11 @@
 	}
 
 	/* .s7 {
-	height: 35rpx;
-	align-items: center;
-	width: auto;
-	background-color: #000000;
-} */
-
+		height: 35rpx;
+		align-items: center;
+		width: auto;
+		background-color: #000000;
+	} */
 	.s8 {
 		margin-top: 20rpx;
 		margin-left: 380rpx;
