@@ -11,10 +11,13 @@
 			<view class="tit2">附近的书</view>
 			</navigator>
 			<!-- #endif -->
-			<image class="im"  src="../../static/images/附近的书.定位.icon@2x.png" style="width: 48rpx; height: 48rpx;"></image>
+			<!-- #ifdef MP-WEIXIN -->
+			<image class="im1"  src="../../static/images/附近的书.定位.icon@2x.png" style="width: 48rpx; height: 48rpx;"></image>
 			<navigator url="fujin">
 			<view class="tit2">附近的书</view>
 			</navigator>
+			<!-- #endif -->
+			
 			</view>
 			<!-- 搜索框 -->
 			<view class="tit">
@@ -22,7 +25,14 @@
 			<view class="titi">
 				<view class="h-input">
 					<image src="../../static/images/搜索icon@2x.png" class="image"></image>
-					<input @input="goToSearch" placeholder="请输入关键字" placeholderStyle="color:#BBBBBB "  type="text"/>
+				<!-- #ifdef MP-WEIXIN -->
+					<input class="input"  @input="goToSearch" placeholder="请输入关键字" placeholderStyle="color:#BBBBBB "  type="text"/>
+				<!-- #endif -->
+				<!-- #ifdef APP-PLUS -->
+				<view>
+				<input class="input1" @input="goToSearch" placeholder="请输入关键字" placeholderStyle="color:#BBBBBB "  type="text"/>
+				</view>
+				<!-- #endif -->
 				</view>
 				<navigator url="book">
 				<view class="tab">搜索</view>
@@ -30,6 +40,7 @@
 			</view>
 			</view>
 			<!-- 热搜内容 -->
+			<!-- #ifdef APP-PLUS -->
 			<view class="list">
 				<!-- <image class="hot" src="../../static/images/热搜.png"style="width: 40rpx; height: 40rpx;"></image> -->
 				<view class="tex">热门搜索</view>
@@ -53,6 +64,32 @@
 			<view class="list">
 				<view class="tex2">深度学习</view>
 			</view>
+			<!-- #endif -->
+			<!-- #ifdef MP-WEIXIN -->
+			<view class="list">
+				<!-- <image class="hot" src="../../static/images/热搜.png"style="width: 40rpx; height: 40rpx;"></image> -->
+				<view class="tex">热门搜索</view>
+				
+			</view>
+			<view class="list">
+				<view class="tex2">深度学习</view>
+				<view class="tex2">财富号历</view>
+				<view class="tex2">深度学习</view>
+				<view class="tex2">深度学习</view>
+			</view>
+			<view class="list">
+				<view class="tex2">深度学习</view>
+				<view class="tex2">深度学习</view>
+				
+			</view>
+			<view class="list1">
+				<view class="tex">历史记录</view>
+				<image class="more" src="../../static/images/清空删除.icon@2x.png"style="width: 40rpx; height: 40rpx;"></image>
+			</view>
+			<view class="list">
+				<view class="tex2">深度学习</view>
+			</view>
+			<!-- #endif -->
 	</view>
 </template>
 
@@ -86,7 +123,7 @@
 	.tit1 {
 		margin-top: 9rpx;
 		color:#FFFFFF ;
-		margin-left: 200rpx;
+		margin-left: 230rpx;
 		display: flex;
 		font-size: 40rpx;
 		width: 30%;
@@ -98,7 +135,11 @@
 	}
 	.im{
 		margin-top: 23rpx;
-		margin-left: 10rpx;
+		margin-left: 40rpx;
+	}
+	.im1{
+		margin-top: 23rpx;
+		margin-left: -10rpx;
 	}
 	.tit2{
 		margin-top: 27rpx;
@@ -133,22 +174,36 @@
 		margin-left: 20rpx;
 		/* margin-top: 20rpx; */
 		width: 600rpx;
-		height: 60rpx;
+		height: 80rpx;
 		border-radius: 36rpx;
 		background-color: #F1F1F1;
 		display: flex;
 		flex-direction: row;
 	}
-	.h-input input{
+	/* .h-input input{
 		margin-left: -70rpx;
 		width: 450rpx;
-		height: 60rpx;
+		height: 80rpx;
 		line-height: 60rpx;
-		/* align-items: ; */
 		display: flex;
-		/* outline-width: 100rpx; */
-		font-size: 28rpx;
+		font-size: 30rpx;
 		
+	} */
+	.input{
+		margin-left: -80rpx;
+		width: 450rpx;
+		height: 80rpx;
+		line-height: 60rpx;
+		display: flex;
+		font-size: 30rpx;
+	}
+	.input1{
+		/* margin-left: 0rpx; */
+		width: 450rpx;
+		height: 80rpx;
+		line-height: 60rpx;
+		display: flex;
+		font-size: 30rpx;
 	}
 	.h-input view{
 		width: 90rpx;
@@ -157,7 +212,7 @@
 	}
 	.image{
 		margin-left: 10rpx;
-		margin-top: -5rpx;
+		margin-top: 8rpx;
 		width: 65rpx;
 		height: 65rpx;
 	}
