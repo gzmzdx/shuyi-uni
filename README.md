@@ -21,60 +21,20 @@ shell依赖
 **HBuilder X编译插件：**
 
 + less编译
-+ scss编译
++ scss/sass编译
 + uni-app编译
 
 
 **安装依赖**
 ```shell
 # 使用npm
-npm instal
+npm install
+# 或者
+npm i
 # 使用yarn
 yarn
 ```
 
-**注意：** 编译报错，当编译到H5端报错pages.json，请在MP-WEIXIN的第一个page前添加逗号
-如下
-```js
-		{
-			"path": "pages/test/test",
-			"style": {"navigationStyle": "custom"}
-		}
-		//这里没有逗号
-		// #endif
-
-		// #ifdef MP-WEIXIN
-		//下面有逗号
-		{
-			"path": "pages/main/main",
-			"style": {
-				"navigationStyle": "custom",
-				"app-plus": {"titleNView": false}
-				}
-		}
-```
-
-当编译到MP-WEIXIN端报错pages.json，请在H5的最后一个page后添加逗号
-```js
-		{
-			"path": "pages/test/test",
-			"style": {"navigationStyle": "custom"}
-		},
-		//这里有逗号
-		// #endif
-
-		// #ifdef MP-WEIXIN
-		//下面没有逗号
-		{
-			"path": "pages/main/main",
-			"style": {
-				"navigationStyle": "custom",
-				"app-plus": {"titleNView": false}
-				}
-		}
-```
-
-如果要同时编译到小程序和H5，那么可以先选择编译一种，然后修改pages中逗号位置即可(修改不会导致之前正在编译的报错)
 
 ## UI组件库
 
@@ -203,16 +163,51 @@ yarn
 
 规范说明参考 gitCommit.md
 
-拉取最新代码 `git push`命令或者直接点webstorm的拉取按钮<br/>
- 使用 `npm run addAll` 命令将所有文件添加至git变更中,当然你也可以使用git  add命令来指定要add的文件<br/>
- 使用 `npm run commit` 命令提交当前变更<br/>
+
+
+## 拉取最新代码
+
+拉取最新代码 `git pull`命令或者直接点webstorm的拉取按钮<br/>
+
+IDE： 工具>外部命令>git插件>拉取(Pull)
+
+成功就是拉取成功了
+
+
+
+如果是失败，那么很有可能是代码冲突（别人和你编辑了同一个文件，系统不知道采用谁的）
+
+> 解决冲突：找到带×图标的文件进行编辑，然后打开右键git小乌龟工具>解决冲突
+
+
+
+
+
+## add&commit
+
+使用 `npm run addAll` 命令将所有文件添加至git变更中,当然你也可以使用git  add命令来指定要add的文件<br/>
+使用 `npm run commit` 命令提交当前变更<br/>
+
  选择     提交类型<br/>
  输入     当前提交影响的主模块（页面/组件）<br/>
  输入     本次提交的简介（描述主要更新了什么 <90字）<br/>
  输入     本次提交的详情（可以不写）<br/>
  后面全部按  Enter 默认即可<br/>
- 使用 `git push` 命令将提交推送到远程仓库<br/>
 
- 
+<hr/>
+
+使用 `npm run gitFlow` 命令提交当前变更<br/>
+
+
+
+
+
+## push
+
+就是把本地代码更新到远程仓库（github）
+
+shell： 使用 `git push` 命令将提交推送到远程仓库<br/>
+
+ IDE： 工具>外部命令>git插件>推送(Push)
 
 
