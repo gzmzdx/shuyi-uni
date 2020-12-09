@@ -3,8 +3,8 @@
 		<!-- 搜索框开始 -->
 	<view class="top">
 	<view class="header-input">
-		<input @input="goToSearch" placeholder="输入书名查找" placeholderStyle="color:#BBBBBB" type="text"></input>
-		<view>
+		<input v-model="mhcx" placeholder="输入书名查找" placeholderStyle="color:#BBBBBB" type="text"></input>
+		<view @click="goToSearch()">
 			<image class="image" src="../../static/images/search_icon.png">
 			</image>
 		</view>
@@ -13,137 +13,42 @@
 	<!-- 搜索框结束 -->
 	<view class="show">
 			<!-- 第一个 -->
-				<view class="main">
-					<view v-for="(item, index) in csListArrl" :key="index" :data-index="index"  class="order-item"   @touchstart="drawStart" @touchmove="drawMove"  @touchend="drawEnd"  :style="'right:'+item.right+'px'">
-						<view class="content">
+			<view v-if="info.length!=0">
+				<view class="main" v-for="(i, index) in info" :key="index">
+					<!-- <view v-for="(item, index) in csListArrl" :key="index" :data-index="index"  class="order-item"   @touchstart="drawStart" @touchmove="drawMove"  @touchend="drawEnd"  :style="'right:'+item.right+'px'"> -->
+						<view class="content" @touchstart.prevent="touchstart(index)" @touchend.prevent="touchend">
 							<view class="zhengti">
-								<image src="../../static/images/书1.jpg" style="width: 140rpx;height: 180rpx;"></image>
+								<image :src="i.picture_path" style="width: 140rpx;height: 180rpx;"></image>
 							</view>
 							<view class="xq">
-								<view class="midwz">致敬老师</view>
-								<view class="s2">借入时间：2017-08-10</view>
+								<view class="midwz" v-text="i.book_name">致敬老师</view>
+								<view class="s2" >
+									<view>借入时间：</view>
+									<view v-text="formatDate(i.borrow_time)">2017-09-10</view>
+								</view>
 								<!-- <view class="s7"> -->
-								<view class="s3">还书时间：2017-09-10</view>
+								<view class="s3">
+									<view>还书时间：</view>
+									<view v-text="formatDate(i.needreturn_time)">2017-09-10</view>
+								</view>
 								<view class="s4">
 									承运快递：
-									<view class="s5">书易物流</view>
+									<view class="s5" v-text="i.return_type">书易物流</view>
 								</view>
-								<view class="s8">
-									<navigator url="./borrow_and_returnXQ">
-										<button class="btn1"><view class="wz">查看详情</view></button>
-									</navigator>
+								<view class="s8" >
+									<button class="btn1" @click="toDetil(i.borrow_list_id)"><view class="wz" >查看详情</view></button>
 								</view>
 							</view>
 						</view>
-						<view class="remove" @click="delData(item)">删除</view>
-					</view>
+						<!-- <view class="remove" @click="delData(i.borrow_list_id)">删除</view> -->
+					<!-- </view> -->
 				</view>
-			<!--下一个开始-->
-				<view class="main">
-					<view v-for="(item, index) in csListArrl" :key="index" :data-index="index"  class="order-item"   @touchstart="drawStart" @touchmove="drawMove"  @touchend="drawEnd"  :style="'right:'+item.right+'px'">
-						<view class="content">
-							<view class="zhengti">
-								<image src="../../static/images/书1.jpg" style="width: 140rpx;height: 180rpx;"></image>
-							</view>
-							<view class="xq">
-								<view class="midwz">致敬老师</view>
-								<view class="s2">借入时间：2017-08-10</view>
-								<!-- <view class="s7"> -->
-								<view class="s3">还书时间：2017-09-10</view>
-								<view class="s4">
-									承运快递：
-									<view class="s5">书易物流</view>
-								</view>
-								<view class="s8">
-									<navigator url="./borrow_and_returnXQ">
-										<button class="btn1"><view class="wz">查看详情</view></button>
-									</navigator>
-								</view>
-							</view>
-						</view>
-						<view class="remove" @click="delData(item)">删除</view>
-					</view>
-				</view>
-			<!-- 下一个 -->
-				<view class="main">
-					<view v-for="(item, index) in csListArrl" :key="index" :data-index="index"  class="order-item"   @touchstart="drawStart" @touchmove="drawMove"  @touchend="drawEnd"  :style="'right:'+item.right+'px'">
-						<view class="content">
-							<view class="zhengti">
-								<image src="../../static/images/书1.jpg" style="width: 140rpx;height: 180rpx;"></image>
-							</view>
-							<view class="xq">
-								<view class="midwz">致敬老师</view>
-								<view class="s2">借入时间：2017-08-10</view>
-								<!-- <view class="s7"> -->
-								<view class="s3">还书时间：2017-09-10</view>
-								<view class="s4">
-									承运快递：
-									<view class="s5">书易物流</view>
-								</view>
-								<view class="s8">
-									<navigator url="./borrow_and_returnXQ">
-										<button class="btn1"><view class="wz">查看详情</view></button>
-									</navigator>
-								</view>
-							</view>
-						</view>
-						<view class="remove" @click="delData(item)">删除</view>
-					</view>
-				</view>
-			<!-- 下一个 -->
-				<view class="main">
-					<view v-for="(item, index) in csListArrl" :key="index" :data-index="index"  class="order-item"   @touchstart="drawStart" @touchmove="drawMove"  @touchend="drawEnd"  :style="'right:'+item.right+'px'">
-						<view class="content">
-							<view class="zhengti">
-								<image src="../../static/images/书1.jpg" style="width: 140rpx;height: 180rpx;"></image>
-							</view>
-							<view class="xq">
-								<view class="midwz">致敬老师</view>
-								<view class="s2">借入时间：2017-08-10</view>
-								<!-- <view class="s7"> -->
-								<view class="s3">还书时间：2017-09-10</view>
-								<view class="s4">
-									承运快递：
-									<view class="s5">书易物流</view>
-								</view>
-								<view class="s8">
-									<navigator url="./borrow_and_returnXQ">
-										<button class="btn1"><view class="wz">查看详情</view></button>
-									</navigator>
-								</view>
-							</view>
-						</view>
-						<view class="remove" @click="delData(item)">删除</view>
-					</view>
-				</view>
-			<!-- 下一个 -->
-				<view class="main">
-					<view v-for="(item, index) in csListArrl" :key="index" :data-index="index"  class="order-item"   @touchstart="drawStart" @touchmove="drawMove"  @touchend="drawEnd"  :style="'right:'+item.right+'px'">
-						<view class="content">
-							<view class="zhengti">
-								<image src="../../static/images/书1.jpg" style="width: 140rpx;height: 180rpx;"></image>
-							</view>
-							<view class="xq">
-								<view class="midwz">致敬老师</view>
-								<view class="s2">借入时间：2017-08-10</view>
-								<!-- <view class="s7"> -->
-								<view class="s3">还书时间：2017-09-10</view>
-								<view class="s4">
-									承运快递：
-									<view class="s5">书易物流</view>
-								</view>
-								<view class="s8">
-									<navigator url="./borrow_and_returnXQ">
-										<button class="btn1"><view class="wz">查看详情</view></button>
-									</navigator>
-								</view>
-							</view>
-						</view>
-						<view class="remove" @click="delData(item)">删除</view>
-					</view>
-				</view>
+			</view>	
+		    <view v-if="info.length==0">
+		    	您还没有记录，<span style="color: #00AAFF;">快去借书吧!</span>
+		    </view>
 			<!-- 刷新 -->
-		<view class="bt"><button style="background-color: #6C40F3;">刷新</button></view>
+		<view class="bt" @click="goToSearch()"><button style="background-color: #6C40F3;" >刷新</button></view>
 	</view>
 	</view>
 </template>
@@ -153,65 +58,160 @@
 		data() {
 			return {
 				//列表数据，可根据自己的业务获取
-						csListArrl:[{
-							name:'小A',
-							age:'1',
-							right: 0
-						}],
-						//左滑默认宽度
-						delBtnWidth: 80
+				csListArrl:[{
+					name:'小A',
+					age:'1',
+					right: 0
+				}],
+				//左滑默认宽度
+				delBtnWidth: 80,
+				mhcx:'', /*搜索框内容*/
+				page:0,
+				size:20,
+				info:[],//借还记录数据
+				openId:'1',//暂时是1
+				flag:'true',//判断是否到底部
+				borrow_list_id:'',
+				ids:[],//删除的borrow_list_id
+				
 			}
 		},
+		onLoad() {
+			this.goToSearch();
+		},
+		//当划到最底部的时候触发事件
+		onReachBottom:function(){				
+				console.log("我是最底部了");
+				if(this.flag=='true'){
+					this.getMoreNews();
+				}else{
+					this.showModal("到底啦~")
+				}			
+				},
 		methods: {
-			//开始触摸滑动
-			drawStart(e) {
-				console.log("开始触发");
-				var touch = e.touches[0];
-				this.startX = touch.clientX;
+			//获取数据
+			goToSearch(){
+				uni.request({
+					 url:getApp().globalData.URL+'api/borrowList/borrowAndRetrue',
+					 data:{
+						 openId:this.openId,
+						 mhcx:this.mhcx,
+						 page:this.page,
+						 size:this.size,
+					 },
+					 method:'GET',
+					 header: {
+					     'content-type': 'application/json;charset=UTF-8' // 默认值
+					   },
+					success:res =>{
+						console.log("后台传来的数据：",res.data)
+						this.info = res.data;
+						},
+					fail: (res) => {
+						this.showModal("网络错误！")
+					}
+				})
 			},
-			//触摸滑动
-			drawMove(e) {
-				console.log("滑动");
-				for (var index in this.csListArrl) {
-					this.$set(this.csListArrl[index],'right',0);
-				}
-				var touch = e.touches[0];
-				var item = this.csListArrl[e.currentTarget.dataset.index];
-				var disX = this.startX - touch.clientX;
-				if (disX >= 20) {
-				        if (disX > this.delBtnWidth) {
-					    disX = this.delBtnWidth;
-				        }
-				        this.$set(this.csListArrl[e.currentTarget.dataset.index],'right',disX);
-				} else {
-					this.$set(this.csListArrl[e.currentTarget.dataset.index],'right',0);
-				}
+			//分页加载
+			getMoreNews:function(){						//数据到底,触发这个函数
+				this.page = this.page + 1;
+				uni.showNavigationBarLoading();		//一读取数据,就进行刷新
+				var that = this;
+				uni.request({
+					url:getApp().globalData.URL+'api/borrowList/borrowAndRetrue',
+					data:{
+						 openId:that.openId,
+						 mhcx:that.mhcx,
+						 page:that.page,
+						 size:that.size,
+					},
+					method:'GET',
+					header: {
+						 'content-type': 'application/json;charset=UTF-8' // 默认值
+					   },
+					success:res =>{
+						console.log("分页后台传来的",res.data);
+						if(res.data.length==0){
+							//到底了
+							that.flag = 'false';
+							that.page = that.page - 1;
+							return false;
+						}
+						that.info=that.info.concat(Array.from(res.data)); //拼接数组
+						// uni.stopPullDownRefresh();	//数据加载完成,刷新结束
+						// uni.hideNavigationBarLoading();	//数据读取完毕,刷新停止	
+					},
+					fail: (res) => {
+						this.showModal("网络错误！")
+					}
+				})
 			},
-			//触摸滑动结束
-			drawEnd(e) {
-				console.log("滑动结束");
-				var item = this.csListArrl[e.currentTarget.dataset.index];
-				if (item.right >= this.delBtnWidth / 2) {
-					this.$set(this.csListArrl[e.currentTarget.dataset.index],'right',this.delBtnWidth);
-				} else {
-					this.$set(this.csListArrl[e.currentTarget.dataset.index],'right',0);
-				}
+			//日期转换方法
+			formatDate(value) {
+				let date = new Date(value);
+				let y = date.getFullYear();
+				let MM = date.getMonth() + 1;
+				MM = MM < 10 ? ('0' + MM) : MM;
+				let d = date.getDate();
+				d = d < 10 ? ('0' + d) : d;
+				let h = date.getHours();
+				h = h < 10 ? ('0' + h) : h;
+				let m = date.getMinutes();
+				m = m < 10 ? ('0'+ m) : m;
+				let s = date.getSeconds();
+				s = s < 10 ? ('0' + s) : s;
+				return y + '/' + MM + '/' + d+' '+h+':'+m+':'+s ;
 			},
 			//删除方法
-			delData(item){
-				console.log("删除")
-				uni.showModal({
-				    title: '提示',
-				    content: "确认删除该记录？",
-				    success: function (res) {
-					if (res.confirm) {
-						console.log('用户点击确定');
-					} else if (res.cancel) {
-						console.log('用户点击取消');
-					}
-				    }
-				});
+			touchstart(index) {
+			　　let that = this;
+			　　clearInterval(this.Loop); //再次清空定时器，防止重复注册定时器
+			　　　　this.Loop = setTimeout(function() {
+			　　　　　　uni.showModal({
+			　　　　　　　　title: '删除',
+			　　　　　　　　content: '请问要删除本条记录吗？',
+			　　　　　　　　success:async function(res) {
+			　　　　　　　　　　if (res.confirm) {
+			　　　　　　　　　　　that.ids[0] = that.info[index].borrow_list_id
+			　　　　　　　　　　　uni.request({
+								url:getApp().globalData.URL+'api/borrowList',
+								data:that.ids,
+								method:'DELETE',
+								header: {
+									'content-type': 'application/json;charset=UTF-8' // 默认值
+								  },
+								success:res =>{
+									that.showModal("已删除该条记录！")
+								},
+								fail: (res) => {
+									that.showModal("网络错误！")
+								}
+							})
+			　　　　　　　　} else if (res.cancel) {
+			　　　　　　　　　　console.log('用户点击取消')
+			　　　　　　　　}
+			　　　　　　}
+			　　　　});
+			　　}.bind(this), 1000);
 			},
+			//清空定时器，防止重复注册定时器
+			touchend() {  
+			　　clearInterval(this.Loop);
+			},
+			//提示框
+			showModal(val){
+				 uni.showToast({
+					title: val,
+					icon: 'none'
+				 });
+			},
+			//去详情页
+			toDetil(id){
+				this.borrow_list_id = id
+				uni.navigateTo({
+					url:'borrow_and_returnXQ?id='+this.borrow_list_id
+				})
+			}
 		}
 	}
 </script>
@@ -309,6 +309,8 @@
 	align-items: center;
 	/* margin-left: 190rpx; */
 	color: #999999;
+	display : flex ; 
+	flex-flow : row;
 }
 .s3 {
 	font-size: 20rpx;
@@ -317,6 +319,8 @@
 	align-items: center;
 	/* margin-left: 190rpx; */
 	color: #999999;
+	display : flex ;
+	flex-flow : row;
 }
 .s4 {
 	font-size: 24rpx;

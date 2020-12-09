@@ -78,14 +78,21 @@
 					 success:res =>{
 						that.info=res.data.readerInfo;
 						that.book=res.data.zjds
-						console.log("后台的数据1：",res.data)
 						console.log("后台的数据2：",res.data.zjds)
-						
-						//that.head_img = res.data.avatar
+						},
+						fail:(res)=>{
+							this.showModal("网络错误！")
 						}
 				})
 			},
-		}
+			//提示框
+			showModal(val){
+				 uni.showToast({
+					title: val,
+					icon: 'none'
+				 });
+			},
+		},
 	}
 </script>
 

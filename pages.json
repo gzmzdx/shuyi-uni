@@ -715,10 +715,6 @@
             
         }
         ,{
-<<<<<<< HEAD
-            "path" : "pages/order/order",
-            "style" : {}
-=======
             "path" : "pages/friend/friends_rank",
             "style" :                                                                                    
             {
@@ -744,7 +740,6 @@
                 "enablePullDownRefresh": false
             }
             
->>>>>>> b1a3f59ae74237d17529bbb09cd1e664e7d131dd
         }
     ],
 	"globalStyle": {

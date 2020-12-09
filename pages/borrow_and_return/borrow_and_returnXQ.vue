@@ -5,18 +5,24 @@
 			<view class="br1"></view>
 			<!-- 中间书籍部分 -->
 			<view class="midone">
-				<view class="zhengti"><image src="../../static/images/书1.jpg" style="width: 140rpx;height: 180rpx;"></image></view>
+				<view class="zhengti"><image :src="info.picture_path" style="width: 140rpx;height: 180rpx;"></image></view>
 				<view class="xq">
-					<view class="midwz">致敬老师</view>
+					<view class="midwz" v-text="info.book_name">致敬老师</view>
 					<view class="s1">
 						作者：
 						<!-- <image style="width: 30rpx; height: 30rpx;" src="../../static/images/dingwei.png"></image> -->
-						<view class="s6">大鲤鱼</view>
+						<view class="s6" v-text="info.author">大鲤鱼</view>
 					</view>
-					<view class="s2">出版社：湖南文艺出版社</view>
+					<view class="s2" >
+						<view>出版社：</view>
+						<view v-text="info.publisher">湖南文艺出版社</view>
+					</view>
 					<view class="s7">
-						<view class="s3">出版时间：2017-09-10</view>
-						<view class="s4">广东省立中山图书馆馆藏，广东中山图书馆</view>
+						<view class="s3">
+							<view>出版时间：</view>
+							<view v-text="info.publisher_year">2017-09-10</view>
+						</view>
+						<view class="s4" v-text="info.library">广东省立中山图书馆馆藏，广东中山图书馆</view>
 						<view class="s8">
 							<navigator url="./borrow_and_returnXQ">
 								<button class="btn1"><view class="wz">查看详情</view></button>
@@ -29,20 +35,20 @@
 			<view class="below">
 				<view class="kd">
 					承运快递：
-					<view class="s5">书易物流</view>
+					<view class="s5" v-text="info.return_type">书易物流</view>
 				</view>
 				<view class="kd">
 					地址：
 					<image style="width: 30rpx; height: 30rpx;" src="../../static/images/dingwei.png"></image>
 					<view class="s5">上海市松江区亭林镇大叶公路500号</view>
 				</view>
-				<view class="kd">
-					借入时间：
-					<view class="s5">2017-08-10</view>
+				<view class="kd1">
+					<view>借入时间：</view>
+					<view v-text="formatDate(info.borrow_time)">2017-09-10</view>
 				</view>
-				<view class="kd">
-					还书时间：
-					<view class="s5">2017-09-10</view>
+				<view class="kd1">
+					<view>还书时间：</view>
+					<view v-text="formatDate(info.needreturn_time)">2017-09-10</view>
 				</view>
 			</view>
 			<view class="br1"></view>
@@ -53,9 +59,52 @@
 <script>
 export default {
 	data() {
-		return {};
+		return {
+			id:"",//借还id
+			info:{}//后台传来的信息
+		};
 	},
-	methods: {}
+	onLoad(res) {
+		this.getIDetail(res.id)
+		console.log("++++来活了",res)
+	},
+	methods: {
+		getIDetail(id){
+			uni.request({
+				 url:getApp().globalData.URL+'api/borrowList/borrowAndRetrueDetail',
+				 data:{
+					 borrowId:id
+				 },
+				 method:'GET',
+				 header: {
+				     'content-type': 'application/json;charset=UTF-8' // 默认值
+				   },
+				success:res =>{
+					console.log("后台传来的数据：",res.data)
+					this.info = res.data;
+					},
+				fail: (res) => {
+					this.showModal("网络错误！")
+				}
+			})
+		},
+		//日期转换方法
+		formatDate(value) {
+			let date = new Date(value);
+			let y = date.getFullYear();
+			let MM = date.getMonth() + 1;
+			MM = MM < 10 ? ('0' + MM) : MM;
+			let d = date.getDate();
+			d = d < 10 ? ('0' + d) : d;
+			let h = date.getHours();
+			h = h < 10 ? ('0' + h) : h;
+			let m = date.getMinutes();
+			m = m < 10 ? ('0'+ m) : m;
+			let s = date.getSeconds();
+			s = s < 10 ? ('0' + s) : s;
+			return y + '/' + MM + '/' + d+' '+h+':'+m+':'+s ;
+		},
+	}
 };
 </script>
 
@@ -114,6 +163,8 @@ export default {
 	align-items: center;
 	/* margin-left: 190rpx; */
 	color: #999999;
+	display : flex ;
+	flex-flow : row;
 }
 .s3 {
 	font-size: 20rpx;
@@ -122,6 +173,8 @@ export default {
 	align-items: center;
 	/* margin-left: 190rpx; */
 	color: #999999;
+	display : flex ;
+	flex-flow : row;
 }
 .s4 {
 	font-size: 24rpx;
@@ -169,5 +222,12 @@ export default {
 	margin-top: 10rpx;
 	font-size: 24rpx;
 	color: #000000;
+}
+.kd1 {
+	margin-top: 10rpx;
+	font-size: 24rpx;
+	color: #000000;
+	display : flex ;
+	flex-flow : row;
 }
 </style>
