@@ -59,12 +59,12 @@
 					<view class="btns">
 						<navigator url="contact-order-agent">
 							<view class="one">
-								<view  style="margin-left: 10rpx; margin-top: 5rpx;">联系预约人</view>
+								<view  style="">联系预约人</view>
 							</view>
 						</navigator>
 						<navigator url="../return/return">
 							<view class="three">
-								<view  style="margin-left: 20rpx; margin-top: 5rpx;">面对面还书</view>
+								<view  style=" ">面对面还书</view>
 							</view>
 						</navigator>
 					</view>
@@ -105,10 +105,10 @@
 					
 					success:function (res) {
 						if(res.confirm){
-							console.log('取消');
+							console.log('确认');
 						}
 						else if (res.cancel){
-							console.log('确认');
+							console.log('取消');
 						}
 					}
 				});
@@ -202,6 +202,8 @@
 	height: 45rpx;
 	width: 135rpx;
 	border-radius: 23rpx;
+	line-height:45rpx;
+	text-align: center;
 	opacity:1;
 	margin-left: 200rpx;
 }
@@ -223,6 +225,8 @@
 	width: 135rpx;
 	margin-left: 20rpx;
 	border-radius: 23rpx;
+	line-height:45rpx;
+	text-align: center;
 	opacity:1;
 }
 

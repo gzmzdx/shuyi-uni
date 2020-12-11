@@ -16,8 +16,7 @@
 					<image class="imag" src="../../static/images/ap.jpg" style="width: 206rpx; height: 258rpx;"></image>
 				</view>
 				<view>
-					<view class="book-name">大数据与机器学习</view>
-
+					<view class="book-name">书的名字</view>
 					<view class="s1">预约时间：
 						<view class="s6">2018-08-20</view>
 					</view>
@@ -44,11 +43,10 @@
 							</view>
 						</navigator>
 						<view class="three">
-							<!-- <view  style="margin-left: 20rpx; margin-top: 5rpx;">查看物流</view> -->
 							<navigator url="./logistics">
 							<view  style="margin-left: 20rpx; margin-top: 5rpx;">查看物流</view>
 							</navigator>
-						</view>
+				</view>
 					</view>
 				</view>
 			</view>

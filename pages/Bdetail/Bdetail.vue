@@ -69,11 +69,9 @@
 			</view>
 			<!-- 底部 -->
 			<view class="btn">
-				<navigator url="../borrow/borrow">
 					<view class="btn1">
-						<button class="btn1">借书</button>
+						<button class="btn1" @click="borrowBook">借书</button>
 					</view>
-				</navigator>
 				<view class="btn2">
 					<button class="btn2">收藏</button>
 				</view>
@@ -89,7 +87,11 @@
 			}
 		},
 		methods: {
-			
+			borrowBook : function(){
+				uni.navigateTo({
+					url:'../borrow/borrow'
+				})
+			}
 		}
 	}
 </script>

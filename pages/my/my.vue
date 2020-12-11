@@ -60,7 +60,7 @@
 			<!-- 分割线br2 -->
 			<view class="br2"></view>
 			
-			<navigator url="../allOrders/index">
+			<navigator url="../appointment/appointment">
 				<view class="class1">
 					<image class="tupian" src="../../static/images/我的预约-2.png"></image>
 					<view class="neirong">我的预约</view>
@@ -77,7 +77,7 @@
 			</view>
 			<!-- 分割线br1 -->
 			<view class="br1"></view>
-			<navigator url="../return/return">
+			<navigator url="../return-books/return-books">
 				<view class="class1">
 					<image class="tupian" src="../../static/images/中心.还书.icon.png"></image>
 					<view class="neirong">我要还书</view>
