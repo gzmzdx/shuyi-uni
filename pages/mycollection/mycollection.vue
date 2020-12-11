@@ -2,28 +2,31 @@
 	<view>
 		<!-- 顶部 -->
 		<view class="top">
+			<!-- <text>我的书单</text> -->
 			<view class="wz">我的书单</view>
 			<navigator url="./xinjiang">
 			<view class="Xjiang">
-					<view class="image">
+					<!-- <view class="image"> -->
 					<image src="../../static/images/新建.png" style="width: 50rpx;height: 50rpx;"></image>	
-					</view>
+					<!-- </view> -->
 				<view class="xinjian">新建</view>
 			</view>
 			</navigator>
 		</view>
 		<!-- 中间 -->
 		<view class="mid">
-			<view class="midone">
+			<!-- <view class="midone">
 				<navigator url="mycollbook">
 				<view class="zhengti">
-					<image src="../../static/images/我的喜欢.png" style="width: 150rpx; height: 150rpx;"></image>
+					<image src="../../static/images/书1.jpg" style="width: 150rpx; height: 180rpx;"></image>
 					<view class="midwz">我的最爱</view>
 				</view>
 				<view class="shumu">100本</view>
 				</navigator>
-			</view>
-			<view class="midone">
+			</view> -->
+			<!-- 分割线br2 -->
+			<!-- <view class="br2"><view class="wz">我的书单</view></view> -->
+			<!-- <view class="midone">
 				<navigator url="mycollbook">
 				<view class="zhengti">
 					<image src="../../static/images/书1.jpg" style="width: 150rpx; height: 150rpx;"></image>
@@ -31,8 +34,10 @@
 				</view>
 				<view class="shumu">500本</view>
 				</navigator>
-			</view>
-			<view class="midone">
+			</view> -->
+			<!-- 分割线br2 -->
+			<!-- <view class="br2"></view> -->
+			<!-- <view class="midone">
 				<navigator url="mycollbook">
 				<view class="zhengti">
 					<image src="../../static/images/after.jpg" style="width: 150rpx; height: 150rpx;"></image>
@@ -40,7 +45,9 @@
 				</view>
 				<view class="shumu">50本</view>
 				</navigator>
-			</view>
+			</view> -->
+			<!-- 分割线br2 -->
+			<!-- <view class="br2"></view> -->
 		</view>
 	</view>
 </template>
@@ -48,28 +55,41 @@
 <script></script>
 
 <style>
+.br2 {
+		/* margin-left: 20rpx; */
+		width: 100%;
+		height: 50rpx;
+		background-color: #F5F5F5;
+	}
 .top {
-	height: 60rpx;
-	background: #f1f1f1;
-	box-shadow: #C0C0C0 6rpx 0rpx 6rpx 6rpx;
+	box-shadow: ;
+	background-color: #F8F8F8;
+	display: flex;
+	height: 90rpx;
 	}
 .wz {
-	margin-left: 25rpx;
-	height: 15rpx;
-	width: 150rpx;
+	width: 40%;
+	font-size: 30rpx;
+	margin-top: 30rpx;
+	margin-left: 30rpx;
 }
 .Xjiang{
 	display: flex;
-	margin-left: 600rpx;
-	height: 50rpx;
-	width: 550rpx;
+	font-size: 30rpx;
+	margin-top: 30rpx;
+	margin-left: 280rpx;
+	/* margin-left: 610rpx; */
+	/* margin-top: -40rpx; */
+	/* text-align: right; */
+	/* margin-right: 10rpx; */
+	/* color: #D2D2D2; */
 }
 .image {
-	margin-top: -5rpx;
-	/* margin-left: 600rpx; */
+	/* margin-top: -5rpx; */
+	/* margin-l: 600rpx; */
 }
 .xinjian {
-	margin-left: 0rpx;
+	margin-left: 5rpx;
 	/* margin-top: -55rpx; */
 	font-size: 30rpx;
 }
@@ -82,7 +102,7 @@
 	font-size: 28rpx;
 	margin-top: 30rpx;
 	align-items: center;
-	border-bottom: 1rpx solid #bbbbbb;
+	/* border-bottom: 1rpx solid #bbbbbb; */
 	/* background-color:   #007AFF; */
 	/* border:1px solid transparent; */
 }
