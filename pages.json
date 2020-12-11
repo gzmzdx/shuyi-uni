@@ -519,87 +519,76 @@
 			"path": "pages/readCirclepage/CircleNR_Right",
 			"style": {
                 "navigationBarTitleText": "圈文",
-                "enablePullDownRefresh": false,
-				"navigationBarBackgroundColor": "#6C40F3"
+                "enablePullDownRefresh": false
             }
 
 		}, {
 			"path": "pages/readCirclepage/CircleXQLife",
 			"style": {
                 "navigationBarTitleText": "圈子信息",
-                "enablePullDownRefresh": false,
-				"navigationBarBackgroundColor": "#6C40F3"
+                "enablePullDownRefresh": false
             }
 
 		}, {
 			"path": "pages/readCirclepage/CircleXQRight",
 			"style": {
                 "navigationBarTitleText": "圈子成员",
-                "enablePullDownRefresh": false,
-				"navigationBarBackgroundColor": "#6C40F3"
+                "enablePullDownRefresh": false
             }
 
 		}, {
 			"path": "pages/readCircle/readExperience",
 			"style": {
                 "navigationBarTitleText": "",
-                "enablePullDownRefresh": false,
-				"navigationBarBackgroundColor": "#6C40F3"
+                "enablePullDownRefresh": false
             }
 
 		}, {
 			"path": "pages/readCirclepage/readExperDZ",
 			"style": {
                 "navigationBarTitleText": "",
-                "enablePullDownRefresh": false,
-				"navigationBarBackgroundColor": "#6C40F3"
+                "enablePullDownRefresh": false
             }
 
 		}, {
 			"path": "pages/readCirclepage/readExperPL",
 			"style": {
                 "navigationBarTitleText": "",
-                "enablePullDownRefresh": false,
-				"navigationBarBackgroundColor": "#6C40F3"
+                "enablePullDownRefresh": false
             }
 
 		}, {
 			"path": "pages/my_reserve_Spage/reserve_SpageR",
 			"style": {
                 "navigationBarTitleText": "",
-                "enablePullDownRefresh": false,
-				"navigationBarBackgroundColor": "#6C40F3"
+                "enablePullDownRefresh": false
             }
 
 		}, {
 			"path": "pages/my_reserve_Spage/reserve_SpageL",
 			"style": {
                 "navigationBarTitleText": "",
-                "enablePullDownRefresh": false,
-				"navigationBarBackgroundColor": "#6C40F3"
+                "enablePullDownRefresh": false
             }
 
 		}, {
 			"path": "pages/readLabel/readLabel",
 			"style": {
                 "navigationBarTitleText": "",
-                "enablePullDownRefresh": false,
-				"navigationBarBackgroundColor": "#6C40F3"
+                "enablePullDownRefresh": false
             }
 
 		}, {
 			"path": "pages/readLabel/readLabelNew",
 			"style": {
                 "navigationBarTitleText": "",
-                "enablePullDownRefresh": false,
-				"navigationBarBackgroundColor": "#6C40F3"
+                "enablePullDownRefresh": false
             }
 
 		}, {
 			"path": "pages/borrow_and_return/borrow_and_return",
 			"style": {
                 "navigationBarTitleText": "借还记录",
-				"navigationBarBackgroundColor": "#6C40F3",
                 "enablePullDownRefresh": false
             }
 
@@ -750,15 +739,14 @@
 			"path": "pages/borrow_and_return/borrow_and_returnXQ",
 			"style": {
 				"navigationBarTitleText": "订单详情",
-				"enablePullDownRefresh": false,
-				"navigationBarBackgroundColor": "#6C40F3"
+				"enablePullDownRefresh": false
 			}
 		}
 	],
 	"globalStyle":{
-		"navigationBarTextStyle": "black",
+		"navigationBarTextStyle": "white",
 		"navigationBarTitleText": "uni-app",
-		"navigationBarBackgroundColor": "#F8F8F8",
+		"navigationBarBackgroundColor": "#6C40F3",
 		"backgroundColor": "#F8F8F8"
 	},
 	"tabBar": {
