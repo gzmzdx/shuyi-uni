@@ -268,6 +268,7 @@
 			.input-wrap {
 				display: flex;
 				width: 530rpx;
+				height: 75upx;
 				height: 70upx;
 				padding: 10upx 80upx 10upx 50upx;
 				margin-left: 0;
@@ -289,7 +290,7 @@
 
 				.img {
 					width: 70upx;
-					height: 70upx;
+					height: 75upx;
 					margin-top: 9upx;
 					margin-left: -55upx;
 					color: $words-color-light;

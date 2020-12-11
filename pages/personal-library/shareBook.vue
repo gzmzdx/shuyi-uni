@@ -82,9 +82,9 @@
 		margin-left: 20rpx;
 		color: #D7D7D7;
 		margin-top: 15rpx;
-		placeholder-style{
+		/* placeholder-style{
 			
-		}
+		} */
 	}
 
 
@@ -113,9 +113,9 @@
 		margin-left: 20rpx;
 		color: #D7D7D7;
 		margin-top: 15rpx;
-		placeholder-style{
+		/* placeholder-style{
 			
-		}
+		} */
 	}
 	
 	.publisher{
@@ -143,9 +143,9 @@
 		margin-left: 20rpx;
 		color: #D7D7D7;
 		margin-top: 15rpx;
-		placeholder-style{
+		/* placeholder-style{
 			
-		}
+		} */
 	}
 
 

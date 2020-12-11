@@ -11,7 +11,7 @@
 				</view>
 			</view>
 			</navigator>
-			<navigator url="Shejiao_notice">
+			<navigator url="BandR_notice">
 			<view class="topone">
 				<view class="top_one_ima"><image src="../../static/images/ring_white.png" style="width: 60rpx;height: 60rpx;"></image></view>
 				<view class="top_one_wz">借还消息</view>

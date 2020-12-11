@@ -93,6 +93,11 @@
 				"navigationBarTitleText": "社交消息"
 			}
 		}, {
+			"path": "pages/personal/BandR_notice",
+			"style": {
+				"navigationBarTitleText": "借还消息"
+			}	
+		}, {
 			"path": "pages/personal/serve_chat",
 			"style": {
 				"navigationBarTitleText": "书易客服"
@@ -617,22 +622,22 @@
 	, {
 			"path": "pages/my/lib",
 			"style": {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
+				"navigationBarTitleText": "我的图书馆",
+				"navigationStyle": "custom",
+				"app-plus": {
+					"titleNView": false
+           		 }
+			}
 
 		}, {
 			"path": "pages/my/mylib",
 			"style": {
-				"style": {
 					"navigationBarTitleText": "好友图书馆",
 					"navigationStyle": "custom",
 					"app-plus": {
 						"titleNView": false
         }
             }
-        }
-
 		}, {
 			"path": "pages/my/mylibrary",
 			"style": {
@@ -711,7 +716,8 @@
 				"navigationBarTitleText": "订单详情",
 				"enablePullDownRefresh": false
 			}
-		}    ],
+		}
+	],
 	"globalStyle":{
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",
