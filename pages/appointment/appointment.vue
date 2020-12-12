@@ -16,9 +16,7 @@
 					<image class="imag" src="../../static/images/ap.jpg" style="width: 206rpx; height: 258rpx;"></image>
 				</view>
 				<view>
-
-					<view class="book-name">大数据与机器学习</view>
-
+					<view class="book-name">书的名字</view>
 					<view class="s1">预约时间：
 						<view class="s6">2018-08-20</view>
 					</view>
@@ -34,19 +32,21 @@
 						<view class="">线下交易中，物流配送中</view>
 					</view>
 					<view class="btns">
-						<view class="one">
-							<view  style="margin-left: 10rpx; margin-top: 5rpx;">联系持有人</view>
-						</view>
-						<view class="two">
-							<view  style="margin-left: 20rpx; margin-top: 5rpx;">确认收货</view>
-						</view>
+						<navigator url="contact-booking-agent">
+							<view class="one">
+								<view  style="margin-left: 10rpx; margin-top: 5rpx;">联系持有人</view>
+							</view>
+						</navigator>
+						<navigator url="confirm">
+							<view class="two">
+								<view  style="margin-left: 20rpx; margin-top: 5rpx;">确认收货</view>
+							</view>
+						</navigator>
 						<view class="three">
-
 							<navigator url="./logistics">
 							<view  style="margin-left: 20rpx; margin-top: 5rpx;">查看物流</view>
 							</navigator>
-
-						</view>
+				</view>
 					</view>
 				</view>
 			</view>
@@ -76,9 +76,11 @@
 						<view class="">线下交易中，物流配送中</view>
 					</view>
 					<view class="btns">
-						<view class="one">
-							<view  style="margin-left: 10rpx; margin-top: 5rpx;">联系持有人</view>
-						</view>
+						<navigator url="contact-booking-agent">
+							<view class="one">
+								<view  style="margin-left: 10rpx; margin-top: 5rpx;">联系持有人</view>
+							</view>
+						</navigator>
 						<view class="two1">
 							<view  style="margin-left: 20rpx; margin-top: 5rpx;">确认收货</view>
 						</view>
@@ -117,9 +119,11 @@
 						<view class="">线下交易中，物流配送中</view>
 					</view>
 					<view class="btns">
-						<view class="one">
-							<view  style="margin-left: 20rpx; margin-top: 5rpx;">取消预约</view>
-						</view>
+						<navigator url="abolish">
+							<view class="one">
+								<view  style="margin-left: 20rpx; margin-top: 5rpx;">取消预约</view>
+							</view>
+						</navigator>
 					</view>
 				</view>
 			</view>

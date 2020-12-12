@@ -96,7 +96,7 @@
 .all{
 	width: 100%;
 	height: 800rpx;
-	background-color: rgb(245,245,245);
+	background-color: #F8F8F8;
 }
 .top{
 	/* margin-top: 20rpx; */

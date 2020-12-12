@@ -86,13 +86,17 @@
 			<!-- 底部 -->
 			<!-- #ifdef APP-PLUS -->
 			<view class="btn">
-				<button class="btn1">借书</button>
-				<button class="btn2">收藏</button>
+					<view class="btn1">
+						<button class="btn1" @click="borrowBook">借书</button>
+					</view>
+				<view class="btn2">
+					<button class="btn2">收藏</button>
+				</view>
 			</view>
 			<!-- #endif -->
 			<!-- #ifdef MP-WEIXIN -->
 			<view class="btn">
-				<view class="btn3">借书</view>
+				<view class="btn3" @click="borrowBook">借书</view>
 				<view class="btn4">收藏</view>
 			</view>
 			<!-- #endif -->

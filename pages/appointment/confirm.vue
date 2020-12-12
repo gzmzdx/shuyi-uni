@@ -48,7 +48,7 @@
 <style>
 	
 .confirm-btn{
-	margin-top: 270rpx;
+	margin-top: 35%;
 	color: #FFFFFF;
 	background-color: #5E49F5;
 	height: 90rpx;
