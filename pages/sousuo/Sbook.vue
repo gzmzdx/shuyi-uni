@@ -7,13 +7,11 @@
 					<view class="li">
 					<view class="name">书名....</view>
 					<navigator url="../Bdetail/Bdetail">
-					<view class="te">更多</view>
 					</navigator>
 					</view>
 					<view class="tex">作者 ：哈哈</view>
-					<view class="tex">最近书评 ：2020-09</view>
+					<view class="tex">出版社 ：华科出版社</view>
 					<view class="tex1"></view>
-					<view class="tex">大护法开了家我男人噶尔给个房间官方的身份拉和服务器房管局二....</view>
 				</view>
 			</view>
 		</view>
@@ -47,26 +45,23 @@
 		color: #007AFF;
 		border-bottom: 2rpx solid #00AAFF;
 	}
-	.list{
-		height: 120rpx;
-		display: flex;
-	}
-	.tit{
-		margin: 30rpx 55rpx;
-	}
+
 	
 	.list1 {
 		height: 300rpx;
 		width: 100%;
+		margin-left: -200rpx;
 		border-bottom: 1rpx solid #C8C7CC;
 		display: flex;
 	}
 	
 	.ima {
 		margin: 40rpx 40rpx;
+		width: 40%;
 	}
 	
 	.name {
+		width: 30%;
 		margin-top: 30rpx;
 		font-size: 40rpx;
 	}
@@ -81,7 +76,7 @@
 		height: 1rpx;
 		width: 450rpx;
 		margin-top: 15rpx;
-		background-color: #C0C0C0;
+		/* background-color: #C0C0C0; */
 	}
 	.tabs{
 		width: 500rpx;
