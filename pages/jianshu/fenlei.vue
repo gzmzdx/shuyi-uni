@@ -7,8 +7,8 @@
 			<!-- 弹出下拉筛选框 -->
 			<view class="Array" v-if="ShowHidden">
 				<view class="ty">
-				<view class="type" mode="aspectFill" @click.stop="type=!type1">通俗分类</view>
-				<view class="type" mode="aspectFill" @click.stop="type=!type2">中图法分类</view>
+				<view class="type" mode="aspectFill" @click="type!=type1">通俗分类</view>
+				<view class="type" mode="aspectFill" @click="type!=type2">中图法分类</view>
 				</view>
 				<view class="d4"></view>
 					<view class="side">
@@ -81,7 +81,7 @@
 		data() {
 			return {
 				ShowHidden:false,
-				Type:true,
+				Type:type1,
 			}
 		},
 		methods: {

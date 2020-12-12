@@ -1,18 +1,19 @@
 <template>
 	<view>
 		<!-- 导航栏 -->
-		<view class="tr"></view>
 		<!-- #ifdef APP-PLUS -->
+		<view class="tq"></view>
 		<view class="tab" style="width: 100%; height: 90rpx;">
-			<image class="back" src="../../static/images/向左箭头.二级.返回@2x.png" style="width: 64rpx; height: 64rpx;"></image>
+			<image @click="back" class="back" src="../../static/images/向左箭头.二级.返回@2x.png" style="width: 64rpx; height: 64rpx;"></image>
 			<view class="tit">新书上架</view>
 			<image class="shua" src="../../static/images/换一批.icon.png" style="width: 55rpx; height: 45rpx;"></image>
 			<view class="tit1">换一批</view>
 		</view>
 		<!-- #endif -->
 		<!-- #ifdef MP-WEIXIN -->
+		<view class="tq"></view>
 		<view class="tab" style="width: 100%; height: 90rpx;">
-			<image class="back" src="../../static/images/向左箭头.二级.返回@2x.png" style="width: 64rpx; height: 64rpx;"></image>
+			<image @click="back" class="back" src="../../static/images/向左箭头.二级.返回@2x.png" style="width: 64rpx; height: 64rpx;"></image>
 			<view class="tit2">新书上架</view>
 			<image class="shua1" src="../../static/images/换一批.icon.png" style="width: 55rpx; height: 40rpx;"></image>
 			<view class="tit1">换一批</view>
@@ -85,13 +86,17 @@
 			}
 		},
 		methods: {
-			
+			back(){
+				uni.navigateBack({
+					delta:1
+				})
+			}
 		}
 	}
 </script>
 
 <style>
-.tr{
+.tq{
 		height: 70rpx;
 		background-color:#6C40F3;
 	}
@@ -103,7 +108,7 @@
 	.tit {
 		margin-top: 9rpx;
 		color:#FFFFFF ;
-		margin-left: 230rpx;
+		margin-left: 250rpx;
 		display: flex;
 		font-size: 40rpx;
 		width: 60%;
@@ -127,7 +132,11 @@
 		height: 10rpx;
 		background-color: #F1F1F1;
 	} */
+.shua {
+		margin-top: 28rpx;
+		margin-left: 60rpx;
 
+	}
 	.shua1 {
 		margin-top: 28rpx;
 		margin-left: 60rpx;

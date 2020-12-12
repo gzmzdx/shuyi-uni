@@ -1,19 +1,7 @@
 <template>
 	<view>
-		<view class="ta"></view>
+		<!-- <view class="ta"></view> -->
 		<!-- 导航栏 -->
-		<view class="tab1" style="width: 100%; height: 90rpx;">
-			<image class="back" src="../../static/images/向左箭头.二级.返回@2x.png" style="width: 64rpx; height: 64rpx;"></image>
-			<!-- #ifdef MP-WEIXIN -->
-			<view class="tit3">全部分类</view>
-			<!-- #endif -->
-			<!-- #ifdef APP-PLUS -->
-			<view class="tit1">全部分类</view>
-			<!-- #endif -->
-			<navigator url="../sousuo/sousuo">
-			<image class="im" src="../../static/images/搜索icon@2x.png"style="width: 80rpx; height: 80rpx;"></image>
-			</navigator>
-			</view>
 			<!-- 最近使用列表 -->
 			<view class="di">
 			<!-- #ifdef APP-PLUS -->
@@ -191,36 +179,12 @@
 </script>
 
 <style>
-	.ta{
-		height: 70rpx;
-		background-color:#6C40F3;
-	}
-.tab1 {
-		display: flex;
-		background-color:#6C40F3;
-	}
-	.tit1 {
-		margin-top: 9rpx;
-		color:#FFFFFF ;
-		margin-left: 230rpx;
-		display: flex;
-		font-size: 40rpx;
-		/* width: 30%; */
-	}
-	.tit3 {
-		margin-top: 9rpx;
-		color:#FFFFFF ;
-		margin-left: 230rpx;
-		display: flex;
-		font-size: 40rpx;
-		width: 30%;
-	}
 	.back {
 		margin-top: 15rpx;
 		margin-left: 10rpx;
 	}
 	.im{
-		margin-top: 5rpx;
+		/* margin-top: -50rpx; */
 		margin-left: 190rpx;
 	}
 	.di{

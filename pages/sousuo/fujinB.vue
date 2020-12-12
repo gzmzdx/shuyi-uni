@@ -1,12 +1,24 @@
 <template>
 	<view>
 		<!-- 导航栏 -->
+		<!-- #ifdef APP-PLUS -->
+		<view class="tr3"></view>
 		<view class="tab1" style="width: 100%; height: 90rpx;">
-			<image class="back" src="../../static/images/back.png" style="width: 60rpx; height: 60rpx;"></image>
+		<image @click="back" class="back" src="../../static/images/向左箭头.二级.返回@2x.png" style="width: 60rpx; height: 60rpx;"></image>
 			<view class="tit1">选定位置的书</view>
-			<image class="im"  src="../../static/images/附近.png" style="width: 25rpx; height: 35rpx;"></image>
+			<image class="im"  src="../../static/images/附近的书.定位.icon@2x.png" style="width: 48rpx; height: 48rpx;"></image>
 			<view class="te">1024m</view>
 			</view>
+		<!-- #endif -->
+		<!-- #ifdef MP-WEIXIN -->
+		<view class="tr3"></view>
+		<view class="tab1" style="width: 100%; height: 90rpx;">
+		<image @click="back" class="back" src="../../static/images/向左箭头.二级.返回@2x.png" style="width: 60rpx; height: 60rpx;"></image>
+			<view class="tit3">选定位置的书</view>
+			<image class="im1"  src="../../static/images/附近的书.定位.icon@2x.png" style="width: 48rpx; height: 48rpx;"></image>
+			<view class="te1">1024m</view>
+			</view>
+		<!-- #endif -->
 			<!-- 分类选择 -->
 			<view class="list1">
 				<view class="td">中文</view>
@@ -18,7 +30,12 @@
 			</view>
 			<view class="tab2"></view>
 			<view class="list">
-				<image class="ima" src="../../static/images/封面.png" style="width: 150rpx; height: 200rpx;"></image>
+				<!-- #ifdef APP-PLUS -->
+				<image class="ima" src="../../static/images/封面.png"></image>
+				<!-- #endif -->
+				<!-- #ifdef MP-WEIXIN -->
+				<image class="im3" src="../../static/images/封面.png"></image>
+				<!-- #endif -->
 				<view>
 					<view class="name">书名....</view>
 					<view class="tex">作者 ：哈哈</view>
@@ -28,7 +45,12 @@
 				</view>
 			</view>
 			<view class="list">
-				<image class="ima" src="../../static/images/封面.png" style="width: 150rpx; height: 200rpx;"></image>
+				<!-- #ifdef APP-PLUS -->
+				<image class="ima" src="../../static/images/封面.png"></image>
+				<!-- #endif -->
+				<!-- #ifdef MP-WEIXIN -->
+				<image class="im3" src="../../static/images/封面.png"></image>
+				<!-- #endif -->
 				<view>
 					<view class="name">书名....</view>
 					<view class="tex">作者 ：哈哈</view>
@@ -49,36 +71,65 @@
 			}
 		},
 		methods: {
-			
+			back(){
+				uni.navigateBack({
+					delta:1
+				})
+			}
 		}
 	}
 </script>
 
 <style>
-.tab1 {
-		display: flex;
-		margin-top: 79rpx;
+.tr3{
+		height: 70rpx;
+		background-color:#6C40F3;
 	}
+	.tab1 {
+		/* margin-top: 79rpx; */
+		background-color:#6C40F3;
+		display: flex;
+	}
+
 	.tit1 {
-		margin-top: 9rpx;
-		color: #555555 ;
+		margin-top: 8rpx;
+		/* color: #555555; */
 		/* margin-left: 215rpx; */
 		font-size: 45rpx;
+		color: #FFFFFF;
+		width: 40%;
 	}
-	
+	.tit3 {
+		margin-top: 8rpx;
+		/* color: #555555; */
+		/* margin-left: 215rpx; */
+		font-size: 45rpx;
+		color: #FFFFFF;
+		width: 50%;
+	}
 	.back {
 		margin-top: 8rpx;
 		margin-left: 10rpx;
 	}
 	.im{
-		margin-top: 15rpx;
-		margin-left: 260rpx;
+		margin-top: 23rpx;
+		margin-left: 180rpx;
 	}
 	.te{
 		font-size: 35rpx;
-		margin-top: 10rpx;
+		margin-top: 25rpx;
 		margin-left: 10rpx;
-		color: #8F8F94;
+		color:#FFFFFF ;
+	}
+	.im1{
+		margin-top: 23rpx;
+		margin-left: 140rpx;
+	}
+	.te1{
+		font-size: 35rpx;
+		margin-top: 25rpx;
+		margin-left: 0rpx;
+		color:#FFFFFF ;
 	}
 	.list1{
 		display: flex;
@@ -108,8 +159,14 @@
 	
 	.ima {
 		margin: 40rpx 40rpx;
+		width: 150rpx;
+		height: 200rpx;
 	}
-	
+	.im3 {
+		margin: 40rpx 40rpx;
+		width: 150rpx;
+		height: 200rpx;
+	}
 	.name {
 		margin-top: 30rpx;
 		font-size: 40rpx;

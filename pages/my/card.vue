@@ -1,20 +1,5 @@
 <template>
 	<view >
-		<!-- #ifdef APP-PLUS -->
-		<view class="ta"></view>
-		<view class="tab1" style="width: 100%; height: 90rpx;">
-			<image class="back" src="../../static/images/向左箭头.二级.返回@2x.png" style="width: 64rpx; height: 64rpx;"></image>
-			<view class="tit1">快速办证</view>
-			</view>
-		<!-- #endif -->
-		<!-- #ifdef MP-WEIXIN -->
-		<view class="ta"></view>
-		<view class="tab1" style="width: 100%; height: 90rpx;">
-			<image class="back" src="../../static/images/向左箭头.二级.返回@2x.png" style="width: 64rpx; height: 64rpx;"></image>
-			<view class="tit2">快速办证</view>
-			</view>
-		<!-- #endif -->
-		
 		<view class="ta">
 			</view>
 		<view class="tab">
@@ -69,14 +54,13 @@
 
 <style>
 	.ta{
-				height: 70rpx;
-				background-color:#6C40F3;
-			}
-		.tab1 {
-				display: flex;
-				background-color:#6C40F3;
-			}
-	
+			height: 70rpx;
+			background-color:#6C40F3;
+		}
+	.tab1 {
+			display: flex;
+			background-color:#6C40F3;
+		}
 	.tit1 {
 		margin-top: 9rpx;
 			color:#FFFFFF ;
@@ -123,13 +107,13 @@
 		width: 80%;
 		margin-top: 40rpx;
 		color: #FFFFFF;
-background: #00AAFF;
+background: #6C40F3;
 	}
 	.btn1{
 			width: 80%;
 			margin-top: 40rpx;
 			color: #FFFFFF;
 			height: 100rpx;
-	background: #00AAFF;
+	background: #6C40F3;
 		}
 </style>

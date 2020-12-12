@@ -156,11 +156,7 @@
 		{
 			"path": "pages/classify/classify",
 			"style": {
-				"navigationBarTitleText": "全部分类",
-				"navigationStyle": "custom",
-				"app-plus": {
-					"titleNView": false
-				}
+				"navigationBarTitleText": "全部分类"
 			}
 		},
 		{
@@ -432,11 +428,11 @@
 		{
 			"path": "pages/my/card",
 			"style": {
-				"navigationBarTitleText": "借书卡",
-				"navigationStyle": "custom",
-				"app-plus": {
-					"titleNView": false
-				}
+				"navigationBarTitleText": "快速办证"
+				// "navigationStyle": "custom",
+				// "app-plus": {
+				// 	"titleNView": false
+				// }
 			}
 		},
 		{
@@ -704,10 +700,11 @@
 		}
     ],
 	"globalStyle":{
-			"navigationBarTextStyle": "black",
+			// "navigationBarTextStyle": "black",
 			"navigationBarTitleText": "uni-app",
-			"navigationBarBackgroundColor": "#F8F8F8",
-			"backgroundColor": "#F8F8F8"
+			"navigationBarBackgroundColor": "#6C40F3",
+			"backgroundColor": "#F8F8F8",
+			"navigationBarTextStyle":"white"
 		},
 	"tabBar": {
 			"backgroundColor": "#FFFFFF",

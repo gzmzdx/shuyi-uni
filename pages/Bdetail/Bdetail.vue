@@ -4,7 +4,7 @@
 		<view class="ta"></view>
 		<!-- #ifdef APP-PLUS -->
 		<view class="tab1" style="width: 100%; height: 90rpx;">
-			<image class="back" src="../../static/images/向左箭头.二级.返回@2x.png" style="width: 64rpx; height: 64rpx;"></image>
+			<image @click="back" class="back" src="../../static/images/向左箭头.二级.返回@2x.png" style="width: 64rpx; height: 64rpx;"></image>
 			<view class="tit1">图书详情</view>
 			<share>
 			<!-- <image class="im" src="../../static/images/详情页.分享.icon.png" style="width: 50rpx; height: 50rpx;"></image> -->
@@ -13,7 +13,7 @@
 		<!-- #endif -->
 			<!-- #ifdef MP-WEIXIN -->
 			<view class="tab1" style="width: 100%; height: 90rpx;">
-				<image class="back" src="../../static/images/向左箭头.二级.返回@2x.png" style="width: 64rpx; height: 64rpx;"></image>
+				<image @click="back" class="back" src="../../static/images/向左箭头.二级.返回@2x.png" style="width: 64rpx; height: 64rpx;"></image>
 				<view class="tit5">图书详情</view>
 				<share>
 				<!-- <image class="im1" src="../../static/images/详情页.分享.icon.png" style="width: 50rpx; height: 50rpx;"></image> -->
@@ -73,24 +73,7 @@
 				<view class="tit2">作者简介</view>
 				<view class="text">光大证券首席金融业分析师王一峰认为，自7月份开始，货币市场短期与中长期资金利率运行出现明显分化迹象。</view>
 			</view>
-			<!-- 书评 -->
-			<!-- <view class="lis">
-				<view class="tit2">书评</view>
-				<view class="li">
-					<image class="toux" src="../../static/images/头像.jpg" style="width: 80rpx; height: 80rpx;"></image>
-				<view class="name">爱书的猫</view>
-				<view class="vip">LV.11</view>
-				<view class="time">2017-05-05  15:32</view>
-				</view>
-				<view class="text1">光大证券首席金融业分析师王一峰认为，自7月份开始，货币市场短期与中长期资金利率运行出现明显分化迹象。</view>
-			<view class="li">
-				<image class="toux" src="../../static/images/头像.jpg" style="width: 80rpx; height: 80rpx;"></image>
-			<view class="name">爱书的猫</view>
-			<view class="vip">LV.11</view>
-			<view class="time">2017-05-05  15:32</view>
-			</view>
-			<view class="text1">光大证券首席金融业分析师王一峰认为，自7月份开始，货币市场短期与中长期资金利率运行出现明显分化迹象。</view>
-			</view> -->
+			
 			<!-- 类似的书 -->
 			<view class="jian2">
 				<view class="tit2">类似的书</view>
@@ -124,7 +107,11 @@
 			}
 		},
 		methods: {
-			
+			back(){
+				uni.navigateBack({
+					delta:1
+				})
+			}
 		}
 	}
 </script>
@@ -212,7 +199,7 @@
 		/* margin: 10rpx 20rpx; */
 		margin-left: 20rpx;
 		color: #8F8F94;
-		font-size: 30rpx;
+		font-size: 28rpx;
 	}
 	.tex5{
 		/* margin: 10rpx 20rpx; */
@@ -243,6 +230,7 @@
 		/* border-bottom: 1rpx solid #C0C0C0; */
 	}
 	.jian{
+		
 		height: 240rpx;
 		/* border-bottom: 1rpx solid #C0C0C0; */
 	}
