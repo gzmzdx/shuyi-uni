@@ -44,12 +44,13 @@
 					</navigator>
 				</view>
 				<view class="module">
-					<navigator url="../return/return">
+					<navigator url="../return-books/return-books">
 					<image class="tupian" src="../../static/images/还书.icon@2x.png"></image>
 					<view class="name">还书</view>
 					</navigator>
 				</view>
 				<view class="module">
+					<navigator url="../appointment/appointment">
 					<image class="tupian" src="../../static/images/预约.icon@2x.png"></image>
 					<view class="name">预约</view>
 					</navigator>
@@ -89,7 +90,7 @@
 				<view class="module1">
 					<image class="tupian1" src="../../static/images/活动.icon@2x.png"></image>
 					<view class="name">活动</view>
-				</view>
+			</view>
 			</view>
 			<view class="fenlei">
 				<view class="module1">
@@ -146,7 +147,7 @@
 						<view class="name2">[日]东野圭吾</view>
 					</view>
 				</view>
-			</view>
+					</view>
 			<!-- 分割线 -->
 			<view class="br"></view>
 			<!-- 热门推荐 -->
@@ -176,7 +177,7 @@
 						<view class="name2">[日]东野圭吾</view>
 					</view>
 				</view>
-			</view>
+					</view>
 			<!-- 分割线 -->
 			<view class="br"></view>
 			<!-- 猜您喜欢 -->
@@ -208,10 +209,10 @@
 						<view class="name2">[日]东野圭吾</view>
 					</view>
 				</view>
-			</view>
+			</view>		
 			<view class="br1"></view>
-		</view>
-	</view>
+		</view>			
+	</view>				
 </template>
 
 <script>
@@ -267,6 +268,7 @@
 			.input-wrap {
 				display: flex;
 				width: 530rpx;
+				height: 75upx;
 				height: 70upx;
 				padding: 10upx 80upx 10upx 50upx;
 				margin-left: 0;
@@ -288,7 +290,7 @@
 
 				.img {
 					width: 70upx;
-					height: 70upx;
+					height: 75upx;
 					margin-top: 9upx;
 					margin-left: -55upx;
 					color: $words-color-light;

@@ -1,13 +1,25 @@
 <template>
 	<view>
 		<!-- 导航栏 -->
+		<view class="ta"></view>
+		<!-- #ifdef APP-PLUS -->
 		<view class="tab1" style="width: 100%; height: 90rpx;">
-			<image class="back" src="../../static/images/back.png" style="width: 60rpx; height: 60rpx;"></image>
+			<image class="back" src="../../static/images/向左箭头.二级.返回@2x.png" style="width: 64rpx; height: 64rpx;"></image>
 			<view class="tit1">附近的书</view>
 			<navigator url="sousuo">
-			<image class="im" src="../../static/images/搜索.png"style="width: 65rpx; height: 65rpx;"></image>
+				<image class="im" src="../../static/images/搜索icon@2x.png"style="width: 80rpx; height: 80rpx;"></image>
 			</navigator>
 			</view>
+		<!-- #endif -->
+		<!-- #ifdef MP-WEIXIN -->
+		<view class="tab1" style="width: 100%; height: 90rpx;">
+			<image class="back" src="../../static/images/向左箭头.二级.返回@2x.png" style="width: 64rpx; height: 64rpx;"></image>
+			<view class="tit3">附近的书</view>
+			<navigator url="sousuo">
+				<image class="im1" src="../../static/images/搜索icon@2x.png"style="width: 80rpx; height: 80rpx;"></image>
+			</navigator>
+			</view>
+		<!-- #endif -->
 		<!-- 范围 -->
 		<view class="list">
 			<view class="td">1KM以内</view>
@@ -35,17 +47,30 @@
 </script>
 
 <style>
+.ta{
+		height: 70rpx;
+		background-color:#6C40F3;
+	}
 .tab1 {
-	margin-top: 79rpx;
 		display: flex;
+		background-color:#6C40F3;
 	}
 	.tit1 {
-		margin-top: 19rpx;
-		color: #555555 ;
-		margin-left: 215rpx;
-		font-size: 45rpx;
+		margin-top: 9rpx;
+		color:#FFFFFF ;
+		margin-left: 230rpx;
+		display: flex;
+		font-size: 40rpx;
+		width: 30%;
 	}
-	
+	.tit3 {
+		margin-top: 9rpx;
+		color:#FFFFFF ;
+		margin-left: 230rpx;
+		display: flex;
+		font-size: 40rpx;
+		width: 40%;
+	}
 	.back {
 		margin-top: 18rpx;
 		margin-left: 10rpx;
@@ -54,11 +79,15 @@
 		margin-top: 10rpx;
 		margin-left: 200rpx;
 	}
+	.im1{
+		margin-top: 10rpx;
+		margin-left: 40rpx;
+	}
 	.list{
 		height: 100rpx;
 		margin-top: 10rpx;
 		display: flex;
-		background-color: #F8F8F8;
+		background-color:#FFFFFF;
 	}
 	.td{
 		margin: 20rpx 20rpx;
@@ -73,6 +102,6 @@
 	.map {
 		/* margin-top: 30rpx; */
 		width: 100%;
-		height: 1000rpx;
+		height: 1400rpx;
 	}
 </style>

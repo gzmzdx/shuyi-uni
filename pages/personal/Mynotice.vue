@@ -50,6 +50,7 @@
 				<view class="mid_one_xx">好的</view>
 			</view>
 			</navigator>
+			
 		</view>
 		<!-- 底部  好友消息 -->
 		<view class="under">
@@ -64,6 +65,18 @@
 			</navigator>
 		</view>
 		
+		<!-- 联系图书持有人 -->
+		<view class="under">
+			<navigator url="unChat">
+			<view class="underone">
+				<view class="under_one_ima"><image src="../../static/images/图书持有人头像.jpg"style="width: 90rpx;height: 90rpx;border-radius: 50%;"></image></view>
+				<view class="under_one_imaWD"><image src="../../static/images/WD.png"style="width: 30rpx;height: 30rpx;" ></image></view>
+				<view class="under_one_wz">图书持有人</view>
+				<view class="under_one_time">10天前</view>
+				<view class="under_one_xx">我可能下个周才看完，看完才可以还书哟</view>
+			</view>
+			</navigator>
+		</view>
 	</view>
 </template>
 

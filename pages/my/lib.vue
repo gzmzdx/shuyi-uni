@@ -1,8 +1,9 @@
 <template>
 	<view>
 		<!-- 导航栏 -->
+		<view class="ta"></view>
 		<view class="tab1" style="width: 100%; height: 90rpx;">
-			<image class="back" src="../../static/images/back.png" style="width: 60rpx; height: 60rpx;"></image>
+			<image class="back" src="../../static/images/向左箭头.二级.返回@2x.png" style="width: 64rpx; height: 64rpx;"></image>
 			<view class="tit1">爱读书的猫</view>
 			<navigator url="../sousuo/sousuo">
 			</navigator>
@@ -33,16 +34,20 @@
 </script>
 
 <style>
+	.ta{
+			height: 70rpx;
+			background-color:#6C40F3;
+		}
 	.tab1 {
 			display: flex;
-			margin-top: 79rpx;
+			background-color:#6C40F3;
 		}
 		.tit1 {
-			margin-top: 9rpx;
-			/* text-align: center; */
-			color: #555555 ;
-			margin-left: 215rpx;
-			font-size: 38rpx;
+		margin-top: 9rpx;
+			color:#FFFFFF ;
+			margin-left: 220rpx;
+			display: flex;
+			font-size: 40rpx;
 		}
 		
 		.back {
@@ -51,16 +56,17 @@
 		}
 .ima{
 	width: 100%;
-	height: 300rpx;
+	height: 400rpx;
 }
 .list{
 	display: flex;
 }
 .tit{
-		margin: 10rpx 85rpx;
+	font-size: 34rpx;
+		margin: 10rpx 90rpx;
 	}
 	.blue{
-		color: #007AFF;
-		border-bottom: 2rpx solid #00AAFF;
+		color:#6C40F3;
+		border-bottom: 2rpx solid #6C40F3;
 	}
 </style>

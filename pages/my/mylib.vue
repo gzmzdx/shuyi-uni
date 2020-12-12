@@ -1,6 +1,6 @@
 <template>
 	<view> 
-		<view class="Array">
+	<!-- 	<view class="Array">
 			<navigator url="lib">
 				<view class="list1">
 					<image class="ima" src="../../static/images/me_blue.png" style="width: 110rpx; height: 110rpx;"></image>
@@ -20,9 +20,29 @@
 				</view>
 				</navigator>
 			</view>
-		</view>
+		</view> -->
+		<view class="ta"></view>
+		<view class="tab1" style="width: 100%; height: 90rpx;">
+			<image class="back" src="../../static/images/向左箭头.二级.返回@2x.png" style="width: 64rpx; height: 64rpx;"></image>
+			<!-- #ifdef APP-PLUS -->
+			<view class="tit1">好友图书馆</view>
+			<image class="im" src="../../static/images/搜索icon@2x.png"style="width: 80rpx; height: 80rpx;"></image>
+			<!-- #endif -->
+			<!-- #ifdef MP-WEIXIN -->
+			<view class="tit5">好友图书馆</view>
+			<image class="im1" src="../../static/images/搜索icon@2x.png"style="width: 80rpx; height: 80rpx;"></image>
+			<!-- #endif -->
+			</view>
+			<view class="tr">
+				<image class="ima" src="../../static/images/借书证.jpg" style="width: 310rpx; height: 200rpx;"></image>
+				<view>
+				<view class="tit">好友图书馆</view>
+				<view class="tex">创建时间：2020-9-9</view>
+				<view class="tex">类型：文学类</view>
+				<view class="tex">图书馆人数：124人</view>
 	</view>
-	
+	</view>
+	</view>
 </template>
 
 <script>
@@ -44,90 +64,76 @@
 </script>
 
 <style>
-	.tit1{
-		margin: 30rpx 55rpx; 
-		width: 80rpx;
-	}
-	.blue{
-		color: #007AFF;
-		border-bottom: 2rpx solid #00AAFF;
-	}
-	.list{
-		/* margin-left: -370rpx; */
-		height: 120rpx;
-		display: flex;
-	}
-	.tit{
-		margin: 30rpx -10rpx;
-		font-size: 35rpx;
-		font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
-		color: #333333;
-		width: 160rpx;
-		height: 60rpx;
-	}
+	.ta{
+			height: 70rpx;
+			background-color:#6C40F3;
+		}
+	.tab1 {
+			display: flex;
+			background-color:#6C40F3;
+		}
 	
-	.list1 {
-		/* margin-left: -370rpx; */
-		height: 190rpx;
-		width: 100%;
-		border-bottom: 1rpx solid #C8C7CC;
-		display: flex;
-		
-	}
-	
-	.ima {
-		margin: 40rpx 40rpx;
-		border-radius: 50%;
-	}
-	.imag {
-		margin-left: 270rpx;
-		margin-top: 60rpx;
-	}
-	.tr{
-		display: flex;
-	}
-	.btn{
-		width: 45rpx;
-		height: 22rpx;
-		font-size: 15rpx;
-		/* align-items: center; */
-		color: #F0AD4E;
-		border-radius: 15%;
-		margin: 45rpx 20rpx;
-		border:1px solid #F0AD4E;
-	}
-	
-	.tex {
-		font-size: 25rpx;
-		margin-top: -40rpx;
-		color: #808080;
-	}
-	
-	.text {
-		height: 1rpx;
-		width: 250rpx;
-		font-size: 25rpx;
-		color: #555555;
-		margin-top: 10rpx;
-	}
-	.text1 {
-		height: 1rpx;
-		/* width: 250rpx; */
-		margin-left: -170rpx;
-		font-size: 25rpx;
-		color: #555555;
-		margin-top: 10rpx;
-	}
-	.tabs{
-		width: 550rpx;
-	}
-	.te{
-		font-size: 25rpx;
-		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-		color: #F0AD4E;
-		margin: 40rpx -10rpx;
-	}
+	.tit1 {
+		margin-top: 9rpx;
+			color:#FFFFFF ;
+			margin-left: 200rpx;
+			display: flex;
+			font-size: 40rpx;
+			width: 50%;
+		}
+	.tit5 {
+		margin-top: 9rpx;
+			color:#FFFFFF ;
+			margin-left: 220rpx;
+			display: flex;
+			font-size: 40rpx;
+			width: 35%;
+		}
 	.li{
 		display: flex;
 	}
+	.back {
+		margin-top: 18rpx;
+		margin-left: 10rpx;
+	}
+	.im{
+		margin-top: 8rpx;
+		margin-left: 240rpx;
+	}
+	.im1{
+		margin-top: 8rpx;
+		margin-left: 140rpx;
+	}
+	.tab{
+		height: 20rpx;
+		background-color: #F1F1F1;
+	}
+	.tr{
+		width: 100%;
+		height: 300rpx;
+		background-color: #FFFFFF;
+		display: flex;
+		border-bottom: 1rpx solid #C8C7CC;
+	}
+	.tr1{
+		width: 100%;
+		height: 400rpx;
+		background-color: #FFFFFF;
+		display: flex;
+		border-bottom: 1rpx solid #C8C7CC;
+	}
+.ima{
+	margin: 30rpx 30rpx;
+	margin-top: 40rpx;
+	border-radius: 3%;
+}
+.tit{
+	font-size: 30rpx;
+	margin-top: 50rpx;
+}
+.tex{
+	font-size: 25rpx;
+	color: #8F8F94;
+	margin-top: 10rpx;
+}
 </style>
