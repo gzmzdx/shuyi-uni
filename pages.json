@@ -174,7 +174,6 @@
 				"navigationBarTitleText": "全部分类"
 
 			}
-			}
 		},
 		{
 			"path": "pages/book_cart/book_cart",
@@ -789,3 +788,4 @@
 		}]
 	}
 }
+
