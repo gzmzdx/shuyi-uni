@@ -84,7 +84,7 @@
 					itemList: ['预约自提','预约物流','面对面' ],
 					success: function (res) {
 						console.log('选中了第' + (res.tapIndex + 1) + '个按钮');
-						var that = this;
+						/* var that = this;
 						uni.request({
 								url:getApp().globalData.URL+"api/reserveList/onlineBooking",
 								data:{
@@ -100,7 +100,7 @@
 									console.log("后台传来的",res.data)
 									that.logistics = res.data;
 									}
-							})
+							}) */
 					},
 					fail: function (res) {
 						console.log(res.errMsg);
