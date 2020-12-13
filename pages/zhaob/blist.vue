@@ -6,7 +6,7 @@
 				<image @click="back" class="back" src="../../static/images/向左箭头.二级.返回@2x.png" style="width: 60rpx; height: 60rpx;"></image>
 				<view class="tit1">找书</view>
 				<navigator url="../sousuo/sousuo">
-					<image class="im" src="../../static/images/搜索icon@2x.png"style="width: 80rpx; height: 80rpx;"></image>
+					<image class="im" src="../../static/images/search_icon2x.png"style="width: 80rpx; height: 80rpx;"></image>
 				</navigator>
 			</view>
 

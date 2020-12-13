@@ -4,7 +4,7 @@
 			<view class="zt1">
 				温馨提示：确认收货之前，请仔细检查：包装是否完好；图书是否污损？图书是否就是您要借的书？
 			</view>
-			<view class="" style="margin-top: 30rpx; margin-left: 50rpx;">调用扫码功能</view>
+			
 		</view>
 	</view>
 	

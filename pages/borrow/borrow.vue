@@ -9,7 +9,6 @@
 		<!-- 分割线 -->
 		<view class="br3"></view>
 		
-		<!-- #ifndef MP-WEIXIN -->
 		<view class="text">
 			<view class="book-Name">冰与火之歌</view>
 			<view class="book-author">作者：
@@ -22,29 +21,12 @@
 				<view>2017年</view>
 			</view>
 		</view>
-		<!-- #endif -->
-		
-		<!-- #ifdef MP-WEIXIN -->
-		<view class="text" style="margin-top: 10rpx; height: 210rpx; ">
-			<view class="book-Name">冰与火之歌</view>
-			<view class="book-author">作者：
-				<view>康玉兰著</view>
-			</view>
-			<view class="book-publisher">出版社：
-				<view>北京大学联合出版社</view>
-			</view>
-			<view class="book-publish-time">出版年：
-				<view>2017年</view>
-			</view>
-		</view>
-		<!-- #endif -->
-		
 		
 		<!-- 分割线 -->
 		<view class="br3"></view>
-		<!-- <view class="order-book"> -->
+		<view class="order-book">
 			<view class="order-book-image">
-				<image class="house-image" src="../../static/images/个人图书馆.jpg"></image>
+				<image class="house-image" src="../../static/images/tuguan.gif"></image>
 			</view>
 			<view class="order-book-right">
 				
@@ -56,18 +38,18 @@
 						在馆可预约
 					</view>
 					<view class="count">
-						数量：<view style="color:#00AAFF;">2</view>
+						数量：<view>2</view>
 					</view>
 					<view class="address">
-						<image style="width: 30rpx;height: 30rpx;" src="../../static/images/dingwei.png"></image>约<view style="color: #00AAFF;">1196</view>km
+						<image style="width: 30rpx;height: 30rpx;" src="../../static/images/dingwei.png"></image>约<view>1196</view>km
 					</view>
 					
 				</view>
 				<view class="btnSubmmit">
-					<button class="orderSubmmit" @click="Inappointment"><view class="orderText">预约</view></button>
+					<button class="orderSubmmit" @click="Inappointment">预约</button>
 				</view>
 			</view>
-		<!-- </view> -->
+		</view>
 	</view>
 </template>
 
@@ -84,7 +66,7 @@
 					itemList: ['预约自提','预约物流','面对面' ],
 					success: function (res) {
 						console.log('选中了第' + (res.tapIndex + 1) + '个按钮');
-						var that = this;
+						/* var that = this;
 						uni.request({
 								url:getApp().globalData.URL+"api/reserveList/onlineBooking",
 								data:{
@@ -100,7 +82,7 @@
 									console.log("后台传来的",res.data)
 									that.logistics = res.data;
 									}
-							})
+							}) */
 					},
 					fail: function (res) {
 						console.log(res.errMsg);
@@ -138,8 +120,9 @@
 		background-color: #F4F5F6;
 	}
 	.text{
-		margin-top: 20rpx;
+		margin-top: 30rpx;
 		height: 200rpx;
+		border: 1rpx solid ;
 		margin-left: 50rpx;
 	}
 	.book-Name{
@@ -148,73 +131,54 @@
 	}
 	.book-author{
 		display: flex;
-		margin-top: 5rpx;
+		margin-top: 10rpx;
 		font-size: 26rpx;
 		color: #999999;
 	}
 	.book-publisher{
 		display: flex;
-		margin-top: 5rpx;
+		margin-top: 10rpx;
 		font-size: 26rpx;
 		color: #999999;
 	}
 	.book-publish-time{
 		display: flex;
-		margin-top: 5rpx;
+		margin-top: 10rpx;
 		font-size: 26rpx;
 		color: #999999;
 	}
-	/* .order-book{
+	.order-book{
+		/* width: 100%; */
 		height: 280rpx;
 		border: #18B566 1rpx solid;
 		display: flex;
-	} */
+	}
 	.order-book-image{
-		margin-top: 30rpx;
-		margin-left: 30rpx;
+		margin-top: 60rpx;
+		/* margin-left: 45rpx; */
+		/* width: 300rpx;
+		height:200rpx; */
+		/* border: #000000 1rpx solid; */
 		align-items: center;
 	}
 	.house-image{
-		width: 166rpx;
-		height:126rpx;
+		width: 300rpx;
+		height:200rpx;
+		margin-left: 50rpx;
 		/* border: #000000 1rpx solid; */
 	}
 	.order-book-right{
-		margin-top: -140rpx;
-		margin-left: 230rpx;
+		margin-top: 60rpx;
+		margin-left: -30rpx;
+		
 	}
 	.order-book-right1{
 		display: flex;
-		font-size: 26rpx;
-		color: #999999;
-		margin-top: 10rpx;
-		margin-bottom: 20rpx;
-	}
-	.right-name{
-		font-size: 36rpx;
 	}
 	.count{
 		display: flex;
-		margin-left: 30rpx;
 	}
 	.address{
 		display: flex;
-		margin-left: 30rpx;
-	}
-	.btnSubmmit{
-		margin-left: 220rpx;
-		/* line-height: center; */
-	}
-	.orderSubmmit{
-		background-color: #5E49F5;
-		width: 146rpx;
-		height: 46rpx;
-		border-radius: 23rpx;
-		font-size: 28rpx;
-		color: #FFFFFF;
-		
-	}
-	.orderText{
-		margin-top: -13rpx;
 	}
 </style>

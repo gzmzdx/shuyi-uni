@@ -5,16 +5,9 @@
 		<!-- 顶部 -->
 		<view class="mid" style="  opacity:1;">
 			<view class="midone">
-				<!-- #ifndef MP-WEIXIN -->
 				<view class="">
 					<image class="imag" src="../../static/images/ap.jpg" style="width: 206rpx; height: 258rpx;"></image>
 				</view>
-				<!-- #endif -->
-				<!-- #ifdef MP-WEIXIN -->
-				<view class="">
-					<image class="imag" src="../../static/images/ap.jpg" style="width: 206rpx; height: 258rpx; margin-top: 15rpx;"></image>
-				</view>
-				<!-- #endif -->
 				<view>
 					<view class="book-name">书的名字</view>
 					<view class="s1">作者：
@@ -41,16 +34,9 @@
 			
 		</view>
 		
-		<!-- #ifdef MP-WEIXIN -->
-		<view>
-			<button class="confirm-btn" style="margin-top: 600rpx;">确定取消</button>
-		</view>
-		<!-- #endif -->
-		<!-- #ifndef MP-WEIXIN -->
 		<view>
 			<button class="confirm-btn">确定取消</button>
 		</view>
-		<!-- #endif -->
 		
 		
 		

@@ -11,14 +11,12 @@
 				<button type="warn" style="width: 110rpx; height: 50rpx; font-size: 15rpx; margin-right: 100rpx; " >搜索</button>
 			</view>
 		</view>
-		<navigator url="../privateSpace/privateSpace">
-			<view class="show">
-				<view class="img">
-					<image src="../../static/images/user.jpg" style="width: 80rpx; height: 80rpx; border-radius: 50%; margin-top: 10rpx;"></image>
-				</view>
-				<view class="name">樱桃小丸子</view>
+		<view class="show">
+			<view class="img">
+				<image src="../../static/images/user.jpg" style="width: 80rpx; height: 80rpx; border-radius: 50%; margin-top: 10rpx;"></image>
 			</view>
-		</navigator>
+			<view class="name">樱桃小丸子</view>
+		</view>
 		
 		<view class="show">
 			<view class="img">

@@ -4,22 +4,22 @@
 		<view class="head">
 			<view class="header-wrap">
 				<view class="index-header">
-					<image class="address" src="../../static/images/书易.LOGO.SY@2x.png"></image>
+					<image class="address" src="../../static/images/shuyi_LOGO_SY2x.png"></image>
 					<view class="input-wrap">
 						<navigator url="../sousuo/sousuo">
-							<image class="img" src="/static/images/搜索icon@2x.png"></image>
-						<input type="search" placeholder="  书易搜索" v-model="value" @change="inputChange" />
+							<image class="img" src="/static/images/search_icon2x.png"></image>
+							<input type="search" placeholder="  书易搜索" v-model="value" @change="inputChange" />
 						</navigator>
 					</view>
 					<view class="map-wrap" @click="rightClick">
-						<image class="iconfont" src="../../static/images/留言icon@2x.png"></image>
+						<image class="iconfont" src="../../static/images/message_icon2x.png"></image>
 					</view>
 				</view>
 			</view>
 			<view class="blank"></view>
 		</view>
 		<!-- 轮播图 -->
-		<view class="lunbo">
+		<view class="lunbo"> 
 			<swiper style="height: 350rpx;" indicator-dots="true" autoplay="true" interval='5000' indicator-active-color="#18C7F2"
 			 circular="true">
 				<swiper-item>
@@ -39,32 +39,32 @@
 			<view class="gongnen">
 				<view class="module">
 					<navigator url="../zhaob/blist">
-					<image class="tupian" src="../../static/images/找书.icon@2x.png"></image>
-					<view class="name">找书</view>
+						<image class="tupian" src="../../static/images/find_book_icon2x.png"></image>
+						<view class="name">找书</view>
 					</navigator>
 				</view>
 				<view class="module">
 					<navigator url="../return-books/return-books">
-					<image class="tupian" src="../../static/images/还书.icon@2x.png"></image>
-					<view class="name">还书</view>
+						<image class="tupian" src="../../static/images/repay_book_icon2x.png"></image>
+						<view class="name">还书</view>
 					</navigator>
 				</view>
 				<view class="module">
 					<navigator url="../appointment/appointment">
-					<image class="tupian" src="../../static/images/预约.icon@2x.png"></image>
-					<view class="name">预约</view>
+						<image class="tupian" src="../../static/images/make_book_icon2x.png"></image>
+						<view class="name">预约</view>
 					</navigator>
 				</view>
 				<view class="module">
 					<navigator url="../mycollection/mycollection">
-					<image class="tupian" src="../../static/images/收藏.icon@2x.png"></image>
-					<view class="name">收藏</view>
+						<image class="tupian" src="../../static/images/collect_book_icon2x.png"></image>
+						<view class="name">收藏</view>
 					</navigator>
 				</view>
 				<view class="module">
 					<navigator url="../sousuo/fujin">
-					<image class="tupian" src="../../static/images/附近的书.icon@2x.png"></image>
-					<view class="name">附近的书</view>
+						<image class="tupian" src="../../static/images/nearby_book_icon2x.png"></image>
+						<view class="name">附近的书</view>
 					</navigator>
 				</view>
 			</view>
@@ -72,130 +72,142 @@
 			<!-- 分类 -->
 			<view class="fenlei">
 				<view class="module1">
-					<image class="tupian1" src="../../static/images/艺术.icon@2x.png"></image>
+					<image class="tupian1" src="../../static/images/art_icon2x.png"></image>
 					<view class="name">艺术</view>
 				</view>
 				<view class="module1">
-					<image class="tupian1" src="../../static/images/经济.icon@2x.png"></image>
+					<image class="tupian1" src="../../static/images/economics_icon2x.png"></image>
 					<view class="name">经济</view>
 				</view>
 				<view class="module1">
-					<image class="tupian1" src="../../static/images/小说.icon@2x.png"></image>
+					<image class="tupian1" src="../../static/images/hour_icon2x.png"></image>
 					<view class="name">小说</view>
 				</view>
 				<view class="module1">
-					<image class="tupian1" src="../../static/images/儿童.icon@2x.png"></image>
+					<image class="tupian1" src="../../static/images/children.icon2x.png"></image>
 					<view class="name">儿童</view>
 				</view>
 				<view class="module1">
-					<image class="tupian1" src="../../static/images/活动.icon@2x.png"></image>
+					<image class="tupian1" src="../../static/images/activity_icon2x.png"></image>
 					<view class="name">活动</view>
-			</view>
+				</view>
 			</view>
 			<view class="fenlei">
 				<view class="module1">
-					<image class="tupian1" src="../../static/images/法律.icon@2x.png"></image>
+					<image class="tupian1" src="../../static/images/law_icon2x.png"></image>
 					<view class="name">法律</view>
 				</view>
 				<view class="module1">
-					<image class="tupian1" src="../../static/images/科技.icon@2x.png"></image>
+					<image class="tupian1" src="../../static/images/science_icon2x.png"></image>
 					<view class="name">科技</view>
 				</view>
 				<view class="module1">
-					<image class="tupian1" src="../../static/images/体育.icon@2x.png"></image>
+					<image class="tupian1" src="../../static/images/sports_icon2x.png"></image>
 					<view class="name">体育</view>
 				</view>
 				<view class="module1">
-					<image class="tupian1" src="../../static/images/文学.icon@2x.png"></image>
+					<image class="tupian1" src="../../static/images/literature_icon2x.png"></image>
 					<view class="name">文学</view>
 				</view>
 				<view class="module1">
 					<navigator url="../classify/classify">
-					<image class="tupian1" src="../../static/images/全部分类.icon@2x.png"></image>
-					<view class="name">全部分类</view>
+						<image class="tupian1" src="../../static/images/all_classifications_icon2x.png"></image>
+						<view class="name">全部分类</view>
 					</navigator>
 				</view>
 			</view>
 			<!-- 分割线 -->
 			<view class="br"></view>
 			<!-- 新书上架 -->
-			<view class="xinshu">
+			<view class="xinshu" v-if="newbookList !==undefined && newbookList.length > 0">
 				<navigator url="../jianshu/newb">
-				<view class="tit">
-					<image class="imag1" src="../../static/images/标题导航.icon@2x.png"></image>
-					<view class="shu">新书上架</view>
-					<view class="gengduo">查看更多</view>
-					<image class="imag2" src="../../static/images/向右箭头.icon.32@2x.png"></image>
-				</view>
+					<view class="tit">
+						<image class="imag1" src="../../static/images/title_navigation_icon2x.png"></image>
+						<view class="shu">新书上架</view>
+						<view class="gengduo">查看更多</view>
+						<image class="imag2" src="../../static/images/arrow_right_icon_32_2x.png"></image>
+					</view>
 				</navigator>
 				<view class="lieshu">
-					<view class="lies">
-						<navigator url="../Bdetail/Bdetail">
-						<image class="imag3" src="http://cdn.static.17k.com/book/189x272/61/95/3159561.jpg-189x272?v=1590116249000"></image>
-						<view class="name1">解忧杂货</view>
-						<view class="name2">[日]东野圭吾电风扇广泛广泛是</view>
+					<view class="lies" v-for="item in newbookList">
+						<navigator :url="'../Bdetail/Bdetail?isbn='+item.isbn">
+							<image class="imag3" :src="item.book.picturePath"></image>
+							<view class="name1">{{item.book.bookName}}</view>
+							<view class="name2">{{item.book.publisher}}</view>
 						</navigator>
 					</view>
-					<view class="lies">
-						<image class="imag3" src="http://cdn.static.17k.com/book/189x272/83/03/3200383.jpg-189x272?v=1596527153000"></image>
-						<view class="name1">解忧杂货铺</view>
-						<view class="name2">[日]东野圭吾</view>
+				</view>
+			</view>
+			<view v-if="newbookList == undefined || newbookList.length <= 0" style="height: 300rpx;">
+				<navigator url="../jianshu/person">
+					<view class="tit">
+						<image class="imag1" src="../../static/images/title_navigation_icon2x.png"></image>
+						<view class="shu">新书上架</view>
+						<view class="gengduo">查看更多</view>
+						<image class="imag2" src="../../static/images/arrow_right_icon_32_2x.png"></image>
 					</view>
-					<view class="lies">
-						<image class="imag3" src="https://img11.360buyimg.com/n1/jfs/t26623/338/419718625/245064/7ef5b21b/5b9106caNc9b79061.jpg"></image>
-						<view class="name1">解忧杂货铺</view>
-						<view class="name2">[日]东野圭吾</view>
+				</navigator>
+				<view style="width: 100%;height: 100rpx;font-size: 40rpx;color: red;text-align: center;margin-top: 60rpx;">
+					<view>
+						书籍正在上架中...
 					</view>
 				</view>
-					</view>
+			</view>
 			<!-- 分割线 -->
 			<view class="br"></view>
 			<!-- 热门推荐 -->
-			<view class="xinshu">
+			<view class="xinshu" v-if="hotbookList !==undefined && hotbookList.length > 0">
 				<navigator url="../jianshu/remen">
-				<view class="tit">
-					<image class="imag1" src="../../static/images/标题导航.icon@2x.png"></image>
-					<view class="shu">热门推荐</view>
-					<view class="gengduo">查看更多</view>
-					<image class="imag2" src="../../static/images/向右箭头.icon.32@2x.png"></image>
-				</view>
+					<view class="tit">
+						<image class="imag1" src="../../static/images/title_navigation_icon2x.png"></image>
+						<view class="shu">热门推荐</view>
+						<view class="gengduo">查看更多</view>
+						<image class="imag2" src="../../static/images/arrow_right_icon_32_2x.png"></image>
+					</view>
 				</navigator>
 				<view class="lieshu">
-					<view class="lies">
-						<image class="imag3" src="http://cdn.static.17k.com/book/189x272/61/95/3159561.jpg-189x272?v=1590116249000"></image>
-						<view class="name1">解忧杂货铺</view>
-						<view class="name2">[日]东野圭吾电风扇广泛广泛是</view>
-					</view>
-					<view class="lies">
-						<image class="imag3" src="http://cdn.static.17k.com/book/189x272/83/03/3200383.jpg-189x272?v=1596527153000"></image>
-						<view class="name1">解忧杂货铺牛</view>
-						<view class="name2">[日]东野圭吾</view>
-					</view>
-					<view class="lies">
-						<image class="imag3" src="https://img11.360buyimg.com/n1/jfs/t26623/338/419718625/245064/7ef5b21b/5b9106caNc9b79061.jpg"></image>
-						<view class="name1">解忧杂货铺</view>
-						<view class="name2">[日]东野圭吾</view>
+					<view class="lies" v-for="item in hotbookList">
+						<navigator :url="'../Bdetail/Bdetail?isbn='+item.isbn">
+							<image class="imag3" :src="item.book.picturePath"></image>
+							<view class="name1">{{item.book.bookName}}</view>
+							<view class="name2">{{item.book.publisher}}</view>
+						</navigator>
 					</view>
 				</view>
+			</view>
+			<view v-if="hotbookList == undefined || hotbookList.length <= 0" style="height: 300rpx;">
+				<navigator url="../jianshu/person">
+					<view class="tit">
+						<image class="imag1" src="../../static/images/title_navigation_icon2x.png"></image>
+						<view class="shu">热门推荐</view>
+						<view class="gengduo">查看更多</view>
+						<image class="imag2" src="../../static/images/arrow_right_icon_32_2x.png"></image>
 					</view>
+				</navigator>
+				<view style="width: 100%;height: 100rpx;font-size: 40rpx;color: red;text-align: center;margin-top: 60rpx;">
+					<view>
+						书籍正在上架中...
+					</view>
+				</view>
+			</view>
 			<!-- 分割线 -->
 			<view class="br"></view>
 			<!-- 猜您喜欢 -->
-			<view class="xinshu">
+			<view class="xinshu" v-if="guessLikeList !==undefined && guessLikeList.length > 0">
 				<navigator url="../jianshu/person">
-				<view class="tit">
-					<image class="imag1" src="../../static/images/标题导航.icon@2x.png"></image>
-					<view class="shu">猜您喜欢</view>
-					<view class="gengduo">查看更多</view>
-					<image class="imag2" src="../../static/images/向右箭头.icon.32@2x.png"></image>
-				</view>
+					<view class="tit">
+						<image class="imag1" src="../../static/images/title_navigation_icon2x.png"></image>
+						<view class="shu">猜您喜欢</view>
+						<view class="gengduo">查看更多</view>
+						<image class="imag2" src="../../static/images/arrow_right_icon_32_2x.png"></image>
+					</view>
 				</navigator>
 				<view class="lieshu">
 					<view class="lies">
 						<navigator url="../Bdetail/Bdetail">
-						<image class="imag3" src="http://cdn.static.17k.com/book/189x272/61/95/3159561.jpg-189x272?v=1590116249000"></image>
-						<view class="name1">解忧杂货铺</view>
-						<view class="name2">[日]东野圭吾电风扇广泛广泛是</view>
+							<image class="imag3" src="http://cdn.static.17k.com/book/189x272/61/95/3159561.jpg-189x272?v=1590116249000"></image>
+							<view class="name1">解忧杂货铺</view>
+							<view class="name2">[日]东野圭吾电风扇广泛广泛是</view>
 						</navigator>
 					</view>
 					<view class="lies">
@@ -209,20 +221,69 @@
 						<view class="name2">[日]东野圭吾</view>
 					</view>
 				</view>
-			</view>		
+			</view>
+			<view v-if="guessLikeList == undefined || guessLikeList.length <= 0" style="height: 300rpx;">
+				<navigator url="../jianshu/person">
+					<view class="tit">
+						<image class="imag1" src="../../static/images/title_navigation_icon2x.png"></image>
+						<view class="shu">猜您喜欢</view>
+						<view class="gengduo">查看更多</view>
+						<image class="imag2" src="../../static/images/arrow_right_icon_32_2x.png"></image>
+					</view>
+				</navigator>
+				<view style="width: 100%;height: 100rpx;font-size: 40rpx;color: red;text-align: center;margin-top: 60rpx;">
+					<view>
+						书籍正在上架中...
+					</view>
+				</view>
+			</view>
 			<view class="br1"></view>
-		</view>			
-	</view>				
+		</view>
+	</view>
 </template>
 
 <script>
+	let app = getApp();
+	import {
+		mapState,
+		mapMutations
+	} from 'vuex'
 	export default {
 		data() {
 			return {
-				// value: ''
+				value: '',
+				newbookList: [], //新书list
+				hotbookList: [], //热书列表
+				guessLikeList: [], //猜你喜欢列表
 			}
 		},
+		onLoad() {
+			this.getNewBook(); //新书
+			this.getHotBook(); //热书
+		},
 		methods: {
+			//获取新书列表
+			async getNewBook() {
+				var that = this;
+				var params = {
+					url: "newbook",
+					type: 'GET',
+					data: {}
+				}
+				const res = await app.myRequest(params);
+				that.newbookList = res.content;
+			},
+			//获取热书列表
+			async getHotBook() {
+				var that = this;
+				var params = {
+					url: "hotbook",
+					type: 'GET',
+					data: {}
+				}
+				const res = await app.myRequest(params);
+				that.hotbookList = res.content;
+			},
 			// inputChange: function() {
 			// 	this.$emit('change', this.value)
 			// },
@@ -256,10 +317,11 @@
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
-			background-color:#6C40F3; 
+			background-color: #6C40F3;
+
 			.address {
 				margin-left: -10upx;
-				width:76rpx;
+				width: 76rpx;
 				height: 76rpx;
 				font-size: 26upx;
 				// background-color: #333333;
@@ -357,7 +419,7 @@
 		margin-top: 20rpx;
 		width: 100%;
 		height: 150rpx;
-		
+
 	}
 
 	.module {
@@ -383,7 +445,7 @@
 	/* 分类 */
 	.fenlei {
 		display: flex;
-		margin-top: 25rpx;
+		margin-top: 30rpx;
 		width: 100%;
 		height: 125rpx;
 	}
@@ -409,7 +471,7 @@
 	/* 新书上架 */
 	.xinshu {
 		width: 100%;
-		height: 470rpx;
+		height: 1070rpx;
 	}
 
 	.tit {
@@ -443,15 +505,17 @@
 		height: 50rpx;
 		font-size: 28rpx;
 		width: 20%;
-		
+
 	}
-.tr{
-	margin-top: 10rpx;
-	height: 2rpx;
-	background-color: #F1F1F1;
-	margin-left: 20rpx;
-	width: 95%;
-}
+
+	.tr {
+		margin-top: 10rpx;
+		height: 2rpx;
+		background-color: #F1F1F1;
+		margin-left: 20rpx;
+		width: 95%;
+	}
+
 	.imag2 {
 		margin-top: 32rpx;
 		width: 40rpx;
@@ -461,26 +525,27 @@
 	/* 新书 */
 	.lieshu {
 		display: flex;
+		flex-wrap: wrap; //自动换行
 		width: 100%;
-		height: 300rpx;
+		height: 1000rpx;
 	}
 
 	.lies {
-		margin-left: 26rpx;
+		margin-left: 20rpx;
 		margin-top: 20rpx;
 		width: 30%;
-		height: 250rpx;
+		height: 450rpx;
 	}
 
 	.imag3 {
-		width: 212rpx;
-		height: 270rpx;
+		width: 100%;
+		height: 300rpx;
 	}
 
 	.name1 {
 		display: -webkit-box;
 		width: 100%;
-		height: 60rpx;
+		height: 90rpx;
 		font-size: 30rpx;
 		color: #333333;
 		word-break: break-all;
@@ -488,13 +553,14 @@
 		/*自适应字体*/
 		overflow: hidden;
 		-webkit-box-orient: vertical;
-		-webkit-line-clamp: 1;
+		-webkit-line-clamp: 2;
 		/*设置 需要显示的行数*/
 	}
+
 	.name2 {
 		display: -webkit-box;
 		width: 100%;
-		height: 60rpx;
+		height: 40rpx;
 		// margin-top: 10rpx;
 		font-size: 20rpx;
 		color: #999999;
@@ -506,6 +572,7 @@
 		-webkit-line-clamp: 1;
 		/*设置 需要显示的行数*/
 	}
+
 	.br1 {
 		margin-top: 30rpx;
 		width: 100%;

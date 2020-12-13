@@ -14,7 +14,7 @@
 			<view class="topone">
 				<view class="title">文学</view>
 				<view class="delate">
-					<image src="../../static/images/清除.红.icon.png" style="width: 35rpx;height: 35rpx;"></image>
+					<image src="../../static/images/red_clearance_icon.png" style="width: 35rpx;height: 35rpx;"></image>
 					<view class="Sc">删除</view>
 				</view>
 			</view>
@@ -53,7 +53,7 @@
 			<view class="topone">
 				<view class="title">武侠小说</view>
 				<view class="delate">
-					<image src="../../static/images/清除.红.icon.png" style="width: 35rpx;height: 35rpx;"></image>
+					<image src="../../static/images/red_clearance_icon.png" style="width: 35rpx;height: 35rpx;"></image>
 					<view class="Sc">删除</view>
 				</view>
 			</view>
@@ -92,7 +92,7 @@
 			<view class="topone">
 				<view class="title">文学</view>
 				<view class="delate">
-					<image src="../../static/images/清除.红.icon.png" style="width: 35rpx;height: 35rpx;"></image>
+					<image src="../../static/images/red_clearance_icon.png" style="width: 35rpx;height: 35rpx;"></image>
 					<view class="Sc">删除</view>
 				</view>
 			</view>
