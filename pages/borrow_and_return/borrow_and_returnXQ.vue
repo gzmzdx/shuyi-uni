@@ -9,7 +9,7 @@
 				<view class="xq">
 					<view class="midwz" v-text="info.book_name">致敬老师</view>
 					<view class="s1">
-						作者：
+						<view>作者：</view>
 						<!-- <image style="width: 30rpx; height: 30rpx;" src="../../static/images/dingwei.png"></image> -->
 						<view class="s6" v-text="info.author">大鲤鱼</view>
 					</view>
@@ -155,6 +155,7 @@ export default {
 	/* margin-left: 190rpx; */
 	color: #999999;
 	display: flex;
+	flex-flow : row;
 }
 .s2 {
 	font-size: 20rpx;

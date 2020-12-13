@@ -1,84 +1,27 @@
 <template name="Logistic">
 	<view>
 		<view class="mid">
-			<view class="zt"><view class="zt1">广东图书馆</view></view>
-			<view class="midone">
-				<view class="zhengti">
-					<image src="../../static/images/书2.jpg" style="width: 125rpx; height: 170rpx;"></image>
-					<view class="midwz">致敬老师</view>
-				</view>
-				<view>
-					<!-- <view class="midwz">致敬老师</view> -->
-					<view class="s1">
-						预约时间：2017-11-08
-						<image style="width: 30rpx; height: 30rpx;" src="../../static/images/dingwei.png"></image>
-						<view class="s6">1.2km</view>
+			<view>
+				<view class="zt"><view class="zt1">广东图书馆</view></view>
+				<view class="midone">
+					<view class="zhengti">
+						<image src="../../static/images/书2.jpg" style="width: 125rpx; height: 170rpx;"></image>
+						<view class="midwz">致敬老师</view>
 					</view>
-					<view class="s2">上一位借书人：爱哭的猫</view>
-					<view class="s7">
-						<view class="s3">上一次还书期：2017-09-10</view>
-						<view class="s4">
-							当前状态：
-							<view class="s5">等待持书人还书</view>
+					<view>
+						<view class="s1">
+							预约时间：2017-11-08
 						</view>
-						<view class="s8">
-							<navigator url="../appointment/abolish">
-								<button class="btn1"><view class="wz">取消预约</view></button>
-							</navigator>
-						</view>
-					</view>
-				</view>
-			</view>
-			<!--预约成功开始-->
-			<view class="zt"><view class="zt1">广州图书馆</view></view>
-			<view class="midone">
-				<view class="zhengti">
-					<image src="../../static/images/书2.jpg" style="width: 125rpx; height: 170rpx;"></image>
-					<view class="midwz">致敬老师</view>
-				</view>
-				<view>
-					<view class="s1">
-						预约时间：2017-11-08
-						<image style="width: 30rpx; height: 30rpx;" src="../../static/images/dingwei.png"></image>
-						<view class="s6">1.2km</view>
-					</view>
-					<view class="s2">上一位借书人：爱哭的猫</view>
-					<view class="s7">
-						<view class="s3">上一次还书期：2017-09-10</view>
-						<view class="s4">
-							当前状态：
-							<view class="s5">交易成功</view>
-						</view>
-						<view class="s8">
+						<view class="s2">持书人：爱哭的猫</view>
+						<view class="s7">
+							<view class="s3">支付：未支付</view>
+							<view class="s4">
+								当前状态：
+								<view class="s5">等待持书人还书</view>
+							</view>
+							<view class="s8">
 								<button class="btn5"><view class="wz">删除记录</view></button>
-						</view>
-					</view>
-				</view>
-			</view>
-
-			<view class="zt"><view class="zt1">广东图书馆</view></view>
-			<view class="midone">
-				<view class="zhengti">
-					<image src="../../static/images/书2.jpg" style="width: 125rpx; height: 170rpx;"></image>
-					<view class="midwz">致敬老师</view>
-				</view>
-				<view>
-					<view class="s1">
-						预约时间：2017-11-08
-						<image style="width: 30rpx; height: 30rpx;" src="../../static/images/dingwei.png"></image>
-						<view class="s6">1.2km</view>
-					</view>
-					<view class="s2">上一位借书人：爱哭的猫</view>
-					<view class="s7">
-						<view class="s3">上一次还书期：2017-09-10</view>
-						<view class="s4">
-							当前状态：
-							<view class="s5">等待持书人还书</view>
-						</view>
-						<view class="s8">
-							<navigator url="../appointment/abolish">
-								<button class="btn1"><view class="wz">取消预约</view></button>
-							</navigator>
+							</view>
 						</view>
 					</view>
 				</view>
@@ -90,9 +33,113 @@
 <script>
 export default {
 	data() {
-		return {};
+		return {
+			mhcx:'', /*搜索框内容*/
+			page:0,
+			size:20,
+			info:[],//
+			openId:'1',//暂时是1
+			flag:'true',//判断是否到底部
+			condition:2//切换
+		};
 	},
-	methods: {}
+	onLoad() {
+		console.log("执行方法了")
+		this.goToSearch()
+	},
+	//当划到最底部的时候触发事件
+	onReachBottom:function(){				
+			console.log("我是最底部了");
+			if(this.flag=='true'){
+				this.getMoreNews();
+			}else{
+				this.showModal("到底啦~")
+			}			
+			},
+	methods: {
+		//获取数据
+		goToSearch(){
+			uni.request({
+				 url:getApp().globalData.URL+'api/reserveList/queryReserveList	',
+				 data:{
+					 
+					 openId:this.openId,
+					 mhcx:this.mhcx,
+					 condition:this.condition,
+					 page:this.page,
+					 size:this.size,
+				 },
+				 method:'GET',
+				 header: {
+				     'content-type': 'application/json;charset=UTF-8' // 默认值
+				   },
+				success:res =>{
+					console.log("后台传来的数据：",res.data)
+					this.info = res.data;
+					},
+				fail: (res) => {
+					this.showModal("网络错误！")
+				}
+			})
+		},
+		//分页加载
+		getMoreNews:function(){						//数据到底,触发这个函数
+			this.page = this.page + 1;
+			uni.showNavigationBarLoading();		//一读取数据,就进行刷新
+			var that = this;
+			uni.request({
+				url:getApp().globalData.URL+'api/reserveList/queryReserveList',
+				data:{
+					 openId:that.openId,
+					 mhcx:that.mhcx,
+					 page:that.page,
+					 size:that.size,
+				},
+				method:'GET',
+				header: {
+					 'content-type': 'application/json;charset=UTF-8' // 默认值
+				   },
+				success:res =>{
+					console.log("分页后台传来的",res.data);
+					if(res.data.length==0){
+						//到底了
+						that.flag = 'false';
+						that.page = that.page - 1;
+						return false;
+					}
+					that.info=that.info.concat(Array.from(res.data)); //拼接数组
+					// uni.stopPullDownRefresh();	//数据加载完成,刷新结束
+					// uni.hideNavigationBarLoading();	//数据读取完毕,刷新停止	
+				},
+				fail: (res) => {
+					this.showModal("网络错误！")
+				}
+			})
+		},
+		//日期转换方法
+		formatDate(value) {
+			let date = new Date(value);
+			let y = date.getFullYear();
+			let MM = date.getMonth() + 1;
+			MM = MM < 10 ? ('0' + MM) : MM;
+			let d = date.getDate();
+			d = d < 10 ? ('0' + d) : d;
+			let h = date.getHours();
+			h = h < 10 ? ('0' + h) : h;
+			let m = date.getMinutes();
+			m = m < 10 ? ('0'+ m) : m;
+			let s = date.getSeconds();
+			s = s < 10 ? ('0' + s) : s;
+			return y + '/' + MM + '/' + d+' '+h+':'+m+':'+s ;
+		},
+		//提示框
+		showModal(val){
+			 uni.showToast({
+				title: val,
+				icon: 'none'
+			 });
+		},
+	}
 };
 </script>
 

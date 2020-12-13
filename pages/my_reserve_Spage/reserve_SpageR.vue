@@ -1,98 +1,34 @@
 <template name="Orders">
 	<view>
 		<view class="mid">
-				<!--预约中开始-->
-		<view class="zt">
-			<view class="zt1">
-				爱书的猫
-			</view>
-			
+			<view>
+				<view class="zt">
+					<view class="zt1">
+						广东图书馆
+					</view>
+				</view>
+				<view class="midone">
+					<view class="zhengti">
+						<image src="../../static/images/书2.jpg" style="width: 125rpx; height: 170rpx;"></image>
+						<view class="midwz">致敬老师</view>
+					</view>
+					<view >
+						<view class="s1">预约时间：2017-11-08 
+						</view>
+						<view class="s2">持书人：爱哭的猫</view>
+						<view class="s7">
+							<view class="s3">支付：未支付</view>
+							<view class="s4">当前状态：
+								<view class="s5">预约失败，交易终止</view>
+							</view>
+							<view class="s8">
+								<button class="btn5"><view class="wz1">删除记录</view></button>
+							</view>
+						</view>
+					</view>
+				</view>
+			</view>	
 		</view>
-		<view class="midone">
-			
-			<view class="zhengti">
-				<image src="../../static/images/书2.jpg" style="width: 125rpx; height: 170rpx;"></image>
-				<view class="midwz">致敬老师</view>
-				
-			</view>
-			<view >
-				<view class="s1">预约时间：2017-11-08 <image style="width: 30rpx; height: 30rpx;" src="../../static/images/dingwei.png"></image>
-					<view class="s6">1.2km</view>
-				</view>
-				<view class="s2">上一位借书人：爱哭的猫</view>
-				<view class="s7">
-					<view class="s3">上一次还书期：无</view>
-					<view class="s4">当前状态：
-						<view class="s5">预约失败，交易终止</view>
-					</view>
-					<view class="s8">
-						<button class="btn5"><view class="wz1">删除</view></button>
-					</view>
-				</view>
-			</view>
-		</view>
-			<!--预约成功开始-->
-			<view class="zt">
-				<view class="zt1">
-					爱书的猫
-				</view>
-				
-			</view>
-			<view class="midone">
-				
-				<view class="zhengti">
-					<image src="../../static/images/书2.jpg" style="width: 125rpx; height: 170rpx;"></image>
-					<view class="midwz">致敬老师</view>
-					
-				</view>
-				<view >
-					<view class="s1">预约时间：2017-11-08 <image style="width: 30rpx; height: 30rpx;" src="../../static/images/dingwei.png"></image>
-						<view class="s6">1.2km</view>
-					</view>
-					<view class="s2">上一位借书人：爱哭的猫</view>
-					<view class="s7">
-						<view class="s3">上一次还书期：无</view>
-						<view class="s4">当前状态：
-							<view class="s5">预约失败，交易终止</view>
-						</view>
-						<view class="s8">
-							<button class="btn5"><view class="wz1">删除</view></button>
-						</view>
-					</view>
-				</view>
-			</view>
-			<!--预约失败开始-->
-			<view class="zt">
-				<view class="zt1">
-					爱书的猫
-				</view>
-				
-			</view>
-			<view class="midone">
-				
-				<view class="zhengti">
-					<image src="../../static/images/书2.jpg" style="width: 125rpx; height: 170rpx;"></image>
-					<view class="midwz">致敬老师</view>
-					
-				</view>
-				<view >
-					<view class="s1">预约时间：2017-11-08 <image style="width: 30rpx; height: 30rpx;" src="../../static/images/dingwei.png"></image>
-						<view class="s6">1.2km</view>
-					</view>
-					<view class="s2">上一位借书人：爱哭的猫</view>
-					<view class="s7">
-						<view class="s3">上一次还书期：无</view>
-						<view class="s4">当前状态：
-							<view class="s5">预约失败，交易终止</view>
-						</view>
-						<view class="s8">
-							<button class="btn5"><view class="wz1">删除</view></button>
-						</view>
-					</view>
-				</view>
-			</view>
-			<!--预约失败结束-->
-			</view>
 	</view>
 </template>
 
