@@ -19,34 +19,9 @@
 		</view>
 		<!-- 中间标签内容 -->
 		<view class="mid">
-			<view class="midone">
-				<view class="midone_nameS">
-					<text>xxx文学</text>
-				</view>
-			</view>
-			<view class="midone">
-				<view class="midone_nameO">
-					<text>文学</text>
-				</view>
-			</view>
-			<view class="midone">
-				<view class="midone_nameT">
-					<text>文学</text>
-				</view>
-			</view>
-			<view class="midone">
-				<view class="midone_nameS">
-					<text>语言文学</text>
-				</view>
-			</view>
-			<view class="midone">
-				<view class="midone_nameO">
-					<text>文学</text>
-				</view>
-			</view>
-			<view class="midone">
-				<view class="midone_nameT">
-					<text>物理网络文学</text>
+			<view class="midone" v-for="(i,index) in info" :kye=index>
+				<view class="midone_nameS" :style="{'color':color[index]}" @touchstart.prevent="touchstart(index)" @touchend.prevent="touchend">
+					<text v-text="i.content">xxx文学</text>
 				</view>
 			</view>
 		</view>
@@ -57,11 +32,98 @@
 	export default {
 		data() {
 			return {
-				
+				openId:"1",//暂时
+				info:[],//接收的数据
+				color:[
+					"#00ff00",
+					"#aaaaff",
+					"#ff557f",
+					"#00ffff",
+					"#00ff00",
+					"#55aaff",
+					"#ff00ff",
+					"#aaff00",
+					"#00ff00",
+					"#55ffff",
+					"#ffaa7f",
+					"#aaffff"
+				],
+				ids:[],//删除的id
 			}
 		},
+		onLoad() {
+			this.getInfo()
+		},
 		methods: {
-			
+			//获取数据
+			getInfo(){
+				uni.request({
+					url:getApp().globalData.URL+'api/tagReader/queryTag',
+					data:{
+						 openId:this.openId,
+					},
+					method:'GET',
+					header: {
+						 'content-type': 'application/json;charset=UTF-8' // 默认值
+					   },
+					success:res =>{
+						console.log("分页后台传来的",res.data)
+						this.info = res.data
+						},
+					fail: (res) => {
+						// showModal(){
+						// 	 uni.showToast({
+						// 		title: "网络错误！",
+						// 		icon: 'none'
+						// 	 })
+						// },
+					}
+				})
+			},
+			//删除方法
+			touchstart(index) {
+			　　let that = this;
+			　　clearInterval(this.Loop); //再次清空定时器，防止重复注册定时器
+			　　　　this.Loop = setTimeout(function() {
+			　　　　　　uni.showModal({
+			　　　　　　　　title: '删除',
+			　　　　　　　　content: '请问要删除本条记录吗？',
+			　　　　　　　　success:async function(res) {
+			　　　　　　　　　　if (res.confirm) {
+			　　　　　　　　　　　that.ids[0] = that.info[index].id
+			　　　　　　　　　　　uni.request({
+								url:getApp().globalData.URL+'api/tagReader',
+								data:that.ids,
+								method:'DELETE',
+								header: {
+									'content-type': 'application/json;charset=UTF-8' // 默认值
+								  },
+								success:res =>{
+									that.showModal("已删除该条记录！")
+									that.getInfo()
+								},
+								fail: (res) => {
+									that.showModal("网络错误！")
+								}
+							})
+			　　　　　　　　} else if (res.cancel) {
+			　　　　　　　　　　console.log('用户点击取消')
+			　　　　　　　　}
+			　　　　　　}
+			　　　　});
+			　　}.bind(this), 1000);
+			},
+			//清空定时器，防止重复注册定时器
+			touchend() {  
+			　　clearInterval(this.Loop);
+			},
+			//提示框
+			showModal(val){
+				 uni.showToast({
+					title: val,
+					icon: 'none'
+				 });
+			},
 		}
 	}
 </script>
@@ -106,7 +168,6 @@
 	margin-left: 30rpx;
 }
 .midone_nameS{
-	color: #00BFFF;
 	margin-top: 30rpx;
 	margin-left: 30rpx;
 }

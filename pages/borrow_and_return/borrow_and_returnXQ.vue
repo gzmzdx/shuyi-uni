@@ -37,11 +37,11 @@
 					承运快递：
 					<view class="s5" v-text="info.return_type">书易物流</view>
 				</view>
-				<view class="kd">
+				<!-- <view class="kd">
 					地址：
 					<image style="width: 30rpx; height: 30rpx;" src="../../static/images/dingwei.png"></image>
 					<view class="s5">上海市松江区亭林镇大叶公路500号</view>
-				</view>
+				</view> -->
 				<view class="kd1">
 					<view>借入时间：</view>
 					<view v-text="formatDate(info.borrow_time)">2017-09-10</view>
