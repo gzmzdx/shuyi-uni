@@ -47,13 +47,24 @@
 
 <style>
 	
+/* #ifdef MP-WEIXIN */
 .confirm-btn{
-	margin-top: 35%;
+	margin-top: 49%;
 	color: #FFFFFF;
 	background-color: #5E49F5;
 	height: 90rpx;
 	border-radius: 0;
 }
+/* #endif */
+/* #ifndef MP-WEIXIN */
+.confirm-btn{
+	margin-top: 36%;
+	color: #FFFFFF;
+	background-color: #5E49F5;
+	height: 90rpx;
+	border-radius: 0;
+}
+/* #endif */
 .book-name{
 	font-size: 36rpx;
 	margin-top: -80rpx;
@@ -99,10 +110,17 @@
 	display: flex;
 }
 
+/* #ifdef MP-WEIXIN */
+.imag{
+	margin-left:30rpx;
+	margin-top: 1rpx;
+}
+/* #endif */
+/* #ifndef MP-WEIXIN */
 .imag{
 	margin-left:30rpx;
 }
-
+/* #endif */
 .s1{
 	font-size: 20rpx;
 	margin-top: 5rpx;

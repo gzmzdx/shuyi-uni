@@ -168,14 +168,9 @@
 
 			}
 		},
+		
 		{
-			"path": "pages/classify/classify",
-			"style": {
 				"navigationBarTitleText": "全部分类"
-
-			}
-		},
-		{
 			"path": "pages/book_cart/book_cart",
 			"style": {
 				"navigationBarTitleText": "借书车"
@@ -464,11 +459,11 @@
 		{
 			"path": "pages/my/card",
 			"style": {
-				"navigationBarTitleText": "快速办证"
-				// "navigationStyle": "custom",
-				// "app-plus": {
-				// 	"titleNView": false
-				// }
+				"navigationBarTitleText": "借书卡",
+				"navigationStyle": "custom",
+				"app-plus": {
+					"titleNView": false
+				}
 			}
 		},
 		{
@@ -741,14 +736,11 @@
 		}
 	],
 	"globalStyle":{
-			// "navigationBarTextStyle": "black",
-			"navigationBarTitleText": "uni-app",
-			"navigationBarBackgroundColor": "#6C40F3",
-			"backgroundColor": "#F8F8F8",
-			"navigationBarTextStyle":"white"
-		},
-
-
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#6C40F3",
+		"backgroundColor": "#F8F8F8"
+	},
 	"tabBar": {
 		"backgroundColor": "#FFFFFF",
 		"color": "#8A8A8A",

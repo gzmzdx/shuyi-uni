@@ -115,6 +115,11 @@
 				uni.navigateBack({
 					delta:1
 				})
+			},
+			borrowBook : function(){
+				uni.navigateTo({
+					url:'../borrow/borrow'
+				})
 			}
 		}
 	}
