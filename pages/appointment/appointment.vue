@@ -54,7 +54,6 @@
 			<!-- 分割线br -->
 			<view class="br"></view>
 			
-			
 			<view class="midone">
 				<view class="">
 					<image class="imag" src="../../static/images/ap.jpg" style="width: 206rpx; height: 258rpx;"></image>
@@ -143,12 +142,24 @@
 	color: #333333;
 }	
 	
+/* #ifdef MP-WEIXIN */
+.br {
+		margin-top: 10rpx;
+		/* width: 100%; */
+		height: 3rpx;
+		background-color: #EEEEEE;
+	}
+/* #endif */
+
+/* #ifndef MP-WEIXIN */
 .br {
 		margin-top: 10rpx;
 		/* width: 100%; */
 		height: 1rpx;
 		background-color: #EEEEEE;
 	}
+/* #endif */
+
 .show{
 	/* margin-bottom: auto; */
 	width: auto;
@@ -182,10 +193,17 @@
 	display: flex;
 }
 
+/* #ifndef MP-WEIXIN */
 .imag{
 	margin-left:30rpx;
 }
-
+/* #endif */
+/* #ifdef MP-WEIXIN */
+.imag{
+	margin-left:30rpx;
+	margin-top: 1rpx;
+}
+/* #endif */
 .s1{
 	font-size: 24rpx;
 	margin-top: 5rpx;

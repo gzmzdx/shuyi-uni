@@ -3,7 +3,7 @@
 		<!-- 顶部部分 -->
 		<view class="head">
 			<view class="header-wrap">
-				<view class="index-header">
+				<view class="index-header" style="  background-color: #5E49F5; line-height: 45rpx;">
 					<image class="address" src="../../static/images/back.png"></image>
 					<view class="name2">个人空间</view>
 				</view><!--  -->
@@ -151,8 +151,8 @@
 		// display: flex;
 		.index-header {
 			display: flex;
-			height: 110rpx;
-			line-height: 110rpx;
+			height: 100rpx;
+			line-height: 100px;
 			padding: 0 30rpx;
 			padding-top: 40rpx;
 			background-color: $color-base;
@@ -163,10 +163,11 @@
 
 			.address {
 				// margin-left: 50upx;
-				width: 60rpx;
+				width: 70rpx;
 				height: 60rpx;
 				font-size: 26rpx;
-				margin-top: 20rpx;
+				margin-top: -40rpx;
+				line-height: 45rpx;
 			}
 
 			
@@ -236,7 +237,7 @@
 		font-size: 40rpx;
 	}
 	.name2 {
-		color: #3C3C3C;
+		color: #FFFFFF;
 		width: 100%;
 		height: 60rpx;
 		font-size: 40rpx;
