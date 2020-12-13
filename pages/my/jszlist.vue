@@ -2,7 +2,7 @@
 	<view class="all">
 		<view class="ta"></view>
 		<view class="tab1" style="width: 100%; height: 90rpx;">
-			<image class="back" src="../../static/images/向左箭头.二级.返回@2x.png" style="width: 64rpx; height: 64rpx;"></image>
+			<image @click="back" class="back" src="../../static/images/向左箭头.二级.返回@2x.png" style="width: 64rpx; height: 64rpx;"></image>
 			<!-- #ifdef APP-PLUS -->
 			<view class="tit1">借书卡</view>
 			<image class="im" src="../../static/images/搜索icon@2x.png"style="width: 80rpx; height: 80rpx;"></image>
@@ -36,7 +36,7 @@
 				<view class="tr1">
 					<image class="ima" src="../../static/images/借书证.jpg" style="width: 310rpx; height: 200rpx;"></image>
 					<view>
-					<view class="tit">广东省省立图书馆</view>
+					<view class="tit7">广东省省立图书馆</view>
 					<view class="tex">注册日期：2020-9-9</view>
 					<view class="tex">类型：普通A A类卡</view>
 					<view class="tex">当前状态：正常</view>
@@ -65,7 +65,11 @@
 			}
 		},
 		methods: {
-			
+			back(){
+				uni.navigateBack({
+						delta:1
+					})
+			}
 		}
 	}
 </script>
@@ -83,7 +87,7 @@
 	.tit1 {
 		margin-top: 9rpx;
 			color:#FFFFFF ;
-			margin-left: 220rpx;
+			margin-left: 230rpx;
 			display: flex;
 			font-size: 40rpx;
 			/* width: 20%; */
@@ -124,7 +128,7 @@
 	}
 	.tr1{
 		width: 100%;
-		height: 400rpx;
+		height: 350rpx;
 		background-color: #FFFFFF;
 		display: flex;
 		border-bottom: 1rpx solid #C8C7CC;
@@ -137,6 +141,11 @@
 .tit{
 	font-size: 30rpx;
 	margin-top: 20rpx;
+}
+.tit7{
+	font-size: 30rpx;
+	margin-top: 20rpx;
+	width: 70%;
 }
 .tex{
 	font-size: 25rpx;

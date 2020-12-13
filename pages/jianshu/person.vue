@@ -1,93 +1,147 @@
 <template>
 	<view>
 		<!-- 导航栏 -->
+		<!-- #ifdef APP-PLUS -->
+		<view class="tq"></view>
 		<view class="tab" style="width: 100%; height: 90rpx;">
-			<image class="back" src="../../static/images/back.png" style="width: 60rpx; height: 60rpx;"></image>
+			<image @click="back" class="back" src="../../static/images/向左箭头.二级.返回@2x.png" style="width: 64rpx; height: 64rpx;"></image>
 			<view class="tit">猜您喜欢</view>
-			<image class="shua" src="../../static/images/刷新.png" style="width: 55rpx; height: 55rpx;"></image>
+			<image class="shua" src="../../static/images/换一批.icon.png" style="width: 55rpx; height: 45rpx;"></image>
 			<view class="tit1">换一批</view>
 		</view>
-		<view class="tab1"></view>
+		<!-- #endif -->
+		<!-- #ifdef MP-WEIXIN -->
+		<view class="tq"></view>
+		<view class="tab" style="width: 100%; height: 90rpx;">
+			<image @click="back" class="back" src="../../static/images/向左箭头.二级.返回@2x.png" style="width: 64rpx; height: 64rpx;"></image>
+			<view class="tit2">猜您喜欢</view>
+			<image class="shua1" src="../../static/images/换一批.icon.png" style="width: 55rpx; height: 40rpx;"></image>
+			<view class="tit1">换一批</view>
+		</view>
+		<!-- #endif -->
+		<!-- #ifdef MP-WEIXIN -->
 		<view class="list">
-			<image class="ima" src="../../static/images/封面.png" style="width: 150rpx; height: 200rpx;"></image>
+			<image class="ima1" src="../../static/images/封面.png" ></image>
 			<view>
 				<view class="name">书名....</view>
 				<view class="tex">作者 ：哈哈</view>
 				<view class="tex">出版社 ：浙江大学出版社</view>
-				<view class="tex">出版时间 ：2020-09</view>
-				<view class="tex1">广东省图书馆、广东中山图书馆.....</view>
+				<!-- <view class="tex">出版时间 ：2020-09</view> -->
+				<!-- <view class="tex1">广东省图书馆、广东中山图书馆</view> -->
 			</view>
 		</view>
 		<view class="list">
-			<image class="ima" src="../../static/images/封面.png" style="width: 150rpx; height: 200rpx;"></image>
+			<image class="ima1" src="../../static/images/封面.png" ></image>
 			<view>
 				<view class="name">书名....</view>
 				<view class="tex">作者 ：哈哈</view>
 				<view class="tex">出版社 ：浙江大学出版社</view>
-				<view class="tex">出版时间 ：2020-09</view>
-				<view class="tex1">广东省图书馆、广东中山图书馆.....</view>
+				<!-- <view class="tex">出版时间 ：2020-09</view> -->
+				<!-- <view class="tex1">广东省图书馆、广东中山图书馆</view> -->
 			</view>
 		</view>
-
-		<view class="tab">
-			<image class="shua" src="../../static/images/刷新.png" style="width: 55rpx; height: 55rpx;"></image>
-			<view class="tit1">换一批</view>
+		<!-- #endif -->
+		<!-- #ifdef APP-PLUS -->
+		<view class="list">
+			
+			<image class="ima" src="../../static/images/封面.png" style="width: 200rpx; height: 250rpx;"></image>
+			<view>
+				<view class="name">书名....</view>
+				<view class="tex">作者 ：哈哈</view>
+				<view class="tex">出版社 ：浙江大学出版社</view>
+				<!-- <view class="tex">出版时间 ：2020-09</view> -->
+				<!-- <view class="tex1">广东省图书馆、广东中山图书馆</view> -->
+			</view>
 		</view>
-		<image class="top" src="../../static/images/top.png" style="width: 80rpx; height: 80rpx;"></image>
-	</view>
+		<view class="list">
+			<image class="ima" src="../../static/images/封面.png" style="width: 200rpx; height: 250rpx;"></image>
+			<view>
+				<view class="name">书名....</view>
+				<view class="tex">作者 ：哈哈</view>
+				<view class="tex">出版社 ：浙江大学出版社</view>
+				<!-- <view class="tex">出版时间 ：2020-09</view> -->
+				<!-- <view class="tex1">广东省图书馆、广东中山图书馆</view> -->
+			</view>
+		</view>
+		<!-- #endif -->
+		</view>
 </template>
 
 <script>
 	export default {
 		data() {
 			return {
-
+				
 			}
 		},
 		methods: {
-
+			back(){
+				uni.navigateBack({
+					delta:1
+				})
+			}
 		}
 	}
 </script>
 
 <style>
-	.tab {
-		margin-top: 69rpx;
+.tq{
+		height: 70rpx;
+		background-color:#6C40F3;
+	}
+.tab {
 		display: flex;
+		background-color:#6C40F3;
 	}
 
 	.tit {
 		margin-top: 9rpx;
-		color: #808080;
-		margin-left: 5rpx;
-		font-size: 45rpx;
+		color:#FFFFFF ;
+		margin-left: 250rpx;
+		display: flex;
+		font-size: 40rpx;
+		width: 60%;
+	
 	}
-
+.tit2 {
+		margin-top: 9rpx;
+		color:#FFFFFF ;
+		margin-left: 230rpx;
+		display: flex;
+		font-size: 40rpx;
+		width: 30%;
+	
+	}
 	.back {
-		margin-top: 18rpx;
+		margin-top: 15rpx;
 		margin-left: 10rpx;
 	}
 
-	.tab1 {
+	/* .tab1 {
 		height: 10rpx;
 		background-color: #F1F1F1;
-	}
+	} */
+.shua {
+		margin-top: 28rpx;
+		margin-left: 60rpx;
 
-	.shua {
-		margin-top: 18rpx;
-		margin-left: 300rpx;
+	}
+	.shua1 {
+		margin-top: 28rpx;
+		margin-left: 80rpx;
 
 	}
 
 	.tit1 {
-		margin-top: 18rpx;
-		color: #808080;
+		margin-top: 28rpx;
+		color:#FFFFFF ;
 		margin-left: 10rpx;
-		font-size: 36rpx;
+		font-size: 28rpx;
+		width: 20%;
 	}
 
 	.list {
-		height: 290rpx;
+		height: 330rpx;
 		border-bottom: 1rpx solid #C8C7CC;
 		display: flex;
 	}
@@ -95,9 +149,21 @@
 	.ima {
 		margin: 40rpx 40rpx;
 	}
-
+	.ima1 {
+		margin: 40rpx 40rpx;
+		width: 200rpx;
+		height: 250rpx;
+	}
+	.ta{
+		/* margin-left: 100rpx; */
+		width: 0rpx;
+	}
+.biaoz{
+	/* margin-top: 60rpx; */
+	margin-left: 180rpx;
+}
 	.name {
-		margin-top: 30rpx;
+		margin-top: 50rpx;
 		font-size: 40rpx;
 	}
 

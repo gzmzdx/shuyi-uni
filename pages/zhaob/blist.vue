@@ -3,10 +3,10 @@
 		<!-- 头部 -->
 		<view class="head">
 			<view class="head-tab">
-				<image class="back" src="../../static/images/back.png" style="width: 60rpx; height: 60rpx;"></image>
+				<image @click="back" class="back" src="../../static/images/向左箭头.二级.返回@2x.png" style="width: 60rpx; height: 60rpx;"></image>
 				<view class="tit1">找书</view>
-				<navigator url="zhaob">
-					<image class="im" src="../../static/images/搜索.png" style="width: 65rpx; height: 65rpx;"></image>
+				<navigator url="../sousuo/sousuo">
+					<image class="im" src="../../static/images/搜索icon@2x.png"style="width: 80rpx; height: 80rpx;"></image>
 				</navigator>
 			</view>
 
@@ -22,7 +22,7 @@
 		</view>
 		<view class="tab1"></view>
 		<view class="list">
-			<image class="ima" src="../../static/images/封面.png" style="width: 150rpx; height: 200rpx;"></image>
+			<image class="im1" src="../../static/images/封面.png" ></image>
 			<view>
 				<view class="name">书名....</view>
 				<view class="tex">作者 ：哈哈</view>
@@ -32,7 +32,7 @@
 			</view>
 		</view>
 		<view class="list">
-			<image class="ima" src="../../static/images/封面.png" style="width: 150rpx; height: 200rpx;"></image>
+			<image class="im1" src="../../static/images/封面.png" ></image>
 			<view>
 				<view class="name">书名....</view>
 				<view class="tex">作者 ：哈哈</view>
@@ -50,7 +50,13 @@
 		data() {
 			return {}
 		},
-		methods: {}
+		methods: {
+			back(){
+				uni.navigateBack({
+					delta:1
+				})
+			}
+		}
 	}
 </script>
 
@@ -60,15 +66,18 @@
 	}
 
 	.head-tab {
-		margin-top: 50rpx;
+		background-color: #6C40F3;
+		// margin-top: 50rpx;
 		display: flex;
 	}
 
 	.tit1 {
-		color: #555555;
-		margin-top: 45rpx;
-		margin-left: 5rpx;
+		margin-top: 49rpx;
+		/* color: #555555; */
+		margin-left: 15rpx;
 		font-size: 45rpx;
+		color: #FFFFFF;
+		width: 20%;
 	}
 
 	.back {
@@ -76,9 +85,9 @@
 		margin-left: 10rpx;
 	}
 
-	.im {
-		margin-top: 50rpx;
-		margin-left: 500rpx;
+	.im{
+		margin-top: 40rpx;
+		margin-left: 400rpx;
 	}
 
 	.list1 {
@@ -106,8 +115,10 @@
 		display: flex;
 	}
 
-	.ima {
+	.im1 {
 		margin: 40rpx 40rpx;
+		width: 150rpx;
+		height: 200rpx;
 	}
 
 	.name {

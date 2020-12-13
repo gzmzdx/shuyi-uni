@@ -2,7 +2,7 @@
 	<view>
 		<view class="tr3"></view>
 		<view class="tab1" style="width: 100%; height: 90rpx;">
-			<image class="back" src="../../static/images/向左箭头.二级.返回@2x.png" style="width: 60rpx; height: 60rpx;"></image>
+			<image @click="back" class="back" src="../../static/images/向左箭头.二级.返回@2x.png" style="width: 60rpx; height: 60rpx;"></image>
 			<view class="tit1">书易搜索</view>
 			
 			</view>
@@ -30,7 +30,11 @@
 			}
 		},
 		methods: {
-
+back(){
+	uni.navigateBack({
+		delta:1
+	})
+}
 		}
 	}
 </script>
@@ -73,7 +77,7 @@
 		border-bottom: 2rpx solid #dcdcdc;
 	}
 	.tit{
-		margin: 30rpx 55rpx;
+		margin: 30rpx 56rpx;
 		font-size: 36rpx;
 
 		color: #333333;

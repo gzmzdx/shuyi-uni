@@ -32,12 +32,13 @@
 				<image class="im1" src="../../static/images/朋友圈.png" style="width: 150rpx; height: 150rpx;"></image>
 			<view>微信朋友圈</view>
 			</view>
-			<view class="td">
+			<!-- <view class="td">
 				<image class="im1" src="../../static/images/QQ空间.png" style="width: 150rpx; height: 150rpx;"></image>
 			<view>QQ空间</view>
-			</view>
+			</view> -->
 		</view>
 		<!-- #endif -->
+		<!-- #ifdef APP-PLUS -->
 		<view class="list1">
 			<view class="td">
 				<image class="im1" src="../../static/images/QQ.png" style="width: 150rpx; height: 150rpx;"></image>
@@ -52,6 +53,7 @@
 			<view>QQ空间</view>
 			</view>
 		</view>
+		<!-- #endif -->
 		</view>
 	</view>
 </template>
@@ -99,7 +101,7 @@
 	}
 	.list3{
 		display: flex;
-		margin-top: -200rpx;
+		/* margin-top: 200rpx; */
 	}
 	.td{
 		height: 250rpx;
@@ -108,8 +110,10 @@
 		border: 1rpx solid #F1F1F1;
 		font-size: 28rpx;
 		color: #555555;
+		margin-left: 50rpx;
 	}
 	.im1{
 		margin-top: 30rpx;
+		margin-left: -20rpx;
 	}
 </style>

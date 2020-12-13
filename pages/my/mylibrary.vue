@@ -2,16 +2,20 @@
 	<view class="all">
 		<view class="ta"></view>
 		<view class="tab1" style="width: 100%; height: 90rpx;">
-			<image class="back" src="../../static/images/向左箭头.二级.返回@2x.png" style="width: 64rpx; height: 64rpx;"></image>
+			<image @click="back" class="back" src="../../static/images/向左箭头.二级.返回@2x.png" style="width: 64rpx; height: 64rpx;"></image>
 <!-- #ifdef APP-PLUS -->
 			<view class="tit1">个人图书馆</view>
-<!-- #endif -->
-<!-- #ifdef MP-WEIXIN -->
-			<view class="tit2">个人图书馆</view>
-<!-- #endif -->
 			<navigator url="../sousuo/sousuo">
 				<image class="im" src="../../static/images/搜索icon@2x.png"style="width: 80rpx; height: 80rpx;"></image>
 			</navigator>
+<!-- #endif -->
+<!-- #ifdef MP-WEIXIN -->
+			<view class="tit2">个人图书馆</view>
+			<navigator url="../sousuo/sousuo">
+				<image class="im1" src="../../static/images/搜索icon@2x.png"style="width: 80rpx; height: 80rpx;"></image>
+			</navigator>
+<!-- #endif -->
+			
 			</view>
 			<!-- #ifdef APP-PLUS -->
 			<navigator url="lib">
@@ -20,7 +24,7 @@
 			<image  class="ima" src="../../static/images/右箭头.png" style="width: 64rpx; height: 64rpx;"></image>
 			</view>
 			</navigator>
-			<navigator url="mylib">
+			<navigator url="jianj">
 			<view class="td">
 			<view class="tex">好友图书馆</view>
 			<image  class="ima" src="../../static/images/右箭头.png" style="width: 64rpx; height: 64rpx;"></image>
@@ -28,14 +32,18 @@
 			</navigator>
 			<!-- #endif -->
 			<!-- #ifdef MP-WEIXIN -->
+			<navigator url="lib">
 			<view class="td1">
 			<view class="tex1">我的图书馆</view>
 			<image  class="ima1" src="../../static/images/右箭头.png" style="width: 64rpx; height: 64rpx;"></image>
 			</view>
+			</navigator>
+			<navigator url="mylib">
 			<view class="td1">
 			<view class="tex1">好友图书馆</view>
 			<image  class="ima1" src="../../static/images/右箭头.png" style="width: 64rpx; height: 64rpx;"></image>
 			</view>
+			</navigator>
 			<!-- #endif -->
 			<!-- <view class="tr">
 			<view :class="['tit',index===1&&'blue']" @click="index=1">我的</view>
@@ -54,7 +62,11 @@
 			}
 		},
 		methods: {
-			
+			back(){
+				uni.navigateBack({
+					delta:1
+				})
+			}
 		}
 	}
 </script>
@@ -85,7 +97,7 @@
 			margin-left: 210rpx;
 			display: flex;
 			font-size: 40rpx;
-			width: 35%;
+			width: 40%;
 		}
 		.back {
 			margin-top: 8rpx;
@@ -95,7 +107,10 @@
 			margin-top: 10rpx;
 			margin-left: 180rpx;
 		}
-		
+		.im1{
+			margin-top: 10rpx;
+			margin-left: 100rpx;
+		}
 .tit{
 	/* color: #007AFF; */
 	height: 60rpx;

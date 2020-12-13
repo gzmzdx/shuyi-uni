@@ -73,6 +73,7 @@
 		margin-top: 10rpx;
 		margin-left: 10rpx;
 		align-items: center;
+		font-size: 36rpx;
 	}
 	.tit{
 		/* margin-top: 10rpx; */

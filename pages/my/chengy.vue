@@ -1,20 +1,33 @@
 <template>
 	<view> 
-		<view class="Array">
-				<view class="list1">
-					<image class="ima" src="../../static/images/me_blue.png" style="width: 80rpx; height: 80rpx;"></image>
+	<!-- #ifdef APP-PLUS -->
+			<view class="list1">
+				<image class="im" src="../../static/images/me_blue.png" ></image>
+				<view class="tabs">
+					<view class="tr">
+					<view class="tit">爱读书的</view>
+					<view class="btn">LV11</view>
+					<view class="te">书圣</view>
+					<image class="imag" src="../../static/images/double_right_arrow.png" style="width: 20rpx; height: 20rpx;"></image>
+					</view>
+					<view class="tr">
+				</view>
+				</view>
+			</view>
+	<!-- #endif -->
+		<!-- #ifdef MP-WEIXIN -->
+				<view class="list2">
+					<image class="im" src="../../static/images/me_blue.png" ></image>
 					<view class="tabs">
-						<view class="tr">
+						<view class="t">
 						<view class="tit">爱读书的</view>
 						<view class="btn">LV11</view>
 						<view class="te">书圣</view>
 						<image class="imag" src="../../static/images/double_right_arrow.png" style="width: 20rpx; height: 20rpx;"></image>
 						</view>
-						<view class="tr">
-					</view>
 					</view>
 				</view>
-			</view>
+		<!-- #endif -->
 		</view>
 	</view>
 	
@@ -24,16 +37,11 @@
 	export default {
 		data() {
 			return {
-				ShowHidden:false,
+				// ShowHidden:false,
 			}
 		},
 		methods: {
-			HiddenClick(){
-				this.ShowHidden=false
-			},
-			titClick(){
-				this.ShowHidden=!this.ShowHidden;
-			}
+			
 		},
 	}
 </script>
@@ -70,11 +78,20 @@
 		border-bottom: 3rpx solid #F1F1F1;
 		border-top:3rpx solid #F1F1F1 ;
 		display: flex;
-		
 	}
-	
-	.ima {
+	.list2 {
+		height: 130rpx;
+		/* margin-top: 10rpx; */
+		width: 100%;
+		border-bottom: 1rpx solid #EDEDED;
+		/* border-bottom: 3rpx solid #F1F1F1; */
+		/* border-top:3rpx solid #F1F1F1 ; */
+		display: flex;
+	}
+	.im {
 		margin: 40rpx 40rpx;
+		width: 80rpx;
+		height: 80rpx;
 		border-radius: 50%;
 	}
 	.imag {
@@ -82,6 +99,9 @@
 		margin-top: 60rpx;
 	}
 	.tr{
+		display: flex;
+	}
+	.t{
 		display: flex;
 	}
 	.btn{
@@ -117,9 +137,9 @@
 		color: #555555;
 		margin-top: 10rpx;
 	}
-	.tabs{
+	/* .tabs{
 		width: 550rpx;
-	}
+	} */
 	.te{
 		font-size: 25rpx;
 		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;

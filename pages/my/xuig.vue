@@ -4,7 +4,7 @@
 		<!-- #ifdef APP-PLUS -->
 		<view class="ta"></view>
 			<view class="tab1" style="width: 100%; height: 90rpx;">
-				<image class="back" src="../../static/images/向左箭头.二级.返回@2x.png" style="width: 64rpx; height: 64rpx;"></image>
+				<image @click="back" class="back" src="../../static/images/向左箭头.二级.返回@2x.png" style="width: 64rpx; height: 64rpx;"></image>
 				<view class="tit1">修改借书卡</view>
 				</view>
 				<!-- 内容 -->
@@ -20,7 +20,7 @@
 		<!-- #ifdef MP-WEIXIN -->
 		<view class="ta"></view>
 			<view class="tab1" style="width: 100%; height: 90rpx;">
-				<image class="back" src="../../static/images/向左箭头.二级.返回@2x.png" style="width: 64rpx; height: 64rpx;"></image>
+				<image @click="back" class="back" src="../../static/images/向左箭头.二级.返回@2x.png" style="width: 64rpx; height: 64rpx;"></image>
 				<view class="tit2">修改借书卡</view>
 				</view>
 				<!-- 内容 -->
@@ -44,7 +44,11 @@
 			}
 		},
 		methods: {
-			
+			back(){
+				uni.navigateBack({
+					delta:1
+				})
+			}
 		}
 	}
 </script>

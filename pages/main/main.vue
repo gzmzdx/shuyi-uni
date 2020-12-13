@@ -219,16 +219,16 @@
 	export default {
 		data() {
 			return {
-				value: ''
+				// value: ''
 			}
 		},
 		methods: {
-			inputChange: function() {
-				this.$emit('change', this.value)
-			},
-			rightClick: function() {
-				this.$emit("rightClick")
-			}
+			// inputChange: function() {
+			// 	this.$emit('change', this.value)
+			// },
+			// rightClick: function() {
+			// 	this.$emit("rightClick")
+			// }
 		}
 	}
 </script>

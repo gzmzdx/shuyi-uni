@@ -1,8 +1,12 @@
 <template>
 	<view>
-		<view class="Array">
 			<view class="list1">
-				<image class="ima" src="../../static/images/封面.png" style="width: 150rpx; height: 200rpx;"></image>
+				<!-- #ifdef APP-PLUS -->
+				<image class="im" src="../../static/images/封面.png" ></image>
+				<!-- #endif -->
+				<!-- #ifdef MP-WEIXIN -->
+				<image class="im1" src="../../static/images/封面.png" ></image>
+				<!-- #endif -->
 				<view class="tabs">
 					<view class="li">
 					<view class="name">书名....</view>
@@ -14,7 +18,6 @@
 					<view class="tex1"></view>
 				</view>
 			</view>
-		</view>
 	</view>
 </template>
 
@@ -22,16 +25,9 @@
 	export default {
 		data() {
 			return {
-				ShowHidden:false,
 			}
 		},
 		methods: {
-			HiddenClick(){
-				this.ShowHidden=false
-			},
-			titClick(){
-				this.ShowHidden=!this.ShowHidden;
-			}
 		},
 	}
 </script>
@@ -50,20 +46,26 @@
 	.list1 {
 		height: 300rpx;
 		width: 100%;
-		margin-left: -200rpx;
+		/* margin-left: -200rpx; */
 		border-bottom: 1rpx solid #C8C7CC;
 		display: flex;
 	}
 	
-	.ima {
+	.im{
 		margin: 40rpx 40rpx;
-		width: 40%;
+		/* width: 40%; */
+		width: 150rpx;
+		height: 200rpx;
 	}
-	
+	.im1{
+		margin: 40rpx 40rpx;
+		width: 150rpx;
+		height: 200rpx;
+	}
 	.name {
 		width: 30%;
 		margin-top: 30rpx;
-		font-size: 40rpx;
+		font-size: 38rpx;
 	}
 	
 	.tex {

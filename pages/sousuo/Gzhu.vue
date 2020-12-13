@@ -1,23 +1,33 @@
 <template>
-	<view>
-		<view class="Array">
-				<view class="list1">
-					<image class="ima" src="../../static/images/me_blue.png" style="width: 110rpx; height: 110rpx;"></image>
+	<view> 
+	<!-- #ifdef APP-PLUS -->
+			<view class="list1">
+				<image class="im" src="../../static/images/me_blue.png" ></image>
+				<view class="tabs">
+					<view class="tr">
+					<view class="tit">爱读书的</view>
+					<view class="btn">LV11</view>
+					<view class="te">书圣</view>
+					<image class="imag" src="../../static/images/double_right_arrow.png" style="width: 20rpx; height: 20rpx;"></image>
+					</view>
+					<view class="tr">
+				</view>
+				</view>
+			</view>
+	<!-- #endif -->
+		<!-- #ifdef MP-WEIXIN -->
+				<view class="list2">
+					<image class="im" src="../../static/images/me_blue.png" ></image>
 					<view class="tabs">
-						<view class="tr">
-						<view class="tit">爱书的猫</view>
+						<view class="t">
+						<view class="tit">爱读书的</view>
 						<view class="btn">LV11</view>
 						<view class="te">书圣</view>
 						<image class="imag" src="../../static/images/double_right_arrow.png" style="width: 20rpx; height: 20rpx;"></image>
 						</view>
-						<view class="tex">广州</view>
-						<view class="tr">
-						<view class="text">个性签名：</view>
-					    <view class="text1">书山有路勤为径，学海无涯苦作舟</view>
-					</view>
 					</view>
 				</view>
-			</view>
+		<!-- #endif -->
 		</view>
 	</view>
 	
@@ -27,16 +37,11 @@
 	export default {
 		data() {
 			return {
-				ShowHidden:false,
+				// ShowHidden:false,
 			}
 		},
 		methods: {
-			HiddenClick(){
-				this.ShowHidden=false
-			},
-			titClick(){
-				this.ShowHidden=!this.ShowHidden;
-			}
+			
 		},
 	}
 </script>
@@ -57,37 +62,57 @@
 	}
 	.tit{
 		margin: 30rpx -10rpx;
+		margin-top: 50rpx;
 		font-size: 35rpx;
+		font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
 		color: #333333;
+		width: 160rpx;
+		height: 60rpx;
 	}
 	
 	.list1 {
 		/* margin-left: -370rpx; */
-		height: 190rpx;
+		height: 130rpx;
+		margin-top: 10rpx;
 		width: 100%;
-		border-bottom: 1rpx solid #C8C7CC;
+		border-bottom: 1rpx solid #F1F1F1;
+		border-top:1rpx solid #F1F1F1 ;
 		display: flex;
-		
 	}
-	
-	.ima {
+	.list2 {
+		height: 150rpx;
+		/* margin-top: 10rpx; */
+		width: 100%;
+		border-bottom: 1rpx solid #EDEDED;
+		/* border-bottom: 3rpx solid #F1F1F1; */
+		/* border-top:3rpx solid #F1F1F1 ; */
+		display: flex;
+	}
+	.im {
 		margin: 40rpx 40rpx;
+		width: 80rpx;
+		height: 80rpx;
 		border-radius: 50%;
 	}
 	.imag {
-		margin-left: 260rpx;
+		margin-left: 270rpx;
 		margin-top: 60rpx;
 	}
 	.tr{
+		display: flex;
+	}
+	.t{
 		display: flex;
 	}
 	.btn{
 		width: 45rpx;
 		height: 22rpx;
 		font-size: 15rpx;
+		/* align-items: center; */
 		color: #F0AD4E;
 		border-radius: 15%;
-		margin: 45rpx 20rpx;
+		margin: 15rpx 20rpx;
+		margin-top: 60rpx;
 		border:1px solid #F0AD4E;
 	}
 	
@@ -107,19 +132,20 @@
 	.text1 {
 		height: 1rpx;
 		/* width: 250rpx; */
-		margin-left: -140rpx;
+		margin-left: -170rpx;
 		font-size: 25rpx;
 		color: #555555;
 		margin-top: 10rpx;
 	}
-	.tabs{
+	/* .tabs{
 		width: 550rpx;
-	}
+	} */
 	.te{
 		font-size: 25rpx;
 		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 		color: #F0AD4E;
-		margin: 40rpx -10rpx;
+		margin: 30rpx -10rpx;
+		margin-top: 56rpx;
 	}
 	.li{
 		display: flex;

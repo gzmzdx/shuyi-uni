@@ -168,10 +168,17 @@
 	display: flex;
 }
 
+/* #ifdef MP-WEIXIN */
+.imag{
+	margin-left:30rpx;
+	margin-top: 1rpx;
+}
+/* #endif */
+/* #ifndef MP-WEIXIN */
 .imag{
 	margin-left:30rpx;
 }
-
+/* #endif */
 .s1{
 	font-size: 24rpx;
 	margin-top: 5rpx;

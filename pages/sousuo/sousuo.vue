@@ -1,24 +1,29 @@
 <template>
 	<view>
 		<!-- 导航栏 -->
-		<view class="tr"></view>
+		<!-- #ifdef APP-PLUS -->
+		<view class="ta"></view>
 		<view class="tab1" style="width: 100%; height: 90rpx;">
-			<image class="back" src="../../static/images/向左箭头.二级.返回@2x.png" style="width: 64rpx; height: 64rpx;"></image>
+			<image @click="back" class="back" src="../../static/images/向左箭头.二级.返回@2x.png" style="width: 64rpx; height: 64rpx;"></image>
 			<view class="tit1">图书搜索</view>
-			<!-- #ifdef APP-PLUS -->
 			<image class="im"  src="../../static/images/附近的书.定位.icon@2x.png" style="width: 48rpx; height: 48rpx;"></image>
 			<navigator url="fujin">
 			<view class="tit2">附近的书</view>
 			</navigator>
-			<!-- #endif -->
-			<!-- #ifdef MP-WEIXIN -->
-			<image class="im1"  src="../../static/images/附近的书.定位.icon@2x.png" style="width: 48rpx; height: 48rpx;"></image>
-			<navigator url="fujin">
-			<view class="tit2">附近的书</view>
-			</navigator>
-			<!-- #endif -->
-			
 			</view>
+		<!-- #endif -->
+	<!-- #ifdef MP-WEIXIN -->
+	<view class="ta"></view>
+	<view class="tab1" style="width: 100%; height: 90rpx;">
+		<image @click="back" class="back" src="../../static/images/向左箭头.二级.返回@2x.png" style="width: 64rpx; height: 64rpx;"></image>
+		<view class="tit1">图书搜索</view>
+		<image class="im1"  src="../../static/images/附近的书.定位.icon@2x.png" style="width: 48rpx; height: 48rpx;"></image>
+		<navigator url="fujin">
+		<view class="tit2">附近的书</view>
+		</navigator>
+		</view>
+	<!-- #endif -->
+			
 			<!-- 搜索框 -->
 			<view class="tit">
 			
@@ -101,13 +106,17 @@
 			}
 		},
 		methods: {
-			
+			back(){
+				uni.navigateBack({
+					delta:1
+				})
+			}
 		}
 	}
 </script>
 
 <style>
-	.tr{
+	.ta{
 		height: 70rpx;
 		background-color:#6C40F3;
 	}
@@ -190,16 +199,16 @@
 		
 	} */
 	.input{
-		margin-left: -80rpx;
-		width: 450rpx;
+		margin-left: 0rpx;
+		/* width: 450rpx; */
 		height: 80rpx;
 		line-height: 60rpx;
 		display: flex;
 		font-size: 30rpx;
 	}
 	.input1{
-		/* margin-left: 0rpx; */
-		width: 450rpx;
+		margin-left: 0rpx;
+		/* width: 450rpx; */
 		height: 80rpx;
 		line-height: 60rpx;
 		display: flex;

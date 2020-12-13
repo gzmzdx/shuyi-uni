@@ -23,7 +23,7 @@
 		</view> -->
 		<view class="ta"></view>
 		<view class="tab1" style="width: 100%; height: 90rpx;">
-			<image class="back" src="../../static/images/向左箭头.二级.返回@2x.png" style="width: 64rpx; height: 64rpx;"></image>
+			<image class="back" @click="back" src="../../static/images/向左箭头.二级.返回@2x.png" style="width: 64rpx; height: 64rpx;"></image>
 			<!-- #ifdef APP-PLUS -->
 			<view class="tit1">好友图书馆</view>
 			<image class="im" src="../../static/images/搜索icon@2x.png"style="width: 80rpx; height: 80rpx;"></image>
@@ -33,15 +33,18 @@
 			<image class="im1" src="../../static/images/搜索icon@2x.png"style="width: 80rpx; height: 80rpx;"></image>
 			<!-- #endif -->
 			</view>
+			<!-- #ifdef MP-WEIXIN -->
 			<view class="tr">
-				<image class="ima" src="../../static/images/借书证.jpg" style="width: 310rpx; height: 200rpx;"></image>
-				<view>
-				<view class="tit">好友图书馆</view>
-				<view class="tex">创建时间：2020-9-9</view>
-				<view class="tex">类型：文学类</view>
-				<view class="tex">图书馆人数：124人</view>
-	</view>
-	</view>
+						<image class="ima" src="../../static/images/借书证.jpg" style="width: 310rpx; height: 200rpx;"></image>
+						<view>
+						<view class="tit">好友图书馆</view>
+						<view class="tex1">创建时间：2020-9-9</view>
+						<view class="tex1">类型：文学类</view>
+						<view class="tex1">图书馆人数：124人</view>
+			</view>
+			</view>
+			<!-- #endif -->
+
 	</view>
 </template>
 
@@ -53,11 +56,10 @@
 			}
 		},
 		methods: {
-			HiddenClick(){
-				this.ShowHidden=false
-			},
-			titClick(){
-				this.ShowHidden=!this.ShowHidden;
+			back(){
+				uni.navigateBack({
+					delta:1
+				})
 			}
 		},
 	}
@@ -131,9 +133,15 @@
 	font-size: 30rpx;
 	margin-top: 50rpx;
 }
+
 .tex{
 	font-size: 25rpx;
 	color: #8F8F94;
 	margin-top: 10rpx;
+}
+.tex1{
+	font-size: 25rpx;
+	color: #8F8F94;
+	/* margin-top: 10rpx; */
 }
 </style>
