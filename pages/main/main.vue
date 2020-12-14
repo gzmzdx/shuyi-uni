@@ -193,7 +193,7 @@
 			<!-- 分割线 -->
 			<view class="br"></view>
 			<!-- 猜您喜欢 -->
-			<view class="xinshu" >
+			<view class="xinshu" v-if="guessLikeList !==undefined && guessLikeList.length > 0">
 				<navigator url="../jianshu/person">
 					<view class="tit">
 						<image class="imag1" src="../../static/images/title_navigation_icon2x.png"></image>
@@ -266,7 +266,7 @@
 			async getNewBook() {
 				var that = this;
 				var params = {
-					url: "newbook",
+					url: "newbook?size=6&page=0",
 					type: 'GET',
 					data: {}
 				}
@@ -277,7 +277,7 @@
 			async getHotBook() {
 				var that = this;
 				var params = {
-					url: "hotbook",
+					url: "hotbook?size=6&page=0",
 					type: 'GET',
 					data: {}
 				}
@@ -562,7 +562,7 @@
 		width: 100%;
 		height: 40rpx;
 		// margin-top: 10rpx;
-		font-size: 20rpx;
+		font-size: 26rpx;
 		color: #999999;
 		word-break: break-all;
 		text-overflow: ellipsis;

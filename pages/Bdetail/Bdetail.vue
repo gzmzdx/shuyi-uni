@@ -6,7 +6,7 @@
 		<view class="head">
 			<view class="header-wrap">
 				<view class="index-header">
-					<image class="address" src="../../static/images/turn_left_two_return2x.png"></image>
+					<image @click="leftClick" class="address" src="../../static/images/turn_left_two_return2x.png"></image>
 					<view class="name">图书详情</view>
 					<view class="map-wrap" @click="rightClick">
 						<image class="iconfont" src="../../static/images/detail_fenx_icon.png"></image>
@@ -82,11 +82,6 @@
 		},
 		methods: {
 			
-			borrowBook : function(){
-					uni.navigateTo({
-						url:'../borrow/borrow'
-					})
-				},
 			//根据ISBN获取图书详情
 			async getBookByISBN(e){
 				console.log(e)
@@ -107,12 +102,12 @@
 				console.log(e)
 				if(e == null && e == ''){
 					var params = {
-						url: "book?blurry&page=1&size=3",
+						url: "book?blurry&page=0&size=3",
 						type: 'GET'
 					}
 				}else{
 					var params = {
-						url: "book?page=1&size=3&blurry="+e,
+						url: "book?page=0&size=3&blurry="+e,
 						type: 'GET'
 					}
 				}
@@ -120,8 +115,12 @@
 				that.bookLikeList = res.content;
 				console.log("ffffffff:",that.bookLikeList);
 			},
-			
-			back() {
+			// leftClick(){
+			// 	uni.reLaunch({
+			// 	    url: '../main/main'
+			// 	});
+			// },
+			leftClick() {
 				uni.navigateBack({
 					delta: 1
 				})
