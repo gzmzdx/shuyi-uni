@@ -2,9 +2,9 @@
 	<view>
 	<view class="top">
 	<view class="header-input">
-		<input @input="goToSearch" placeholder="输入书名查找" placeholderStyle="color:#BBBBBB" type="text"></input>
+		<input v-model="mhcx" placeholder="输入书名查找" placeholderStyle="color:#BBBBBB" type="text"></input>
 		<view>
-			<image class="image" src="../../static/images/search_icon.png">
+			<image class="image" src="../../static/images/search_icon.png" @click="goToSearch()">
 			</image>
 		</view>
 	</view>
@@ -40,6 +40,7 @@
 			</view>	
 		</view>
 		
+		<scroll-view scroll-y="true" style="height: 560px;" @scrolltolower="scrolltolower">
 		<view class="mid">
 			<view v-if="info.length!=0">
 				<view v-for="(i, index) in info" :key="index">
@@ -61,15 +62,18 @@
 								<view class="s5" v-text="i.status">等待持书人还书</view>
 							</view>
 							<view class="s8">
-								<button class="btn5"><view class="wz">删除记录</view></button>
+								<button class="btn5" @click="delList(i.reserve_list_id)"><view class="wz">删除记录</view></button>
 							</view>
 						</view>
 					</view>
 				</view>
 				</view>
 			</view>
-		</view>		
-	
+		</view>
+		</scroll-view>
+	<!-- <view v-if="info.length==0">
+		您还没有记录，<span style="color: #00AAFF;">快去借书吧!</span>
+	</view> -->
 	
 	
 	</view>
@@ -94,10 +98,10 @@
 				info:[],//
 				openId:'1',//暂时是1
 				flag:'true',//判断是否到底部
-				condition:1//切换
+				condition:0,//切换
+				ids:[],
 			};
 		},
-
 		onLoad() {
 			this.goToSearch()
 		},
@@ -105,12 +109,28 @@
 		    console.log("success")        
 		},
 		methods: {
+			/* </scroll-view>的触底函数*/
+			scrolltolower:function(){
+					console.log("我是最底部了");
+					uni.showToast({
+						title: '到底啦~',
+						icon: 'none'
+					});
+					// if(this.flag=='true'){
+					// 	this.associationList(this.type);
+					// }else{
+					// 	this.page=-1;
+					// 	uni.showToast({
+					// 		title: '到底啦~',
+					// 		icon: 'none'
+					// 	});
+					// }				
+				},
 			//获取数据
 			goToSearch(){
 				uni.request({
 					 url:getApp().globalData.URL+'api/reserveList/queryReserveList	',
 					 data:{
-						 
 						 openId:this.openId,
 						 mhcx:this.mhcx,
 						 condition:this.condition,
@@ -164,6 +184,35 @@
 					}
 				})
 			},
+			delList(id){
+				this.ids[0]=id
+				var that=this
+				uni.showModal({
+				    title: '删除',
+				    content: '确定要删除这条记录吗',
+				    success: function (res) {
+				        if (res.confirm) {
+				            console.log('用户点击确定');
+							uni.request({
+								url:getApp().globalData.URL+'api/reserveList',
+								data:that.ids,
+								method:'DELETE',
+								header: {
+									'content-type': 'application/json;charset=UTF-8' // 默认值
+								  },
+								success:res =>{
+									that.showModal("已删除该条记录！")
+								},
+								fail: (res) => {
+									that.showModal("网络错误！")
+								}
+							})
+				        } else if (res.cancel) {
+				            console.log('用户点击取消');
+				        }
+				    }
+				});
+			},
 			//日期转换方法
 			formatDate(value) {
 				let date = new Date(value);
@@ -187,9 +236,13 @@
 					icon: 'none'
 				 });
 			},
+			//切换栏，请求变换数据
 			handleScroll(index) {
 				this.currentId = index;
-				console.log(this.currentId)
+				this.condition = index
+				this.info=[]
+				console.log(this.condition)
+				this.goToSearch()
 			},
 		}
 		
