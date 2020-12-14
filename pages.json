@@ -170,7 +170,7 @@
 		},
 		
 		{
-				"navigationBarTitleText": "全部分类"
+				"navigationBarTitleText": "全部分类",
 			"path": "pages/book_cart/book_cart",
 			"style": {
 				"navigationBarTitleText": "借书车"
