@@ -82,6 +82,11 @@
 		},
 		methods: {
 			
+			borrowBook : function(){
+					uni.navigateTo({
+						url:'../borrow/borrow'
+					})
+				},
 			//根据ISBN获取图书详情
 			async getBookByISBN(e){
 				console.log(e)

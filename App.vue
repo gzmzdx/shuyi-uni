@@ -85,7 +85,7 @@
 		
 		globalData: {
 			userInfo: {},
-			URL: "http://127.0.0.1:8002/api/",
+			URL: "http://127.0.0.1:8000/api/",
 			currentTab: 0,
 			Link: "http://localhost:8000/",
 		},
