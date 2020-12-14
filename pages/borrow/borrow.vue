@@ -63,7 +63,7 @@
 		methods: {
 			Inappointment: function(e) {
 				uni.showActionSheet({
-					itemList: ['预约自提','预约物流','面对面' ],
+					itemList: ['预约自提','预约物流' ],
 					success: function (res) {
 						console.log('选中了第' + (res.tapIndex + 1) + '个按钮');
 						/* var that = this;

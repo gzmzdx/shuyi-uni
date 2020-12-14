@@ -2,115 +2,120 @@
 	<view>
 		<!-- 导航栏 -->
 		<view class="ta"></view>
-		<!-- #ifdef APP-PLUS -->
-		<view class="tab1" style="width: 100%; height: 90rpx;">
-			<image @click="back" class="back" src="../../static/images/向左箭头.二级.返回@2x.png" style="width: 64rpx; height: 64rpx;"></image>
-			<view class="tit1">图书详情</view>
-			<share>
-				<!-- <image class="im" src="../../static/images/详情页.分享.icon.png" style="width: 50rpx; height: 50rpx;"></image> -->
-			</share>
+		<!-- 顶部部分 -->
+		<view class="head">
+			<view class="header-wrap">
+				<view class="index-header">
+					<image class="address" src="../../static/images/turn_left_two_return2x.png"></image>
+					<view class="name">图书详情</view>
+					<view class="map-wrap" @click="rightClick">
+						<image class="iconfont" src="../../static/images/detail_fenx_icon.png"></image>
+					</view>
+				</view>
+			</view>
 		</view>
-		<!-- #endif -->
-		<!-- #ifdef MP-WEIXIN -->
-		<view class="tab1" style="width: 100%; height: 90rpx;">
-			<image @click="back" class="back" src="../../static/images/向左箭头.二级.返回@2x.png" style="width: 64rpx; height: 64rpx;"></image>
-			<view class="tit5">图书详情</view>
-			<share>
-				<!-- <image class="im1" src="../../static/images/详情页.分享.icon.png" style="width: 50rpx; height: 50rpx;"></image> -->
-			</share>
-		</view>
-		<!-- #endif -->
-
+		<view class="blank"></view>
 		<!-- 图片背景 -->
-		<!-- #ifdef MP-WEIXIN -->
 		<view class="bg">
-			<image class="ima1" src="../../static/images/封面.png"></image>
-			<view class="tit6">书名</view>
+			<image class="ima1" :src="bookDetail.picturePath" ></image>
+			<view class="tit6">{{bookDetail.bookName}}</view>
 		</view>
-		<!-- #endif -->
-		<!-- #ifdef APP-PLUS -->
-		<view class="bg">
-			<image class="ima" src="../../static/images/封面.png" style="width: 200rpx; height: 300rpx;"></image>
-			<view class="tit3">书名</view>
-		</view>
-		<!-- #endif -->
-		<!-- #ifdef APP-PLUS -->
-		<view class="tit">书名</view>
+		<view class="tit">{{bookDetail.bookName}}</view>
 		<view class="table">
-			<view class="tex">作者：</view>
-			<view class="tex">出版社：</view>
-			<view class="tex">出版年：</view>
+			<view class="tex">作者：{{bookDetail.author}}</view>
+			<view class="tex">出版社：{{bookDetail.publisher}}</view>
+			<view class="tex">出版年：{{bookDetail.publisherYear}}</view>
 			<view class="tex">图书馆：</view>
-			<view class="tex">ISBN：</view>
-			<view class="tex">馆藏数量：</view>
+			<view class="tex">ISBN：{{bookDetail.isbn}}</view>
+			<view class="tex">馆藏数量：{{bookDetail.num}}</view>
 			<view class="tex">可借数量：</view>
 			<view class="tex">书易读者：</view>
-			<view class="tex">索书号：</view>
+			<view class="tex">索书号：{{bookDetail.shortIsbn}}</view>
 		</view>
-		<!-- #endif -->
-		<!-- #ifdef MP-WEIXIN -->
-		<view class="tit">书名</view>
-		<view class="table">
-			<view class="tex5">作者：</view>
-			<view class="tex5">出版社：</view>
-			<view class="tex5">出版年：</view>
-			<view class="tex5">图书馆：</view>
-			<view class="tex5">ISBN：</view>
-			<view class="tex5">馆藏数量：</view>
-			<view class="tex5">可借数量：</view>
-			<view class="tex5">书易读者：</view>
-			<view class="tex5">索书号：</view>
-		</view>
-		<!-- #endif -->
 		<!-- 图书简介 -->
 		<view class="jian">
 			<view class="tit2">图书简介</view>
-			<view class="text">光大证券首席金融业分析师王一峰认为，自7月份开始，货币市场短期与中长期资金利率运行出现明显分化迹象。</view>
+			<view class="text">{{bookDetail.summary}}</view>
 		</view>
 
 		<!-- 作者简介 -->
 		<view class="jian">
 			<view class="tit2">作者简介</view>
-			<view class="text">光大证券首席金融业分析师王一峰认为，自7月份开始，货币市场短期与中长期资金利率运行出现明显分化迹象。</view>
+			<view class="text">{{bookDetail.authorAbstract}}</view>
 		</view>
 
 		<!-- 类似的书 -->
 		<view class="jian2">
 			<view class="tit2">类似的书</view>
-			<view>
-				<image class="image" src="../../static/images/封面.png"></image>
-				<image class="image" src="../../static/images/封面.png"></image>
-				<image class="image" src="../../static/images/封面.png"></image>
+			<view class="book_like" >
+				<view v-for="item in bookLikeList">
+					<navigator :url="'../Bdetail/Bdetail?isbn='+item.isbn">
+						<image class="image"  :src="item.picturePath"></image>
+					</navigator>
+				</view>
 			</view>
 		</view>
+		
+		<view class="mar-btn"></view>
+
 		<!-- 底部 -->
-		<!-- #ifdef APP-PLUS -->
-		<view class="btn">
-			<view class="btn1">
-				<button class="btn1" @click="borrowBook">借书</button>
-			</view>
-			<view class="btn2">
-				<button class="btn2">收藏</button>
-			</view>
+		<view class="buttom">
+			<button class="btn1" @click="borrowBook"  style="color: #00AAFF;">借书</button>
+			<button class="btn2" style="color: #FFFFFF;">收藏</button>
 		</view>
-		<!-- #endif -->
-		<!-- #ifdef MP-WEIXIN -->
-		<view class="btn">
-			<view class="btn3" @click="borrowBook">借书</view>
-			<view class="btn4">收藏</view>
-		</view>
-		<!-- #endif -->
+		
 	</view>
 </template>
 
 <script>
+	let app = getApp();
 	export default {
 		data() {
 			return {
-
+				"bookDetail": {},	//数据详情
+				"bookLikeList": [],	//类似的书
 			}
 		},
+		onLoad(e) {
+			console.log(e.isbn);
+			this.getBookByISBN(e.isbn);
+		},
 		methods: {
+			
+			//根据ISBN获取图书详情
+			async getBookByISBN(e){
+				console.log(e)
+				var that = this;
+				var params = {
+					url: "book?isbn="+e,
+					type: 'GET'
+				}
+				const res = await app.myRequest(params);
+				that.bookDetail = res.content[0];
+				console.log("whuiahdui:",that.bookDetail);
+				that.getBookByBook(res.content[0].classificationSymbol);
+			},
+			
+			//根据图书名查询类似的书
+			async getBookByBook(e){
+				var that = this;
+				console.log(e)
+				if(e == null && e == ''){
+					var params = {
+						url: "book?blurry&page=1&size=3",
+						type: 'GET'
+					}
+				}else{
+					var params = {
+						url: "book?page=1&size=3&blurry="+e,
+						type: 'GET'
+					}
+				}
+				const res = await app.myRequest(params);
+				that.bookLikeList = res.content;
+				console.log("ffffffff:",that.bookLikeList);
+			},
+			
 			back() {
 				uni.navigateBack({
 					delta: 1
@@ -120,11 +125,65 @@
 	}
 </script>
 
-<style>
-	.ta {
-		height: 70rpx;
-		background-color: #6C40F3;
+<style lang="scss">
+	// 顶部页面
+	$color-base: #6C40F3;
+	$words-color-base: #333333;
+	$words-color-light: #999999;
+	.header-wrap {
+		width: 100%;
+		position: fixed;
+		top: 0;
+		z-index: 999;
+	
+		.index-header {
+			display: flex;
+			height: 150rpx;
+			line-height: 110rpx;
+			padding: 0 30rpx;
+			padding-top: 40rpx;
+			background-color: $color-base;
+			font-size: 28rpx;
+			color: #fff;
+			align-items: center;
+			// justify-content: space-between;
+	
+			.address {
+				// margin-left: 50upx;
+				width: 60rpx;
+				height: 60rpx;
+				font-size: 26rpx;
+				margin-top: 20rpx;
+			}
+	
+			.name {
+				color: #FFFFFF;
+				width: 80%;
+				height: 60rpx;
+				font-size: 36rpx;
+				margin-top: -32rpx;
+				text-align: center;
+			}
+	
+			.map-wrap {
+				.iconfont {
+					margin-top: 50rpx;
+					width: 60rpx;
+					height: 60rpx;
+					font-size: 36rpx;
+					margin-right: 5rpx;
+				}
+	
+				text {
+					font-size: 26rpx;
+				}
+			}
+		}
 	}
+	.blank {
+		height: 150rpx;
+	}
+	
 
 	.tab1 {
 		display: flex;
@@ -193,6 +252,7 @@
 	}
 
 	.tit {
+		width: 100%;
 		margin: 20rpx 20rpx;
 		font-size: 36rpx;
 	}
@@ -200,30 +260,23 @@
 	.tit3 {
 		/* margin: 20rpx 20rpx; */
 		text-align: center;
-		font-size: 40rpx;
+		font-size: 36rpx;
 		color: #333333;
 	}
 
 	.tit6 {
 		/* margin: 20rpx 20rpx; */
 		text-align: center;
-		font-size: 40rpx;
+		font-size: 36rpx;
 		color: #333333;
 	}
 
 	.tex {
 		/* margin: 10rpx 20rpx; */
 		margin-left: 20rpx;
+		margin-top: 10rpx;
 		color: #8F8F94;
-		font-size: 28rpx;
-	}
-
-	.tex5 {
-		/* margin: 10rpx 20rpx; */
-		/* margin-top: 10rpx; */
-		margin-left: 20rpx;
-		color: #8F8F94;
-		font-size: 30rpx;
+		font-size: 26rpx;
 	}
 
 	.tex1 {
@@ -246,14 +299,17 @@
 	}
 
 	.table {
-		margin-top: -20rpx;
-		height: 380rpx;
+		margin-top: -10rpx;
+		height: 400rpx;
 		/* border-bottom: 1rpx solid #C0C0C0; */
 	}
 
 	.jian {
 
-		height: 240rpx;
+		width:100%;
+		position: relative;
+		min-height:80rpx;
+		margin-top:17rpx;
 		/* border-bottom: 1rpx solid #C0C0C0; */
 	}
 
@@ -271,13 +327,19 @@
 		margin: 20rpx;
 		font-size: 36rpx;
 		color: #333333;
+		display:block;
+	   word-break:break-all;
+	   word-wrap:break-word;
 	}
 
 	.text {
 		margin: 20rpx 20rpx;
-		font-size: 32rpx;
-		color: #808080;
+		font-size: 26rpx;
+		color: #999999;
 		width: 95%;
+		height:100%;
+		/* overflow-wrap: break-word; */
+		line-height: 1.7em;
 	}
 
 	.lis {
@@ -326,6 +388,11 @@
 		margin-left: 100rpx;
 		color: #808080;
 	}
+	
+	.book_like{
+		display: flex;
+		height: 260rpx;
+	}
 
 	.image {
 		width: 200rpx;
@@ -333,18 +400,32 @@
 		margin: 10rpx 20rpx;
 		margin-left: 26rpx;
 	}
-
-	.btn {
-		display: flex;
+	
+	.mar-btn{
 		width: 100%;
+		height: 100rpx;
+	}
+
+	.buttom {
+		width: 100%;
+		height: 88rpx;
+		display: flex;
+		padding: 0;
+		margin: 0;
+		background-color: #FFFFFF;
+		position: fixed;
+		bottom: 0;
+		left: 0;
 	}
 
 	.btn1 {
 		width: 50%;
-		margin-left: 0rpx;
+		margin: 0;
+		border-radius: 0;
+		border-color: #FFFFFF;
 		background-color: #FFFFFF;
 		color: #00AAFF;
-		border-radius: 0rpx;
+		font-size: 30rpx;
 	}
 
 	.btn2 {
@@ -353,31 +434,6 @@
 		background-color: #6C40F3;
 		color: #FFFFFF;
 		border-radius: 0rpx;
-	}
-
-	.btn3 {
-		width: 50%;
-		height: 80rpx;
-		margin-left: 0rpx;
-		background-color: #FFFFFF;
-		color: #00AAFF;
-		border-radius: 0rpx;
-		text-align: center;
-		align-items: center;
-		font-size: 38rpx;
-		/* border-radius: 10rpx; */
-	}
-
-	.btn4 {
-		/* width: 400rpx; */
-		width: 50%;
-		height: 80rpx;
-		margin-right: 0rpx;
-		background-color: #6C40F3;
-		color: #FFFFFF;
-		border-radius: 0rpx;
-		text-align: center;
-		font-size: 38rpx;
-		/* border-radius: 10rpx; */
+		font-size: 30rpx;
 	}
 </style>

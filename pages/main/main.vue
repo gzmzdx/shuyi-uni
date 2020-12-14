@@ -193,7 +193,7 @@
 			<!-- 分割线 -->
 			<view class="br"></view>
 			<!-- 猜您喜欢 -->
-			<view class="xinshu" v-if="guessLikeList !==undefined && guessLikeList.length > 0">
+			<view class="xinshu" >
 				<navigator url="../jianshu/person">
 					<view class="tit">
 						<image class="imag1" src="../../static/images/title_navigation_icon2x.png"></image>

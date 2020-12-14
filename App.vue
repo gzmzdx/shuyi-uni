@@ -36,6 +36,7 @@
 						fail: function(err) {
 							// 页面中弹框显示失败
 							uni.showToast({
+								icon: 'none',
 								title: '请求接口失败'
 							})
 							// 返回错误消息
@@ -84,7 +85,7 @@
 		
 		globalData: {
 			userInfo: {},
-			URL: "http://127.0.0.1:8000/api/",
+			URL: "http://127.0.0.1:8002/api/",
 			currentTab: 0,
 			Link: "http://localhost:8000/",
 		},
