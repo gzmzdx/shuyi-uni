@@ -17,7 +17,7 @@
 		<view class="blank"></view>
 		<!-- 图片背景 -->
 		<view class="bg">
-			<image class="ima1" :src="bookDetail.picturePath" ></image>
+			<image class="ima1" :src="bookDetail.picturePath"></image>
 			<view class="tit6">{{bookDetail.bookName}}</view>
 		</view>
 		<view class="tit">{{bookDetail.bookName}}</view>
@@ -47,23 +47,23 @@
 		<!-- 类似的书 -->
 		<view class="jian2">
 			<view class="tit2">类似的书</view>
-			<view class="book_like" >
+			<view class="book_like">
 				<view v-for="item in bookLikeList">
 					<navigator :url="'../Bdetail/Bdetail?isbn='+item.isbn">
-						<image class="image"  :src="item.picturePath"></image>
+						<image class="image" :src="item.picturePath"></image>
 					</navigator>
 				</view>
 			</view>
 		</view>
-		
+
 		<view class="mar-btn"></view>
 
 		<!-- 底部 -->
 		<view class="buttom">
-			<button class="btn1" @click="borrowBook"  style="color: #00AAFF;">借书</button>
+			<button class="btn1" @click="borrowBook" style="color: #00AAFF;">借书</button>
 			<button class="btn2" style="color: #FFFFFF;">收藏</button>
 		</view>
-		
+
 	</view>
 </template>
 
@@ -72,8 +72,8 @@
 	export default {
 		data() {
 			return {
-				"bookDetail": {},	//数据详情
-				"bookLikeList": [],	//类似的书
+				"bookDetail": {}, //数据详情
+				"bookLikeList": [], //类似的书
 			}
 		},
 		onLoad(e) {
@@ -81,39 +81,44 @@
 			this.getBookByISBN(e.isbn);
 		},
 		methods: {
-			
+
+			borrowBook: function() {
+				uni.navigateTo({
+					url: '../borrow/borrow'
+				})
+			},
 			//根据ISBN获取图书详情
-			async getBookByISBN(e){
+			async getBookByISBN(e) {
 				console.log(e)
 				var that = this;
 				var params = {
-					url: "book?isbn="+e,
+					url: "book?isbn=" + e,
 					type: 'GET'
 				}
 				const res = await app.myRequest(params);
 				that.bookDetail = res.content[0];
-				console.log("whuiahdui:",that.bookDetail);
+				console.log("whuiahdui:", that.bookDetail);
 				that.getBookByBook(res.content[0].classificationSymbol);
 			},
-			
+
 			//根据图书名查询类似的书
-			async getBookByBook(e){
+			async getBookByBook(e) {
 				var that = this;
 				console.log(e)
-				if(e == null && e == ''){
+				if (e == null && e == '') {
 					var params = {
 						url: "book?blurry&page=0&size=3",
 						type: 'GET'
 					}
-				}else{
+				} else {
 					var params = {
-						url: "book?page=0&size=3&blurry="+e,
+						url: "book?page=0&size=3&blurry=" + e,
 						type: 'GET'
 					}
 				}
 				const res = await app.myRequest(params);
 				that.bookLikeList = res.content;
-				console.log("ffffffff:",that.bookLikeList);
+				console.log("ffffffff:", that.bookLikeList);
 			},
 			// leftClick(){
 			// 	uni.reLaunch({
@@ -134,12 +139,13 @@
 	$color-base: #6C40F3;
 	$words-color-base: #333333;
 	$words-color-light: #999999;
+
 	.header-wrap {
 		width: 100%;
 		position: fixed;
 		top: 0;
 		z-index: 999;
-	
+
 		.index-header {
 			display: flex;
 			height: 150rpx;
@@ -151,7 +157,7 @@
 			color: #fff;
 			align-items: center;
 			// justify-content: space-between;
-	
+
 			.address {
 				// margin-left: 50upx;
 				width: 60rpx;
@@ -159,7 +165,7 @@
 				font-size: 26rpx;
 				margin-top: 20rpx;
 			}
-	
+
 			.name {
 				color: #FFFFFF;
 				width: 80%;
@@ -168,7 +174,7 @@
 				margin-top: -32rpx;
 				text-align: center;
 			}
-	
+
 			.map-wrap {
 				.iconfont {
 					margin-top: 50rpx;
@@ -177,17 +183,18 @@
 					font-size: 36rpx;
 					margin-right: 5rpx;
 				}
-	
+
 				text {
 					font-size: 26rpx;
 				}
 			}
 		}
 	}
+
 	.blank {
 		height: 150rpx;
 	}
-	
+
 
 	.tab1 {
 		display: flex;
@@ -310,10 +317,10 @@
 
 	.jian {
 
-		width:100%;
+		width: 100%;
 		position: relative;
-		min-height:80rpx;
-		margin-top:17rpx;
+		min-height: 80rpx;
+		margin-top: 17rpx;
 		/* border-bottom: 1rpx solid #C0C0C0; */
 	}
 
@@ -331,9 +338,9 @@
 		margin: 20rpx;
 		font-size: 36rpx;
 		color: #333333;
-		display:block;
-	   word-break:break-all;
-	   word-wrap:break-word;
+		display: block;
+		word-break: break-all;
+		word-wrap: break-word;
 	}
 
 	.text {
@@ -341,7 +348,7 @@
 		font-size: 26rpx;
 		color: #999999;
 		width: 95%;
-		height:100%;
+		height: 100%;
 		/* overflow-wrap: break-word; */
 		line-height: 1.7em;
 	}
@@ -392,8 +399,8 @@
 		margin-left: 100rpx;
 		color: #808080;
 	}
-	
-	.book_like{
+
+	.book_like {
 		display: flex;
 		height: 260rpx;
 	}
@@ -404,8 +411,8 @@
 		margin: 10rpx 20rpx;
 		margin-left: 26rpx;
 	}
-	
-	.mar-btn{
+
+	.mar-btn {
 		width: 100%;
 		height: 100rpx;
 	}
