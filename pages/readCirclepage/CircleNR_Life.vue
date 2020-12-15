@@ -5,11 +5,9 @@
 			<view class="show">
 				<view class="showone">
 					<view class="person">
-						<navigator url="../privateSpace/privateSpace">
-							<view class="tou">
-								<image src="../../static/images/头像2.jpg" style="width: 90rpx;height: 90rpx;border-radius: 50%;"></image>
-							</view>
-						</navigator>
+						<view class="tou">
+							<image src="../../static/images/头像2.jpg" style="width: 90rpx;height: 90rpx;border-radius: 50%;"></image>
+						</view>
 						<view class="Ttitle">
 							<view class="Ntitle">
 								<view class="name">爱丽丝</view>

@@ -25,7 +25,7 @@
 		<!-- #endif -->
 		
 		<!-- #ifdef MP-WEIXIN -->
-		<view class="text" style="margin-top: 10rpx; height: 210rpx; ">
+		<view class="text" style="margin-top: 10rpx; height: 210rpx; width: auto;">
 			<view class="book-Name">冰与火之歌</view>
 			<view class="book-author">作者：
 				<view>康玉兰著</view>
@@ -81,7 +81,7 @@
 		methods: {
 			Inappointment: function(e) {
 				uni.showActionSheet({
-					itemList: ['预约自提','预约物流','面对面' ],
+					itemList: ['预约自提','预约物流' ],
 					success: function (res) {
 						console.log('选中了第' + (res.tapIndex + 1) + '个按钮');
 						/* var that = this;

@@ -2,166 +2,166 @@
 	<view>
 		<!-- <view class="ta"></view> -->
 		<!-- 导航栏 -->
-			<!-- 最近使用列表 -->
-			<view class="di">
+		<!-- 最近使用列表 -->
+		<view class="di">
 			<!-- #ifdef APP-PLUS -->
 			<view class="tit">最近使用</view>
-			<image class="more" src="../../static/images/清除.红.icon.png"style="width: 40rpx; height: 40rpx;"></image>
+			<image class="more" src="../../static/images/red_clearance_icon.png" style="width: 40rpx; height: 40rpx;"></image>
 			<view class="text">清除</view>
 			<!-- #endif -->
 			<!-- #ifdef MP-WEIXIN -->
 			<view class="tit4">最近使用</view>
-			<image class="more1" src="../../static/images/清除.红.icon.png"style="width: 40rpx; height: 40rpx;"></image>
+			<image class="more1" src="../../static/images/red_clearance_icon.png" style="width: 40rpx; height: 40rpx;"></image>
 			<view class="text1">清除</view>
 			<!-- #endif -->
-			</view>
-			<view class="td">
-				<view>
-			<image class="image" src="../../static/images/艺术.icon@2x.png" style="width: 50rpx; height: 50rpx;"></image>
+		</view>
+		<view class="td">
+			<view>
+				<image class="image" src="../../static/images/art_icon2x.png" style="width: 50rpx; height: 50rpx;"></image>
 				<view class="name">艺术</view>
-				</view>
-				<view>
-			<image class="image" src="../../static/images/经济.icon@2x.png" style="width: 50rpx; height: 50rpx;"></image>
-			<view class="name">经济</view>
 			</view>
 			<view>
-			<image class="image" src="../../static/images/小说.icon@2x.png" style="width: 50rpx; height: 50rpx;"></image>
-			<view class="name">小说</view>
+				<image class="image" src="../../static/images/economics_icon2x.png" style="width: 50rpx; height: 50rpx;"></image>
+				<view class="name">经济</view>
 			</view>
 			<view>
-			<image class="image" src="../../static/images/儿童.icon@2x.png" style="width: 50rpx; height: 50rpx;"></image>
-			<view class="name">儿童</view>
+				<image class="image" src="../../static/images/hour_icon2x.png" style="width: 50rpx; height: 50rpx;"></image>
+				<view class="name">小说</view>
 			</view>
 			<view>
-			<image class="image" src="../../static/images/航空.icon.png" style="width: 50rpx; height: 50rpx;"></image>
-		<view class="name">航天</view>
+				<image class="image" src="../../static/images/children.icon2x.png" style="width: 50rpx; height: 50rpx;"></image>
+				<view class="name">儿童</view>
 			</view>
+			<view>
+				<image class="image" src="../../static/images/aviation_icon.png" style="width: 50rpx; height: 50rpx;"></image>
+				<view class="name">航天</view>
 			</view>
-			<!-- #ifdef MP-WEIXIN -->
-			<view class="di">
+		</view>
+		<!-- #ifdef MP-WEIXIN -->
+		<view class="di">
 			<view class="tit4">全部分类</view>
-			</view>
-			<!-- #endif -->
-			<!-- #ifdef APP-PLUS -->
-			<view class="di">
+		</view>
+		<!-- #endif -->
+		<!-- #ifdef APP-PLUS -->
+		<view class="di">
 			<view class="tit">全部分类</view>
-			</view>
-			<!-- #endif -->
-			<view class="td">
-				<view>
-			<image class="image" src="../../static/images/文学.icon@2x.png" style="width: 50rpx; height: 50rpx;"></image>
-			<view class="name">文学</view>
+		</view>
+		<!-- #endif -->
+		<view class="td">
+			<view>
+				<image class="image" src="../../static/images/literature_icon2x.png" style="width: 50rpx; height: 50rpx;"></image>
+				<view class="name">文学</view>
 			</view>
 			<view>
-			<image class="image" src="../../static/images/艺术.icon@2x.png" style="width: 50rpx; height: 50rpx;"></image>
-			<view class="name">艺术</view>
+				<image class="image" src="../../static/images/art_icon2x.png" style="width: 50rpx; height: 50rpx;"></image>
+				<view class="name">艺术</view>
 			</view>
 			<view>
-			<image class="image" src="../../static/images/儿童.icon@2x.png" style="width: 50rpx; height: 50rpx;"></image>
-			<view class="name">儿童</view>
+				<image class="image" src="../../static/images/children.icon2x.png" style="width: 50rpx; height: 50rpx;"></image>
+				<view class="name">儿童</view>
 			</view>
 			<view>
-			<image class="image" src="../../static/images/小说.icon@2x.png" style="width: 50rpx; height: 50rpx;"></image>
-			<view class="name">小说</view>
+				<image class="image" src="../../static/images/hour_icon2x.png" style="width: 50rpx; height: 50rpx;"></image>
+				<view class="name">小说</view>
 			</view>
 			<view>
-			<image class="image" src="../../static/images/经济.icon@2x.png" style="width: 50rpx; height: 50rpx;"></image>
-			<view class="name">经济</view>
+				<image class="image" src="../../static/images/economics_icon2x.png" style="width: 50rpx; height: 50rpx;"></image>
+				<view class="name">经济</view>
 			</view>
-			</view>
-			<view class="tr1"></view>
-			<view class="td">
-				<view>
-			<image class="image" src="../../static/images/法律.icon@2x.png" style="width: 50rpx; height: 50rpx;"></image>
-			<view class="name">法律</view>
+		</view>
+		<view class="tr1"></view>
+		<view class="td">
+			<view>
+				<image class="image" src="../../static/images/law_icon2x.png" style="width: 50rpx; height: 50rpx;"></image>
+				<view class="name">法律</view>
 			</view>
 			<view>
-			<image class="image" src="../../static/images/军事.icon.png" style="width: 50rpx; height: 50rpx;"></image>
-			<view class="name">军事</view>
+				<image class="image" src="../../static/images/military_icon.png" style="width: 50rpx; height: 50rpx;"></image>
+				<view class="name">军事</view>
 			</view>
 			<view>
-			<image class="image" src="../../static/images/科技.icon@2x.png" style="width: 50rpx; height: 50rpx;"></image>
-			<view class="name">科技</view>
+				<image class="image" src="../../static/images/science_icon2x.png" style="width: 50rpx; height: 50rpx;"></image>
+				<view class="name">科技</view>
 			</view>
 			<view>
-			<image class="image" src="../../static/images/历史.icon.png" style="width: 50rpx; height: 50rpx;"></image>
-			<view class="name">历史</view>
+				<image class="image" src="../../static/images/history_icon.png" style="width: 50rpx; height: 50rpx;"></image>
+				<view class="name">历史</view>
 			</view>
 			<view>
-			<image class="image" src="../../static/images/金融.icon.png" style="width: 50rpx; height: 50rpx;"></image>
-			<view class="name">金融</view>
+				<image class="image" src="../../static/images/financial_icon.png" style="width: 50rpx; height: 50rpx;"></image>
+				<view class="name">金融</view>
 			</view>
-			</view>
-			<view class="tr1"></view>
-			<view class="td">
-				<view>
-			<image class="image" src="../../static/images/政治.icon.png" style="width: 50rpx; height: 50rpx;"></image>
-			<view class="name">政治</view>
+		</view>
+		<view class="tr1"></view>
+		<view class="td">
+			<view>
+				<image class="image" src="../../static/images/politics_icon.png" style="width: 50rpx; height: 50rpx;"></image>
+				<view class="name">政治</view>
 			</view>
 			<view>
-			<image class="image" src="../../static/images/哲学.icon.png" style="width: 50rpx; height: 50rpx;"></image>
-			<view class="name">哲学</view>
+				<image class="image" src="../../static/images/philosophy_icon.png" style="width: 50rpx; height: 50rpx;"></image>
+				<view class="name">哲学</view>
 			</view>
 			<view>
-			<image class="image" src="../../static/images/地理.icon.png" style="width: 50rpx; height: 50rpx;"></image>
-			<view class="name">地理</view>
+				<image class="image" src="../../static/images/geography_icon.png" style="width: 50rpx; height: 50rpx;"></image>
+				<view class="name">地理</view>
 			</view>
 			<view>
-			<image class="image" src="../../static/images/园艺.icon.png" style="width: 50rpx; height: 50rpx;"></image>
-			<view class="name">园艺</view>
+				<image class="image" src="../../static/images/horticulture_icon.png" style="width: 50rpx; height: 50rpx;"></image>
+				<view class="name">园艺</view>
 			</view>
 			<view>
-			<image class="image" src="../../static/images/语言.icon.png" style="width: 50rpx; height: 50rpx;"></image>
-			<view class="name">语言</view>
+				<image class="image" src="../../static/images/language_icon.png" style="width: 50rpx; height: 50rpx;"></image>
+				<view class="name">语言</view>
 			</view>
-			</view>
-			<view class="tr1"></view>
-			<view class="td">
-				<view>
-			<image class="image" src="../../static/images/医药.icon.png" style="width: 50rpx; height: 50rpx;"></image>
-			<view class="name">医学</view>
+		</view>
+		<view class="tr1"></view>
+		<view class="td">
+			<view>
+				<image class="image" src="../../static/images/medicine_icon.png" style="width: 50rpx; height: 50rpx;"></image>
+				<view class="name">医学</view>
 			</view>
 			<view>
-			<image class="image" src="../../static/images/交通.icon.png" style="width: 50rpx; height: 50rpx;"></image>
-			<view class="name">交通</view>
+				<image class="image" src="../../static/images/traffic_icon.png" style="width: 50rpx; height: 50rpx;"></image>
+				<view class="name">交通</view>
 			</view>
 			<view>
-			<image class="image" src="../../static/images/环境.icon.png" style="width: 50rpx; height: 50rpx;"></image>
-			<view class="name">环境</view>
+				<image class="image" src="../../static/images/environment_icon.png" style="width: 50rpx; height: 50rpx;"></image>
+				<view class="name">环境</view>
 			</view>
 			<view>
-			<image class="image" src="../../static/images/天文.icon.png" style="width: 50rpx; height: 50rpx;"></image>
-			<view class="name">天文</view>
+				<image class="image" src="../../static/images/astronomy_icon.png" style="width: 50rpx; height: 50rpx;"></image>
+				<view class="name">天文</view>
 			</view>
 			<view>
-			<image class="image" src="../../static/images/航空.icon.png" style="width: 50rpx; height: 50rpx;"></image>
-			<view class="name">航空</view>
+				<image class="image" src="../../static/images/aviation_icon.png" style="width: 50rpx; height: 50rpx;"></image>
+				<view class="name">航空</view>
 			</view>
-			</view>
-			<view class="tr1"></view>
-			<view class="td">
-				<view>
-			<image class="image" src="../../static/images/航天.icon.png" style="width: 50rpx; height: 50rpx;"></image>
-			<view class="name">航天</view>
+		</view>
+		<view class="tr1"></view>
+		<view class="td">
+			<view>
+				<image class="image" src="../../static/images/spaceflight_icon.png" style="width: 50rpx; height: 50rpx;"></image>
+				<view class="name">航天</view>
 			</view>
 			<view>
-			<image class="image" src="../../static/images/数学.icon.png" style="width: 50rpx; height: 50rpx;"></image>
-			<view class="name">数学</view>
+				<image class="image" src="../../static/images/mathematics_icon.png" style="width: 50rpx; height: 50rpx;"></image>
+				<view class="name">数学</view>
 			</view>
 			<view>
-			<image class="image" src="../../static/images/物理.icon.png" style="width: 50rpx; height: 50rpx;"></image>
-			<view class="name">物理</view>
+				<image class="image" src="../../static/images/physics_icon.png" style="width: 50rpx; height: 50rpx;"></image>
+				<view class="name">物理</view>
 			</view>
 			<view>
-			<image class="image" src="../../static/images/化学.icon.png" style="width: 50rpx; height: 50rpx;"></image>
-			<view class="name">化学</view>
+				<image class="image" src="../../static/images/chemistry_icon.png" style="width: 50rpx; height: 50rpx;"></image>
+				<view class="name">化学</view>
 			</view>
 			<view>
-			<image class="image" src="../../static/images/林业.icon.png" style="width: 50rpx; height: 50rpx;"></image>
-			<view class="name">林业</view>
+				<image class="image" src="../../static/images/forestry.icon.png" style="width: 50rpx; height: 50rpx;"></image>
+				<view class="name">林业</view>
 			</view>
-			</view>
-			<view class="tr1"></view>
+		</view>
+		<view class="tr1"></view>
 	</view>
 </template>
 
@@ -169,11 +169,11 @@
 	export default {
 		data() {
 			return {
-				
+
 			}
 		},
 		methods: {
-			
+
 		}
 	}
 </script>
@@ -183,67 +183,80 @@
 		margin-top: 15rpx;
 		margin-left: 10rpx;
 	}
-	.im{
+
+	.im {
 		/* margin-top: -50rpx; */
 		margin-left: 190rpx;
 	}
-	.di{
-		background-color:#F1F1FF; 
+
+	.di {
+		background-color: #F1F1FF;
 		width: 100%;
 		display: flex;
 		height: 80rpx;
 	}
-	.more{
+
+	.more {
 		margin-top: 18rpx;
 		margin-left: 480rpx;
 	}
-	.more1{
+
+	.more1 {
 		margin-top: 18rpx;
 		margin-left: 210rpx;
 	}
-	.text{
+
+	.text {
 		margin-top: 18rpx;
 		color: #FF3D3D;
 	}
-	.text1{
+
+	.text1 {
 		margin-top: 24rpx;
 		color: #FF3D3D;
 		margin-left: 10rpx;
 	}
-	.tr{
+
+	.tr {
 		width: 100%;
 		height: 5rpx;
-		background-color:#F1F1F1;
+		background-color: #F1F1F1;
 	}
-	.tr1{
+
+	.tr1 {
 		width: 100%;
 		height: 3rpx;
-		background-color:#F1F1F1;
+		background-color: #F1F1F1;
 	}
-	.tit{
+
+	.tit {
 		font-size: 30rpx;
 		margin: 20rpx 20rpx;
-		color:#646464;
+		color: #646464;
 		height: 30rpx;
 	}
-	.tit4{
+
+	.tit4 {
 		font-size: 30rpx;
 		margin: 20rpx 20rpx;
-		color:#646464;
+		color: #646464;
 		height: 30rpx;
 		display: flex;
 		width: 50%;
 	}
-	.td{
+
+	.td {
 		display: flex;
 		height: 150rpx;
 		background-color: #FFFFFF;
 		width: 100%;
 	}
-	.image{
+
+	.image {
 		margin: 20rpx 40rpx;
 	}
-	.name{
+
+	.name {
 		margin: -20rpx 46rpx;
 		color: #333333;
 		font-size: 26rpx;

@@ -29,7 +29,7 @@
 			
 			<view class="titi">
 				<view class="h-input">
-					<image src="../../static/images/搜索icon@2x.png" class="image"></image>
+					<image src="../../static/images/search_icon2x.png" class="image"></image>
 				<!-- #ifdef MP-WEIXIN -->
 					<input class="input"  @input="goToSearch" placeholder="请输入关键字" placeholderStyle="color:#BBBBBB "  type="text"/>
 				<!-- #endif -->
