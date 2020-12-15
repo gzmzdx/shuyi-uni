@@ -3,7 +3,8 @@
 		"^u-(.*)": "@/uview-ui/components/u-$1/u-$1.vue",
 		"^c-(.*)": "@/components/c-$1/index.vue"
 	},
-	"pages": [{
+	"pages": [
+		{
 			"path": "pages/main/main",
 			"style": {
 				"navigationStyle": "custom",
@@ -35,14 +36,13 @@
 				"navigationBarTitleText": "添加图书",
 				"navigationBarBackgroundColor": "#6C40F3"
 			}
-		}, {
-			"path": "pages/myinfomation/myinfomation",
+			},{
+			"path":"pages/myinfomation/myinfomation",
 			"style": {
 				"navigationBarTitleText": "信息管理",
 				"navigationBarBackgroundColor": "#6C40F3"
 			}
-		}, {
-			"path": "pages/index/publish",
+},{			"path": "pages/index/publish",
 			"style": {
 				"navigationBarTitleText": "发表",
 				"navigationBarBackgroundColor": "#6C40F3"
@@ -113,7 +113,7 @@
 			"style": {
 				"navigationBarTitleText": "借还消息",
 				"navigationBarBackgroundColor": "#6C40F3"
-			}
+			}	
 		}, {
 			"path": "pages/personal/serve_chat",
 			"style": {
@@ -168,16 +168,10 @@
 
 			}
 		},
-		{
-			"path": "pages/classify/classify",
-			"style": {
-				"navigationBarTitleText": "全部分类"
 
-			}
-		},
 		{
-			"navigationBarTitleText": "全部分类",
 			"path": "pages/book_cart/book_cart",
+			"navigationBarTitleText": "全部分类",
 			"style": {
 				"navigationBarTitleText": "借书车"
 			}
@@ -203,16 +197,16 @@
 			"path": "pages/appointment/abolish",
 			"style": {
 				"navigationBarTitleText": "取消预约",
-				"navigationBarBackgroundColor": "#6C40F3"
+				"navigationBarBackgroundColor":"#6C40F3"
 
 			}
 		}, {
 			"path": "pages/borrow/borrow",
 			"style": {
 				"navigationBarTitleText": "借书",
-				"navigationBarBackgroundColor": "#6C40F3"
+				"navigationBarBackgroundColor":"#6C40F3"
 			}
-
+			
 		},
 		{
 			"path": "pages/appointment/confirm",
@@ -225,14 +219,14 @@
 			"path": "pages/appointment/contact-booking-agent",
 			"style": {
 				"navigationBarTitleText": "联系持书人",
-				"navigationBarBackgroundColor": "#6C40F3"
+				"navigationBarBackgroundColor":"#6C40F3"
 			}
 		},
 		{
 			"path": "pages/return-books/contact-order-agent",
 			"style": {
 				"navigationBarTitleText": "联系预约人",
-				"navigationBarBackgroundColor": "#6C40F3"
+				"navigationBarBackgroundColor":"#6C40F3"
 			}
 		},
 		{
@@ -277,7 +271,7 @@
 			"path": "pages/components/logistic",
 			"style": {
 				"navigationBarTitleText": "物流配送中",
-				"navigationBarBackgroundColor": "#6C40F3"
+				"navigationBarBackgroundColor":"#6C40F3"
 			}
 		},
 
@@ -305,7 +299,7 @@
 			"path": "pages/return/return",
 			"style": {
 				"navigationBarTitleText": "面对面还书",
-				"navigationBarBackgroundColor": "#6C40F3"
+				"navigationBarBackgroundColor":"#6C40F3"
 			}
 		}
 
@@ -328,7 +322,7 @@
 			"path": "pages/mineFriend/mineFriend",
 			"style": {
 				"navigationBarTitleText": "我的好友",
-				"navigationBarBackgroundColor": "#6C40F3"
+				"navigationBarBackgroundColor":"#6C40F3"
 			}
 		}
 
@@ -336,22 +330,22 @@
 			"path": "pages/personal-library/shareBook",
 			"style": {
 				"navigationBarTitleText": "添加共享图书",
-				"navigationBarBackgroundColor": "#6C40F3",
+				"navigationBarBackgroundColor":"#6C40F3",
 				"app-plus": {
 					"titleNView": {
 						"buttons": [
 
-							//                    {
-							//                        "text":"提交",
-							//                        "type":"none",
-							//                        "color":"#00BFFF",
-							//                        "background":"#000000",
-							//                        "fontSize":"16px",
-							// "float":"right"
-							// // "margin-right":"100px"
+							 //                    {
+							 //                        "text":"提交",
+							 //                        "type":"none",
+							 //                        "color":"#00BFFF",
+							 //                        "background":"#000000",
+							 //                        "fontSize":"16px",
+							 // "float":"right"
+							 // // "margin-right":"100px"
 
-							//                    },
-							// 勾的图
+							 //                    },
+							 // 勾的图
 							// {
 							// 	"type": "none",
 							// 	"text": "\u2713",
@@ -465,11 +459,11 @@
 		{
 			"path": "pages/my/card",
 			"style": {
-				"navigationBarTitleText": "快速办证"
-				// "navigationStyle": "custom",
-				// "app-plus": {
-				// 	"titleNView": false
-				// }
+				"navigationBarTitleText": "借书卡",
+				"navigationStyle": "custom",
+				"app-plus": {
+					"titleNView": false
+				}
 			}
 		},
 		{
@@ -513,153 +507,154 @@
 			}
 		}
 
-		, {
+	, {
 			"path": "pages/readCirclepage/CircleNR_Right",
 			"style": {
-				"navigationBarTitleText": "圈文",
-				"enablePullDownRefresh": false
-			}
+                "navigationBarTitleText": "圈文",
+                "enablePullDownRefresh": false
+            }
 
 		}, {
 			"path": "pages/readCirclepage/CircleXQLife",
 			"style": {
-				"navigationBarTitleText": "圈子信息",
-				"enablePullDownRefresh": false
-			}
+                "navigationBarTitleText": "圈子信息",
+                "enablePullDownRefresh": false
+            }
 
 		}, {
 			"path": "pages/readCirclepage/CircleXQRight",
 			"style": {
-				"navigationBarTitleText": "圈子成员",
-				"enablePullDownRefresh": false
-			}
+                "navigationBarTitleText": "圈子成员",
+                "enablePullDownRefresh": false
+            }
 
 		}, {
 			"path": "pages/readCircle/readExperience",
 			"style": {
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
-			}
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
 
 		}, {
 			"path": "pages/readCirclepage/readExperDZ",
 			"style": {
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
-			}
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
 
 		}, {
 			"path": "pages/readCirclepage/readExperPL",
 			"style": {
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
-			}
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
 
 		}, {
 			"path": "pages/my_reserve_Spage/reserve_SpageR",
 			"style": {
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
-			}
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
 
 		}, {
 			"path": "pages/my_reserve_Spage/reserve_SpageL",
 			"style": {
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
-			}
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
 
 		}, {
 			"path": "pages/readLabel/readLabel",
 			"style": {
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
-			}
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
 
 		}, {
 			"path": "pages/readLabel/readLabelNew",
 			"style": {
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
-			}
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
 
 		}, {
 			"path": "pages/borrow_and_return/borrow_and_return",
 			"style": {
-				"navigationBarTitleText": "借还记录",
-				"enablePullDownRefresh": false
-			}
+                "navigationBarTitleText": "借还记录",
+                "enablePullDownRefresh": false
+            }
 
 		}, {
 			"path": "pages/privateSpace/privateSpace",
 			"style": {
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
-			}
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
 
 		}, {
 			"path": "pages/login/login",
 			"style": {
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
-			}
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
 
 		}, {
 			"path": "pages/login/register",
 			"style": {
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
-			}
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
 
 		}, {
 			"path": "pages/my/build",
 			"style": {
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
-			}
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
 
-		}, {
+        }
+	, {
 			"path": "pages/my/chengy",
 			"style": {
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
-			}
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
 
 		}, {
 			"path": "pages/my/jianj",
 			"style": {
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
-			}
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
 
 		}, {
 			"path": "pages/my/join",
 			"style": {
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
-			}
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
 
-		}
+        }
 
-		, {
+	, {
 			"path": "pages/my/lib",
 			"style": {
 				"navigationBarTitleText": "我的图书馆",
 				"navigationStyle": "custom",
 				"app-plus": {
 					"titleNView": false
-				}
+           		 }
 			}
 
 		}, {
 			"path": "pages/my/mylib",
 			"style": {
-				"navigationBarTitleText": "好友图书馆",
-				"navigationStyle": "custom",
-				"app-plus": {
-					"titleNView": false
-				}
-			}
+					"navigationBarTitleText": "好友图书馆",
+					"navigationStyle": "custom",
+					"app-plus": {
+						"titleNView": false
+        }
+            }
 		}, {
 			"path": "pages/my/mylibrary",
 			"style": {
@@ -667,51 +662,51 @@
 				"navigationStyle": "custom",
 				"app-plus": {
 					"titleNView": false
-				}
-			}
+            }
+        }
 
 		}, {
 			"path": "pages/my/tushu",
 			"style": {
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
-			}
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
 
 		}, {
 			"path": "pages/yind/yind",
 			"style": {
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
-			}
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
 
 		}, {
 			"path": "pages/sousuo/Gzhu",
 			"style": {
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
-			}
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
 
 		}, {
 			"path": "pages/sousuo/Hyou",
 			"style": {
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
-			}
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
 
 		}, {
 			"path": "pages/Setup/Setup",
 			"style": {
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
-			}
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
 
 		}, {
 			"path": "pages/readCircle/readCicleMore",
 			"style": {
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
-			}
-		},
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+},
 		{
 			"path": "pages/friend/friends_rank",
 			"style": {
@@ -719,13 +714,13 @@
 				"enablePullDownRefresh": false
 			}
 
-		},
-		{
-			"path": "pages/order/order",
-			"style": {}
+}, 
+ {
+            "path" : "pages/order/order",
+            "style" : {}
 
 
-		}, {
+        },{
 			"path": "pages/friend/friendSearch",
 			"style": {
 				"navigationBarTitleText": "搜索好友",
@@ -740,24 +735,21 @@
 			}
 		}
 	],
-	"globalStyle": {
-		// "navigationBarTextStyle": "black",
+	"globalStyle":{
+		"navigationBarTextStyle": "white",
 		"navigationBarTitleText": "uni-app",
 		"navigationBarBackgroundColor": "#6C40F3",
-		"backgroundColor": "#F8F8F8",
-		"navigationBarTextStyle": "white"
+		"backgroundColor": "#F8F8F8"
 	},
-
-
 	"tabBar": {
 		"backgroundColor": "#FFFFFF",
 		"color": "#8A8A8A",
-		"selectedColor": "#0044dd",
+			"selectedColor": "#0044dd",
 		"list": [{
 				"pagePath": "pages/main/main",
 				"text": "首页",
-				"iconPath": "/static/images/main_icon2x.png",
-				"selectedIconPath": "/static/images/main_icon_active2x.png"
+			"iconPath": "/static/images/main_icon2x.png",
+			"selectedIconPath": "/static/images/main_icon_active2x.png"
 			},
 			{
 				"pagePath": "pages/friend/friend",

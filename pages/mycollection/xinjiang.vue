@@ -165,7 +165,7 @@
 	/* margin-bottom: 0rpx; */
 	/* marker-end: 0rpx; */
 	color: #FFFFFF;
-	background-color: #5251F5;
+	background-color: #6C40F3;
 	position:fixed;
 	bottom: 0;
 	width:100%;

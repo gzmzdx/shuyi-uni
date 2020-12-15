@@ -156,15 +156,5 @@ export default [{
 				"cat": 6
 			}
 		]
-	},
-	{
-		"name": "新建",
-		// "foods": [{
-		// 		"name": "新建",
-		// 		"key": "新建",
-		// 		"icon": "http://img.kiwifruits.cn/classify/2/1.jpg",
-		// 		"cat": 6
-		// 	},
-		// ]
 	}
 ]

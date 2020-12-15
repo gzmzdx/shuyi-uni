@@ -1,13 +1,15 @@
 <template>
 	<view>
 		<!-- 顶部 -->
-		<view class="top">
-			<view class="wz">我的书单</view>
+		<view class="tq"></view>
+		<view class="tab" style="width: 100%; height: 90rpx;">
+			<image @click="back" class="back" src="../../static/images/向左箭头.二级.返回@2x.png" style="width: 64rpx; height: 64rpx;"></image>
+			<view class="tit2">我的收藏</view>
 			<navigator url="./xinjiang">
-				<view class="Xjiang"><image src="../../static/images/新建.png" style="width: 50rpx;height: 50rpx;"></image></view>
+			<image class="shua1" src="../../static/images/添加.icon.png" style="width: 40rpx; height: 40rpx;"></image>
 			</navigator>
 		</view>
-		<!-- 分割线br1 -->
+		<!-- 分割线br2 -->
 		<view class="br2"></view>
 		<!-- 中间 -->
 		<view class="mid">
@@ -22,7 +24,6 @@
 				<view class="zhengti">
 					<image src="../../static/images/书1.jpg" style="width: 125rpx; height: 170rpx;"></image>
 					<view class="midwz">致敬老师</view>
-					<!-- <image src="../../static/images/shoucang1.png" style="width: 40rpx; height: 30rpx;"></image> -->
 				</view>
 				<view class="shumu">
 					作者：
@@ -130,9 +131,53 @@
 	</view>
 </template>
 
-<script></script>
+<script>
+	export default {
+		data() {
+			return {
+				
+			}
+		},
+		methods: {
+			back(){
+				uni.navigateBack({
+					delta:1
+				})
+			}
+		}
+	}
+</script>
 
 <style>
+/* 顶部导航条 */
+.tq{
+		height: 80rpx;
+		background-color:#6C40F3;
+	}
+.tab {
+		display: flex;
+		background-color:#6C40F3;
+	}
+.tit2 {
+		margin-top: 20rpx;
+		color:#FFFFFF ;
+		text-align: center;
+		margin-left: 55rpx;
+		/* display: flex; */
+		font-size: 40rpx;
+		width: 65%;
+	
+	}
+	.back {
+		margin-top: 15rpx;
+		margin-left: 10rpx;
+	}
+	.shua1 {
+		margin-top: 28rpx;
+		margin-left: 60rpx;
+
+	}
+
 .br1 {
 	width: 90%;
 	height: 3rpx;

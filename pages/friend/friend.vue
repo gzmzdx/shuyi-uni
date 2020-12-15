@@ -1,119 +1,164 @@
 <template>
 	<view>
-		<!-- 顶部部分 -->
-		<view class="head">
-			<view class="header-wrap">
-				<view class="index-header">
-					<navigator url="./friends_rank">
-					<image class="address" src="../../static/images/通讯录.排行.icon.png"></image>
+			<view class="tq"></view>
+		<view class="container">
+			<view class="top">
+				<view class="tab" style="width: 100%; height: 90rpx;">
+					<navigator url="friends_rank">
+					<image @click="back" class="back" src="../../static/images/通讯录.排行.icon.png" style="width: 70rpx; height: 70rpx;"></image>
 					</navigator>
-					<view class="name">
-						<view class="haoyou">好友</view>
-						<view class="guanzhu">关注</view>
+					<view class="tit2"><scroll-view 
+			class="scroll-container" 
+			scroll-x 
+			scroll-with-animation 
+			v-if="brands.length > 1" 
+			:scroll-into-view="'s' + currentIndex">
+				<view :class="['scroll-item', { active: index == currentId }]" 
+				:id="'s' + index" 
+				v-for="(item, index) in brands"
+				:key="index" 
+				@tap="handleScroll(index)">
+				{{ item }}
+					<view class="bottom-border" v-if="index == currentId">
 					</view>
-					<view class="map-wrap" >
-						<image class="iconfont" src="../../static/images/Fsearch.png"></image> 
-					</view>
+					<!-- 底部蓝色短border -->
 				</view>
+			</scroll-view></view>
+					<navigator url="./friendSearch">
+					<image class="shua1" src="../../static/images/Fsearch.png" style="width: 45rpx; height: 45rpx;"></image>
+					</navigator>
+					<!-- <navigator url="../myinfomation/myinfomation">
+					<image class="shua1" src="../../static/images/通讯录.编辑.icon.png" style="width: 40rpx; height: 40rpx;"></image>
+					</navigator> -->
+				</view>
+			
 			</view>
-			<view class="blank"></view>
+			
+				<view v-if="currentId===1">
+					<Orders></Orders>
+				</view>
+				<view v-else>
+					<Trade></Trade>
+				</view>
+			
 		</view>
 	</view>
 </template>
-
 <script>
+	import Orders from '../friend/hayou.vue'
+	import Trade  from '../friend/Ganzhu.vue'
 	export default {
 		data() {
 			return {
-				
-			}
+				currentId:'',/* 控制被选中 */
+				brands:[
+					'关注',
+					'好友',
+				]
+			};
+		},
+
+		onLoad: function() {},
+		components: {
+			// Fail,
+			Orders,
+			Trade,
+			// Logistic,
+		},
+		onNavigationBarButtonTap(e) {
+		    console.log("success")        
 		},
 		methods: {
-			
-		}
+			handleScroll(index) {
+				this.currentId = index;
+				console.log(this.currentId)
+			},
+		},
 	}
-</script>
 
-<style lang="scss">
-	// 顶部页面
-	$color-base: #fff;
-	$words-color-base: #333333;
-	$words-color-light: #999999;
-	
-	.header-wrap {
-		width: 100%;
-		position: fixed;
-		top: 0;
-		z-index: 999;
-	
-		.index-header {
-			display: flex;
-			height: 200rpx;
-			line-height: 110rpx;
-			padding: 0 30rpx;
-			padding-top: 40rpx;
-			// background-color: $color-base;
-			background-color: #6C40F3;
-			font-size: 28rpx;
-			color: #fff;
-			align-items: center;
-			justify-content: space-between;
-	
-			.address {
-				// margin-left: 50upx;
-				width: 60rpx;
-				height: 60rpx;
-				font-size: 26rpx;
-				margin-top: 90rpx;
-				background-color:#000000;
-			}
-	
-			.name {
-				display: flex;
-				color: #3C3C3C;
-				width: 200rpx;
-				height: 100rpx;
-				font-size: 40rpx;
-				margin-top: 20rpx;
-				margin-bottom: 40rpx;
-				// background-color: red;
-				justify-content: space-around; //靠左靠右
-				
-				.haoyou{
-					width: 50%;
-					height: 60rpx; 
-					font-size: 40rpx;
-					margin-top: 40rpx;
-					padding-bottom: 40rpx;
-					border: 1rpx solid #A0A0A0;
-				}
-				.guanzhu{
-					width: 50%;
-					height: 60rpx;
-					font-size: 40rpx;
-					border: 1rpx solid #A0A0A0; 
-					margin-top: 40rpx;
-					text-align: center;
-				}
-			}
-	
-			.map-wrap {
-				.iconfont {
-					margin-top: 120rpx;
-					width: 50rpx;
-					height: 50rpx;
-					font-size: 32rpx;
-					margin-right: 5rpx;
-				}
-	
-				text {
-					font-size: 26rpx;
-				}
-			}
+</script>
+<style lang="scss" scoped>
+	.tq{
+			height: 100rpx;
+			background-color:#6C40F3;
 		}
-	}
+	.tab {
+			display: flex;
+			background-color:#6C40F3;
+		}
+	.tit2 {
+			margin-top: 20rpx;
+			// color:#FFFFFF ;
+			text-align: center;
+			margin-left: 55rpx;
+			/* display: flex; */
+			// font-size: 40rpx;
+			width: 65%;
+		
+		}
+		.back {
+			margin-top: 15rpx;
+			margin-left: 10rpx;
+		}
+		.shua1 {
+			margin-top: 28rpx;
+			margin-left: 55rpx;
 	
-	.blank {
-		height: 126upx;
-	}
+		}
+	
+.top{
+	height: 95rpx;
+	background-color:#6C40F3;
+	text-align: center;
+}
+.scroll-container {
+    // box-sizing: border-box;
+	// text-align: center;
+    // padding-left: 300upx;
+	margin-left: 120rpx;
+    // white-space: nowrap;
+	// background-color: #18B566;
+    height: 50upx;
+    background: #fff;
+	border-radius: 70rpx;
+	width: 265rpx;
+	border: #FFFFFF 5rpx solid;
+	// border-top: 15upx solid #EEEEEE;
+    // border-bottom: 15upx solid #EEEEEE;
+    .scroll-item {
+      text-align: center;
+      display: inline-block;
+      padding: 0rpx 30upx;
+	  // margin-left: 50rpx;
+      line-height: 60rpx;
+      font-size: 32upx;
+      font-weight: 90;
+	  // border: #000000 5rpx solid;
+	  // background-color: #007AFF;
+	  // border-radius: 5rpx;
+      // color: #1e1e1e;
+
+      &.active {
+        display: inline-block;
+        font-weight: bold;
+        color: #FFFFFF;
+		width: 140rpx;
+		height: 50rpx;
+		border-radius: 50rpx;
+		background-color: #6C40F3;
+        font-size: 32upx;
+      }
+    }
+
+    .bottom-border {
+      margin: 0 auto;
+      width: 50upx;
+      height: 5upx;
+	  // background-color: #007AFF;
+	  // background: #00BFFF;
+      // border-radius: 5upx;
+	  // border: 1upx;
+    }
+  }
+  
 </style>

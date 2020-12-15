@@ -21,7 +21,7 @@
 					<navigator url="./readExperience">
 					<view class="zy">
 						<text>
-							《预见未来》哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈灌灌灌帆帆帆帆烦烦烦哈哈哈哈哈哈哈哈哈哈后哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈好好...
+							《预见未来》哈哈哈哈哈哈哈哈哈hhhhhhhhh哈哈哈哈哈哈哈哈哈哈哈灌灌灌帆帆帆帆烦烦烦哈哈哈哈哈哈哈哈哈哈后哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈好好...
 						</text>
 					</view>
 					<view class="tab">
@@ -33,7 +33,6 @@
 					</view>
 					</navigator>
 				</view>
-		
 				<view class="showtwo">
 					<view class="dz">
 						<image class="wave" src="../../static/images/zan.png"></image>
@@ -138,13 +137,15 @@
 	height: auto;
 	margin-top: 40rpx;
 	color: #f1f1f1;
+	/* background-color: #000000; */
 }
 
 .showone {
-	color: #999999;
+	/* color: #999999; */
 	height: auto;
 	margin-top: 10rpx;
 	border-radius: 50rpx;
+	/* background-color: #0066CC; */
 }
 
 .person {
@@ -191,6 +192,7 @@
 	font-size: 20rpx;
 	margin-top: 10rpx;
 	margin-left: 18rpx;
+	color: #C0C0C0;
 	/* background-color: #4CD964; */
 }
 
@@ -204,6 +206,8 @@
 	color: #555555;
 }
 .tab {
+	height: 250rpx;
+	/* background-color: #000000; */
 	margin: 10rpx 10rpx;
 }
 .book {

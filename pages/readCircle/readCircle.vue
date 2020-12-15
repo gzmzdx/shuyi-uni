@@ -247,6 +247,7 @@ export default {
 	color: #555555;
 }
 .tab {
+	height: 250rpx;
 	margin: 10rpx 10rpx;
 }
 .book {

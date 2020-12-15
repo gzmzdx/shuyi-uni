@@ -19,45 +19,40 @@
 			</navigator>
 			<!-- 分割线br1 -->
 			<view class="br1"></view>
-			<navigator url="jszlist">
+			<!-- <navigator url="jszlist">
 			<view class="class1">
-				<view class="neirong">此页面先不要渲染</view>
+				<view class="neirong"></view>
 				<image class="img2" src="../../static/images/right_arrow.png"></image>
 			</view>
 			</navigator>
-			<!-- 分割线br2 -->
 			<view class="br2"></view>
 			
 			<navigator url="../allOrders/index">
 				<view class="class1">
-					<view class="neirong">此页面先不要渲染</view>
+					<view class="neirong"></view>
 					<image class="img2" src="../../static/images/right_arrow.png"></image>
 				</view>
 			</navigator>
 			
-			<!-- 分割线br1 -->
 			<view class="br1"></view>
 			<view class="class1">
-				<view class="neirong">此页面先不要渲染</view>
+				<view class="neirong"></view>
 				<image class="img2" src="../../static/images/right_arrow.png"></image> 
 			</view>
-			<!-- 分割线br1 -->
 			<view class="br1"></view>
 			<navigator url="../return/return">
 				<view class="class1">
-					<view class="neirong">此页面先不要渲染</view>
+					<view class="neirong"></view>
 					<image class="img2" src="../../static/images/right_arrow.png"></image>
 				</view>
 			</navigator>
 			
-			<!-- 分割线br1 -->
 			<view class="br1"></view>
 			<view class="class1">
-				<view class="neirong">此页面先不要渲染</view>
+				<view class="neirong"></view>
 				<image class="img2" src="../../static/images/right_arrow.png"></image>
 			</view>
-			<!-- 分割线br1 -->
-			<view class="br1"></view>
+			<view class="br1"></view> -->
 		</view>
 	</view>
 </template>

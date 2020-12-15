@@ -46,9 +46,11 @@
 				<view v-else>
 					<Logistic></Logistic>
 				</view>	
-
-				
-	</view>
+			</view>
+	<!-- 发布 -->
+	<navigator url="../index/publish">
+	<button class="btn" style="background-color: #6C40F3;"><image class="btnima" src="../../static/images/添加.icon.png" style="width: 50rpx;height: 50rpx;"></image></button>
+	</navigator>
 	</view>
 </template>
 
@@ -170,4 +172,18 @@
 	  border: 1upx;
     }
   }
+  // 发布
+  .btn{
+  	background-color: #5251F5;
+  	position:fixed;
+  	bottom: 10rpx;
+	margin-left: 640rpx;
+  	width:100rpx;
+	height: 100rpx;
+  	border-radius: 100%;
+  }
+ .btnima{
+	 margin-left: -4rpx;
+	 margin-top: 25rpx;
+ } 
 </style>

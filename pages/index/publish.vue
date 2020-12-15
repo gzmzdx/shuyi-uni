@@ -1,20 +1,20 @@
 <template>
 	<view class="all">
-		<view class="show">
-			<view class="btn">
+		<view class="top">
+			<!-- 简介 -->
+			<view class="toptwo">
+				<view class="jjNR">
+					<textarea class="jjk" placeholder="这一刻的想法..." maxlength="5000" ></textarea>
+				</view>
 			</view>
-			<view class="tx">
-				<textarea class="te" placeholder="这一刻的想法......" maxlength="200"></textarea>
+			<!-- 封面 -->
+			<view class="topthree">
+				<view class="img">
+					<image class="tp" src="../../static/images/tj.jpg" :loading="loading" :disabled="disabled" @click="upload"></image>
+				</view>
 			</view>
 		</view>
-		<view class="im">
-			<!-- <view class="img">
-				<image class="wa" src="../../static/images/after.jpg"></image>
-			</view> -->
-			<view class="img">
-				<image class="wa" src="../../static/images/tj.jpg" :loading="loading" :disabled="disabled" @click="upload"></image>
-			</view>
-		</view>
+		<!--  -->
 		<view class="qt">
 			<view class="qq">
 				所在位置
@@ -22,12 +22,9 @@
 			</view>
 			<view class="qq">
 				<view class="one">
-					<!-- <image class="image1" src="../../static/imagess/personal_center.jpg" style="width: 30rpx; height: 30rpx;"></image> -->
 					提醒ta看
 				</view>
-				
 				<image class="image" src="../../static/images/aite.png" style="width: 20rpx; height: 20rpx;"></image>
-				
 			</view>
 			<button class="fb">发表</button>
 		</view>
@@ -85,11 +82,74 @@
 
 <style>
 	.all{
+		background-color: #FFFFFF;
 		width: 90%;
 		height: 80%;
 		margin-left: 40rpx;
 		margin-right: 40rpx;
 	}
+	
+	.topone{
+		display: flex;
+	}
+	.title{
+		margin-top: 50rpx;
+		margin-left: 30rpx;
+		width: 18%;
+	}
+	.shuru{
+		margin-left: 5rpx;
+		margin-top: 50rpx;
+		width: 550rpx;
+		height: 60rpx;
+		border-radius: 10rpx;
+		background-color: #FFFFFF;
+		border:1rpx solid #E3E3E3;
+	}
+	.shuru input{
+		margin: 10rpx 15rpx;
+		font-size: 26rpx;
+	}
+	/* 简介 */
+	.toptwo{
+		display: flex;
+	}
+	.jjtitle{
+		margin-top: 60rpx;
+		margin-left: 30rpx;
+		width: 18%;
+	}
+	.jjNR{
+		margin-left: 5rpx;
+		margin-top: 30rpx;
+		border-radius: 10rpx;
+		background-color: #FFFFFF;
+		/* border:1rpx solid #E3E3E3; */
+	}
+	.jjk{
+		margin: 10rpx 10rpx;
+		font-size: 32rpx;
+		width: 630rpx;
+		height: 300rpx;
+	}
+	/* 封面 */
+	.topthree{
+		display: flex;
+	}
+	.tptitle{
+		margin-top: 60rpx;
+		margin-left: 30rpx;
+		width: 18%;
+	}
+	.tp{
+		width: 160rpx;
+		height: 160rpx;
+		margin: 30rpx 5rpx ;
+		/* 虚线 */
+		/* border: 3rpx dashed #C0C0C0; */
+		}
+	
+	
 	.show{
 		width: auto;
 		height: 200rpx;
@@ -101,14 +161,16 @@
 		width: auto;
 		height: 200rpx;
 		margin-top: 20rpx;
-		/* border: #4CD964 1rpx solid; */
+		border: #4CD964 1rpx solid;
 		display: flex;
 	}
 	.image{
 		margin-left: 550rpx;
+		/* background-color: #000000; */
 		align-items: center;
 	}
 	.wa{
+		/* background-color: #000000; */
 		width: 195rpx;
 		height: 195rpx;
 		margin: 5rpx 5rpx 5rpx 5rpx;
@@ -119,7 +181,7 @@
 		height: 350rpx;
 		align-items: center;
 		/* border: #007AFF 1rpx solid; */
-		border-top: #F8F8F8 2rpx solid;
+		/* border-top: #F8F8F8 2rpx solid; */
 		text-align: left;
 		/* border-bottom: 1px solid #ccc; */
 		
@@ -153,7 +215,7 @@
 		font-size: 28rpx;
 		margin-top: 100rpx;
 		width: 500rpx;
-		background-color: #4658F6;
+		background-color: #6C40F3;
 	}
 	.one{
 		align-items: center;
