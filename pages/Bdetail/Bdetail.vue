@@ -28,9 +28,9 @@
 			<view class="tex">图书馆：</view>
 			<view class="tex">ISBN：{{bookDetail.isbn}}</view>
 			<view class="tex">馆藏数量：{{bookDetail.num}}</view>
-			<view class="tex">可借数量：</view>
+			<view class="tex">可借数量：{{num}}</view>
 			<view class="tex">书易读者：</view>
-			<view class="tex">索书号：{{bookDetail.shortIsbn}}</view>
+			<view class="tex">索书号：{{bookDetail.classificationSymbol}}</view>
 		</view>
 		<!-- 图书简介 -->
 		<view class="jian">
@@ -74,6 +74,7 @@
 			return {
 				"bookDetail": {}, //数据详情
 				"bookLikeList": [], //类似的书
+				"num": 0,	//可借书的数量
 			}
 		},
 		onLoad(e) {
@@ -97,11 +98,11 @@
 				}
 				const res = await app.myRequest(params);
 				that.bookDetail = res.content[0];
-				console.log("whuiahdui:", that.bookDetail);
 				that.getBookByBook(res.content[0].classificationSymbol);
+				that.getBookNumByBookId(res.content[0].bookId);
 			},
 
-			//根据图书名查询类似的书
+			//根据分类号查询类似的书
 			async getBookByBook(e) {
 				var that = this;
 				console.log(e)
@@ -119,6 +120,24 @@
 				const res = await app.myRequest(params);
 				that.bookLikeList = res.content;
 				console.log("ffffffff:", that.bookLikeList);
+			},
+			
+			//根据booId查询可解的书
+			async getBookNumByBookId(e){
+				var that = this;
+				if(e == null || e=="" || e==undefined){
+					uni.showToast({
+						icon: 'none',
+						title: '网络链接失败！'
+					})
+				}else{
+					var params = {
+						url: "realBook/queryIsBorrowed?bookId=" + e,
+						type: 'GET',
+						data: {}
+					}
+					that.num = await app.myRequest(params);
+				}
 			},
 			// leftClick(){
 			// 	uni.reLaunch({

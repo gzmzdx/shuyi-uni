@@ -20,7 +20,7 @@
 		</view>
 		<!-- 轮播图 -->
 		<view class="lunbo"> 
-			<swiper style="height: 350rpx;" indicator-dots="true" autoplay="true" interval='5000' indicator-active-color="#18C7F2"
+			<swiper style="height: 350rpx;" indicator-dots="true" autoplay="true" interval='5000' indicator-active-color="#6C40F3"
 			 circular="true">
 				<swiper-item>
 					<image class="ima1" src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3498136939,2417991357&fm=26&gp=0.jpg"></image>

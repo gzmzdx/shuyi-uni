@@ -7,8 +7,12 @@
 			//同步请求
 			myRequest: function(params){
 				return new Promise((resolve, reject)=>{
-					var that = this,
-						url = that.globalData.URL + params.url;
+					var that = this;
+					if(!params.name||params.name =="URL"){
+						var url = that.globalData.URL + params.url
+					}else{
+						var url = that.globalData.Link + params.url;
+					}
 					if (!params.type) {
 						params.type = 'GET';
 					}
@@ -48,8 +52,12 @@
 			},
 			//异步请求
 			request: function(params) {
-				var that = this,
-					url = that.globalData.URL + params.url;
+				var that = this;
+				if(!params.name || params.name =="URL"){
+					var url = that.globalData.URL + params.url;
+				}else{
+					var url = that.globalData.Link + params.url;
+				}
 				if (!params.type) {
 					params.type = 'GET';
 				}
@@ -85,7 +93,7 @@
 		
 		globalData: {
 			userInfo: {},
-			URL: "http://localhost:8000/api/",
+			URL: "http://127.0.0.1:8000/api/",
 			currentTab: 0,
 			Link: "http://localhost:8000/",
 		},
