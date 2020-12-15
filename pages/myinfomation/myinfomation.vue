@@ -83,7 +83,7 @@
 		 	var that = this;
 		 	uni.request({
 		 		 // url:getApp().globalData.URL +'api/reader/app?id='+that.openId,
-		 		 url:getApp().globalData.URL +'api/reader/app',
+		 		 url:getApp().globalData.URL +'reader/app',
 		 		 data:{
 		 			 id:that.openId,
 		 			 token:that.token,
@@ -119,7 +119,7 @@
 				this.showModal('请检查电子邮箱格式')
 			}else{
 				uni.request({
-					url:getApp().globalData.URL +'api/reader/app?openId='+that.openId+'&headImg='+that.head_img,
+					url:getApp().globalData.URL +'reader/app?openId='+that.openId+'&headImg='+that.head_img,
 					data: tmp,
 					method: "PUT",
 					success:(res)=> {
@@ -144,7 +144,7 @@
 		 	    success: (chooseImageRes) => {
 		 	        const tempFilePaths = chooseImageRes.tempFilePaths;
 		 	        uni.uploadFile({
-		 	            url: getApp().globalData.URL +'api/imgUpload/upload', //仅为示例，非真实的接口地址
+		 	            url: getApp().globalData.URL +'imgUpload/upload', //仅为示例，非真实的接口地址
 		 	            filePath: tempFilePaths[0],
 		 	            name: 'multipartFile',
 		 	            formData: {
@@ -154,7 +154,7 @@
 		 					var datas=JSON.parse(uploadFileRes.data);
 		 					if(datas.errno==0){
 								this.showModal("头像已上传！")
-		 						that.head_img = getApp().globalData.URL+"upload/图片/" + datas.data[0];
+		 						that.head_img = getApp().globalData.Link+"upload/图片/" + datas.data[0];
 		 					}else{
 								this.showModal("图片上传失败了！")
 		 						}

@@ -92,7 +92,7 @@
 			//获取数据
 			goToSearch(){
 				uni.request({
-					 url:getApp().globalData.URL+'api/borrowList/borrowAndRetrue',
+					 url:getApp().globalData.URL+'borrowList/borrowAndRetrue',
 					 data:{
 						 openId:this.openId,
 						 mhcx:this.mhcx,
@@ -118,7 +118,7 @@
 				uni.showNavigationBarLoading();		//一读取数据,就进行刷新
 				var that = this;
 				uni.request({
-					url:getApp().globalData.URL+'api/borrowList/borrowAndRetrue',
+					url:getApp().globalData.URL+'borrowList/borrowAndRetrue',
 					data:{
 						 openId:that.openId,
 						 mhcx:that.mhcx,
@@ -174,7 +174,7 @@
 			　　　　　　　　　　if (res.confirm) {
 			　　　　　　　　　　　that.ids[0] = that.info[index].borrow_list_id
 			　　　　　　　　　　　uni.request({
-								url:getApp().globalData.URL+'api/borrowList',
+								url:getApp().globalData.URL+'borrowList',
 								data:that.ids,
 								method:'DELETE',
 								header: {

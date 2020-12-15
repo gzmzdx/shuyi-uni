@@ -66,7 +66,7 @@
 				var that = this;
 				uni.request({
 					 // url:getApp().globalData.URL +'api/reader/app?id='+that.openId,
-					 url:getApp().globalData.URL +'api/reader/personal',
+					 url:getApp().globalData.URL +'reader/personal',
 					 data:{
 						 id:that.openId,
 						 token:that.token,

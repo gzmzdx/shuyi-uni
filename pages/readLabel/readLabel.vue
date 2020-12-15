@@ -54,11 +54,15 @@
 		onLoad() {
 			this.getInfo()
 		},
+		onShow() {
+			console.log("Onshow")
+			this.getInfo()
+		},
 		methods: {
 			//获取数据
 			getInfo(){
 				uni.request({
-					url:getApp().globalData.URL+'api/tagReader/queryTag',
+					url:getApp().globalData.URL+'tagReader/queryTag',
 					data:{
 						 openId:this.openId,
 					},
@@ -71,12 +75,10 @@
 						this.info = res.data
 						},
 					fail: (res) => {
-						// showModal(){
-						// 	 uni.showToast({
-						// 		title: "网络错误！",
-						// 		icon: 'none'
-						// 	 })
-						// },
+						 uni.showToast({
+							title: "网络错误！",
+							icon: 'none'
+						 })
 					}
 				})
 			},
@@ -92,7 +94,7 @@
 			　　　　　　　　　　if (res.confirm) {
 			　　　　　　　　　　　that.ids[0] = that.info[index].id
 			　　　　　　　　　　　uni.request({
-								url:getApp().globalData.URL+'api/tagReader',
+								url:getApp().globalData.URL+'tagReader',
 								data:that.ids,
 								method:'DELETE',
 								header: {

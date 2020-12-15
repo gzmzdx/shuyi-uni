@@ -71,7 +71,7 @@ export default {
 	methods: {
 		getIDetail(id){
 			uni.request({
-				 url:getApp().globalData.URL+'api/borrowList/borrowAndRetrueDetail',
+				 url:getApp().globalData.URL+'borrowList/borrowAndRetrueDetail',
 				 data:{
 					 borrowId:id
 				 },

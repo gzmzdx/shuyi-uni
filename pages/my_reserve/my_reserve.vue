@@ -129,7 +129,7 @@
 			//获取数据
 			goToSearch(){
 				uni.request({
-					 url:getApp().globalData.URL+'api/reserveList/queryReserveList	',
+					 url:getApp().globalData.URL+'reserveList/queryReserveList	',
 					 data:{
 						 openId:this.openId,
 						 mhcx:this.mhcx,
@@ -156,7 +156,7 @@
 				uni.showNavigationBarLoading();		//一读取数据,就进行刷新
 				var that = this;
 				uni.request({
-					url:getApp().globalData.URL+'api/reserveList/queryReserveList',
+					url:getApp().globalData.URL+'reserveList/queryReserveList',
 					data:{
 						 openId:that.openId,
 						 mhcx:that.mhcx,
@@ -194,7 +194,7 @@
 				        if (res.confirm) {
 				            console.log('用户点击确定');
 							uni.request({
-								url:getApp().globalData.URL+'api/reserveList',
+								url:getApp().globalData.URL+'reserveList',
 								data:that.ids,
 								method:'DELETE',
 								header: {

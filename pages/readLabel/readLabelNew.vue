@@ -49,7 +49,7 @@
 			
 			onLoad() {
 				uni.request({
-					url:getApp().globalData.URL+'api/tag',
+					url:getApp().globalData.URL+'tag',
 					method:'GET',
 					header: {
 						 'content-type': 'application/json;charset=UTF-8' // 默认值
@@ -108,7 +108,7 @@
 				//添加标签
 				addTag(){
 					uni.request({
-						url:getApp().globalData.URL+'api/tagReader?openId='+this.openId,
+						url:getApp().globalData.URL+'tagReader?openId='+this.openId,
 						data:this.tagIds,
 						method:'POST',
 						header: {
@@ -116,6 +116,10 @@
 						   },
 						success:res =>{
 							console.log("添加标签成功！",res.data)
+							uni.showToast({
+								title: "添加成功！",
+								icon: 'none'
+							})
 							},
 						fail: (res) => {
 							 uni.showToast({
