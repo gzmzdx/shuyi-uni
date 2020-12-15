@@ -23,8 +23,8 @@
 			<view>
 				<navigator :url="'../Bdetail/Bdetail?isbn='+item.isbn">
 					<view class="title_name">{{item.book.bookName}}</view>
-					<view class="tex">作者 ：{{item.book.author}}</view>
-					<view class="tex">出版社 ：{{item.book.publisher}}</view>
+					<view class="text_tex">作者 ：{{item.book.author}}</view>
+					<view class="text_tex">出版社 ：{{item.book.publisher}}</view>
 					<!-- <view class="tex">出版时间 ：2020-09</view> -->
 					<!-- <view class="tex1">广东省图书馆、广东中山图书馆</view> -->
 				</navigator>
@@ -238,10 +238,21 @@
 		/*设置 需要显示的行数*/
 	}
 
-	.tex {
+	.text_tex {
+		width: 450rpx;
+		/* height: 30rpx; */
+		text-align: left;
 		font-size: 28rpx;
-		margin-top: 10rpx;
+		margin-top: 15rpx;
 		color: #808080;
+		display: -webkit-box;
+		word-break: break-all;
+		text-overflow: ellipsis;
+		/*自适应字体*/
+		overflow: hidden;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 1;
+		/*设置 需要显示的行数*/
 	}
 
 	.tex1 {
