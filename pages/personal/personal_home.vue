@@ -29,20 +29,10 @@
 				最近读书
 			</view>
 			<view class="book" v-for="b in book">
-				<image class="bookone" :src="b.picture_path" style="width: 120rpx;height: 150rpx;"></image>
+				<navigator :url="'../Bdetail/Bdetail?isbn='+b.ISBN">
+					<image class="bookone" :src="b.picture_path" style="width: 120rpx;height: 150rpx;"></image>
+				</navigator>
 			</view>
-			<!-- <view class="book">
-				<image class="bookone"src="../../static/images/书1.jpg" style="width: 120rpx;height: 150rpx;"></image>
-			</view>
-			<view class="book">
-				<image class="bookone"src="../../static/images/after.jpg" style="width: 120rpx;height: 150rpx;"></image>
-			</view>
-			<view class="book">
-				<image class="bookone"src="../../static/images/书1.jpg" style="width: 120rpx;height: 150rpx;"></image>
-			</view>
-			<view class="book">
-				<image class="bookone"src="../../static/images/书2.jpg" style="width: 120rpx;height: 150rpx;"></image>
-			</view> -->
 		</view>
 	</view>
 </template>

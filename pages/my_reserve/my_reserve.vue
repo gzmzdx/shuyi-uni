@@ -29,44 +29,37 @@
 					</view>
 				</scroll-view>
 			</view>
-			
-			<!--评论-->
-			<view v-if="currentId===1">
-				<Orders></Orders>
-			</view>
-			<!-- 点赞 -->
-			<view v-else>
-				<Logistic></Logistic>
-			</view>	
 		</view>
-		
+		<!-- 中部 -->
 		<scroll-view scroll-y="true" style="height: 560px;" @scrolltolower="scrolltolower">
 		<view class="mid">
 			<view v-if="info.length!=0">
 				<view v-for="(i, index) in info" :key="index">
 				<view class="zt"><view class="zt1" v-text="i.name">广东图书馆</view></view>
-				<view class="midone">
-					<view class="zhengti">
-						<image :src="i.picture_path" style="width: 125rpx; height: 170rpx;"></image>
-						<view class="midwz" v-text="i.book_name">致敬老师</view>
-					</view>
-					<view>
-						<view class="s1">
-							预约时间：{{formatDate(i.reserve_time)}}
+					<view class="midone">
+						<view class="zhengti">
+							<navigator :url="'../Bdetail/Bdetail?isbn='+i.ISBN">
+								<image :src="i.picture_path" style="width: 125rpx; height: 170rpx;"></image>
+							</navigator>
+							<view class="midwz" v-text="i.book_name">致敬老师</view>
 						</view>
-						<view class="s2" >持书人：{{i.nickname}}</view>
-						<view class="s7">
-							<view class="s3">支付：{{i.is_pay}}</view>
-							<view class="s4">
-								当前状态：
-								<view class="s5" v-text="i.status">等待持书人还书</view>
+						<view>
+							<view class="s1">
+								预约时间：{{formatDate(i.reserve_time)}}
 							</view>
-							<view class="s8">
-								<button class="btn5" @click="delList(i.reserve_list_id)"><view class="wz">删除记录</view></button>
+							<view class="s2" >持书人：{{i.nickname}}</view>
+							<view class="s7">
+								<view class="s3">支付：{{i.is_pay}}</view>
+								<view class="s4">
+									当前状态：
+									<view class="s5" v-text="i.status">等待持书人还书</view>
+								</view>
+								<view class="s8">
+									<button class="btn5" @click="delList(i.reserve_list_id)"><view class="wz">删除记录</view></button>
+								</view>
 							</view>
 						</view>
 					</view>
-				</view>
 				</view>
 			</view>
 		</view>
@@ -74,16 +67,10 @@
 	<!-- <view v-if="info.length==0">
 		您还没有记录，<span style="color: #00AAFF;">快去借书吧!</span>
 	</view> -->
-	
-	
 	</view>
 </template>
 
 <script>
-	// import Logistic from '../my_reserve_Spage/reserve_SpageL.vue'
-	// import Orders from '../my_reserve_Spage/reserve_SpageR.vue'
-	// import Logistic from '../components/logistic.vue'
-	// import Orders from '../components/orders.vue'
 	export default {
 		data() {
 			return {

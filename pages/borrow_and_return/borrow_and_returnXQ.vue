@@ -5,12 +5,15 @@
 			<view class="br1"></view>
 			<!-- 中间书籍部分 -->
 			<view class="midone">
-				<view class="zhengti"><image :src="info.picture_path" style="width: 140rpx;height: 180rpx;"></image></view>
+				<view class="zhengti">
+					<navigator :url="'../Bdetail/Bdetail?isbn='+info.ISBN">
+						<image :src="info.picture_path" style="width: 140rpx;height: 180rpx;"></image>
+					</navigator>
+				</view>
 				<view class="xq">
 					<view class="midwz" v-text="info.book_name">致敬老师</view>
 					<view class="s1">
 						<view>作者：</view>
-						<!-- <image style="width: 30rpx; height: 30rpx;" src="../../static/images/dingwei.png"></image> -->
 						<view class="s6" v-text="info.author">大鲤鱼</view>
 					</view>
 					<view class="s2" >

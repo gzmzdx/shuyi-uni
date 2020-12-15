@@ -18,7 +18,9 @@
 					<!-- <view v-for="(item, index) in csListArrl" :key="index" :data-index="index"  class="order-item"   @touchstart="drawStart" @touchmove="drawMove"  @touchend="drawEnd"  :style="'right:'+item.right+'px'"> -->
 						<view class="content" @touchstart.prevent="touchstart(index)" @touchend.prevent="touchend">
 							<view class="zhengti">
-								<image :src="i.picture_path" style="width: 140rpx;height: 180rpx;"></image>
+								<navigator :url="'../Bdetail/Bdetail?isbn='+i.ISBN">
+									<image :src="i.picture_path" style="width: 140rpx;height: 180rpx;"></image>
+								</navigator>
 							</view>
 							<view class="xq">
 								<view class="midwz" v-text="i.book_name">致敬老师</view>
