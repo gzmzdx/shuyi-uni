@@ -5,7 +5,7 @@
 				<u-index-anchor :use-slot="true">
 					<text class="anchor-text">{{item}}</text>
 				</u-index-anchor>
-				<view class="list-cell" v-for="(item1,index) in user.filter(u=>u.username.startsWith(item))" :key="index">
+				<view class="list-cell" v-for="(item1,index1) in user.filter(u=>u.username.startsWith(item))" :key="index1">
 					<u-avatar :src="item1.url"></u-avatar>
 					{{item1.username}}
 				</view>

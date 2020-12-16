@@ -5,15 +5,6 @@
 	},
 	"pages": [
 		{
-			"path": "pages/friend/test",
-			"style": {
-				"navigationStyle": "custom",
-				"app-plus": {
-					"titleNView": false
-				}
-			}
-		},
-		{
 			"path": "pages/main/main",
 			"style": {
 				"navigationStyle": "custom",
