@@ -1,6 +1,6 @@
 // import Vue from 'vue'
 // import App from './App'
-// import uView from "uview-ui"
+import uView from "uview-ui"
 // import store from "./store"
 
 // import "./tools"
@@ -52,6 +52,8 @@ Vue.component("join",join)
 Vue.component("jianj",jianj)
 Vue.component("tushu",tushu)
 Vue.component("chengy",chengy)
+
+Vue.use(uView)
 
 const app = new Vue({
     ...App

@@ -34,13 +34,13 @@
 			
 			</view>
 			
-				<view v-if="currentId===1">
+				<!-- <view v-if="currentId===1">
 					<Orders></Orders>
 				</view>
 				<view v-else>
 					<Trade></Trade>
-				</view>
-			
+				</view> -->
+			<Trade :user="currentId===1?user1:user2"></Trade>
 		</view>
 	</view>
 </template>
@@ -54,7 +54,40 @@
 				brands:[
 					'关注',
 					'好友',
-				]
+				],
+				currentIndex:1,
+				user1:[{
+					url:"https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2974706256,1511610652&fm=11&gp=0.jpg",
+					username:"张三"
+				},{
+					url:"https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2974706256,1511610652&fm=11&gp=0.jpg",
+					username:"1"
+				},{
+					url:"https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2974706256,1511610652&fm=11&gp=0.jpg",
+					username:"2"
+				},{
+					url:"https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2974706256,1511610652&fm=11&gp=0.jpg",
+					username:"3"
+				},{
+					url:"com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2974706256,1511610652&fm=11&gp=0.jpg",
+					username:"4"
+				}],
+				user2:[{
+					url:"https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2974706256,1511610652&fm=11&gp=0.jpg",
+					username:"0"
+				},{
+					url:"https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2974706256,1511610652&fm=11&gp=0.jpg",
+					username:"1"
+				},{
+					url:"https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2974706256,1511610652&fm=11&gp=0.jpg",
+					username:"2"
+				},{
+					url:"https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2974706256,1511610652&fm=11&gp=0.jpg",
+					username:"D"
+				},{
+					url:"com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2974706256,1511610652&fm=11&gp=0.jpg",
+					username:"Agjygjy"
+				}]
 			};
 		},
 
@@ -79,7 +112,7 @@
 </script>
 <style lang="scss" scoped>
 	.tq{
-			height: 100rpx;
+			height: 80rpx;
 			background-color:#6C40F3;
 		}
 	.tab {

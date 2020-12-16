@@ -5,6 +5,15 @@
 	},
 	"pages": [
 		{
+			"path": "pages/friend/test",
+			"style": {
+				"navigationStyle": "custom",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},
+		{
 			"path": "pages/main/main",
 			"style": {
 				"navigationStyle": "custom",
@@ -72,13 +81,18 @@
 				"navigationBarTitleText": "已发表",
 				"navigationBarBackgroundColor": "#6C40F3"
 			}
-		}, {
+		}, 
+		{
 			"path": "pages/personal/personal_home",
 			"style": {
 				"navigationBarTitleText": "我的主页",
-				"navigationBarBackgroundColor": "#6C40F3"
+				"navigationStyle": "custom",
+				"app-plus": {
+					"titleNView": false
+				}
+		
 			}
-		}, {
+		},{
 			"path": "pages/personal/Mynotice",
 			"style": {
 				"navigationBarTitleText": "通知消息",
