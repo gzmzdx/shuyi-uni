@@ -1,6 +1,14 @@
 <template>
 	<view>
 		<!-- 导航栏 -->
+		<navbar title="热门推荐" title-color="white" title-size="40" :background="background" back-icon-color="white"
+		 back-icon-size="50">
+			<view class="navbar-right" slot="right">
+				<view class="right_list" style="height: 50rpx;width: 50rpx;">
+					<image style="height: 50rpx;width: 50rpx;" src="../../static/images/分类.png"></image>
+				</view>
+			</view>
+		</navbar>
 		<!-- #ifdef APP-PLUS -->
 		<view class="tq"></view>
 		<view class="tab" style="width: 100%; height: 90rpx;">
@@ -38,9 +46,16 @@
 
 <script>
 	let app = getApp();
+	import navbar from '../../components/c-navbar/index.vue'
 	export default {
+		components: {
+			navbar,
+		},
 		data() {
 			return {
+				background: {
+					background: '#6C40F3'
+				},
 				hotbookList: [], //热书列表
 			}
 		},
