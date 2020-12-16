@@ -22,15 +22,15 @@
 		</view>
 		<view class="tit">{{bookDetail.bookName}}</view>
 		<view class="table">
-			<view class="tex">作者：{{bookDetail.author}}</view>
-			<view class="tex">出版社：{{bookDetail.publisher}}</view>
-			<view class="tex">出版年：{{bookDetail.publisherYear}}</view>
-			<view class="tex">图书馆：</view>
-			<view class="tex">ISBN：{{bookDetail.isbn}}</view>
-			<view class="tex">馆藏数量：{{bookDetail.num}}</view>
-			<view class="tex">可借数量：{{num}}</view>
-			<view class="tex">书易读者：</view>
-			<view class="tex">索书号：{{bookDetail.classificationSymbol}}</view>
+			<view class="text_tex">作者：{{bookDetail.author}}</view>
+			<view class="text_tex">出版社：{{bookDetail.publisher}}</view>
+			<view class="text_tex">出版年：{{bookDetail.publisherYear}}</view>
+			<view class="text_tex">图书馆：</view>
+			<view class="text_tex">ISBN：{{bookDetail.isbn}}</view>
+			<view class="text_tex">馆藏数量：{{bookDetail.num}}</view>
+			<view class="text_tex">可借数量：{{num}}</view>
+			<view class="text_tex">书易读者：</view>
+			<view class="text_tex">索书号：{{bookDetail.classificationSymbol}}</view>
 		</view>
 		<!-- 图书简介 -->
 		<view class="jian">
@@ -301,12 +301,23 @@
 		color: #333333;
 	}
 
-	.tex {
+	.text_tex {
+		// height: 30rpx;
 		/* margin: 10rpx 20rpx; */
 		margin-left: 20rpx;
 		margin-top: 10rpx;
 		color: #8F8F94;
 		font-size: 26rpx;
+		display: -webkit-box;
+		word-break: break-all;
+		text-overflow: ellipsis;
+		/*自适应字体*/
+		overflow: hidden;
+		/* autoprefixer: off */
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 1;
+		/*autoprefixer: on */
+		/*设置 需要显示的行数*/
 	}
 
 	.tex1 {
