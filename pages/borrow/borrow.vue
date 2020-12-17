@@ -64,7 +64,9 @@
 					
 				</view>
 				<view class="btnSubmmit">
-					<button class="orderSubmmit" @click="Inappointment"><view class="orderText">预约</view></button>
+					<navigator url="../order/order">
+						<button class="orderSubmmit" ><view class="orderText">借走</view></button>
+					</navigator>
 				</view>
 			</view>
 		<!-- </view> -->

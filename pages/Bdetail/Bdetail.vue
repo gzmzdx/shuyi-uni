@@ -60,8 +60,15 @@
 
 		<!-- 底部 -->
 		<view class="buttom">
-			<button class="btn1" @click="borrowBook" style="color: #00AAFF;">借书</button>
-			<button class="btn2" style="color: #FFFFFF;">收藏</button>
+			
+			<navigator url="../borrow/borrow">
+				<view>
+					<button class="btn1" @click="borrowBook" style="color: #00AAFF; width: 400rpx; height: 100rpx;">借走</button>
+				</view>
+			</navigator>
+			<view>
+				<button class="btn2" style="color: #FFFFFF;  width: 400rpx; height: 100rpx;">收藏</button>
+			</view>
 		</view>
 
 	</view>
@@ -462,7 +469,7 @@
 	.btn1 {
 		width: 50%;
 		margin: 0;
-		border-radius: 0;
+		// border-radius: 0;
 		border-color: #FFFFFF;
 		background-color: #FFFFFF;
 		color: #00AAFF;
