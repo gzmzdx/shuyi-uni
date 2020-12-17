@@ -60,12 +60,9 @@
 
 		<!-- 底部 -->
 		<view class="buttom">
-			
-			<navigator url="../borrow/borrow">
-				<view>
-					<button class="btn1" @click="borrowBook" style="color: #00AAFF; width: 400rpx; height: 100rpx;">借走</button>
-				</view>
-			</navigator>
+      <view>
+        <button class="btn1" @click="borrowBook" style="color: #00AAFF; width: 400rpx; height: 100rpx;">借走</button>
+      </view>
 			<view>
 				<button class="btn2" style="color: #FFFFFF;  width: 400rpx; height: 100rpx;">收藏</button>
 			</view>
@@ -89,10 +86,9 @@
 			this.getBookByISBN(e.isbn);
 		},
 		methods: {
-
 			borrowBook: function() {
-				uni.navigateTo({
-					url: '../borrow/borrow'
+        uni.navigateTo({
+					url: '/pages/borrow/borrow?bookId='+this.bookDetail.bookId
 				})
 			},
 			//根据ISBN获取图书详情
@@ -128,7 +124,7 @@
 				that.bookLikeList = res.content;
 				console.log("ffffffff:", that.bookLikeList);
 			},
-			
+
 			//根据booId查询可解的书
 			async getBookNumByBookId(e){
 				var that = this;

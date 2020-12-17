@@ -26,8 +26,8 @@
 		<u-index-list :scrollTop="scrollTop">
 			<view v-for="(item, index) in indexList" :key="index">
 				<u-index-anchor :index="item" />
-				<view class="list-cell"  v-for="(item1,index1) in (currentId===1?user1:user2).filter(u=>u.username.startsWith(item))"  :key="index1">
-					<u-avatar :src="item1.url"></u-avatar>
+				<view class="list-cell u-flex"  v-for="(item1,index1) in (currentId===1?user1:user2).filter(u=>u.username.startsWith(item))"  :key="index1">
+					<u-avatar size="60" :src="item1.url"></u-avatar>
 					{{item1.username}}
 				</view>
 			</view>

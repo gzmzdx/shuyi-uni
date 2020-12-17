@@ -11,22 +11,22 @@
 				</view>
 				<view class="dizhi">广东省广州大学城外环西路100号楼303</view>
 			</view>
-			
+
 		</view>
 		<view class="fenge"></view>
 		<!--书籍-->
 		<view class="show">
-			
+
 			<view class="midone">
 				<view class="zhengti">
-					<image class="imag" src="../../static/images/ap.jpg" style="width: 158rpx; height: 188rpx;"></image>
-					<view class="midwz">致敬老师</view>
+					<image class="imag" :src="book.picturePath" style="width: 158rpx; height: 188rpx;"></image>
+					<view class="midwz">{{book.bookName}}</view>
 				</view>
 				<view>
 					<view class="s1">作者：
 						<view class="s6">汪魏青</view>
 					</view>
-					<view class="s2">出版社：浙江大学出版社</view>
+					<view class="s2">出版社：{{book.publisher}}</view>
 					<!-- <view class="s7">
 						<view class="s3">出版时间：2017-09-10</view>
 					</view> -->
@@ -34,7 +34,7 @@
 				<view class="aa">
 					<view class="sa">
 						<view class="ss">馆藏：
-							<view class="s5">广州图书馆</view>
+							<view class="s5">{{list[index]&&list[index].library.name}}</view>
 						</view>
 						<!-- <view class="s7">
 							<view class="s4">书易读者：
@@ -64,21 +64,48 @@
 				<view class="">读者自提</view>
 			</view>
 		</view> -->
-		
+
 		<!--书籍-->
+    <u-button @tap="orderSubmit(realBookId)" class="u-m-t-80 u-m-l-50 u-m-r-50" >提交</u-button>
 	</view>
 </template>
 
 <script>
-	export default {
+	import {getBookByBookId,realBook} from "../../api";
+
+  export default {
 		data() {
 			return {
-
+        book:{},
+        index:0,//第几个图书馆
+        list:{},
+        realBookId:null,
+        bookId:null,
 			}
 		},
 		methods: {
-			
-		}
+      orderSubmit(realBookId){
+        realBook({realBookId}).then(({data})=>{
+          uni.showToast({icon:"none",title: "下单成功"});
+          uni.switchTab({
+            url: '/pages/main/main'
+          });
+        }).catch(err=>{
+          uni.showToast({icon:"none",title: "服务器繁忙!"});
+        })
+      }
+		},
+    onLoad(query){
+      //获取到图书信息
+      console.log(query);
+      this.index = query.index;
+      this.realBookId = query.realBookId;
+      this.bookId = query.bookId;
+      getBookByBookId({bookId:query.bookId}).then(({data})=>{
+        this.book = data.book;
+        this.list = data.list;
+      })
+    }
 	}
 </script>
 
@@ -115,7 +142,7 @@
 		font-size: 26rpx;
 		line-height: 45rpx;
 		margin-left: 20rpx;
-		
+
 	}
 	.dibu{
 		display: flex;
@@ -123,7 +150,7 @@
 		font-size: 20rpx;
 		color:#999999;
 		margin-left:150rpx;
-		
+
 	}
 	.fenge{
 	/* 	height: 5rpx;
@@ -135,13 +162,13 @@
 		margin-top: 10rpx;
 	}
 	.tupian{
-		
+
 	}
 	.imag4{
 		width: 40rpx;
 		height: 40rpx;
 		margin-left: -10rpx;
-	
+
 	}
 	.bottom{
 		border: #EEEEEE 1rpx solid;
@@ -268,7 +295,7 @@
 		color: #00BFFF;
 
 	}
-	
+
 	.s7 {
 		height: 35rpx;
 		align-items: center;
