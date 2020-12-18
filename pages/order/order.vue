@@ -33,8 +33,8 @@
 				</view>
 				<view class="aa">
 					<view class="sa">
-						<view class="ss">馆藏：
-							<view class="s5">{{list[index]&&list[index].library.name}}</view>
+						<view class="ss u-flex">馆藏：
+							<view>{{list[index]&&list[index].library.name}}</view>
 						</view>
 						<!-- <view class="s7">
 							<view class="s4">书易读者：

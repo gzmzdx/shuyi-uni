@@ -13,10 +13,75 @@
 	<!-- 搜索框结束 -->
 	<view class="show">
 			<!-- 第一个 -->
-			<view v-if="info.length!=0">
-				<view class="main" v-for="(i, index) in info" :key="index">
+			<view v-if="borrowList.length">
+        <u-popup v-model="show" mode="bottom" height="400">
+          <view class="content" v-if="borrow.delivery">
+            <view class="zhengti">
+              <image :src="borrow.borrowList&&borrow.borrowList.realBook.book.picturePath" style="width: 140rpx;height: 180rpx;"></image>
+            </view>
+            <view class="xq">
+              <view>{{borrow.borrowList&&borrow.borrowList.realBook.book.bookName}}</view>
+              <view v-if="borrow.delivery">
+                承运快递：
+                <text>{{borrow.delivery.shippercode}}</text>
+              </view>
+              <view>
+                邮运费：{{borrow.delivery.order.totalPrice}}元
+              </view>
+              <view>
+                收货地址：{{borrow.delivery.address}}
+              </view>
+              <view>
+                收货人电话：{{borrow.delivery.phoneNum}}
+              </view>
+              <u-button @click="submitBorrow" :loading="submitBorrowButtonLoading">确认付款</u-button>
+            </view>
+          </view>
+        </u-popup>
+				<view class="main" v-for="(item, index) in borrowList" :key="index">
+          <!--TODO demo-->
+          <view class="content" @touchstart.prevent="touchstart(index)" @touchend.prevent="touchend">
+            <view class="zhengti">
+              <image :src="item.borrowList.realBook.book.picturePath" style="width: 140rpx;height: 180rpx;"></image>
+            </view>
+            <view class="xq">
+              <view class="midwz">{{item.borrowList.realBook.book.bookName}}</view>
+              <view class="s2" >
+                <view>借入时间：</view>
+                <view v-text="formatDate(item.borrowList.borrowTime)">2017-09-10</view>
+              </view>
+              <view class="s3">
+                <view>还书时间：</view>
+                <view v-text="formatDate(item.borrowList.needreturnTime)">2017-09-10</view>
+              </view>
+              <view class="s4 u-flex" v-if="item.delivery">
+                承运快递：
+                <view v-text="item.delivery.shippercode"></view>
+              </view>
+              <view class="s4 u-flex" v-else>无物流信息</view>
+              <view class="u-flex" style="justify-content: space-between">
+                <view class="s4 u-flex">状态：{{
+                    ["预付款","已付款","付款失败","其他"][item.delivery?item.delivery.order.status:3]
+                  }}</view>
+                <view  v-if="item.delivery && item.delivery.order.status===0">
+                  <u-button :loading="submitBorrowButtonLoading" @click="showPopup(item)" size="mini" type="primary">付款</u-button>
+                </view>
+                <view v-if="item.delivery && !item.delivery.status && item.delivery.order.status===1">
+                  <u-button  :loading="submitSignForButtonLoading" @click="submitSignFor(item)" size="mini" type="success">确认收货</u-button>
+                </view>
+                <view>
+                  <u-button size="mini">查看详情</u-button>
+                </view>
+              </view>
+             <!--<view class="s8" v-if="item.delivery" >
+                <button class="btn1" @tap="toDetil(item.delivery.borrowListId)">
+                  查看详情
+                </button>
+              </view>-->
+            </view>
+          </view>
 					<!-- <view v-for="(item, index) in csListArrl" :key="index" :data-index="index"  class="order-item"   @touchstart="drawStart" @touchmove="drawMove"  @touchend="drawEnd"  :style="'right:'+item.right+'px'"> -->
-						<view class="content" @touchstart.prevent="touchstart(index)" @touchend.prevent="touchend">
+						<!--<view class="content" @touchstart.prevent="touchstart(index)" @touchend.prevent="touchend">
 							<view class="zhengti">
 								<navigator :url="'../Bdetail/Bdetail?isbn='+i.ISBN">
 									<image :src="i.picture_path" style="width: 140rpx;height: 180rpx;"></image>
@@ -28,7 +93,7 @@
 									<view>借入时间：</view>
 									<view v-text="formatDate(i.borrow_time)">2017-09-10</view>
 								</view>
-								<!-- <view class="s7"> -->
+								&lt;!&ndash; <view class="s7"> &ndash;&gt;
 								<view class="s3">
 									<view>还书时间：</view>
 									<view v-text="formatDate(i.needreturn_time)">2017-09-10</view>
@@ -41,14 +106,18 @@
 									<button class="btn1" @click="toDetil(i.borrow_list_id)"><view class="wz" >查看详情</view></button>
 								</view>
 							</view>
-						</view>
+						</view>-->
 						<!-- <view class="remove" @click="delData(i.borrow_list_id)">删除</view> -->
 					<!-- </view> -->
 				</view>
-			</view>	
-		    <view v-if="info.length==0">
+			</view>
+    <!--TODO demo修改-->
+		    <!--<view v-if="info.length==0">
 		    	您还没有记录，<span style="color: #00AAFF;">快去借书吧!</span>
-		    </view>
+		    </view>-->
+    <view v-if="!borrowList.length">
+      您还没有记录，<span style="color: #00AAFF;">快去借书吧!</span>
+    </view>
 			<!-- 刷新 -->
 		<view class="bt" @click="goToSearch()"><button style="background-color: #6C40F3;" >刷新</button></view>
 	</view>
@@ -56,6 +125,7 @@
 </template>
 
 <script>
+import {BorrowedRecord,payment,signFor} from "../../api"
 	export default {
 		data() {
 			return {
@@ -75,20 +145,26 @@
 				flag:'true',//判断是否到底部
 				borrow_list_id:'',
 				ids:[],//删除的borrow_list_id
-				
+
+        //TODO 借还记录 demo演示
+        borrowList:[],
+        show:false,//支付弹框是否显示
+        borrow:{},//正在付款的订单
+        submitBorrowButtonLoading:false,
+        submitSignForButtonLoading:false,
 			}
 		},
 		onLoad() {
-			this.goToSearch();
+			/*this.goToSearch();*/
 		},
 		//当划到最底部的时候触发事件
-		onReachBottom:function(){				
+		onReachBottom:function(){
 				console.log("我是最底部了");
 				if(this.flag=='true'){
 					this.getMoreNews();
 				}else{
 					this.showModal("到底啦~")
-				}			
+				}
 				},
 		methods: {
 			//获取数据
@@ -141,7 +217,7 @@
 						}
 						that.info=that.info.concat(Array.from(res.data)); //拼接数组
 						// uni.stopPullDownRefresh();	//数据加载完成,刷新结束
-						// uni.hideNavigationBarLoading();	//数据读取完毕,刷新停止	
+						// uni.hideNavigationBarLoading();	//数据读取完毕,刷新停止
 					},
 					fail: (res) => {
 						this.showModal("网络错误！")
@@ -197,7 +273,7 @@
 			　　}.bind(this), 1000);
 			},
 			//清空定时器，防止重复注册定时器
-			touchend() {  
+			touchend() {
 			　　clearInterval(this.Loop);
 			},
 			//提示框
@@ -213,8 +289,52 @@
 				uni.navigateTo({
 					url:'borrow_and_returnXQ?id='+this.borrow_list_id
 				})
-			}
-		}
+			},
+      //付款弹出
+      showPopup(borrow){
+        this.show = true
+        this.borrow = borrow;
+      },
+      //确认付款
+      submitBorrow(){
+        this.submitBorrowButtonLoading = true
+        payment({orderId:this.borrow.delivery.orderId}).then((data)=>{
+          uni.showToast({icon:"none",title: "付款成功"});
+          BorrowedRecord({}).then(({data})=>{
+            this.borrowList = data
+            this.borrow = data[0]
+          })
+        }).catch(err=>{
+          uni.showToast({icon:"none",title: "服务器繁忙!"});
+        }).finally(()=>{
+          this.show = false
+          this.submitBorrowButtonLoading = false
+        })
+      },
+      //确认收货
+      submitSignFor(borrow){
+        this.submitSignForButtonLoading = true
+        signFor({deliveryId:borrow.delivery.deliveryId}).then((data)=>{
+          uni.showToast({icon:"none",title: "签收成功"})
+          BorrowedRecord({}).then(({data})=>{
+            this.borrowList = data
+            this.borrow = data[0]
+          })
+        }).catch(err=>{
+          uni.showToast({icon:"none",title: "服务器繁忙!"});
+        }).finally(()=>{
+          this.show = false
+          this.submitSignForButtonLoading = false
+        })
+      }
+		},
+    created(){
+      BorrowedRecord({}).then(({data})=>{
+        console.log("demo数据",data);
+        this.borrowList = data;
+        this.borrow = data[0];
+      })
+    }
 	}
 </script>
 
@@ -235,7 +355,7 @@
 	    display: flex;
 	    flex-direction: row;
 		box-shadow: #007AFF 1rpx 1rpx 5rpx 1rpx;
-	} 
+	}
 	.header-input input {
 	    margin-left: 31rpx;
 	    width: 564rpx;
@@ -243,12 +363,12 @@
 	    line-height: 66rpx;
 	    font-size: 28rpx;
 	}
-	
+
 	.header-input view {
 	    width: 96rpx;
 	    height: 66rpx;
 	}
-	
+
 	.image {
 	    margin-left: 20rpx;
 	    margin-top: 11rpx;
@@ -256,7 +376,7 @@
 	    height: 55rpx;
 	}
 .show {
-	margin-bottom: auto; 
+	margin-bottom: auto;
 	width: auto;
 	height: auto;
 }
@@ -311,7 +431,7 @@
 	align-items: center;
 	/* margin-left: 190rpx; */
 	color: #999999;
-	display : flex ; 
+	display : flex ;
 	flex-flow : row;
 }
 .s3 {
@@ -363,6 +483,8 @@
 	margin-top: -60rpx;
 	background-color: #4CD964;
 	border-radius: 15rpx;
+  font-size: 26rpx;
+  line-height: 55rpx;
 }
 
 .wz {
@@ -393,22 +515,22 @@
 	.content{
 		/* background-color: #0066CC; */
 	    /* width: 100%; */
-	    height: 100px;
+	    height: 110px;
 	    /* margin: 20 auto; */
 	    /* border: 1px solid #C0C0C0; */
 	    /* line-height: 100px; */
 	    /* text-align: center; */
-		
+
 		display: flex;
 		/* width: 100%; */
-		height: 210rpx;
+		/*height: 210rpx;*/
 		font-size: 30rpx;
 		margin-top: 35rpx;
 		/* align-items: center; */
 		/* background-color: #00BFFF; */
 		/* border-bottom: 1rpx solid #EBEBEB; */
 	}
-	
+
 	.remove {
 	    margin-left:-5%;
 	    width: 80px;
