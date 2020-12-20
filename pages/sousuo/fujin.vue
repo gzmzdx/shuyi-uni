@@ -4,8 +4,8 @@
 		<u-navbar height="44" title="附近的书" title-color="white" title-size="40" :background="background" back-icon-color="white"
 		 back-icon-size="50">
 			<view class="navbar-right" slot="right">
-				<view class="right_list" style="height: 50rpx;width: 50rpx;">
-					<image style="height: 50rpx;width: 50rpx;" src="../../static/images/搜索icon@2x.png"></image>
+				<view class="right_list" style="height: 80rpx;width: 80rpx;">
+					<image style="height: 80rpx;width: 80rpx;" src="../../static/images/搜索icon@2x.png"></image>
 				</view>
 			</view>
 		</u-navbar>
@@ -41,8 +41,8 @@
 								<cover-view class="book-name">书名：{{marker.bookName}}</cover-view>
 								<cover-view class="book-name1">作者：{{marker.author}}</cover-view>
 								<cover-view class="book-name1">出版社：{{marker.publisher}}</cover-view>
-								<cover-view class="book-name1">出版时间：</cover-view>
-								<cover-view class="book-name1">图书馆：{{marker.library}}</cover-view>
+								<cover-view class="book-name1">所在图书馆：{{marker.library}}</cover-view>
+								<cover-view class="book-name1">是否外借：</cover-view>
 								<cover-view class="book-add" @click="addFriend" :data-name="marker">预约</cover-view>
 							</cover-view>
 						</cover-view>
@@ -90,17 +90,17 @@
 					width: 40,
 					height: 40,
 					callout: {
-						content: "图书馆",
+						content: "书本名",
 						borderWidth: "2rpx",
 						fontSize: "35rpx",
 						display: "BYCLICK"
 					},
-					bookName: '',	//书本名称
-					realBookId: '',	//书本id
-					picturePath: '',  //书本图片
-					author: '',	//作者
-					publisher: '',	//出版社
-					library: '',	//图书馆
+					bookName: '', //书本名称
+					realBookId: '', //书本id
+					picturePath: '', //书本图片
+					author: '', //作者
+					publisher: '', //出版社
+					library: '', //图书馆
 				}]
 			}
 		},
@@ -118,6 +118,7 @@
 					/** 开始同步数据 */
 					// that.latitude = res.latitude
 					// that.longitude = res.longitude
+					that.getNearbyBook(res.longitude, res.latitude, 1);
 				}
 			})
 		},
@@ -140,7 +141,6 @@
 			async getNearbyBook(longitude, latitude, distance) {
 				var that = this;
 				var BookList = [];
-				var markers = that.markers_new;
 				var params = {
 					url: "realBook/getBookByMap",
 					type: 'POST',
@@ -168,26 +168,30 @@
 				console.log(BookList);
 				if (BookList !== undefined && BookList.length > 0) {
 					for (var i = 0; BookList.length > i; i++) {
-						markers[i] = markers[0];
-						markers[i].iconPath = "/static/images/dw.png";
-						markers[i].id = i;
-						markers[i].longitude = BookList[i].longtitude;
-						markers[i].latitude = BookList[i].latitude;
-						markers[i].width = 40;
-						markers[i].height = 40;
-						markers[i].bookName = BookList[i].book.bookName;
-						markers[i].realBookId = BookList[i].realBookId;
-						markers[i].picturePath = BookList[i].book.picturePath;
-						markers[i].author = BookList[i].book.author;
-						markers[i].publisher = BookList[i].book.publisher;
-						markers[i].library = BookList[i].library.name;
-						markers[i].callout.content = BookList[i].book.bookName;
-						markers[i].callout.borderWidth = "2rpx";
-						markers[i].callout.fontSize = "35rpx";
-						markers[i].callout.display = "BYCLICK";
+						var marker = {};
+						var callout = {};
+						// markers[i] = that.markers_new[0];
+						marker.iconPath = "/static/images/dw.png";
+						marker.id = i;
+						marker.longitude = BookList[i].longtitude;
+						marker.latitude = BookList[i].latitude;
+						marker.width = 40;
+						marker.height = 40;
+						marker.bookName = BookList[i].book.bookName;
+						marker.realBookId = BookList[i].realBookId;
+						marker.picturePath = BookList[i].book.picturePath;
+						marker.author = BookList[i].book.author;
+						marker.publisher = BookList[i].book.publisher;
+						marker.library = BookList[i].library.name;
+						callout.content = BookList[i].book.bookName;
+						callout.borderWidth = "2rpx";
+						callout.fontSize = "35rpx";
+						callout.display = "BYCLICK";
+						marker.callout = callout;
+						// console.log("wwwww",marker);
+						that.markers.push(marker)
 					}
-					console.log("hhhhhhh",markers);
-					that.markers = markers;
+					// console.log("hhhhhhh",that.markers);
 				}
 			},
 			/**
@@ -196,17 +200,32 @@
 			 */
 			go(e) {
 				var that = this
-				console.log(e)
 				console.log(e.detail.markerId)
 				var val = e.detail.markerId
-				console.log(val)
 				if (val != null) {
 					console.log("我执行了")
 					that.sense = 1; //显示隐藏标签
-					that.marker = e.target.dataset.name[0];
-					// that.name = that.markers[val].callout.content;
+					that.marker = that.markers[val];
 				}
-				console.log("maker：", that.marker)
+				console.log("maker：", that.marker);
+				// uni.openLocation({
+				// 	latitude: 36.309051,
+				// 	longitude: 120.396592,
+				// 	success: function(e) {
+				// 		console.log(e);
+				// 	}
+				// });
+				// var point = new plus.maps.Point(120.396592, 36.309051);
+				// plus.maps.Map.reverseGeocode(
+				// 	point, {},
+				// 	function(event) {
+				// 		var address = event.address; // 转换后的地理位置
+				// 		var point = event.coord; // 转换后的坐标信息
+				// 		var coordType = event.coordType; // 转换后的坐标系类型
+				// 		console.log(address, 'address');
+				// 	},
+				// 	function(e) {}
+				// );
 			},
 			/**
 			 * 点击地图触发
@@ -216,18 +235,18 @@
 				that.sense = 0;
 			},
 			/**
-			 * 添加好友
+			 * 借阅图书
 			 */
 			addFriend(e) {
 				console.log(e.currentTarget.dataset.name.callout.content);
 				var name = e.currentTarget.dataset.name.callout.content
 				uni.showModal({
-					content: '确定添加该好友吗？',
+					content: '确定借阅图书吗？',
 					success(res) {
 						if (res.confirm) {
 							console.log('用户点击确定')
 							uni.showToast({
-								title: '添加成功',
+								title: '借阅成功',
 								type: 'success',
 								duration: 2000
 							})
@@ -412,9 +431,10 @@
 
 	.book-name {
 		margin-left: 40rpx;
+		margin-right: 20rpx;
 		/* margin-top: 30rpx; */
 		height: 45rpx;
-		width: 95%;
+		width: 90%;
 		font-size: 30rpx;
 		color: #6C40F3;
 	}
@@ -422,8 +442,16 @@
 	.book-name1 {
 		margin-left: 40rpx;
 		margin-top: 20rpx;
+		margin-right: 20rpx;
 		font-size: 28rpx;
 		color: #636363;
+		display: -webkit-box;
+		word-break: break-all;
+		text-overflow: ellipsis;
+		/*自适应字体*/
+		overflow: hidden;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 1;
 	}
 
 	.book-add {
@@ -454,7 +482,7 @@
 		display: row;
 		margin-top: 15rpx;
 		height: 400rpx;
-		width: 65%;
+		width: 63%;
 		color: #636363;
 	}
 
