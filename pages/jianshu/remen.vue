@@ -1,31 +1,37 @@
 <template>
 	<view>
 		<!-- 导航栏 -->
-		<!-- <u-navbar height="74" title="热门推荐" title-color="white" title-size="40" :background="background" back-icon-color="white"
-		 back-icon-size="50">
+		<u-navbar zhead="65rpx" height="44" title="热门推荐" title-color="white" title-size="40" :background="background"
+		 back-icon-color="white" back-icon-size="50">
 			<view class="navbar-right" slot="right">
-				<view class="right_list" style="height: 50rpx;width: 50rpx;">
-					<image style="height: 50rpx;width: 50rpx;" src="../../static/images/分类.png"></image>
+				<view class="right_list">
+					<image style="height: 60rpx;width: 60rpx;" src="../../static/images/分类.png"></image>
+				</view>
+				<view class="right_list">
+					<!-- <fenlei></fenlei> -->
+					<image style="height: 60rpx;width: 60rpx;" src="../../static/images/搜索icon@2x.png"></image>
 				</view>
 			</view>
-		</u-navbar> -->
+		</u-navbar>
+		<view style="height: 65rpx;"></view>
+		
 		<!-- #ifdef APP-PLUS -->
-		<view class="tq"></view>
+		<!-- <view class="tq"></view>
 		<view class="tab" style="width: 100%; height: 90rpx;">
 			<image @click="back" class="back" src="../../static/images/向左箭头.二级.返回@2x.png" style="width: 64rpx; height: 64rpx;"></image>
 			<view class="tit">热门推荐</view>
 			<image class="im" src="../../static/images/分类.png" style="width: 80rpx; height: 80rpx;"></image>
 			<image class="im1" src="../../static/images/搜索icon@2x.png" style="width: 80rpx; height: 80rpx;"></image>
-		</view>
+		</view> -->
 		<!-- #endif -->
 		<!-- #ifdef MP-WEIXIN -->
-		<view class="tq"></view>
+		<!-- <view class="tq"></view>
 		<view class="tab" style="width: 100%; height: 90rpx;">
 			<image @click="back" class="back" src="../../static/images/向左箭头.二级.返回@2x.png" style="width: 64rpx; height: 64rpx;"></image>
 			<view class="tit2">热门推荐</view>
 			<image class="im" src="../../static/images/分类.png"></image>
 			<image class="im1" src="../../static/images/搜索icon@2x.png"></image>
-		</view>
+		</view> -->
 		<!-- #endif -->
 
 		<view class="list" v-for="item in hotbookList">
@@ -35,8 +41,6 @@
 					<view class="title_name">{{item.book.bookName}}</view>
 					<view class="text_tex">作者 ：{{item.book.author}}</view>
 					<view class="text_tex">出版社 ：{{item.book.publisher}}</view>
-					<!-- <view class="tex">出版时间 ：2020-09</view> -->
-					<!-- <view class="tex1">广东省图书馆、广东中山图书馆</view> -->
 				</navigator>
 			</view>
 		</view>
@@ -85,6 +89,20 @@
 </script>
 
 <style>
+	.navbar-right {
+		display: flex;
+		align-items: center;
+	}
+
+	.right_list {
+		display: flex;
+		align-items: center;
+		height: 80rpx;
+		width: 80rpx;
+		margin-right: 20rpx;
+		margin-top: 10rpx;
+	}
+
 	.tq {
 		height: 70rpx;
 		background-color: #6C40F3;

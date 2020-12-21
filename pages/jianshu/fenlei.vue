@@ -115,11 +115,11 @@
 		padding: 25rpx;
 		width: 250rpx;
 		height: 100rpx;
-		background-color: #fff;
+		background-color: #555555;
 		font-size: 34rpx;
 		&_active{
-			color:#fff;
-			background-color: #555555;
+			color:#636363;
+			background-color: #FFFFFF;
 		}
 	}
 

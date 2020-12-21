@@ -2,6 +2,9 @@
 	<view class="">
 		<view class="u-navbar" :style="[navbarStyle]" :class="{ 'u-navbar-fixed': isFixed, 'u-border-bottom': borderBottom }">
 			<view class="u-status-bar" :style="{ height: statusBarHeight + 'px' }"></view>
+			<!-- #ifdef MP-WEIXIN || MP-BAIDU || MP-TOUTIAO || MP-QQ -->
+			<view :style="'height: '+zhead "></view>
+			<!-- #endif -->
 			<view class="u-navbar-inner" :style="[navbarInnerStyle]">
 				<view class="u-back-wrap" v-if="isBack" @tap="goBack">
 					<view class="u-icon-wrap">
@@ -37,9 +40,9 @@
 	let systemInfo = uni.getSystemInfoSync();
 	let menuButtonInfo = {};
 	// 如果是小程序，获取右上角胶囊的尺寸信息，避免导航栏右侧内容与胶囊重叠(支付宝小程序非本API，尚未兼容)
-	// #ifdef MP-WEIXIN || MP-BAIDU || MP-TOUTIAO || MP-QQ
-	menuButtonInfo = uni.getMenuButtonBoundingClientRect();
-	// #endif
+	// // #ifdef MP-WEIXIN || MP-BAIDU || MP-TOUTIAO || MP-QQ
+	// menuButtonInfo = uni.getMenuButtonBoundingClientRect();
+	// // #endif
 	/**
 	 * navbar 自定义导航栏
 	 * @description 此组件一般用于在特殊情况下，需要自定义导航栏的时候用到，一般建议使用uniapp自带的导航栏。
@@ -156,7 +159,12 @@
 			customBack: {
 				type: Function,
 				default: null
-			}
+			},
+			//小程序导航栏距离顶部位置
+			zhead: {
+				type: String,
+				default: ''
+			},
 		},
 		data() {
 			return {

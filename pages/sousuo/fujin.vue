@@ -1,7 +1,7 @@
 <template>
 	<view>
 		<!-- 导航栏 -->
-		<u-navbar height="44" title="附近的书" title-color="white" title-size="40" :background="background" back-icon-color="white"
+		<u-navbar zhead="65rpx" height="44" title="附近的书" title-color="white" title-size="40" :background="background" back-icon-color="white"
 		 back-icon-size="50">
 			<view class="navbar-right" slot="right">
 				<view class="right_list" style="height: 80rpx;width: 80rpx;">
@@ -9,11 +9,12 @@
 				</view>
 			</view>
 		</u-navbar>
+		<view style="height: 65rpx"></view>
 		<!-- 范围 -->
 		<view class="list">
-			<view data-num="1" @click="getNearbyNum" class="td">1KM以内</view>
-			<view data-num="1.5" @click="getNearbyNum" class="td">1.5KM以内</view>
-			<view data-num="2" @click="getNearbyNum" class="td">2KM以内</view>
+			<view data-num="1" @click="getNearbyNum" class="td" :class="[num == 1?'text-color':'']">1KM以内</view>
+			<view data-num="1.5" @click="getNearbyNum" class="td" :class="[num == 1.5?'text-color':'']">1.5KM以内</view>
+			<view data-num="2" @click="getNearbyNum" class="td" :class="[num == 2?'text-color':'']">2KM以内</view>
 			<!-- <navigator url="fujinB"> -->
 			<view class="td">同城</view>
 			<!-- </navigator> -->
@@ -61,6 +62,7 @@
 				background: {
 					background: '#6C40F3'
 				},
+				num: 1,	//默认选择
 				width: '', //屏幕宽度
 				height: '', //屏幕高度
 				ployline: [], //路线渲染
@@ -101,7 +103,7 @@
 					author: '', //作者
 					publisher: '', //出版社
 					library: '', //图书馆
-				}]
+				}],
 			}
 		},
 		onLoad: function(options) {
@@ -118,7 +120,7 @@
 					/** 开始同步数据 */
 					// that.latitude = res.latitude
 					// that.longitude = res.longitude
-					that.getNearbyBook(res.longitude, res.latitude, 1);
+					that.getNearbyBook(120.396592, 36.309051, 1);
 				}
 			})
 		},
@@ -130,6 +132,7 @@
 				var num = e.currentTarget.dataset.num;
 				var longitude = that.longitude;
 				var latitude = that.latitude;
+				that.num = num;
 				that.getNearbyBook(longitude, latitude, num);
 			},
 			/**
@@ -499,5 +502,8 @@
 		width: 150rpx;
 		height: 60rpx;
 		color: #255BBA;
+	}
+	.text-color{
+		color: #6C40F3;
 	}
 </style>

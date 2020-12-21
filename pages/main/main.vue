@@ -299,7 +299,11 @@
 	$color-base: #fff;
 	$words-color-base: #333333;
 	$words-color-light: #999999;
-
+	.head{
+		/*  #ifdef MP-WEIXIN  */
+		height: 220rpx;
+		/*  #endif  */
+	}
 	.header-wrap {
 		width: 100%;
 		position: fixed;
@@ -307,12 +311,18 @@
 		z-index: 999;
 
 		.index-header {
-			height: 150upx;
-			line-height: 110upx;
-			padding: 0 30upx;
-			padding-top: 40upx;
-			background-color: $color-base;
-			font-size: 28upx;
+			/*  #ifdef MP-WEIXIN  */
+			height: 220rpx;
+			padding-top: 120rpx;
+			/*  #endif  */
+			/*  #ifdef APP-PLUS  */
+			height: 150rpx;
+			padding-top: 40rpx;
+			/*  #endif  */
+			line-height: 110rpx;
+			padding-left: 30rpx;
+			padding-right: 30rpx;
+			font-size: 28rpx;
 			color: #fff;
 			display: flex;
 			align-items: center;
@@ -320,19 +330,19 @@
 			background-color: #6C40F3;
 
 			.address {
-				margin-left: -10upx;
+				margin-left: -10rpx;
 				width: 76rpx;
 				height: 76rpx;
-				font-size: 26upx;
+				font-size: 26rpx;
 				// background-color: #333333;
 			}
 
 			.input-wrap {
 				display: flex;
 				width: 530rpx;
-				height: 75upx;
-				height: 70upx;
-				padding: 10upx 80upx 10upx 50upx;
+				height: 75rpx;
+				height: 70rpx;
+				padding: 10rpx 80rpx 10rpx 50rpx;
 				margin-left: 0;
 				box-sizing: border-box;
 				background-color: #F5F5F5;
@@ -342,21 +352,21 @@
 
 				image {
 					height: 48px;
-					width: 48upx;
+					width: 48rpx;
 					position: absolute;
 					// left: 50upx;
-					top: -8upx;
+					top: -8rpx;
 					color: $words-color-light;
-					font-size: 30upx;
+					font-size: 30rpx;
 				}
 
 				.img {
-					width: 70upx;
-					height: 75upx;
-					margin-top: 9upx;
-					margin-left: -55upx;
+					width: 70rpx;
+					height: 75rpx;
+					margin-top: 9rpx;
+					margin-left: -55rpx;
 					color: $words-color-light;
-					font-size: 30upx;
+					font-size: 30rpx;
 					z-index: 1000;
 				}
 			}
@@ -364,23 +374,23 @@
 
 			.map-wrap {
 				.iconfont {
-					margin-top: 50upx;
+					margin-top: 50rpx;
 					width: 70rpx;
 					height: 70rpx;
-					font-size: 32upx;
-					margin-right: -10upx;
+					font-size: 32rpx;
+					margin-right: -10rpx;
 					// margin-left: ;
 				}
 
 				text {
-					font-size: 26upx;
+					font-size: 26rpx;
 				}
 			}
 		}
 	}
 
 	.blank {
-		height: 126upx;
+		height: 126rpx;
 	}
 
 	/* 轮播 */
