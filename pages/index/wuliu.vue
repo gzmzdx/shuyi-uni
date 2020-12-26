@@ -5,21 +5,24 @@
 				<image class="topima" src="../../static/images/gshunfen.png" style="width: 90rpx;height: 90rpx;"></image>
 				<view class="top_one_wz">圆通快递</view>
 				<view class="topTb">
-				<image class="Tb" src="../../static/images/kaiqi.png" style="width: 70rpx;height: 70rpx;"></image>	
+					<switch checked @change="switchChange(1)" />
+				<!-- <image class="Tb" src="../../static/images/kaiqi.png" style="width: 70rpx;height: 70rpx;"></image> -->	
 				</view>
 			</view>
 			<view class="topone">
 				<image class="topima" src="../../static/images/yuanton.png" style="width: 90rpx;height: 90rpx;"></image>
 				<view class="top_one_wz">圆通快递</view>
 				<view class="topTb">
-				<image class="Tb" src="../../static/images/gb.png" style="width: 70rpx;height: 70rpx;"></image>	
+					<switch checked="true" @change="switchChange(1)" />
+				<!-- <image class="Tb" src="../../static/images/gb.png" style="width: 70rpx;height: 70rpx;"></image> -->	
 				</view>
 			</view>
 			<view class="topone">
 				<image class="topima" src="../../static/images/gshunfen.png" style="width: 85rpx;height: 80rpx;"></image>
 				<view class="top_one_wz">顺丰快递</view>
 				<view class="topTb">
-				<image class="Tb" src="../../static/images/gb.png" style="width: 70rpx;height: 70rpx;"></image>	
+					<switch checked="false" @change="switchChange(1)" />
+				<!-- <image class="Tb" src="../../static/images/gb.png" style="width: 70rpx;height: 70rpx;"></image> -->	
 				</view>
 			</view>
 		</view>
@@ -31,7 +34,11 @@ export default {
 	data() {
 		return {};
 	},
-	methods: {}
+	methods: {
+		switchChange: function (e){
+			console.log("改变的值e：",e)
+		}
+	}
 };
 </script>
 
