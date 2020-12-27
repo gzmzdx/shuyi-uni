@@ -23,13 +23,18 @@
 				<view class="right-goods-box">
 					<view class="goods-name">{{goods.name}}</view>
 					<view class="my-10 goods-spec"><text class="text">{{goods.spec}}</text></view>
-					<view class="price-number-box">
+					<!-- <view class="price-number-box">
 						<view class="red-price">￥{{goods.price}}</view>
 						<view class="number-box">
 							<text class="number-sub" @click="sub(index,i)">-</text>
 							<text class="number-num">{{goods.number}}</text>
 							<text class="number-add" @click="add(index,i)">+</text>
 						</view>
+					</view> -->
+					
+					<view class="price-number-box">
+						<view class="red-price">编号：{{goods.price}}</view>
+						
 					</view>
 				</view>
 			</view>
@@ -43,7 +48,7 @@
 			</view>
 			<view class="goods-remove" v-if="selectedAllRowLength" @click="removeGoodsEvent">删除</view>
 			<view class="right-box">
-				<text class="total-cost">总价格<text class="red-price">￥{{sumPrice}}</text></text>
+				<!-- <text class="total-cost">总价格<text class="red-price">￥{{sumPrice}}</text></text> -->
 				<!-- <navigator url="../borrow/borrow"> -->
 					<text class="account">确定借入<text v-if="selectedAllRowLength">({{selectedAllRowLength}})</text></text>
 				<!-- </navigator> -->
@@ -63,7 +68,7 @@
 			</view>
 			<view class="goods-remove" v-if="selectedAllRowLength" @click="removeGoodsEvent">删除</view>
 			<view class="right-box">
-				<text class="total-cost">总价格<text class="red-price">￥{{sumPrice}}</text></text>
+				<!-- <text class="total-cost">总价格<text class="red-price">￥{{sumPrice}}</text></text> -->
 				<!-- <navigator url="../borrow/borrow"> -->
 					<text class="account">确定借入<text v-if="selectedAllRowLength">({{selectedAllRowLength}})</text></text>
 				<!-- </navigator> -->
@@ -89,7 +94,7 @@
 								img: '../../static/images/photo.gif',
 								name: '冰与火之歌',
 								spec: ' 《冰与火之歌》是美国作家乔治.马丁创作的长篇小说，该书以荒谬的风格...',
-								price: 27.5,
+								price: 2020191056,
 								number: 1,
 								selected: false
 							}, {
@@ -97,7 +102,7 @@
 								img: '../../static/images/photo.gif',
 								name: '冰与火之歌',
 								spec: '《冰与火之歌》是美国作家乔治.马丁创作的长篇小说，该书以荒谬的风格...',
-								price: 9.5,
+								price: 2020191056,
 								number: 2,
 								selected: false
 							}
@@ -112,7 +117,7 @@
 								img: '../../static/images/photo.gif',
 								name: '冰与火之歌',
 								spec: '《冰与火之歌》是美国作家乔治.马丁创作的长篇小说，该书以荒谬的风格...',
-								price: 17.5,
+								price: 2020191056,
 								number: 1,
 								selected: false
 							}
@@ -310,7 +315,7 @@
 	font-size: 28rpx;
 }
 .red-price {
-	color: #F0250F;
+	color: #999999;
 }
 .goods-list{
 	font-size: 36rpx;
@@ -365,6 +370,8 @@
 				.price-number-box{
 					display: flex;
 					line-height: 46rpx;
+					font-size: 26rpx;
+					margin-top: 10rpx;
 					justify-content: space-between;
 					.number-box{
 						.number-sub,

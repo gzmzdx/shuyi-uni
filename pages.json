@@ -308,13 +308,7 @@
 			}
 		}
 
-		, {
-			"path": "pages/book-selection-car/book-selection-car",
-			"style": {
-				// "navigationBarBackgroundColor":"#00BFFF"
-				"navigationBarTitleText": "借书车"
-			}
-		},
+		, 
 		{
 			"path": "pages/personal-library/personal-library",
 			"style": {
